@@ -1,18 +1,15 @@
 import React from "react";
-import { ClassValue } from "clsx";
-import Link, { LinkProps } from "next/link";
+import Link from "next/link";
+
 import { cn } from "@/utils/helpers";
 
-export type LinkButtonProps = LinkProps & {
-  label: string;
-  secondaryLabel?: string;
-  styles?: ClassValue;
-};
+import { LinkButtonProps } from "./types";
 
 const buttonBaseStyles =
-  "block rounded-full px-9 py-4 flex-center font-bold text-base border-color-accent-primary uppercase border-2 leading-8 md:text-xl md:leading-10 text-color-accent-primary bg-color-bg-white";
-const singleLabelButtonStyles = "";
-const doubleLabelButtonStyles = "";
+  "hover:shadow-2xl focus:shadow-2xl md:hover:shadow-3xl md:focus:shadow-3xl transition rounded-full px-9 text-center flex items-center justify-center font-bold border-color-accent-primary uppercase md:text-xl md:leading-10 text-color-accent-primary bg-color-bg-white";
+const singleLabelButtonStyles = "py-4 border-2 md:w-fit text-base leading-8";
+const doubleLabelButtonStyles =
+  "border gap-1 py-[14px] md:py-[25px] flex-col md:flex-row md:justify-between text-sm";
 
 const LinkButton: React.FC<LinkButtonProps> = ({
   label,
@@ -33,8 +30,16 @@ const LinkButton: React.FC<LinkButtonProps> = ({
         styles,
       )}
     >
-      {label}
-      {isDoubleLabel && <span className="ml-2">{secondaryLabel}</span>}
+      <span
+        className={cn(isDoubleLabel ? "md:text-[16px] leading-normal" : "")}
+      >
+        {label}
+      </span>
+      {isDoubleLabel && (
+        <span className="font-normal md:text-[16px] normal-case leading-normal">
+          {secondaryLabel}
+        </span>
+      )}
     </Link>
   );
 };
