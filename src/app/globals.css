@@ -5,5 +5,5 @@
 /* Common utilities: */
 
 .section-heading {
-  @apply font-unbounded font-bold text-color-accent-primary text-[28px] leading-[1.2] tracking-[1.12px] uppercase xl:text-[60px] xl:tracking-[2.4px];
+  @apply font-unbounded font-bold text-color-accent-primary text-[28px] leading-[1.2] tracking-[1.12px] uppercase;
 }
