@@ -9,9 +9,10 @@ export type LinkButtonProps = LinkProps & {
   styles?: ClassValue;
 };
 
-const buttonBaseStyles = "inline-block rounded px-4 py-2 text-white";
-const singleLabelButtonStyles = "bg-blue-500 hover:bg-blue-600";
-const doubleLabelButtonStyles = "bg-green-500 hover:bg-green-600";
+const buttonBaseStyles =
+  "block rounded-full px-9 py-4 flex-center font-bold text-base border-color-accent-primary uppercase border-2 leading-8 md:text-xl md:leading-10 text-color-accent-primary bg-color-bg-white";
+const singleLabelButtonStyles = "";
+const doubleLabelButtonStyles = "";
 
 const LinkButton: React.FC<LinkButtonProps> = ({
   label,
