@@ -33,6 +33,10 @@ const config: Config = {
           xl: "2rem",
         },
       },
+      boxShadow: {
+        "2xl": "-4px 4px 0px 0px #CC1B73",
+        "3xl": "-7px 7px 0px 0px #CC1B73",
+      },
       // COLORS
       colors: {
         "color-bg": {
@@ -41,6 +45,7 @@ const config: Config = {
           hero: "#FFCFD3",
           accent: "#F5D9E2",
           extraAccent: "#FFF4CB",
+          backdrop: "rgba(0, 0, 0, 0.66)",
         },
         "color-accent": {
           primary: "#CC1B73",
@@ -62,6 +67,9 @@ const config: Config = {
       fontFamily: {
         unbounded: ["var(--font-unbounded)"],
         fixel: ["var(--font-fixelDisplay)"],
+      },
+      lineHeight: {
+        normal: "1.4",
       },
       // TRANSITION
       transitionDuration: {

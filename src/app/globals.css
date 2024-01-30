@@ -2,29 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+  .flex-start {
+    @apply flex justify-start items-center;
+  }
+}
+
 /* Common utilities: */
 
 .section-heading {
   @apply font-unbounded font-bold text-color-accent-primary text-[28px] leading-[1.2] tracking-[1.12px] uppercase;
 }
 
-.container {
-  outline: 2px dotted green;
-}
-
-.crumbs-bg-sm {
-  background-image: url("/images/crumbs-sm-@x2.webp");
-}
-
-@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
-  (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi) and (max-width: 767px),
-  (min-resolution: 2dppx) and (max-width: 767px) {
-  .crumbs-bg-sm {
-    background-image: url("/images/crumbs-sm-@x2.webp");
-  }
-}
-
-.crumbs {
-  @apply crumbs-bg-sm bg-cover bg-center;
+/* Burger-Menu */
+.burger-menu::before {
+  content: "";
+  @apply absolute top-0 left-0 w-full h-[7px] md:w-[7px] md:h-full bg-color-accent-primary;
 }
