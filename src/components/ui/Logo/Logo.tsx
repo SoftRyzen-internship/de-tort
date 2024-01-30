@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import { TLogo } from "@/components/ui/Logo/types";
 
-import { cn } from "@/utils/helpers/cn";
+import { cn } from "@/utils/helpers";
 
 import LogoIcon from "../../../../public/icons/logo.svg";
 
