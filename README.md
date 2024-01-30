@@ -92,10 +92,10 @@ is a list of more common components and their API.
 
 - #### ContactsList
 
-| Prop        | Default     | Description                                           |
-| ----------- | ----------- | ----------------------------------------------------- |
-| `variant`   | `undefined` | required, choose between `header` and `footer` styles |
-| `className` | `''`        | add custom or additional css class you'd need         |
+| Prop        | Default  | Description                                           |
+| ----------- | -------- | ----------------------------------------------------- |
+| `variant`   | `header` | required, choose between `header` and `footer` styles |
+| `className` | `''`     | add custom or additional css class you'd need         |
 
 =======
 

@@ -3,7 +3,7 @@ import { cn } from "@/utils/helpers/cn";
 import IconPhone from "~/icons/phone.svg";
 import InstagramIcon from "~/icons/instagram.svg";
 
-import data from "@/data/contacts.json";
+import data from "@/data/common.json";
 
 import { TContacts } from "@/components/ui/ContactLinks/types";
 
@@ -16,6 +16,8 @@ export const ContactLinks: React.FC<TContacts> = ({
     footer: "gap-4 flex-col items-end",
   };
 
+  const { contacts } = data;
+
   return (
     <ul
       className={cn("inline-flex flex-shrink-0 ", styles[variant], className)}
@@ -23,22 +25,26 @@ export const ContactLinks: React.FC<TContacts> = ({
       <li>
         <a
           className="flex gap-2 text-color-text-secondary text-[20px] leading-6 font-semibold font-fixel items-center flex-shrink-0"
-          href={`tel:${data.phone}`}
+          href={`tel:${contacts.phone}`}
         >
           <IconPhone className="h-6 w-6 text-color-accent-primary " />
 
-          {data.phone}
+          {contacts.phone}
         </a>
       </li>
 
       <li className="flex">
         <a
           className="flex gap-2 text-color-text-secondary text-[20px] leading-6 font-semibold font-fixel items-center flex-shrink-0"
-          href={`mailto:${data.instagramLink}`}
+          href={contacts.instagramLink}
+          target="_blank"
+          title={contacts.instagramLink}
+          aria-label={contacts.instagramLinkLabel}
+          rel="noopener noreferrer nofollow"
         >
           <InstagramIcon className="h-6 w-6 text-color-accent-primary " />
 
-          {data.instagramUser}
+          {contacts.instagramUser}
         </a>
       </li>
     </ul>
