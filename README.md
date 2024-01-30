@@ -78,6 +78,12 @@ is a list of more common components and their API.
 | `hero`      | `false`     | to render `h1` element instead of default `h2` with appropriate styles |
 | `className` | `''`        | add custom or additional css class you'd need                          |
 
+- #### Logo
+
+| Prop        | Default | Description                                   |
+| ----------- | ------- | --------------------------------------------- |
+| `className` | `''`    | add custom or additional css class you'd need |
+
 - #### MenuButton
 
 | Prop        | Default | Description                                   |
