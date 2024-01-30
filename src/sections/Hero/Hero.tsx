@@ -4,9 +4,9 @@ import Link from "next/link";
 
 export const Hero = () => {
   return (
-    <section className="bg-color-bg-hero py-[90px]">
-      <div className="pl-5">
-        <div className="relative mx-auto size-[81vw]">
+    <section className="bg-color-bg-hero py-[90px] md:py-[160px] md:relative">
+      <div className="smOnly:pl-5 md:absolute md:bottom-0 md:right-0">
+        <div className="relative mx-auto size-[81vw] md:w-[449px] md:h-[446px]">
           <Image
             src="/images/tort-whole-@x2.webp"
             alt="whole tort"
