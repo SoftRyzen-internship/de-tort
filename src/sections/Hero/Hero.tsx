@@ -21,7 +21,7 @@ export const Hero = () => {
         <SectionTitle
           hero
           text="Онлайн-кондитерська"
-          className="max-w-[694px]"
+          className="max-w-[694px] mb-4"
         />
         <p>
           Спеціалізується на виробництві тортиків та інших смаколиків по
