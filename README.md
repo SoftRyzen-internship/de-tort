@@ -70,6 +70,16 @@ is a list of more common components and their API.
 | `text`      | `undefined` | required, inner text content                  |
 | `className` | `''`        | add custom or additional css class you'd need |
 
+- #### LinkButton
+
+| Prop                                                  | Default     | Description                                    |
+| ----------------------------------------------------- | ----------- | ---------------------------------------------- |
+| `label`                                               | `undefined` | required, inner button text content            |
+| `secondaryLabel`                                      | `undefined` | optional, inner button additional text content |
+| `href`                                                | `undefined` | required, The path or URL to navigate to.      |
+| `className`                                           | `''`        | add custom or additional css class you'd need  |
+| can also take any NextJS Link component standart prop |
+
 ### Technology stack
 
 - **Main technologies**:

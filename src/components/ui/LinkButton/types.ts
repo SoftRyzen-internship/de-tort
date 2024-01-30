@@ -1,8 +1,8 @@
-import { ClassValue } from "clsx";
 import { LinkProps } from "next/link";
+import { ClassValue } from "clsx";
 
 export type LinkButtonProps = LinkProps & {
   label: string;
   secondaryLabel?: string;
-  styles?: ClassValue;
+  className?: ClassValue;
 };
