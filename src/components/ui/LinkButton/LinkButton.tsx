@@ -6,7 +6,7 @@ import { cn } from "@/utils/helpers";
 import { LinkButtonProps } from "./types";
 
 const buttonBaseStyles =
-  "hover:shadow-2xl focus:shadow-2xl md:hover:shadow-3xl md:focus:shadow-3xl transition rounded-full px-9 text-center flex items-center justify-center font-bold border-color-accent-primary uppercase md:text-xl md:leading-10 text-color-accent-primary bg-color-bg-white ";
+  "hover:shadow-2xl focus:shadow-2xl md:hover:shadow-3xl md:focus:shadow-3xl transition rounded-full px-9 text-center flex-center font-bold border-color-accent-primary uppercase md:text-xl md:leading-10 text-color-accent-primary bg-color-bg-white ";
 const singleLabelButtonStyles =
   "py-4 border-2 md:w-fit text-base leading-loose";
 const doubleLabelButtonStyles =
