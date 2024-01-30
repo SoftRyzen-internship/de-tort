@@ -70,6 +70,16 @@ is a list of more common components and their API.
 | `text`      | `undefined` | required, inner text content                  |
 | `className` | `''`        | add custom or additional css class you'd need |
 
+- #### LinkButton
+
+| Prop                                                  | Default     | Description                                    |
+| ----------------------------------------------------- | ----------- | ---------------------------------------------- |
+| `label`                                               | `undefined` | required, inner button text content            |
+| `secondaryLabel`                                      | `undefined` | optional, inner button additional text content |
+| `href`                                                | `undefined` | required, The path or URL to navigate to.      |
+| `className`                                           | `''`        | add custom or additional css class you'd need  |
+| can also take any NextJS Link component standart prop |
+
 - #### SectionTitle
 
 | Prop        | Default     | Description                                                            |
@@ -78,12 +88,43 @@ is a list of more common components and their API.
 | `hero`      | `false`     | to render `h1` element instead of default `h2` with appropriate styles |
 | `className` | `''`        | add custom or additional css class you'd need                          |
 
+<<<<<<< HEAD
+
 - #### ContactsList
 
 | Prop        | Default     | Description                                           |
 | ----------- | ----------- | ----------------------------------------------------- |
 | `variant`   | `undefined` | required, choose between `header` and `footer` styles |
 | `className` | `''`        | add custom or additional css class you'd need         |
+
+=======
+
+- #### Logo
+
+| Prop        | Default | Description                                   |
+| ----------- | ------- | --------------------------------------------- |
+| `className` | `''`    | add custom or additional css class you'd need |
+
+- #### MenuButton
+
+| Prop        | Default | Description                                   |
+| ----------- | ------- | --------------------------------------------- |
+| `className` | `''`    | add custom or additional css class you'd need |
+
+- #### BurgerMenu
+
+| Prop      | Default     | Description                                       |
+| --------- | ----------- | ------------------------------------------------- |
+| `isOpen`  | `undefined` | required, `boolean` - current state of element    |
+| `onClose` | `undefined` | required, `:void` - event-handler on closing menu |
+
+- #### MainNav
+
+| Prop      | Default     | Description                                                                  |
+| --------- | ----------- | ---------------------------------------------------------------------------- |
+| `onClick` | `undefined` | required, `:void` - click-handler for additional effects on navigation links |
+
+> > > > > > > 839eb7bc4ecb9ed6b98fbb1af97277d92180bb17
 
 ### Technology stack
 

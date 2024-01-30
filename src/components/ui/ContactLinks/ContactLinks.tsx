@@ -1,7 +1,3 @@
-import { FC } from "react";
-
-import { TContacts } from "@/components/ui/ContactLinks/types";
-
 import { cn } from "@/utils/helpers/cn";
 
 import IconPhone from "~/icons/phone.svg";
@@ -9,7 +5,12 @@ import InstagramIcon from "~/icons/instagram.svg";
 
 import data from "@/data/contacts.json";
 
-export const ContactLinks: FC<TContacts> = ({ className, variant }) => {
+import { TContacts } from "@/components/ui/ContactLinks/types";
+
+export const ContactLinks: React.FC<TContacts> = ({
+  className = "",
+  variant = "header",
+}) => {
   const styles = {
     header: "gap-10 flex items-center justify-end",
     footer: "gap-4 flex-col items-end",
@@ -43,13 +44,3 @@ export const ContactLinks: FC<TContacts> = ({ className, variant }) => {
     </ul>
   );
 };
-/*
-color: #383838;
-
-text-align: right;
-font-family: "Fixel Display";
-font-size: 20px;
-font-style: normal;
-font-weight: 600;
-line-height: 120%; /* 24px 
-*/
