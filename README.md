@@ -88,6 +88,31 @@ is a list of more common components and their API.
 | `hero`      | `false`     | to render `h1` element instead of default `h2` with appropriate styles |
 | `className` | `''`        | add custom or additional css class you'd need                          |
 
+- #### Logo
+
+| Prop        | Default | Description                                   |
+| ----------- | ------- | --------------------------------------------- |
+| `className` | `''`    | add custom or additional css class you'd need |
+
+- #### MenuButton
+
+| Prop        | Default | Description                                   |
+| ----------- | ------- | --------------------------------------------- |
+| `className` | `''`    | add custom or additional css class you'd need |
+
+- #### BurgerMenu
+
+| Prop      | Default     | Description                                       |
+| --------- | ----------- | ------------------------------------------------- |
+| `isOpen`  | `undefined` | required, `boolean` - current state of element    |
+| `onClose` | `undefined` | required, `:void` - event-handler on closing menu |
+
+- #### MainNav
+
+| Prop      | Default     | Description                                                                  |
+| --------- | ----------- | ---------------------------------------------------------------------------- |
+| `onClick` | `undefined` | required, `:void` - click-handler for additional effects on navigation links |
+
 ### Technology stack
 
 - **Main technologies**:

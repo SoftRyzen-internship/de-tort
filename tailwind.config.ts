@@ -44,6 +44,7 @@ const config: Config = {
           hero: "#FFCFD3",
           accent: "#F5D9E2",
           extraAccent: "#FFF4CB",
+          backdrop: "rgba(0, 0, 0, 0.66)",
         },
         "color-accent": {
           primary: "#CC1B73",
