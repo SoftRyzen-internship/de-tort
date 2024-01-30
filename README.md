@@ -78,6 +78,13 @@ is a list of more common components and their API.
 | `hero`      | `false`     | to render `h1` element instead of default `h2` with appropriate styles |
 | `className` | `''`        | add custom or additional css class you'd need                          |
 
+- #### ContactsList
+
+| Prop        | Default     | Description                                           |
+| ----------- | ----------- | ----------------------------------------------------- |
+| `variant`   | `undefined` | required, choose between `header` and `footer` styles |
+| `className` | `''`        | add custom or additional css class you'd need         |
+
 ### Technology stack
 
 - **Main technologies**:
