@@ -124,8 +124,6 @@ is a list of more common components and their API.
 | --------- | ----------- | ---------------------------------------------------------------------------- |
 | `onClick` | `undefined` | required, `:void` - click-handler for additional effects on navigation links |
 
-> > > > > > > 839eb7bc4ecb9ed6b98fbb1af97277d92180bb17
-
 ### Technology stack
 
 - **Main technologies**:

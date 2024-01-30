@@ -12,7 +12,7 @@ export const ContactLinks: React.FC<TContacts> = ({
   variant = "header",
 }) => {
   const styles = {
-    header: "gap-10 flex items-center justify-end",
+    header: "gap-10 flex items-center justify-end smOnly:hidden",
     footer: "gap-4 flex-col items-end",
   };
 
