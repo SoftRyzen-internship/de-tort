@@ -1,3 +1,4 @@
+import { ContactLinks } from "@/components/ui/ContactLinks";
 import { Logo } from "@/components/ui/Logo";
 import Example from "@/components/Example";
 
@@ -8,6 +9,8 @@ export default async function Home() {
     <>
       <Logo />
       <h1>Home Page</h1>
+      <ContactLinks variant="footer" />
+
       <Example />
       {/* <SectionTitleExamples /> */}
     </>
