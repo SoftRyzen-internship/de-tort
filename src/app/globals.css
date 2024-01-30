@@ -7,3 +7,9 @@
 .section-heading {
   @apply font-unbounded font-bold text-color-accent-primary text-[28px] leading-[1.2] tracking-[1.12px] uppercase;
 }
+
+/* Burger-Menu */
+.burger-menu::before {
+  content: "";
+  @apply absolute top-0 left-0 w-full h-[7px] md:w-[7px] md:h-full bg-color-accent-primary;
+}
