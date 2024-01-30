@@ -70,6 +70,14 @@ is a list of more common components and their API.
 | `text`      | `undefined` | required, inner text content                  |
 | `className` | `''`        | add custom or additional css class you'd need |
 
+- #### SectionTitle
+
+| Prop        | Default     | Description                                                            |
+| ----------- | ----------- | ---------------------------------------------------------------------- |
+| `text`      | `undefined` | required, inner text content                                           |
+| `hero`      | `false`     | to render `h1` element instead of default `h2` with appropriate styles |
+| `className` | `''`        | add custom or additional css class you'd need                          |
+
 ### Technology stack
 
 - **Main technologies**:
