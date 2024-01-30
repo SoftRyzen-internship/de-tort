@@ -13,3 +13,9 @@
     @apply flex justify-start items-center;
   }
 }
+
+/* Common utilities: */
+
+.section-heading {
+  @apply font-unbounded font-bold text-color-accent-primary text-[28px] leading-[1.2] tracking-[1.12px] uppercase;
+}

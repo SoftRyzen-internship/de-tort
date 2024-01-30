@@ -80,6 +80,14 @@ is a list of more common components and their API.
 | `className`                                           | `''`        | add custom or additional css class you'd need  |
 | can also take any NextJS Link component standart prop |
 
+- #### SectionTitle
+
+| Prop        | Default     | Description                                                            |
+| ----------- | ----------- | ---------------------------------------------------------------------- |
+| `text`      | `undefined` | required, inner text content                                           |
+| `hero`      | `false`     | to render `h1` element instead of default `h2` with appropriate styles |
+| `className` | `''`        | add custom or additional css class you'd need                          |
+
 ### Technology stack
 
 - **Main technologies**:
