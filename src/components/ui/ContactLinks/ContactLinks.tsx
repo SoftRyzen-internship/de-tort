@@ -26,6 +26,8 @@ export const ContactLinks: React.FC<TContacts> = ({
         <a
           className="flex gap-2 text-color-text-secondary text-[20px] leading-6 font-semibold font-fixel items-center flex-shrink-0"
           href={`tel:${contacts.phone}`}
+          target="_blank"
+          rel="noopener noreferrer nofollow"
         >
           <IconPhone className="h-6 w-6 text-color-accent-primary " />
 
