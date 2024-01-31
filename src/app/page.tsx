@@ -8,20 +8,23 @@ import { Accordion } from "@/components/base/Accordion";
 import { Hero } from "@/sections/Hero";
 import { Contacts } from "@/sections/Contacts";
 
+import Example from "@/components/Example";
+
 export default async function Home() {
   return (
     <>
       <Hero />
+      <Contacts />
+      
       <div className="container">
         <Accordion />
       </div>
+      
 
       {/* <ContactLinks variant="footer" /> */}
       {/* <Example /> */}
       {/* <SectionTitleExamples /> */}
       {/* <Logo /> */}
-
-      <Contacts />
     </>
   );
 }
