@@ -60,7 +60,12 @@ const config: Config = {
           fourth: "#FEEE9F",
           fifth: "#197CCB",
           sixth: "#A9003A",
+          seven: "#5B4BFF",
+          eight: "#626262",
         },
+      },
+      linearGradientColors: {
+        "bg-gradient": ["180deg", "fixed", "#FFF8F2", "#FFCFD3"],
       },
       // FONTS
       fontFamily: {
