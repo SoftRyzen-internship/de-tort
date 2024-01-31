@@ -124,6 +124,12 @@ is a list of more common components and their API.
 | --------- | ----------- | ---------------------------------------------------------------------------- |
 | `onClick` | `undefined` | required, `:void` - click-handler for additional effects on navigation links |
 
+- #### MapLink
+
+| Prop        | Default | Description                                   |
+| ----------- | ------- | --------------------------------------------- |
+| `className` | `''`    | add custom or additional css class you'd need |
+
 ### Technology stack
 
 - **Main technologies**:

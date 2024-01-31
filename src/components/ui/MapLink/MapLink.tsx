@@ -3,7 +3,9 @@ import Link from "next/link";
 
 import data from "@/data/section-contacts.json";
 
-export const MapLink: React.FC = () => {
+import { MapLinkProps } from "./types";
+
+export const MapLink: React.FC<MapLinkProps> = ({ className = "" }) => {
   const { href, path, alt, ariaLabel } = data.address.image;
 
   return (
@@ -13,6 +15,7 @@ export const MapLink: React.FC = () => {
         aria-label={ariaLabel}
         target="_blank"
         rel="noopener noreferrer nofollow"
+        className={`${className}`}
       >
         <Image
           src={path.mobile}
