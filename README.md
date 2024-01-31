@@ -95,6 +95,14 @@ is a list of more common components and their API.
 | `variant`   | `header` | required, choose between `header` and `footer` styles |
 | `className` | `''`     | add custom or additional css class you'd need         |
 
+- #### ReviewCard
+
+| Prop     | Default     | Description                  |
+| -------- | ----------- | ---------------------------- |
+| `author` | `undefined` | required, review author name |
+| `date`   | `undefined` | required, review date        |
+| `text`   | `undefined` | required, review text        |
+
 - #### Logo
 
 | Prop        | Default | Description                                   |
