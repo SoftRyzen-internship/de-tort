@@ -1,5 +1,5 @@
 // import { ContactLinks } from "@/components/ui/ContactLinks";
-// import { Logo } from "@/components/ui/Logo";
+import { Logo } from "@/components/ui/Logo";
 // import Example from "@/components/Example";
 // import { SectionTitleExamples } from "@/components/ui/SectionTitle/SectionTitleExamples";
 
@@ -13,6 +13,7 @@ export default async function Home() {
       {/* <ContactLinks variant="footer" /> */}
       {/* <Example /> */}
       {/* <SectionTitleExamples /> */}
+      <Logo />
     </>
   );
 }
