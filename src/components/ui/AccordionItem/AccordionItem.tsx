@@ -21,11 +21,11 @@ export const AccordionItem: React.FC<AccordionItemType> = ({
       }}
     >
       <div className="flex justify-between items-start mt-5">
-        <div className="font-semibold text-sm leading-[1.4] text-color-text-primary w-[220px] md:w-[425px] md:text-[20px] xl:text-[24px] xl:w-[615px]">
+        <div className="font-semibold text-sm text-color-text-primary w-[220px] leading-[1.4] md:w-[425px] md:text-[20px] xl:text-[24px] xl:w-[615px]">
           {question}
         </div>
         <div
-          className={`rounded-full border bg-color-bg-white border-color-accent-primary p-[14px] ${isOpen ? "hover:shadow-2xl focus:shadow-2xl md:hover:shadow-3xl md:focus:shadow-3xl" : ""}`}
+          className={`rounded-full border bg-color-bg-white border-color-accent-primary p-[14px] ${isOpen ? "shadow-2xl" : ""}`}
         >
           <span className="inherit">
             {isOpen ? (
