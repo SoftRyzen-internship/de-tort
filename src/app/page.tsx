@@ -3,7 +3,7 @@
 // import Example from "@/components/Example";
 // import { SectionTitleExamples } from "@/components/ui/SectionTitle/SectionTitleExamples";
 
-import { ReviewCard } from "@/components/ui/ReviewCard";
+import Example from "@/components/Example";
 
 export default async function Home() {
   return (
@@ -13,8 +13,7 @@ export default async function Home() {
       </section>
 
       {/* <ContactLinks variant="footer" /> */}
-      {/* <Example /> */}
-      <ReviewCard />
+      <Example />
       {/* <SectionTitleExamples /> */}
     </>
   );

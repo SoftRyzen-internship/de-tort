@@ -88,14 +88,20 @@ is a list of more common components and their API.
 | `hero`      | `false`     | to render `h1` element instead of default `h2` with appropriate styles |
 | `className` | `''`        | add custom or additional css class you'd need                          |
 
-<<<<<<< HEAD
-
 - #### ContactsList
 
 | Prop        | Default  | Description                                           |
 | ----------- | -------- | ----------------------------------------------------- |
 | `variant`   | `header` | required, choose between `header` and `footer` styles |
 | `className` | `''`     | add custom or additional css class you'd need         |
+
+- #### ReviewCard
+
+| Prop     | Default     | Description                  |
+| -------- | ----------- | ---------------------------- |
+| `author` | `undefined` | required, review author name |
+| `date`   | `undefined` | required, review date        |
+| `text`   | `undefined` | required, review text        |
 
 =======
 

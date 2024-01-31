@@ -1,3 +1,5 @@
 export type ReviewCardProps = {
-  className?: string;
+  author: string;
+  text: string;
+  date: string;
 };
