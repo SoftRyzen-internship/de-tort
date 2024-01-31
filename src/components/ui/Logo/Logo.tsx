@@ -1,4 +1,4 @@
-import { cn } from "@/utils/helpers/cn";
+import { cn } from "@/utils/helpers";
 
 import LogoIcon from "~/icons/logo.svg";
 

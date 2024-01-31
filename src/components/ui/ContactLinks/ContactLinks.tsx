@@ -1,4 +1,4 @@
-import { cn } from "@/utils/helpers/cn";
+import { cn } from "@/utils/helpers";
 
 import IconPhone from "~/icons/phone.svg";
 import InstagramIcon from "~/icons/instagram.svg";
