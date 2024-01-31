@@ -12,10 +12,13 @@ export const Logo: React.FC<TLogo> = ({ className = "" }) => {
   return (
     <a
       href="/"
-      className={cn("group inline-block", className)}
+      className={cn(
+        "inline-block transition-transform focus:scale-110 hover:scale-110",
+        className,
+      )}
       aria-label={companyName}
     >
-      <LogoIcon className="w-[58px] h-16 flex-shrink-0" />
+      <LogoIcon className="w-[58px] h-16" />
     </a>
   );
 };

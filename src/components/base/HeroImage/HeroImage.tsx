@@ -17,8 +17,8 @@ export const HeroImage: React.FC = () => {
               src={imageBack.path}
               alt={imageBack.alt}
               fill
-              width={716}
-              height={691}
+              width={0}
+              height={0}
               className="object-cover"
               sizes="(max-width: 767px) 100vw, (min-width: 768px) 50vw"
             />
@@ -28,8 +28,8 @@ export const HeroImage: React.FC = () => {
               src={imageFace.path}
               alt={imageFace.alt}
               fill
-              width={716}
-              height={691}
+              width={0}
+              height={0}
               className="object-cover"
               sizes="(max-width: 767px) 100vw, (min-width: 768px) 50vw"
             />
