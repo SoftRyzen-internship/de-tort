@@ -21,9 +21,9 @@ export const AccordionItem: React.FC<AccordionItemType> = ({
       }}
     >
       <div className="flex justify-between items-start mt-5">
-        <div className="font-semibold text-sm text-color-text-primary w-[220px] leading-[1.4] md:w-[425px] md:text-[20px] xl:text-[24px] xl:w-[615px]">
+        <p className="font-semibold text-[14px] text-color-text-primary w-[220px] leading-normal md:w-[425px] md:text-[20px] xl:text-[24px] xl:w-[615px]">
           {question}
-        </div>
+        </p>
         <div
           className={`rounded-full border bg-color-bg-white border-color-accent-primary p-[14px] ${isOpen ? "shadow-2xl" : ""}`}
         >
@@ -37,9 +37,9 @@ export const AccordionItem: React.FC<AccordionItemType> = ({
         </div>
       </div>
       {isOpen && (
-        <div className="font-fixel text-xl text-color-text-secondary leading-[1.4] font-normal mt-6">
+        <p className="font-fixel text-[20px] text-color-text-secondary leading-normal font-normal mt-6">
           {answer}
-        </div>
+        </p>
       )}
     </div>
   );
