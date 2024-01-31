@@ -5,7 +5,7 @@ import css from "./HeroImage.module.css";
 export const HeroImage: React.FC = () => {
   return (
     <>
-      <div className=" relative md:absolute md:bottom-[-202px] mdOnly:right-0 xl:left-1/2">
+      <div className="smOnly:mt-[-33px] relative md:absolute md:bottom-[-207px] mdOnly:right-0 xl:left-1/2">
         <div className="group translate-x-3 relative w-fit h-fit">
           <div className=" absolute z-10  w-full h-full transition-opacity opacity-0 group-hover:opacity-100">
             <Image
