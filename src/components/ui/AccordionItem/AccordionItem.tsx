@@ -24,8 +24,10 @@ export const AccordionItem: React.FC<AccordionItemType> = ({
         <div className="font-semibold text-sm leading-[1.4] text-color-text-primary w-[225px]">
           {question}
         </div>
-        <div className="rounded-full border border-color-accent-primary p-[14px]">
-          <span className="inline-block">
+        <div
+          className={`rounded-full border border-color-accent-primary p-[14px] ${isOpen ? "hover:shadow-2xl focus:shadow-2xl md:hover:shadow-3xl md:focus:shadow-3xl" : ""}`}
+        >
+          <span className="inherit">
             {isOpen ? (
               <Icon className="w-5 h-5 rotate-180" />
             ) : (
