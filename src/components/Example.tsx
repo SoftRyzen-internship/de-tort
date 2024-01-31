@@ -12,7 +12,7 @@ export const Example: React.FC = () => {
   const date = "18 cічня 2024";
 
   return (
-    <div className="container bg-red-100">
+    <div className="container bg-red-100 p-10">
       <h2>Example ReviewCard component</h2>
       <ReviewCard author={author} text={text} date={date} />
     </div>

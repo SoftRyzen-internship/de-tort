@@ -94,5 +94,11 @@
       "path": "/images/tort-sliced-@x2.webp",
       "alt": "Нарізаний торт"
     }
+  },
+  "reviews": {
+    "imageHeart": {
+      "path": "/images/heart-@2x.webp",
+      "alt": "Серце"
+    }
   }
 }
