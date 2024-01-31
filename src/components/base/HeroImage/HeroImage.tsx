@@ -12,13 +12,14 @@ export const HeroImage: React.FC = () => {
     <>
       <div className="relative md:absolute md:bottom-[-207px] mdOnly:right-0 xl:left-1/2">
         <div className="group translate-x-3 relative w-fit h-fit smOnly:mx-auto">
-          <div className="absolute z-10  w-full h-full transition-opacity opacity-0 group-hover:opacity-100">
+          <div className="absolute z-10 w-full h-full transition-opacity opacity-0 group-hover:opacity-100">
             <Image
               src={imageBack.path}
               alt={imageBack.alt}
               fill
               width={0}
               height={0}
+              priority
               className="object-cover"
               sizes="(max-width: 767px) 100vw, (min-width: 768px) 50vw"
             />
@@ -30,6 +31,7 @@ export const HeroImage: React.FC = () => {
               fill
               width={0}
               height={0}
+              priority
               className="object-cover"
               sizes="(max-width: 767px) 100vw, (min-width: 768px) 50vw"
             />
