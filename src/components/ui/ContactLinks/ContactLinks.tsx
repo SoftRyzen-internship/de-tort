@@ -1,4 +1,4 @@
-import { cn } from "@/utils/helpers/cn";
+import { cn } from "@/utils/helpers";
 
 import IconPhone from "~/icons/phone.svg";
 import InstagramIcon from "~/icons/instagram.svg";
@@ -24,7 +24,7 @@ export const ContactLinks: React.FC<TContacts> = ({
     >
       <li>
         <a
-          className="flex gap-2 text-color-text-secondary text-[20px] leading-6 font-semibold font-fixel items-center flex-shrink-0"
+          className="flex gap-2 text-color-text-secondary transition-colors focus:text-color-accent-primary hover:text-color-accent-primary text-[20px] leading-6 font-semibold font-fixel items-center flex-shrink-0"
           href={`tel:${contacts.phone}`}
           target="_blank"
           rel="noopener noreferrer nofollow"
@@ -37,7 +37,7 @@ export const ContactLinks: React.FC<TContacts> = ({
 
       <li className="flex">
         <a
-          className="flex gap-2 text-color-text-secondary text-[20px] leading-6 font-semibold font-fixel items-center flex-shrink-0"
+          className="flex gap-2 transition-colors focus:text-color-accent-primary hover:text-color-accent-primary text-color-text-secondary text-[20px] leading-6 font-semibold font-fixel items-center flex-shrink-0"
           href={contacts.instagramLink}
           target="_blank"
           title={contacts.instagramLink}
