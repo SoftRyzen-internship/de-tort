@@ -2,7 +2,7 @@ import { ContactLinks } from "@/components/ui/ContactLinks";
 
 import { Hero } from "@/sections/Hero";
 
-// import Example from "@/components/Example";
+import Example from "@/components/Example";
 // import { SectionTitleExamples } from "@/components/ui/SectionTitle/SectionTitleExamples";
 
 export default async function Home() {
@@ -16,7 +16,7 @@ export default async function Home() {
       </section>
 
       {/* <ContactLinks variant="footer" /> */}
-      {/* <Example /> */}
+      <Example />
       {/* <SectionTitleExamples /> */}
       {/* <Logo /> */}
     </>

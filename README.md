@@ -99,6 +99,16 @@ is a list of more common components and their API.
 
 =======
 
+- #### AboutCard
+
+| Prop    | Default     | Description                                  |
+| ------- | ----------- | -------------------------------------------- |
+| `icon`  | `undefined` | required, icon Component to show in the card |
+| `text`  | `undefined` | required, text for the card                  |
+| `color` | `undefined` | required, background color for the card      |
+
+=======
+
 - #### Logo
 
 | Prop        | Default | Description                                   |

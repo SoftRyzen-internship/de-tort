@@ -1,15 +1,35 @@
 import React from "react";
 
-import { LinkButton } from "./ui/LinkButton";
+import { AboutCard } from "./ui/AboutCard";
+
+import HeartIcon from "~/icons/heart.svg";
+import StarIcon from "~/icons/star.svg";
 
 export const Example: React.FC = () => {
+  const array = [
+    {
+      icon: HeartIcon,
+      text: "Індивідуальний підхід до кожного клієнта",
+      color: "#F5D9E2",
+    },
+    { icon: StarIcon, text: "Індивідуальний дизайн", color: "#FFF4CB" },
+  ];
   return (
-    <div className="container bg-red-100">
-      <h2>Example Button component</h2>
-      <LinkButton label="Каталог тортів" href="/page" className="mb-5" />
+    <div className="container">
+      <h2>Example AboutCard component</h2>
 
-      <div className=" bg-red-100">
-        <LinkButton label="міні торти" secondaryLabel="Набір" href="/" />
+      <div className="flex flex-col gap-5 p-5">
+        {array.map((element, index) => {
+          const IconComponent = element.icon;
+          return (
+            <AboutCard
+              key={index}
+              icon={<IconComponent />}
+              text={element.text}
+              color={element.color}
+            />
+          );
+        })}
       </div>
     </div>
   );
