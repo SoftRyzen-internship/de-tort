@@ -1,14 +1,12 @@
-import { FC } from "react";
-
-import { TLogo } from "@/components/ui/Logo/types";
-
 import { cn } from "@/utils/helpers/cn";
 
-import LogoIcon from "../../../../public/icons/logo.svg";
+import LogoIcon from "~/icons/logo.svg";
 
-import content from "@/data/logo.json";
+import content from "@/data/common.json";
 
-export const Logo: FC<TLogo> = ({ className = "" }) => {
+import { TLogo } from "./types";
+
+export const Logo: React.FC<TLogo> = ({ className = "" }) => {
   const { companyName } = content;
 
   return (
