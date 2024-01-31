@@ -14,18 +14,18 @@ export const AccordionItem: React.FC<AccordionItemType> = ({
 
   return (
     <div
-      className={`${css.item}`}
+      className={`${css.item} xl:w-[696px]`}
       onClick={(e) => {
         e.preventDefault();
         handleToggle(id);
       }}
     >
       <div className="flex justify-between items-start mt-5">
-        <div className="font-semibold text-sm leading-[1.4] text-color-text-primary w-[225px]">
+        <div className="font-semibold text-sm leading-[1.4] text-color-text-primary w-[220px] md:w-[425px] md:text-[20px] xl:text-[24px] xl:w-[615px]">
           {question}
         </div>
         <div
-          className={`rounded-full border border-color-accent-primary p-[14px] ${isOpen ? "hover:shadow-2xl focus:shadow-2xl md:hover:shadow-3xl md:focus:shadow-3xl" : ""}`}
+          className={`rounded-full border bg-color-bg-white border-color-accent-primary p-[14px] ${isOpen ? "hover:shadow-2xl focus:shadow-2xl md:hover:shadow-3xl md:focus:shadow-3xl" : ""}`}
         >
           <span className="inherit">
             {isOpen ? (
