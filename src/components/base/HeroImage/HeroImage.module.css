@@ -1,0 +1,42 @@
+.crumbs {
+  background-image: url("/images/crumbs-mob-@x2.webp");
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+  (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) and (max-width: 767px),
+  (min-resolution: 2dppx) and (max-width: 767px) {
+  .crumbs {
+    background-image: url("/images/crumbs-mob-@x2.webp");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .crumbs {
+    background-image: url("/images/crumbs-tablet-@x2.webp");
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-width: 768px) and (min-resolution: 192dpi),
+  screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .crumbs {
+    background-image: url("/images/crumbs-tablet-@x2.webp");
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .crumbs {
+    background-image: url("/images/crumbs-desktop-@x2.webp");
+  }
+}
+
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-width: 1280px) and (min-resolution: 192dpi),
+  screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .crumbs {
+    background-image: url("/images/crumbs-desktop-@x2.webp");
+  }
+}

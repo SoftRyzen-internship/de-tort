@@ -81,5 +81,18 @@
     "instagramLink": "https://www.instagram.com/de_tort.ua/",
     "instagramUser": "@de_tort.ua",
     "instagramLinkLabel": "Посилання на сторінку De Tort в інстаграмі"
+  },
+  "hero": {
+    "details": "Cпеціалізується на виробництві тортиків та інших смаколиків по індивідуальним замовленням! ",
+    "title": "Онлайн-кондитерська",
+    "buttonLabel": "Каталог тортів",
+    "imageFace": {
+      "path": "/images/tort-whole-@x2.webp",
+      "alt": "Цілий торт"
+    },
+    "imageBack": {
+      "path": "/images/tort-sliced-@x2.webp",
+      "alt": "Нарізаний торт"
+    }
   }
 }
