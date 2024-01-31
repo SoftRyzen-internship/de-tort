@@ -17,8 +17,8 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({
   const normalizedText = text.slice(0, MAX_SYMBOLS);
 
   return (
-    <div className="bg-white md:w-[336px] xl:w-[384px] shadow-3xl-a font-fixel rounded-3xl border border-color-option-accent w-full text-base leading-normal">
-      <h3 className="py-6 flex-center gap-2 border-b border-color-option-accent text-[24px]">
+    <div className="bg-white md:w-[336px] xl:w-[384px] shadow-3xl-a font-fixel rounded-3xl border border-color-accent-primary w-full text-base leading-normal">
+      <h3 className="py-6 flex-center gap-2 border-b border-color-accent-primary text-[24px]">
         <span className="text-color-option-seven ">@</span>
         <span>{author}</span>
       </h3>

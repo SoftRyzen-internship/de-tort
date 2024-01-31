@@ -97,7 +97,7 @@
   },
   "reviews": {
     "imageHeart": {
-      "path": "/images/heart-@2x.webp",
+      "path": "/images/heart-512.png",
       "alt": "Серце"
     }
   }

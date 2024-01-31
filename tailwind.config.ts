@@ -67,7 +67,6 @@ const config: Config = {
           eight: "#626262",
           nine: "#683DD2",
           ten: "#5A4BFF",
-          accent: "#CC1B73",
         },
       },
       background: {
