@@ -103,8 +103,6 @@ is a list of more common components and their API.
 | `date`   | `undefined` | required, review date        |
 | `text`   | `undefined` | required, review text        |
 
-=======
-
 - #### Logo
 
 | Prop        | Default | Description                                   |
@@ -129,6 +127,14 @@ is a list of more common components and their API.
 | Prop      | Default     | Description                                                                  |
 | --------- | ----------- | ---------------------------------------------------------------------------- |
 | `onClick` | `undefined` | required, `:void` - click-handler for additional effects on navigation links |
+
+- #### AccordionItem
+
+| Prop           | Default     | Description                                                |
+| -------------- | ----------- | ---------------------------------------------------------- |
+| `item`         | `undefined` | required, item should includes - id, question and answer   |
+| `isOpen`       | `undefined` | required, `boolean` - current state of element             |
+| `handleToggle` | `undefined` | required, `:void` - click-handler for toggle AccordionItem |
 
 ### Technology stack
 
