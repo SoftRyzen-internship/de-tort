@@ -88,16 +88,20 @@ is a list of more common components and their API.
 | `hero`      | `false`     | to render `h1` element instead of default `h2` with appropriate styles |
 | `className` | `''`        | add custom or additional css class you'd need                          |
 
-<<<<<<< HEAD
-
 - #### ContactsList
 
-| Prop        | Default  | Description                                           |
-| ----------- | -------- | ----------------------------------------------------- |
-| `variant`   | `header` | required, choose between `header` and `footer` styles |
-| `className` | `''`     | add custom or additional css class you'd need         |
+| Prop        | Default  | Description                                                     |
+| ----------- | -------- | --------------------------------------------------------------- |
+| `variant`   | `header` | required, choose between `header`, `footer` and `phone` version |
+| `className` | `''`     | add custom or additional css class you'd need                   |
 
-=======
+- #### ReviewCard
+
+| Prop     | Default     | Description                  |
+| -------- | ----------- | ---------------------------- |
+| `author` | `undefined` | required, review author name |
+| `date`   | `undefined` | required, review date        |
+| `text`   | `undefined` | required, review text        |
 
 - #### AboutCard
 
@@ -133,6 +137,20 @@ is a list of more common components and their API.
 | Prop      | Default     | Description                                                                  |
 | --------- | ----------- | ---------------------------------------------------------------------------- |
 | `onClick` | `undefined` | required, `:void` - click-handler for additional effects on navigation links |
+
+- #### MapLink
+
+| Prop        | Default | Description                                   |
+| ----------- | ------- | --------------------------------------------- |
+| `className` | `''`    | add custom or additional css class you'd need |
+
+- #### AccordionItem
+
+| Prop           | Default     | Description                                                |
+| -------------- | ----------- | ---------------------------------------------------------- |
+| `item`         | `undefined` | required, item should includes - id, question and answer   |
+| `isOpen`       | `undefined` | required, `boolean` - current state of element             |
+| `handleToggle` | `undefined` | required, `:void` - click-handler for toggle AccordionItem |
 
 ### Technology stack
 
