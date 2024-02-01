@@ -21,7 +21,7 @@ export default async function Home() {
       </div>
 
       {/* <ContactLinks variant="footer" /> */}
-      <Example />
+      {/* <Example /> */}
       {/* <SectionTitleExamples /> */}
       {/* <Logo /> */}
     </>
