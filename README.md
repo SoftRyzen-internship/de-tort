@@ -103,6 +103,16 @@ is a list of more common components and their API.
 | `date`   | `undefined` | required, review date        |
 | `text`   | `undefined` | required, review text        |
 
+- #### AboutCard
+
+| Prop     | Default     | Description                                        |
+| -------- | ----------- | -------------------------------------------------- |
+| `icon`   | `undefined` | required, icon Component to show in the card       |
+| `text`   | `undefined` | required, text for the card                        |
+| `isEven` | `undefined` | required, true if current curd is even is the list |
+
+=======
+
 - #### Logo
 
 | Prop        | Default | Description                                   |

@@ -1,15 +1,13 @@
 import { Hero } from "@/sections/Hero";
 import { Contacts } from "@/sections/Contacts";
-import { Accordion } from "@/components/base/Accordion";
+import { About } from "@/sections/About";
 
 export default async function Home() {
   return (
     <>
       <Hero />
+      <About />
       <Contacts />
-      <div className="container">
-        <Accordion />
-      </div>
     </>
   );
 }
