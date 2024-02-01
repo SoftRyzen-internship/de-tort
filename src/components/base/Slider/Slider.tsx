@@ -35,7 +35,7 @@ export const Slider: React.FC<SliderProps> = ({
           nextEl: `.button-next-${section}`,
           prevEl: `.button-prev-${section}`,
         }}
-        slidesPerView={3}
+        slidesPerView={1}
         updateOnWindowResize={true}
         lazyPreloadPrevNext={1}
         loop={true}
@@ -43,7 +43,6 @@ export const Slider: React.FC<SliderProps> = ({
         spaceBetween={24}
         grabCursor={true}
         initialSlide={1}
-        centeredSlides={true}
         breakpoints={getSliderConfigs(section)}
         className={cn("w-full ", customClass)}
       >
@@ -61,7 +60,6 @@ export const Slider: React.FC<SliderProps> = ({
               height={320}
               src={slide}
               alt={"some"}
-              loading="lazy"
               // sizes="(max-width: 767px) 320px, (max-width: 1279px) 336px, 384px"
               className="w-full h-auto object-cover"
             />

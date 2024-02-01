@@ -9,7 +9,7 @@ import { SliderNavigationProps } from "./types";
 
 export const SliderNav: React.FC<SliderNavigationProps> = ({
   className,
-  section,
+  section = "top",
 }) => {
   const { SliderButtonsAriaLabel } = data;
 
