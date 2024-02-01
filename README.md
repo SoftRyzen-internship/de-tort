@@ -142,6 +142,14 @@ is a list of more common components and their API.
 | `isOpen`       | `undefined` | required, `boolean` - current state of element             |
 | `handleToggle` | `undefined` | required, `:void` - click-handler for toggle AccordionItem |
 
+- #### InfoButton
+
+| Prop        | Default     | Description                                   |
+| ----------- | ----------- | --------------------------------------------- |
+| `label`     | `undefined` | required, button inner text-content           |
+| `data`      | `undefined` | required, data for modal window inside button |
+| `className` | `''`        | add custom or additional css class you'd need |
+
 ### Technology stack
 
 - **Main technologies**:

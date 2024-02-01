@@ -1,5 +1,12 @@
 {
   "companyName": "De Tort",
+  "soft_ryzen": {
+    "label": {
+      "pre": "Made by ",
+      "name": "SoftRyzen"
+    },
+    "href": "https://softryzen.com/"
+  },
   "menu": {
     "buttons": {
       "open": "Меню",
