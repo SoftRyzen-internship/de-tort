@@ -20,21 +20,22 @@ export const About: React.FC = () => {
 
   return (
     <section className="section">
-      <div className="container">
-        <SectionTitle text={title} />
-        <p className="mb-6 font-fixel">{description}</p>
-        <ul className="mb-10 flex flex-col gap-6">
-          {values.map((value, index) => (
-            <li key={index} className="">
-              <h3 className="font-unbounded mb-3 font-semibold">
-                {value.title}
-              </h3>
-              <p className="font-fixel">{value.text}</p>
-            </li>
-          ))}
-        </ul>
-
-        <div className="flex flex-col gap-4">
+      <div className="container text-base md:text-xl text-color-text-secondary whitespace-pre-line leading-normal md:flex md:gap-[34px] xl:gap-[240px]">
+        <div>
+          <SectionTitle text={title} className="mb-4" />
+          <p className="mb-6 font-fixel md:mb-8 xl:mb-12">{description}</p>
+          <ul className="smOnly:mb-10 flex flex-col gap-6 md:gap-8 xl:gap-10 xl:max-w-[416px]">
+            {values.map((value, index) => (
+              <li key={index}>
+                <h3 className="font-unbounded mb-3 xl:mb-4 font-semibold text-[20px] xl:text-[24px] leading-normal">
+                  {value.title}
+                </h3>
+                <p className="font-fixel">{value.text}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <ul className="flex flex-col gap-4">
           {features.map((text, index) => {
             const IconComponent = icons[index];
             const color = index % 2 === 0 ? BG_FEATURES_EVEN : BG_FEATURES_ODD;
@@ -47,7 +48,7 @@ export const About: React.FC = () => {
               />
             );
           })}
-        </div>
+        </ul>
       </div>
     </section>
   );
