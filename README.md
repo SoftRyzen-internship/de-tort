@@ -90,10 +90,10 @@ is a list of more common components and their API.
 
 - #### ContactsList
 
-| Prop        | Default  | Description                                           |
-| ----------- | -------- | ----------------------------------------------------- |
-| `variant`   | `header` | required, choose between `header` and `footer` styles |
-| `className` | `''`     | add custom or additional css class you'd need         |
+| Prop        | Default  | Description                                                     |
+| ----------- | -------- | --------------------------------------------------------------- |
+| `variant`   | `header` | required, choose between `header`, `footer` and `phone` version |
+| `className` | `''`     | add custom or additional css class you'd need                   |
 
 - #### ReviewCard
 
@@ -127,6 +127,12 @@ is a list of more common components and their API.
 | Prop      | Default     | Description                                                                  |
 | --------- | ----------- | ---------------------------------------------------------------------------- |
 | `onClick` | `undefined` | required, `:void` - click-handler for additional effects on navigation links |
+
+- #### MapLink
+
+| Prop        | Default | Description                                   |
+| ----------- | ------- | --------------------------------------------- |
+| `className` | `''`    | add custom or additional css class you'd need |
 
 - #### AccordionItem
 
