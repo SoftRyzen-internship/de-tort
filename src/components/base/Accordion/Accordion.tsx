@@ -6,20 +6,21 @@ import { AccordionItem } from "@/components/ui/AccordionItem";
 import qa from "@/data/qa.json";
 
 export const Accordion: React.FC = () => {
-  const [openIndex, setOpenIndex] = useState<number>(0);
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  const handleToggle = (id: number): void => {
-    setOpenIndex(id === openIndex ? -1 : id);
+  const handleAccordionClick = (idx: number) => {
+    if (idx !== activeIndex) {
+      setActiveIndex(idx);
+    }
   };
-
   return (
-    <ul className="bg-color-bg-primary">
-      {qa.accordion.map((item, index) => (
+    <ul className="">
+      {qa.accordion.map((item, idx) => (
         <AccordionItem
           item={item}
-          key={index}
-          isOpen={item.id === openIndex}
-          handleToggle={() => handleToggle(item.id)}
+          key={idx}
+          isActive={idx === activeIndex}
+          setActive={() => handleAccordionClick(idx)}
         />
       ))}
     </ul>

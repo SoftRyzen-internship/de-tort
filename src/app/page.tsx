@@ -7,7 +7,7 @@ export default async function Home() {
   return (
     <>
       <Hero />
-      <div className="container">
+      <div className="container bg-color-bg-primary">
         <Accordion />
       </div>
 
