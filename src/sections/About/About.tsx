@@ -11,15 +11,12 @@ import GiftIcon from "~/icons/gift.svg";
 import DropIcon from "~/icons/drop.svg";
 import LightningIcon from "~/icons/lightning.svg";
 
-const BG_FEATURES_EVEN = "#FFF4CB";
-const BG_FEATURES_ODD = "#F5D9E2";
-
 export const About: React.FC = () => {
   const { values, features, title, description } = data.about;
   const icons = [HeartIcon, StarIcon, GiftIcon, DropIcon, LightningIcon];
 
   return (
-    <section className="section">
+    <section className="section bg-color-bg-primary">
       <div className="container text-base md:text-xl text-color-text-secondary whitespace-pre-line leading-normal md:flex md:gap-[34px] xl:gap-[240px]">
         <div>
           <SectionTitle text={title} className="mb-4" />
@@ -38,13 +35,13 @@ export const About: React.FC = () => {
         <ul className="flex flex-col gap-4">
           {features.map((text, index) => {
             const IconComponent = icons[index];
-            const color = index % 2 === 0 ? BG_FEATURES_EVEN : BG_FEATURES_ODD;
+            const isEven = index % 2 === 0;
             return (
               <AboutCard
                 key={index}
                 icon={<IconComponent />}
                 text={text}
-                color={color}
+                isEven={isEven}
               />
             );
           })}

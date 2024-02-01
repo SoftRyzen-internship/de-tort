@@ -1,5 +1,6 @@
 import React from "react";
 import { ReviewCard } from "./ui/ReviewCard";
+import { Logo } from "./ui/Logo";
 
 export const Example: React.FC = () => {
   const text = `Доброго ранку,
@@ -13,8 +14,7 @@ export const Example: React.FC = () => {
 
   return (
     <div className="container bg-red-100 p-10">
-      <h2>Example ReviewCard component</h2>
-      <ReviewCard author={author} text={text} date={date} />
+      <Logo />
     </div>
   );
 };
