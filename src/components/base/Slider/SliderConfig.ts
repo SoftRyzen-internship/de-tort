@@ -11,13 +11,18 @@ export const getSliderConfigs = (section: TSections) => {
     case "advantages": {
       return {
         [dimensions.sm]: {
-          loop: false,
+          loop: true,
+          slidesPerView: 1,
+          watchSlidesProgress: false,
+        },
+        [dimensions.sm]: {
+          slidesPerView: 2,
+          spaceBetween: 32,
         },
         [dimensions.lg]: {
-          slidesPerView: 4,
-          spaceBetween: 12,
-          loopedSlides: 4,
-          loop: true,
+          loop: false,
+          slidesPerView: 3,
+          watchOverFlow: true,
         },
       };
     }
@@ -25,10 +30,14 @@ export const getSliderConfigs = (section: TSections) => {
       return {
         [dimensions.sm]: {
           slidesPerView: 1,
-          loopedSlides: 4,
+          loop: false,
         },
         [dimensions.md]: {
-          loop: false,
+          slidesPerView: 2,
+          spaceBetween: 32,
+        },
+        [dimensions.lg]: {
+          slidesPerView: 3,
         },
       };
     }
@@ -39,10 +48,10 @@ export const getSliderConfigs = (section: TSections) => {
           loopedSlides: 3,
         },
         [dimensions.md]: {
-          slidesPerView: 1,
+          slidesPerView: 2,
         },
         [dimensions.lg]: {
-          slidesPerView: 2,
+          slidesPerView: 3,
           spaceBetween: 16,
           watchSlidesProgress: true,
         },

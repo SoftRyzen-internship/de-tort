@@ -11,7 +11,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperClass } from "swiper/types";
 
 import { cn } from "@/utils/helpers/cn";
-// import { getSliderOptions } from "@/utils/getSliderOptions";
+import { getSliderConfigs } from "./SliderConfig";
 
 import { SliderNav } from "../SliderNav/SliderNav";
 
@@ -26,24 +26,9 @@ import { SliderProps } from "./types";
 
 const defaultSlides = [img1, img2, img3, img4];
 
-const breakpoints = {
-  360: {
-    slidesPerView: 1,
-  },
-
-  768: {
-    slidesPerView: 2,
-    spaceBetween: 16,
-  },
-  1280: {
-    slidesPerView: 3,
-    spaceBetween: 24,
-  },
-};
-
 export const Slider: FC<SliderProps> = ({
   slides = defaultSlides,
-  section = "services",
+  section = "top",
 }) => {
   const [swiperRef, setSwiperRef] = useState<SwiperClass>();
 
@@ -55,25 +40,21 @@ export const Slider: FC<SliderProps> = ({
     swiperRef?.slideNext();
   }, [swiperRef]);
 
+  console.log(getSliderConfigs("top"));
+
   return (
     <>
       <Swiper
         wrapperTag="ul"
         onSwiper={setSwiperRef}
-        // id={`swiper-${section}`}
         slidesPerView={3}
-        // slidesPerView={"auto"}
         loop={true}
         speed={500}
         spaceBetween={24}
         grabCursor={true}
         centeredSlides={true}
-        //
-        watchSlidesProgress={true}
-        //
-        // breakpoints={getSliderOptions(section)}
-        breakpoints={breakpoints}
-        className={"!mb-6 w-full !h-[424px] md:!h-[460px] lg:!h-[636px]"}
+        breakpoints={getSliderConfigs(section)}
+        className={"w-full "}
       >
         {slides.map((slide, idx: number) => (
           <SwiperSlide
@@ -85,13 +66,13 @@ export const Slider: FC<SliderProps> = ({
             )}
           >
             <Image
-              width={300}
-              height={229}
+              width={320}
+              height={320}
               src={slide}
               alt={"some"}
               loading="lazy"
-              sizes="(max-width: 767px) 280px, (max-width: 1279px) 400px, 600px"
-              className="w-[280px] h-[187px] tablet:w-[415px] tablet:h-[294px] desk:w-[600px] desk:h-[429px] object-cover"
+              sizes="(max-width: 767px) 320px, (max-width: 1279px) 336px, 384px"
+              className="w-[320px] h-[320px] tablet:w-[415px] tablet:h-[294px] desk:w-[600px] desk:h-[429px] object-cover"
             />
             <div className="swiper-lazy-preloader absolute top-2/4 left-2/4" />
           </SwiperSlide>
