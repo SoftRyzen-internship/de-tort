@@ -15,11 +15,10 @@ export default async function Home() {
     <>
       <Hero />
       <Contacts />
-      
-      <div className="container">
+
+      {/* <div className="container">
         <Accordion />
-      </div>
-      
+      </div> */}
 
       {/* <ContactLinks variant="footer" /> */}
       {/* <Example /> */}
