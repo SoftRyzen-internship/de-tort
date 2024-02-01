@@ -4,6 +4,13 @@
     "path": "/images/logo.webp",
     "alt": "De tort logo"
   },
+  "soft_ryzen": {
+    "label": {
+      "pre": "Made by ",
+      "name": "SoftRyzen"
+    },
+    "href": "https://softryzen.com/"
+  },
   "menu": {
     "buttons": {
       "open": "Меню",

@@ -13,7 +13,7 @@ export const Logo: React.FC<TLogo> = ({ className = "" }) => {
     <a
       href="/"
       className={cn(
-        "inline-block transition-transform focus:scale-110 hover:scale-110",
+        "inline-block transition-transform focus:scale-110 hover:scale-110 relative z-10",
         className,
       )}
       aria-label={companyName}
