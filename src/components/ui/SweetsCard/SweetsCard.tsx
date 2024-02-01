@@ -24,7 +24,7 @@ export const SweetsCard: React.FC<SweetsCardProps> = ({
         alt={bgAlt}
         width={384}
         height={412}
-        className="object-cover w-full h-full hover:scale-110 transition-transform"
+        className="object-cover w-full h-full hover:scale-110 focus:scale-110 transition-transform"
       />
       <h3
         style={nameStyle}
