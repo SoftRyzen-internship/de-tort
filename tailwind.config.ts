@@ -55,7 +55,6 @@ const config: Config = {
         "color-text": {
           primary: "#393939",
           secondary: "#383838",
-          black: "#000000",
         },
         "color-option": {
           first: "#A33F06",

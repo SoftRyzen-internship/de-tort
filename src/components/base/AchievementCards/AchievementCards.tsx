@@ -1,4 +1,4 @@
-import { AchievementCard } from "@/components/ui/AchievementCard/AchievementCard";
+import { AchievementCard } from "@/components/ui/AchievementCard";
 
 import json from "@/data/achievement.json";
 
