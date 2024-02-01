@@ -31,7 +31,7 @@ export const Footer: React.FC = () => {
             href={soft_ryzen.href}
             target="_blank"
             rel="noopener noreferrer nofollow"
-            className="font-fixel text-color-text-secondary text-[16px] leading-[1.3] hover:text-color-accent-primary focus-visible:text-color-accent-primary transition-all"
+            className="font-fixel text-color-text-secondary text-[16px] leading-[1.3] xl:leading-[1.4] hover:text-color-accent-primary focus-visible:text-color-accent-primary transition-all"
           >
             <span className="font-light">{soft_ryzen.label.pre}</span>
             <span>{soft_ryzen.label.name}</span>
