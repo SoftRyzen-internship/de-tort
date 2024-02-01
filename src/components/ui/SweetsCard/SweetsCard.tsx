@@ -15,23 +15,25 @@ export const SweetsCard: React.FC<SweetsCardProps> = ({
   };
 
   return (
-    <Link
-      href={targetHref}
-      className="group block h-[320px] md:w-[336px] md:h-[364px] xl:w-[384px] xl:h-[412px] rounded-3xl overflow-hidden w-full text-[28px] leading-normal relative"
-    >
-      <Image
-        src={bgSrc}
-        alt={bgAlt}
-        width={384}
-        height={412}
-        className="object-cover w-full h-full group-hover:scale-110 group-focus:scale-110 transition-transform"
-      />
-      <h3
-        style={nameStyle}
-        className="font-unbounded uppercase font-bold text-[28px] absolute top-10 left-1/2 -translate-x-1/2"
+    <li>
+      <Link
+        href={targetHref}
+        className="group block h-[320px] md:h-[364px] xl:h-[412px] rounded-3xl overflow-hidden w-full text-[28px] leading-normal relative"
       >
-        {name}
-      </h3>
-    </Link>
+        <Image
+          src={bgSrc}
+          alt={bgAlt}
+          width={384}
+          height={412}
+          className="object-cover w-full h-full group-hover:scale-110 group-focus:scale-110 transition-transform"
+        />
+        <h3
+          style={nameStyle}
+          className="text-center w-full font-unbounded uppercase font-bold text-[28px] absolute top-10 left-1/2 -translate-x-1/2"
+        >
+          {name}
+        </h3>
+      </Link>
+    </li>
   );
 };
