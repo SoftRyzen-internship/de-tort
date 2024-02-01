@@ -1,6 +1,7 @@
 import { Hero } from "@/sections/Hero";
 import { Contacts } from "@/sections/Contacts";
 import { Accordion } from "@/components/base/Accordion";
+import { ToppingCard } from "@/components/ui/ToppingCard";
 
 export default async function Home() {
   return (
@@ -10,6 +11,7 @@ export default async function Home() {
       <div className="container">
         <Accordion />
       </div>
+      <ToppingCard />
     </>
   );
 }
