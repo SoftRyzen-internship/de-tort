@@ -14,7 +14,7 @@ export const SliderNav: React.FC<SliderNavigationProps> = ({
   const { SliderButtonsAriaLabel } = data;
 
   return (
-    <ul className="flex-center w-fit h-fit gap-2 smOnly:mt-6 md:absolute md:right-0 md:top-[-40px] lg:top-[-60px]">
+    <ul className="flex-center smOnly:mx-auto w-fit h-fit gap-2 smOnly:mt-6 md:absolute md:right-0 md:top-[-40px] lg:top-[-60px]">
       <li key="prev">
         <button
           className={cn(

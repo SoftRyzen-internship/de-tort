@@ -10,7 +10,7 @@ import {
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperClass } from "swiper/types";
 
-import { cn } from "@/utils/helpers/cn";
+// import { cn } from "@/utils/helpers/cn";
 import { getSliderConfigs } from "./SliderConfig";
 
 import { SliderNav } from "../SliderNav/SliderNav";
@@ -40,8 +40,6 @@ export const Slider: FC<SliderProps> = ({
     swiperRef?.slideNext();
   }, [swiperRef]);
 
-  console.log(getSliderConfigs("top"));
-
   return (
     <>
       <Swiper
@@ -60,10 +58,7 @@ export const Slider: FC<SliderProps> = ({
           <SwiperSlide
             key={idx}
             tag="li"
-            className={cn(
-              "overflow-hidden rounded-3xl relative ",
-              `${section}-slide`,
-            )}
+            className={"overflow-hidden rounded-3xl relative !w-[320px]"}
           >
             <Image
               width={320}
