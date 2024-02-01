@@ -9,7 +9,8 @@ export const Example: React.FC = () => {
       <SweetsCard
         name="Печиво"
         nameColor="#A33F06"
-        bgSrc="/images/cookies-@x2.jpg"
+        bgSrc="/images/pasta-@x2.jpg"
+        // bgSrc="/images/cookies-@x2.jpg"
         bgAlt="Печиво з горіхами"
         targetHref="/"
       />
