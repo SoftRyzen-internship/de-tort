@@ -4,15 +4,16 @@ import Image from "next/image";
 import {
   FC,
   // ReactNode,
-  // useCallback, useState
+  useCallback,
+  useState,
 } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-// import { Swiper as SwiperClass } from "swiper/types";
+import { Swiper as SwiperClass } from "swiper/types";
 
 import { cn } from "@/utils/helpers/cn";
 // import { getSliderOptions } from "@/utils/getSliderOptions";
 
-// import SliderNavigation from "@/components/SliderNavigation";
+import { SliderNav } from "../SliderNav/SliderNav";
 
 import "swiper/css";
 
@@ -25,55 +26,78 @@ import { SliderProps } from "./types";
 
 const defaultSlides = [img1, img2, img3, img4];
 
+const breakpoints = {
+  360: {
+    slidesPerView: 1,
+  },
+
+  768: {
+    slidesPerView: 2,
+    spaceBetween: 16,
+  },
+  1280: {
+    slidesPerView: 3,
+    spaceBetween: 24,
+  },
+};
+
 export const Slider: FC<SliderProps> = ({
   slides = defaultSlides,
   section = "services",
 }) => {
-  //   const [swiperRef, setSwiperRef] = useState<SwiperClass>();
+  const [swiperRef, setSwiperRef] = useState<SwiperClass>();
 
-  //   const handlePrev = useCallback(() => {
-  //     swiperRef?.slidePrev();
-  //   }, [swiperRef]);
+  const handlePrev = useCallback(() => {
+    swiperRef?.slidePrev();
+  }, [swiperRef]);
 
-  //   const handleNext = useCallback(() => {
-  //     swiperRef?.slideNext();
-  //   }, [swiperRef]);
+  const handleNext = useCallback(() => {
+    swiperRef?.slideNext();
+  }, [swiperRef]);
 
   return (
     <>
       <Swiper
         wrapperTag="ul"
-        // onSwiper={setSwiperRef}
+        onSwiper={setSwiperRef}
         // id={`swiper-${section}`}
-        slidesPerView={1}
+        slidesPerView={3}
+        // slidesPerView={"auto"}
         loop={true}
         speed={500}
         spaceBetween={24}
+        grabCursor={true}
+        centeredSlides={true}
+        //
+        watchSlidesProgress={true}
+        //
         // breakpoints={getSliderOptions(section)}
-        className={"!mb-6  w-full !h-[424px] md:!h-[460px] lg:!h-[636px]"}
+        breakpoints={breakpoints}
+        className={"!mb-6 w-full !h-[424px] md:!h-[460px] lg:!h-[636px]"}
       >
         {slides.map((slide, idx: number) => (
           <SwiperSlide
             key={idx}
             tag="li"
             className={cn(
-              "overflow-hidden rounded-3xl relative cursor-grab",
+              "overflow-hidden rounded-3xl relative ",
               `${section}-slide`,
             )}
           >
             <Image
-              width={600}
-              height={429}
+              width={300}
+              height={229}
               src={slide}
               alt={"some"}
               loading="lazy"
               sizes="(max-width: 767px) 280px, (max-width: 1279px) 400px, 600px"
               className="w-[280px] h-[187px] tablet:w-[415px] tablet:h-[294px] desk:w-[600px] desk:h-[429px] object-cover"
             />
+            <div className="swiper-lazy-preloader absolute top-2/4 left-2/4" />
           </SwiperSlide>
         ))}
       </Swiper>
-      {/* <SliderNavigation onNext={handleNext} onPrev={handlePrev} /> */}
+      <SliderNav onNext={handleNext} onPrev={handlePrev} />
     </>
   );
 };

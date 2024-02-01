@@ -1,4 +1,5 @@
 {
+  "companyName": "De Tort",
   "menu": {
     "buttons": {
       "open": "Меню",
@@ -80,5 +81,9 @@
     "instagramLink": "https://www.instagram.com/de_tort.ua/",
     "instagramUser": "@de_tort.ua",
     "instagramLinkLabel": "Посилання на сторінку De Tort в інстаграмі"
+  },
+  "SliderButtonsAriaLabel": {
+    "left": "Перейти до попереднього слайду",
+    "right": "Перейти до наступного слайду"
   }
 }

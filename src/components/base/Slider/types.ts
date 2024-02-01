@@ -1,6 +1,4 @@
-// import { ReactNode } from "react";
-
-export type TSections = "advantages" | "feedback" | "gallery" | "services";
+export type TSections = "advantages" | "top" | "feedback";
 
 export interface SliderProps {
   slides?: string[];
