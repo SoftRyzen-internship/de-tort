@@ -1,10 +1,10 @@
 import Image from "next/image";
 
-import { TLogo } from "./types";
-
 import { cn } from "@/utils/helpers";
 
 import content from "@/data/common.json";
+
+import { TLogo } from "./types";
 
 export const Logo: React.FC<TLogo> = ({ className = "" }) => {
   const { companyName, logo } = content;
