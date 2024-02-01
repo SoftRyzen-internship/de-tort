@@ -67,8 +67,6 @@ const config: Config = {
           eight: "#626262",
           nine: "#683DD2",
           ten: "#5A4BFF",
-          eleven: "#FFF4CB",
-          twelve: "#F5D9E2",
         },
       },
       background: {

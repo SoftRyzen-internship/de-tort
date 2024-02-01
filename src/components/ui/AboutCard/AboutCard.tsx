@@ -6,7 +6,7 @@ export const AboutCard: React.FC<AboutCardProps> = ({ icon, text, isEven }) => {
     <li
       className={cn(
         "font-unbounded flex-start rounded-3xl px-4 xl:px-10 md:pl-6 md:pr-[18px] py-5 xl:py-8 gap-3 md:gap-4 md:w-[334px] xl:w-[488px]",
-        isEven ? "bg-color-option-eleven" : "bg-color-option-twelve",
+        isEven ? "bg-color-bg-extraAccent" : "bg-color-bg-accent",
       )}
     >
       <div className="size-8 stroke-color-accent-primary shrink-0"> {icon}</div>
