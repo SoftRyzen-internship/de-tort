@@ -70,6 +70,78 @@ is a list of more common components and their API.
 | `text`      | `undefined` | required, inner text content                  |
 | `className` | `''`        | add custom or additional css class you'd need |
 
+- #### LinkButton
+
+| Prop                                                  | Default     | Description                                    |
+| ----------------------------------------------------- | ----------- | ---------------------------------------------- |
+| `label`                                               | `undefined` | required, inner button text content            |
+| `secondaryLabel`                                      | `undefined` | optional, inner button additional text content |
+| `href`                                                | `undefined` | required, The path or URL to navigate to.      |
+| `className`                                           | `''`        | add custom or additional css class you'd need  |
+| can also take any NextJS Link component standart prop |
+
+- #### SectionTitle
+
+| Prop        | Default     | Description                                                            |
+| ----------- | ----------- | ---------------------------------------------------------------------- |
+| `text`      | `undefined` | required, inner text content                                           |
+| `hero`      | `false`     | to render `h1` element instead of default `h2` with appropriate styles |
+| `className` | `''`        | add custom or additional css class you'd need                          |
+
+- #### ContactsList
+
+| Prop        | Default  | Description                                                     |
+| ----------- | -------- | --------------------------------------------------------------- |
+| `variant`   | `header` | required, choose between `header`, `footer` and `phone` version |
+| `className` | `''`     | add custom or additional css class you'd need                   |
+
+- #### ReviewCard
+
+| Prop     | Default     | Description                  |
+| -------- | ----------- | ---------------------------- |
+| `author` | `undefined` | required, review author name |
+| `date`   | `undefined` | required, review date        |
+| `text`   | `undefined` | required, review text        |
+
+- #### Logo
+
+| Prop        | Default | Description                                   |
+| ----------- | ------- | --------------------------------------------- |
+| `className` | `''`    | add custom or additional css class you'd need |
+
+- #### MenuButton
+
+| Prop        | Default | Description                                   |
+| ----------- | ------- | --------------------------------------------- |
+| `className` | `''`    | add custom or additional css class you'd need |
+
+- #### BurgerMenu
+
+| Prop      | Default     | Description                                       |
+| --------- | ----------- | ------------------------------------------------- |
+| `isOpen`  | `undefined` | required, `boolean` - current state of element    |
+| `onClose` | `undefined` | required, `:void` - event-handler on closing menu |
+
+- #### MainNav
+
+| Prop      | Default     | Description                                                                  |
+| --------- | ----------- | ---------------------------------------------------------------------------- |
+| `onClick` | `undefined` | required, `:void` - click-handler for additional effects on navigation links |
+
+- #### MapLink
+
+| Prop        | Default | Description                                   |
+| ----------- | ------- | --------------------------------------------- |
+| `className` | `''`    | add custom or additional css class you'd need |
+
+- #### AccordionItem
+
+| Prop           | Default     | Description                                                |
+| -------------- | ----------- | ---------------------------------------------------------- |
+| `item`         | `undefined` | required, item should includes - id, question and answer   |
+| `isOpen`       | `undefined` | required, `boolean` - current state of element             |
+| `handleToggle` | `undefined` | required, `:void` - click-handler for toggle AccordionItem |
+
 ### Technology stack
 
 - **Main technologies**:

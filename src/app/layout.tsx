@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Unbounded } from "next/font/google";
 import localFont from "next/font/local";
 
+import { Header } from "@/layout/Header";
+
 import "./globals.css";
 
 const unbounded = Unbounded({
@@ -50,6 +52,8 @@ export default function RootLayout({
   return (
     <html lang="uk">
       <body className={`${fixelDisplay.variable} ${unbounded.className}`}>
+        <Header />
+
         <main>{children}</main>
       </body>
     </html>

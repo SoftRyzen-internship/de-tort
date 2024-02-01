@@ -16,6 +16,7 @@ const config: Config = {
       md: "768px",
       xl: "1280px",
 
+      xsOnly: { max: "479.98px" },
       smOnly: { max: "767.98px" },
       mdOnly: { min: "768px", max: "1279.98px" },
       notXl: { max: "1279.98px" },
@@ -32,6 +33,11 @@ const config: Config = {
           xl: "2rem",
         },
       },
+      boxShadow: {
+        "2xl": "-4px 4px 0px 0px #CC1B73",
+        "3xl": "-7px 7px 0px 0px #CC1B73",
+        "3xl-a": "-7px 7px 0px 0px #F6B5CA",
+      },
       // COLORS
       colors: {
         "color-bg": {
@@ -39,7 +45,9 @@ const config: Config = {
           primary: "#FFF8F2",
           hero: "#FFCFD3",
           accent: "#F5D9E2",
+          grey: "#EFEFEF",
           extraAccent: "#FFF4CB",
+          backdrop: "rgba(0, 0, 0, 0.66)",
         },
         "color-accent": {
           primary: "#CC1B73",
@@ -55,12 +63,25 @@ const config: Config = {
           fourth: "#FEEE9F",
           fifth: "#197CCB",
           sixth: "#A9003A",
+          seven: "#5B4BFF",
+          eight: "#626262",
+          nine: "#683DD2",
+          ten: "#5A4BFF",
         },
+      },
+      background: {
+        gradient: "linear-gradient(180deg, #683DD2 0%, #5A4BFF 100%)",
+      },
+      border: {
+        color: "linear-gradient(180deg, #683DD2 0%, #5A4BFF 100%)",
       },
       // FONTS
       fontFamily: {
         unbounded: ["var(--font-unbounded)"],
         fixel: ["var(--font-fixelDisplay)"],
+      },
+      lineHeight: {
+        normal: "1.4",
       },
       // TRANSITION
       transitionDuration: {

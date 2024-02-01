@@ -1,0 +1,104 @@
+{
+  "companyName": "De Tort",
+  "menu": {
+    "buttons": {
+      "open": "Меню",
+      "close": "Закрити"
+    },
+    "navigation": {
+      "dynamicPages": [
+        {
+          "label": "Торти",
+          "slug": "slug-1",
+          "icon": {
+            "path": "/icons/tort.svg",
+            "alt": "Мінімалістична іконка з зображенням торта"
+          }
+        },
+        {
+          "label": "Капкейки",
+          "slug": "slug-2",
+          "icon": {
+            "path": "/icons/cupcake.svg",
+            "alt": "Мінімалістична іконка з зображенням капкейка"
+          }
+        },
+        {
+          "label": "Чизкейки",
+          "slug": "slug-3",
+          "icon": {
+            "path": "/icons/cheesecake.svg",
+            "alt": "Мінімалістична іконка з зображенням чизкейка"
+          }
+        },
+        {
+          "label": "Солодкі набори",
+          "slug": "slug-4",
+          "icon": {
+            "path": "/icons/kit.svg",
+            "alt": "Мінімалістична іконка з зображенням подарункового пакунку"
+          }
+        },
+        {
+          "label": "Печиво",
+          "slug": "slug-5",
+          "icon": {
+            "path": "/icons/cookie.svg",
+            "alt": "Мінімалістична іконка з зображенням печива"
+          }
+        },
+        {
+          "label": "Макарон",
+          "slug": "slug-6",
+          "icon": {
+            "path": "/icons/pasta.svg",
+            "alt": "Мінімалістична іконка з зображенням тістечка-макарон"
+          }
+        },
+        {
+          "label": "Кейк-попси",
+          "slug": "slug-7",
+          "icon": {
+            "path": "/icons/cake-pops.svg",
+            "alt": "Мінімалістична іконка з зображенням кейк-попса"
+          }
+        }
+      ],
+      "staticPages": [
+        {
+          "label": "Про нас",
+          "slug": "slug-8"
+        },
+        {
+          "label": "Для кав’ярень",
+          "slug": "slug-9"
+        }
+      ]
+    }
+  },
+  "contacts": {
+    "phone": "+38 050 719-5156 ",
+    "instagramLink": "https://www.instagram.com/de_tort.ua/",
+    "instagramUser": "@de_tort.ua",
+    "instagramLinkLabel": "Посилання на сторінку De Tort в інстаграмі"
+  },
+  "hero": {
+    "details": "Cпеціалізується на виробництві тортиків та інших смаколиків по індивідуальним замовленням! ",
+    "title": "Онлайн-кондитерська",
+    "buttonLabel": "Каталог тортів",
+    "imageFace": {
+      "path": "/images/tort-whole-@x2.webp",
+      "alt": "Цілий торт"
+    },
+    "imageBack": {
+      "path": "/images/tort-sliced-@x2.webp",
+      "alt": "Нарізаний торт"
+    }
+  },
+  "reviews": {
+    "imageHeart": {
+      "path": "/images/heart-512.png",
+      "alt": "Серце"
+    }
+  }
+}
