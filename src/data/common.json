@@ -77,7 +77,7 @@
     }
   },
   "contacts": {
-    "phone": "+38 050-719-51-56 ",
+    "phone": "+38 050 719-5156 ",
     "instagramLink": "https://www.instagram.com/de_tort.ua/",
     "instagramUser": "@de_tort.ua",
     "instagramLinkLabel": "Посилання на сторінку De Tort в інстаграмі"
@@ -85,5 +85,24 @@
   "SliderButtonsAriaLabel": {
     "left": "Перейти до попереднього слайду",
     "right": "Перейти до наступного слайду"
+  },
+  "hero": {
+    "details": "Cпеціалізується на виробництві тортиків та інших смаколиків по індивідуальним замовленням! ",
+    "title": "Онлайн-кондитерська",
+    "buttonLabel": "Каталог тортів",
+    "imageFace": {
+      "path": "/images/tort-whole-@x2.webp",
+      "alt": "Цілий торт"
+    },
+    "imageBack": {
+      "path": "/images/tort-sliced-@x2.webp",
+      "alt": "Нарізаний торт"
+    }
+  },
+  "reviews": {
+    "imageHeart": {
+      "path": "/images/heart-512.png",
+      "alt": "Серце"
+    }
   }
 }
