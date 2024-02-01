@@ -5,11 +5,12 @@ import { Slider } from "@/components/base/Slider";
 // import { SectionTitleExamples } from "@/components/ui/SectionTitle/SectionTitleExamples";
 // import { ContactLinks } from "@/components/ui/ContactLinks";
 import { Accordion } from "@/components/base/Accordion";
+import { AchievementCards } from "@/components/base/AchievementCards/AchievementCards";
 
 import { Hero } from "@/sections/Hero";
 import { Contacts } from "@/sections/Contacts";
 
-import Example from "@/components/Example";
+// import Example from "@/components/Example";
 
 export default async function Home() {
   return (
@@ -27,8 +28,10 @@ export default async function Home() {
       <div className="container">
         <Accordion />
       </div>
+      <section className="container bg-color-bg-primary py-10">
+        <AchievementCards />
+      </section>
 
-      <Example />
       {/* <ContactLinks variant="footer" /> */}
       {/* <Example /> */}
       {/* <SectionTitleExamples /> */}
