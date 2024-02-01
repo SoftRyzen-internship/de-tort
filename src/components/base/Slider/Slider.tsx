@@ -1,19 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import {
-  FC,
-  // ReactNode,
-  useCallback,
-  useState,
-} from "react";
+// import { ReactNode } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Swiper as SwiperClass } from "swiper/types";
+import { Navigation, Pagination, A11y } from "swiper/modules";
 
 // import { cn } from "@/utils/helpers/cn";
 import { getSliderConfigs } from "./SliderConfig";
-
-import { SliderNav } from "../SliderNav/SliderNav";
 
 import "swiper/css";
 
@@ -23,42 +16,45 @@ import img3 from "~/images/cookies-@x2.jpg";
 import img4 from "~/images/pasta-@x2.jpg";
 
 import { SliderProps } from "./types";
+import { cn } from "@/utils/helpers";
 
 const defaultSlides = [img1, img2, img3, img4];
 
-export const Slider: FC<SliderProps> = ({
+export const Slider: React.FC<SliderProps> = ({
   slides = defaultSlides,
   section = "top",
+  customClass = "",
+  customSlideClass = "",
 }) => {
-  const [swiperRef, setSwiperRef] = useState<SwiperClass>();
-
-  const handlePrev = useCallback(() => {
-    swiperRef?.slidePrev();
-  }, [swiperRef]);
-
-  const handleNext = useCallback(() => {
-    swiperRef?.slideNext();
-  }, [swiperRef]);
-
   return (
     <>
       <Swiper
         wrapperTag="ul"
-        onSwiper={setSwiperRef}
+        modules={[Navigation, Pagination, A11y]}
+        navigation={{
+          nextEl: `.button-next-${section}`,
+          prevEl: `.button-prev-${section}`,
+        }}
         slidesPerView={3}
+        updateOnWindowResize={true}
+        lazyPreloadPrevNext={1}
         loop={true}
-        speed={500}
+        speed={800}
         spaceBetween={24}
         grabCursor={true}
+        initialSlide={1}
         centeredSlides={true}
         breakpoints={getSliderConfigs(section)}
-        className={"w-full "}
+        className={cn("w-full ", customClass)}
       >
         {slides.map((slide, idx: number) => (
           <SwiperSlide
             key={idx}
             tag="li"
-            className={"overflow-hidden rounded-3xl relative !w-[320px]"}
+            className={cn(
+              `overflow-hidden rounded-3xl relative `,
+              customSlideClass,
+            )}
           >
             <Image
               width={320}
@@ -66,14 +62,13 @@ export const Slider: FC<SliderProps> = ({
               src={slide}
               alt={"some"}
               loading="lazy"
-              sizes="(max-width: 767px) 320px, (max-width: 1279px) 336px, 384px"
-              className="w-[320px] h-[320px] tablet:w-[415px] tablet:h-[294px] desk:w-[600px] desk:h-[429px] object-cover"
+              // sizes="(max-width: 767px) 320px, (max-width: 1279px) 336px, 384px"
+              className="w-full h-auto object-cover"
             />
             <div className="swiper-lazy-preloader absolute top-2/4 left-2/4" />
           </SwiperSlide>
         ))}
       </Swiper>
-      <SliderNav onNext={handleNext} onPrev={handlePrev} />
     </>
   );
 };

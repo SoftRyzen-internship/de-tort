@@ -1,5 +1,6 @@
+import { TSections } from "@/components/base/Slider/types";
+
 export interface SliderNavigationProps {
-  onNext: () => void;
-  onPrev: () => void;
+  section: TSections;
   className?: string;
 }

@@ -1,7 +1,7 @@
 import { TSections } from "@/components/base/Slider/types";
 
 const dimensions = {
-  sm: 280,
+  sm: 320,
   md: 768,
   lg: 1280,
 };
@@ -18,11 +18,13 @@ export const getSliderConfigs = (section: TSections) => {
         [dimensions.sm]: {
           slidesPerView: 2,
           spaceBetween: 32,
+          initialSlide: 1,
         },
         [dimensions.lg]: {
           loop: false,
           slidesPerView: 3,
           watchOverFlow: true,
+          centeredSlidesBounds: true,
         },
       };
     }
@@ -31,6 +33,7 @@ export const getSliderConfigs = (section: TSections) => {
         [dimensions.sm]: {
           slidesPerView: 1,
           loop: false,
+          centeredSlidesBounds: true,
         },
         [dimensions.md]: {
           slidesPerView: 2,
@@ -45,7 +48,7 @@ export const getSliderConfigs = (section: TSections) => {
       return {
         [dimensions.sm]: {
           slidesPerView: 1,
-          loopedSlides: 3,
+          loop: true,
         },
         [dimensions.md]: {
           slidesPerView: 2,
