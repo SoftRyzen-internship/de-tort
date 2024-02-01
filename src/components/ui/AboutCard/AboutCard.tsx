@@ -10,9 +10,9 @@ export const AboutCard: React.FC<AboutCardProps> = ({ icon, text, isEven }) => {
       )}
     >
       <div className="size-8 stroke-color-accent-primary shrink-0"> {icon}</div>
-      <span className="text-color-text-primary font-semibold text-base xl:text-[20px] leading-normal">
+      <p className="text-color-text-primary font-semibold text-base xl:text-[20px] leading-normal">
         {text}
-      </span>
+      </p>
     </li>
   );
 };
