@@ -15,14 +15,13 @@ export default async function Home() {
     <>
       <Hero />
       <Contacts />
-      
+
       <div className="container">
         <Accordion />
       </div>
-      
 
       {/* <ContactLinks variant="footer" /> */}
-      {/* <Example /> */}
+      <Example />
       {/* <SectionTitleExamples /> */}
       {/* <Logo /> */}
     </>

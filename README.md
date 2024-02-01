@@ -142,6 +142,16 @@ is a list of more common components and their API.
 | `isOpen`       | `undefined` | required, `boolean` - current state of element             |
 | `handleToggle` | `undefined` | required, `:void` - click-handler for toggle AccordionItem |
 
+- #### SweetsCard
+
+| Prop         | Default     | Description                    |
+| ------------ | ----------- | ------------------------------ |
+| `name`       | `undefined` | required, sweets name          |
+| `nameColor`  | `undefined` | required, sweet color          |
+| `bgSrc`      | `undefined` | required, sweet image src      |
+| `bgAlt`      | `undefined` | required, sweet image alt      |
+| `targetHref` | `undefined` | required, on click target Href |
+
 ### Technology stack
 
 - **Main technologies**:
