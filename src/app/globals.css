@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer utilities {
+  .section {
+    @apply pt-[60px] md:pt-[80px];
+  }
   .flex-center {
     @apply flex justify-center items-center;
   }
