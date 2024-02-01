@@ -77,7 +77,7 @@
     }
   },
   "contacts": {
-    "phone": "+38 050-719-51-56 ",
+    "phone": "+38 050 719-5156 ",
     "instagramLink": "https://www.instagram.com/de_tort.ua/",
     "instagramUser": "@de_tort.ua",
     "instagramLinkLabel": "Посилання на сторінку De Tort в інстаграмі"
@@ -93,6 +93,12 @@
     "imageBack": {
       "path": "/images/tort-sliced-@x2.webp",
       "alt": "Нарізаний торт"
+    }
+  },
+  "reviews": {
+    "imageHeart": {
+      "path": "/images/heart-512.png",
+      "alt": "Серце"
     }
   }
 }
