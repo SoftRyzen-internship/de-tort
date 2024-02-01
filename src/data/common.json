@@ -1,5 +1,9 @@
 {
   "companyName": "De Tort",
+  "logo": {
+    "path": "/images/logo.webp",
+    "alt": "De tort logo"
+  },
   "menu": {
     "buttons": {
       "open": "Меню",

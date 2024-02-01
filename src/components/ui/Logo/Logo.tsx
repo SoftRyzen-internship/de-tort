@@ -1,24 +1,30 @@
-import { cn } from "@/utils/helpers";
-
-import LogoIcon from "~/icons/logo.svg";
-
-import content from "@/data/common.json";
+import Image from "next/image";
 
 import { TLogo } from "./types";
 
+import { cn } from "@/utils/helpers";
+
+import content from "@/data/common.json";
+
 export const Logo: React.FC<TLogo> = ({ className = "" }) => {
-  const { companyName } = content;
+  const { companyName, logo } = content;
 
   return (
     <a
       href="/"
       className={cn(
-        "block group transition-transform focus:scale-110 hover:scale-110",
+        "inline-block transition-transform focus:scale-110 hover:scale-110",
         className,
       )}
       aria-label={companyName}
     >
-      <LogoIcon className="w-[58px] h-16 focus:scale-110 hover:scale-110" />
+      <Image
+        src={logo.path}
+        alt={logo.alt}
+        width={58}
+        height={64}
+        className="mb-4"
+      />
     </a>
   );
 };
