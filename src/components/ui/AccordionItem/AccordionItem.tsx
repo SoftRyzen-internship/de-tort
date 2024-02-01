@@ -13,19 +13,20 @@ export const AccordionItem: React.FC<AccordionItemType> = ({
   const { id, question, answer } = item;
 
   return (
-    <div
-      className={`${css.item} xl:w-[696px]`}
-      onClick={(e) => {
-        e.preventDefault();
-        handleToggle(id);
-      }}
-    >
-      <div className="flex justify-between items-start mt-5">
+    <li className={`${css.item} xl:w-[696px]`}>
+      <div
+        className="flex justify-between items-start mt-5 cursor-pointer"
+        onClick={(e) => {
+          e.preventDefault();
+          handleToggle(id);
+        }}
+        tabIndex={0}
+      >
         <p className="font-semibold text-[14px] text-color-text-primary w-[220px] leading-normal md:w-[425px] md:text-[20px] xl:text-[24px] xl:w-[615px]">
           {question}
         </p>
         <div
-          className={`rounded-full border bg-color-bg-white border-color-accent-primary p-[14px] ${isOpen ? "shadow-2xl" : ""}`}
+          className={`rounded-full border bg-color-bg-white border-color-accent-primary p-[14px] ${isOpen ? "transition-all shadow-2xl" : ""}`}
         >
           <span className="inherit">
             {isOpen ? (
@@ -36,11 +37,14 @@ export const AccordionItem: React.FC<AccordionItemType> = ({
           </span>
         </div>
       </div>
+
       {isOpen && (
-        <p className="font-fixel text-[20px] text-color-text-secondary leading-normal font-normal mt-6">
+        <p
+          className={`font-fixel text-[20px] text-color-text-secondary leading-normal font-normal mt-6 `}
+        >
           {answer}
         </p>
       )}
-    </div>
+    </li>
   );
 };

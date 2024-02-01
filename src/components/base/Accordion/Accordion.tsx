@@ -13,7 +13,7 @@ export const Accordion: React.FC = () => {
   };
 
   return (
-    <div className="bg-color-bg-primary">
+    <ul className="bg-color-bg-primary">
       {qa.accordion.map((item, index) => (
         <AccordionItem
           item={item}
@@ -22,6 +22,6 @@ export const Accordion: React.FC = () => {
           handleToggle={() => handleToggle(item.id)}
         />
       ))}
-    </div>
+    </ul>
   );
 };
