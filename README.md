@@ -103,6 +103,16 @@ is a list of more common components and their API.
 | `date`   | `undefined` | required, review date        |
 | `text`   | `undefined` | required, review text        |
 
+- #### AboutCard
+
+| Prop     | Default     | Description                                        |
+| -------- | ----------- | -------------------------------------------------- |
+| `icon`   | `undefined` | required, icon Component to show in the card       |
+| `text`   | `undefined` | required, text for the card                        |
+| `isEven` | `undefined` | required, true if current curd is even is the list |
+
+=======
+
 - #### Logo
 
 | Prop        | Default | Description                                   |
@@ -165,6 +175,16 @@ is a list of more common components and their API.
 | ----------- | ------- | ------------------------------------------------------------------ |
 | `section`   | `top`   | required, choose between `achievements`, `top` and `feedback`      |
 | `className` | `''`    | add custom or additional css class you'd need for the whole slider |
+
+- #### SweetsCard
+
+| Prop         | Default     | Description                    |
+| ------------ | ----------- | ------------------------------ |
+| `name`       | `undefined` | required, sweets name          |
+| `nameColor`  | `undefined` | required, sweet color          |
+| `bgSrc`      | `undefined` | required, sweet image src      |
+| `bgAlt`      | `undefined` | required, sweet image alt      |
+| `targetHref` | `undefined` | required, on click target Href |
 
 ### Technology stack
 

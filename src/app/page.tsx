@@ -2,7 +2,8 @@ import { Slider } from "@/components/base/Slider";
 import { SliderNav } from "@/components/base/SliderNav";
 import { Hero } from "@/sections/Hero";
 import { Contacts } from "@/sections/Contacts";
-import { Accordion } from "@/components/base/Accordion";
+import { About } from "@/sections/About";
+import { Sweets } from "@/sections/Sweets";
 
 export default async function Home() {
   return (
@@ -20,10 +21,9 @@ export default async function Home() {
       <Slider section="achievements" />
       <SliderNav section="achievements" />
       <Hero />
+      <Sweets />
+      <About />
       <Contacts />
-      <div className="container">
-        <Accordion />
-      </div>
     </>
   );
 }
