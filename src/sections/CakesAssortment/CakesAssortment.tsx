@@ -13,9 +13,9 @@ export const CakesAssortment: React.FC = () => {
         <Image
           src={image.path}
           alt={image.alt}
-          width={1186}
-          height={1040}
-          className="hidden xl:block w-[592] h-[520]"
+          width={592}
+          height={519}
+          className="hidden xl:block w-[592] h-[519]"
         />
 
         <div className="flex flex-col gap-6 md:gap-10 xl:w-[592px]">
