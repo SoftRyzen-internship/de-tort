@@ -154,7 +154,7 @@ is a list of more common components and their API.
 
 | Prop               | Default    | Description                                                        |
 | ------------------ | ---------- | ------------------------------------------------------------------ |
-| `section`          | `top`      | required, choose between `advantages`, `top` and `feedback`        |
+| `section`          | `top`      | required, choose between `achievements`, `top` and `feedback`      |
 | `slides`           | `string[]` | required, `array` of slides                                        |
 | `customSlideClass` | `''`       | add custom or additional css class you'd need for slide            |
 | `customClass`      | `''`       | add custom or additional css class you'd need for the whole slider |
@@ -163,7 +163,7 @@ is a list of more common components and their API.
 
 | Prop        | Default | Description                                                        |
 | ----------- | ------- | ------------------------------------------------------------------ |
-| `section`   | `top`   | required, choose between `advantages`, `top` and `feedback`        |
+| `section`   | `top`   | required, choose between `achievements`, `top` and `feedback`      |
 | `className` | `''`    | add custom or additional css class you'd need for the whole slider |
 
 ### Technology stack

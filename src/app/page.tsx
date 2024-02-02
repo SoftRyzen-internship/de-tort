@@ -11,8 +11,14 @@ export default async function Home() {
         <h1>Home Page - hero section</h1>
       </section>
 
+      <Slider section="top" />
+      <SliderNav section="top" />
+
       <Slider section="feedback" />
       <SliderNav section="feedback" />
+
+      <Slider section="achievements" />
+      <SliderNav section="achievements" />
       <Hero />
       <Contacts />
       <div className="container">

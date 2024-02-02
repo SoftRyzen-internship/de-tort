@@ -1,4 +1,4 @@
-export type TSections = "advantages" | "top" | "feedback";
+export type TSections = "achievements" | "top" | "feedback";
 
 export interface SliderProps {
   section: TSections;

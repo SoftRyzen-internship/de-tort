@@ -1,14 +1,14 @@
 import { TSections } from "@/components/base/Slider/types";
 
 const dimensions = {
-  sm: 320,
+  sm: 360,
   md: 768,
   lg: 1280,
 };
 
 export const getSliderConfigs = (section: TSections) => {
   switch (section) {
-    case "advantages": {
+    case "achievements": {
       return {
         [dimensions.sm]: {
           loop: true,
