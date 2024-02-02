@@ -7,7 +7,7 @@ export const Sweets = () => {
   const { sweets } = data;
 
   return (
-    <section className="section">
+    <section className="section bg-color-bg-primary">
       <div className="container">
         <SectionTitle text={sweets.title} className="sr-only" />
         <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8">

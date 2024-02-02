@@ -103,6 +103,16 @@ is a list of more common components and their API.
 | `date`   | `undefined` | required, review date        |
 | `text`   | `undefined` | required, review text        |
 
+- #### AboutCard
+
+| Prop     | Default     | Description                                        |
+| -------- | ----------- | -------------------------------------------------- |
+| `icon`   | `undefined` | required, icon Component to show in the card       |
+| `text`   | `undefined` | required, text for the card                        |
+| `isEven` | `undefined` | required, true if current curd is even is the list |
+
+=======
+
 - #### Logo
 
 | Prop        | Default | Description                                   |
@@ -141,6 +151,14 @@ is a list of more common components and their API.
 | `item`         | `undefined` | required, item should includes - id, question and answer   |
 | `isOpen`       | `undefined` | required, `boolean` - current state of element             |
 | `handleToggle` | `undefined` | required, `:void` - click-handler for toggle AccordionItem |
+
+- #### InfoButton
+
+| Prop        | Default     | Description                                   |
+| ----------- | ----------- | --------------------------------------------- |
+| `label`     | `undefined` | required, button inner text-content           |
+| `data`      | `undefined` | required, data for modal window inside button |
+| `className` | `''`        | add custom or additional css class you'd need |
 
 - #### SweetsCard
 
