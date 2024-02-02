@@ -18,7 +18,7 @@ export const SweetsCard: React.FC<SweetsCardProps> = ({
     <li>
       <Link
         href={targetHref}
-        className="group block h-[320px] smallOnly:h-full overflow-hidden rounded-3xl md:h-[364px] xl:h-[412px]  w-full text-[28px] leading-normal relative"
+        className="group block h-[320px] smallOnly:h-full smallOnly:max-h-[420px] overflow-hidden rounded-3xl md:h-[364px] xl:h-[412px]  w-full text-[28px] leading-normal relative"
       >
         <Image
           src={bgSrc}
