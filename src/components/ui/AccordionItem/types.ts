@@ -5,6 +5,4 @@ export interface AccordionItemType {
   };
   isActive: boolean;
   setActive: () => void;
-  // isOpen: boolean;
-  // handleToggle: (id: number) => void;
 }
