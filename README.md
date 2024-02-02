@@ -146,11 +146,11 @@ is a list of more common components and their API.
 
 - #### AccordionItem
 
-| Prop           | Default     | Description                                                |
-| -------------- | ----------- | ---------------------------------------------------------- |
-| `item`         | `undefined` | required, item should includes - id, question and answer   |
-| `isOpen`       | `undefined` | required, `boolean` - current state of element             |
-| `handleToggle` | `undefined` | required, `:void` - click-handler for toggle AccordionItem |
+| Prop        | Default     | Description                                                |
+| ----------- | ----------- | ---------------------------------------------------------- |
+| `item`      | `undefined` | required, item should includes - id, question and answer   |
+| `isActive`  | `undefined` | required, `number` - current index of active element       |
+| `setActive` | `undefined` | required, `:void` - click-handler for toggle AccordionItem |
 
 - #### InfoButton
 
