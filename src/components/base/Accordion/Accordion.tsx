@@ -14,7 +14,7 @@ export const Accordion: React.FC = () => {
     }
   };
   return (
-    <ul className="">
+    <ul>
       {qa.accordion.map((item, idx) => (
         <AccordionItem
           item={item}

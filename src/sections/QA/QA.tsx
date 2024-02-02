@@ -9,7 +9,7 @@ export const QA: React.FC = () => {
       <div className="container flex flex-col xl:flex-row xl:gap-8">
         <SectionTitle
           text={json.titleSection}
-          className="mb-1 md:mb-5 xl:mb-0 mdOnly:w-[286px]"
+          className="mb-6 md:mb-10 xl:mb-0 mdOnly:w-[286px]"
         />
         <Accordion />
       </div>

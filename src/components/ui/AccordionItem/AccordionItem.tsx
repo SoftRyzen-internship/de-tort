@@ -1,8 +1,6 @@
 "use client";
 import { KeyboardEvent } from "react";
 
-import css from "./AccordionItem.module.css";
-
 import Icon from "~/icons/arrow-down.svg";
 
 import { AccordionItemType } from "./types";
@@ -24,9 +22,9 @@ export const AccordionItem: React.FC<AccordionItemType> = ({
       onClick={setActive}
       onKeyDown={handleKeyDown}
       tabIndex={0}
-      className={`${css.item} flex flex-col xl:w-[696px] `}
+      className={`border-b border-color-accent-primary flex flex-col  mb-5 pb-6 last:mb-0 xl:w-[696px]`}
     >
-      <div className="flex justify-between items-center mt-5 cursor-pointer">
+      <div className="flex justify-between items-center cursor-pointer">
         <p className="font-semibold text-[14px] text-color-text-primary w-[220px] leading-normal md:w-[425px] md:text-[20px] xl:text-[24px] xl:w-[615px]">
           {question}
         </p>
