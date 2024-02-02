@@ -18,14 +18,14 @@ export const SweetsCard: React.FC<SweetsCardProps> = ({
     <li>
       <Link
         href={targetHref}
-        className="group block h-[320px] md:h-[364px] xl:h-[412px] rounded-3xl overflow-hidden w-full text-[28px] leading-normal relative"
+        className="group block h-[320px] md:h-[364px] xl:h-[412px]  w-full text-[28px] leading-normal relative"
       >
         <Image
           src={bgSrc}
           alt={bgAlt}
           width={384}
           height={412}
-          className="object-cover w-full h-full group-hover:scale-110 group-focus:scale-110 transition-transform"
+          className="rounded-3xl overflow-hidden object-cover w-full h-full group-hover:scale-110 group-focus:scale-110 transition-transform"
         />
         <h3
           style={nameStyle}
