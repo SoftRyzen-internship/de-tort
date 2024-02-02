@@ -144,7 +144,7 @@
         "targetHref": "/"
       },
       {
-        "name": "капкейки",
+        "name": "Капкейки",
         "nameColor": "#A63F6B",
         "bgSrc": "/images/cupcakes-@x2.jpg",
         "bgAlt": "Три капкейка",
@@ -165,7 +165,7 @@
         "targetHref": "/"
       },
       {
-        "name": "набори",
+        "name": "Набори",
         "nameColor": "#197CCB",
         "bgSrc": "/images/sets-@x2.jpg",
         "bgAlt": "Ягоди з тортиком та печивом",
