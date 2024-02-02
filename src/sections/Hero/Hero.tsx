@@ -20,7 +20,7 @@ export const Hero = () => {
             text={hero.title}
             className="smOnly:-mt-3 mb-4 md:mb-6"
           />
-          <p className="font-fixel max-w-[340px] text-base md:text-xl leading-normal mb-8 md:mb-[52px] md:max-w-[431px] xl:mb-[60px]">
+          <p className="font-fixel max-w-[340px] text-base md:text-xl leading-normal mb-8 md:mb-[52px] md:max-w-[431px] xl:mb-[60px] text-color-text-secondary">
             {hero.details}
           </p>
           <LinkButton label={hero.buttonLabel} href={`/${tortsSlug}`} />

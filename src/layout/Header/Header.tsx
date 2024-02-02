@@ -10,7 +10,7 @@ export const Header: React.FC = () => {
 
         <ContactLinks variant="header" />
 
-        <MenuButton className="" />
+        <MenuButton />
       </div>
     </header>
   );

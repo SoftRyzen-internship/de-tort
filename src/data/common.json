@@ -1,5 +1,16 @@
 {
   "companyName": "De Tort",
+  "logo": {
+    "path": "/images/logo.webp",
+    "alt": "De tort logo"
+  },
+  "soft_ryzen": {
+    "label": {
+      "pre": "Made by ",
+      "name": "SoftRyzen"
+    },
+    "href": "https://softryzen.com/"
+  },
   "menu": {
     "buttons": {
       "open": "Меню",
@@ -77,7 +88,7 @@
     }
   },
   "contacts": {
-    "phone": "+38 050-719-51-56 ",
+    "phone": "+38 050 719-5156 ",
     "instagramLink": "https://www.instagram.com/de_tort.ua/",
     "instagramUser": "@de_tort.ua",
     "instagramLinkLabel": "Посилання на сторінку De Tort в інстаграмі"
@@ -94,5 +105,79 @@
       "path": "/images/tort-sliced-@x2.webp",
       "alt": "Нарізаний торт"
     }
+  },
+  "about": {
+    "title": "Про нас",
+    "description": "Онлайн кондитерська, яка спеціалізується на виробництві тортиків та інших смаколиків\nпо індивідуальним замовленням! ",
+    "values": [
+      {
+        "title": "Наші цінності",
+        "text": "Команда, яка створює солодкі шедеври та наші клієнти, яким ми маємо можливість дарувати свято!"
+      },
+      {
+        "title": "Наша місія",
+        "text": "Дарувати свято та емоції!"
+      }
+    ],
+    "features": [
+      "Індивідуальний підхід до кожного клієнта",
+      "Індивідуальний дизайн",
+      "Святкова упаковка",
+      "Соковиті тортики",
+      "Швидкість"
+    ]
+  },
+  "reviews": {
+    "imageHeart": {
+      "path": "/images/heart-512.png",
+      "alt": "Серце"
+    }
+  },
+  "sweets": {
+    "title": "Смаколики",
+    "sweetList": [
+      {
+        "name": "Печиво",
+        "nameColor": "#A33F06",
+        "bgSrc": "/images/cookies-@x2.jpg",
+        "bgAlt": "Печиво з горіхами",
+        "targetHref": "/"
+      },
+      {
+        "name": "капкейки",
+        "nameColor": "#A63F6B",
+        "bgSrc": "/images/cupcakes-@x2.jpg",
+        "bgAlt": "Три капкейка",
+        "targetHref": "/"
+      },
+      {
+        "name": "Макарон",
+        "nameColor": "#381046",
+        "bgSrc": "/images/pasta-@x2.jpg",
+        "bgAlt": "Кругле печиво",
+        "targetHref": "/"
+      },
+      {
+        "name": "Чизкейки",
+        "nameColor": "#FEEE9F",
+        "bgSrc": "/images/cheesecakes-@x2.jpg",
+        "bgAlt": "Розрізаний чізкейк",
+        "targetHref": "/"
+      },
+      {
+        "name": "набори",
+        "nameColor": "#197CCB",
+        "bgSrc": "/images/sets-@x2.jpg",
+        "bgAlt": "Ягоди з тортиком та печивом",
+        "targetHref": "/"
+      },
+      {
+        "name": "Кейк-попси",
+        "nameColor": "#A9003A",
+        "bgSrc": "/images/cakepops-@x2.jpg",
+        "bgAlt": "Печиво з горіхами",
+        "targetHref": "/"
+      }
+    ]
   }
 }

@@ -18,7 +18,18 @@ export const ContactLinks: React.FC<TContacts> = ({
 
   const { contacts } = data;
 
-  return (
+  return variant === "phone" ? (
+    <a
+      className={`flex gap-2 text-color-text-primary transition-colors focus:text-color-accent-primary hover:text-color-accent-primary text-[16px] md:text-[20px] leading-[1.4] font-fixel items-center flex-shrink-0 ${className}`}
+      href={`tel:${contacts.phone}`}
+      target="_blank"
+      rel="noopener noreferrer nofollow"
+    >
+      <IconPhone className="w-5 h-5 md:h-6 md:w-6 text-color-accent-primary " />
+
+      {contacts.phone}
+    </a>
+  ) : (
     <ul
       className={cn("inline-flex flex-shrink-0 ", styles[variant], className)}
     >

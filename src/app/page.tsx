@@ -1,13 +1,17 @@
-import { ContactLinks } from "@/components/ui/ContactLinks";
-
 import { Hero } from "@/sections/Hero";
+import { Contacts } from "@/sections/Contacts";
+import { About } from "@/sections/About";
+import { Sweets } from "@/sections/Sweets";
+import { QA } from "@/sections/QA";
 
 export default async function Home() {
   return (
     <>
       <Hero />
-
-      <ContactLinks variant="footer" />
+      <Sweets />
+      <About />
+      <QA />
+      <Contacts />
     </>
   );
 }

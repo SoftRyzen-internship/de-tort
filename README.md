@@ -90,10 +90,28 @@ is a list of more common components and their API.
 
 - #### ContactsList
 
-| Prop        | Default  | Description                                           |
-| ----------- | -------- | ----------------------------------------------------- |
-| `variant`   | `header` | required, choose between `header` and `footer` styles |
-| `className` | `''`     | add custom or additional css class you'd need         |
+| Prop        | Default  | Description                                                     |
+| ----------- | -------- | --------------------------------------------------------------- |
+| `variant`   | `header` | required, choose between `header`, `footer` and `phone` version |
+| `className` | `''`     | add custom or additional css class you'd need                   |
+
+- #### ReviewCard
+
+| Prop     | Default     | Description                  |
+| -------- | ----------- | ---------------------------- |
+| `author` | `undefined` | required, review author name |
+| `date`   | `undefined` | required, review date        |
+| `text`   | `undefined` | required, review text        |
+
+- #### AboutCard
+
+| Prop     | Default     | Description                                        |
+| -------- | ----------- | -------------------------------------------------- |
+| `icon`   | `undefined` | required, icon Component to show in the card       |
+| `text`   | `undefined` | required, text for the card                        |
+| `isEven` | `undefined` | required, true if current curd is even is the list |
+
+=======
 
 - #### Logo
 
@@ -120,6 +138,12 @@ is a list of more common components and their API.
 | --------- | ----------- | ---------------------------------------------------------------------------- |
 | `onClick` | `undefined` | required, `:void` - click-handler for additional effects on navigation links |
 
+- #### MapLink
+
+| Prop        | Default | Description                                   |
+| ----------- | ------- | --------------------------------------------- |
+| `className` | `''`    | add custom or additional css class you'd need |
+
 - #### AccordionItem
 
 | Prop           | Default     | Description                                                |
@@ -127,6 +151,24 @@ is a list of more common components and their API.
 | `item`         | `undefined` | required, item should includes - id, question and answer   |
 | `isOpen`       | `undefined` | required, `boolean` - current state of element             |
 | `handleToggle` | `undefined` | required, `:void` - click-handler for toggle AccordionItem |
+
+- #### InfoButton
+
+| Prop        | Default     | Description                                   |
+| ----------- | ----------- | --------------------------------------------- |
+| `label`     | `undefined` | required, button inner text-content           |
+| `data`      | `undefined` | required, data for modal window inside button |
+| `className` | `''`        | add custom or additional css class you'd need |
+
+- #### SweetsCard
+
+| Prop         | Default     | Description                    |
+| ------------ | ----------- | ------------------------------ |
+| `name`       | `undefined` | required, sweets name          |
+| `nameColor`  | `undefined` | required, sweet color          |
+| `bgSrc`      | `undefined` | required, sweet image src      |
+| `bgAlt`      | `undefined` | required, sweet image alt      |
+| `targetHref` | `undefined` | required, on click target Href |
 
 ### Technology stack
 

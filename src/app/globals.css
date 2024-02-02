@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer utilities {
+  .section {
+    @apply pt-[60px] md:pt-[80px];
+  }
   .flex-center {
     @apply flex justify-center items-center;
   }
@@ -26,28 +29,8 @@
   @apply absolute top-0 left-0 w-full h-[7px] md:w-[7px] md:h-full bg-color-accent-primary;
 }
 
-/* При обычном состоянии */
-.drop-up-body {
-  transition: transform 1s;
-  transform: translate(0, 0px);
-  margin-top: 0;
-}
-/* При нажатии на кнопку */
-.drop-up-body_state_toggled {
-  transition: transform 1s;
-  transform: translate(0, -110%);
-  animation: position_hidden 0.00000000000000000001s 1s forwards;
-}
-
-@keyframes position_hidden {
-  0% {
-    position: static;
-  }
-  99% {
-    position: static;
-  }
-  100% {
-    position: absolute;
-    top: -100%;
-  }
+/* Footer */
+.footer::before {
+  content: "";
+  @apply absolute top-0 left-0 w-full h-[3px] bg-color-accent-primary;
 }
