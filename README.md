@@ -160,6 +160,16 @@ is a list of more common components and their API.
 | `data`      | `undefined` | required, data for modal window inside button |
 | `className` | `''`        | add custom or additional css class you'd need |
 
+- #### SweetsCard
+
+| Prop         | Default     | Description                    |
+| ------------ | ----------- | ------------------------------ |
+| `name`       | `undefined` | required, sweets name          |
+| `nameColor`  | `undefined` | required, sweet color          |
+| `bgSrc`      | `undefined` | required, sweet image src      |
+| `bgAlt`      | `undefined` | required, sweet image alt      |
+| `targetHref` | `undefined` | required, on click target Href |
+
 ### Technology stack
 
 - **Main technologies**:
