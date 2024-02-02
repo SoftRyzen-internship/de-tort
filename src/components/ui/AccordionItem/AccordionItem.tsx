@@ -1,5 +1,5 @@
 "use client";
-import css from "./AccordionItem.module.css";
+import { KeyboardEvent } from "react";
 
 import Icon from "~/icons/arrow-down.svg";
 
@@ -7,40 +7,46 @@ import { AccordionItemType } from "./types";
 
 export const AccordionItem: React.FC<AccordionItemType> = ({
   item,
-  isOpen,
-  handleToggle,
+  isActive,
+  setActive,
 }) => {
-  const { id, question, answer } = item;
-
+  const { question, answer } = item;
+  const handleKeyDown = (event: KeyboardEvent<HTMLLIElement>) => {
+    if (event.key === " " || event.key === "Enter") {
+      event.preventDefault();
+      setActive();
+    }
+  };
   return (
-    <div
-      className={`${css.item} xl:w-[696px]`}
-      onClick={(e) => {
-        e.preventDefault();
-        handleToggle(id);
-      }}
+    <li
+      onClick={setActive}
+      onKeyDown={handleKeyDown}
+      tabIndex={0}
+      className={`border-b border-color-accent-primary flex flex-col  mb-5 pb-6 last:mb-0 xl:w-[696px]`}
     >
-      <div className="flex justify-between items-start mt-5">
+      <div className="flex justify-between items-center cursor-pointer">
         <p className="font-semibold text-[14px] text-color-text-primary w-[220px] leading-normal md:w-[425px] md:text-[20px] xl:text-[24px] xl:w-[615px]">
           {question}
         </p>
         <div
-          className={`rounded-full border bg-color-bg-white border-color-accent-primary p-[14px] ${isOpen ? "shadow-2xl" : ""}`}
+          className={`rounded-full border bg-color-bg-white border-color-accent-primary p-[14px] ${isActive ? "transition-all shadow-2xl translate-x-[2px] -translate-y-[2px] " : ""}`}
         >
           <span className="inherit">
-            {isOpen ? (
-              <Icon className="w-5 h-5 rotate-180" />
-            ) : (
-              <Icon className="w-5 h-5" />
-            )}
+            <Icon className={`w-5 h-5 ${isActive ? "rotate-180" : ""}`} />
           </span>
         </div>
       </div>
-      {isOpen && (
-        <p className="font-fixel text-[20px] text-color-text-secondary leading-normal font-normal mt-6">
-          {answer}
-        </p>
-      )}
-    </div>
+      <div
+        className={`overflow-hidden transition-all duration-300 ease-in-out grid ${isActive ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
+      >
+        <div className="overflow-hidden">
+          <p
+            className={`font-fixel text-[20px] text-color-text-secondary leading-normal font-normal mt-6`}
+          >
+            {answer}
+          </p>
+        </div>
+      </div>
+    </li>
   );
 };

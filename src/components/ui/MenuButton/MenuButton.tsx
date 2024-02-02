@@ -10,7 +10,7 @@ import data from "@/data/common.json";
 
 import { MenuButtonProps } from "./types";
 
-export const MenuButton: React.FC<MenuButtonProps> = ({ className }) => {
+export const MenuButton: React.FC<MenuButtonProps> = ({ className = "" }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const { open } = data.menu.buttons;
@@ -23,7 +23,7 @@ export const MenuButton: React.FC<MenuButtonProps> = ({ className }) => {
         type="button"
         aria-label={open}
         onClick={() => setIsOpen(true)}
-        className={`text-color-accent-primary hover:text-color-bg-white focus-visible:text-color-bg-white transition-all ${className}`}
+        className={`w-10 h-10 flex items-center justify-center text-color-accent-primary hover:text-color-bg-white focus-visible:text-color-bg-white transition-all ${className}`}
       >
         <IconMenu className="w-6 h-6" />
       </button>
