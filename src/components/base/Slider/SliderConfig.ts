@@ -11,7 +11,6 @@ export const getSliderConfigs = (section: TSections) => {
     case "achievements": {
       return {
         [dimensions.sm]: {
-          loop: true,
           slidesPerView: 1,
           watchSlidesProgress: false,
         },
@@ -32,15 +31,22 @@ export const getSliderConfigs = (section: TSections) => {
       return {
         [dimensions.sm]: {
           slidesPerView: 1,
+          allowTouchMove: false,
           loop: false,
           centeredSlidesBounds: true,
         },
         [dimensions.md]: {
           slidesPerView: 2,
           spaceBetween: 32,
+          allowTouchMove: false,
+
+          loop: false,
         },
         [dimensions.lg]: {
           slidesPerView: 3,
+          allowTouchMove: false,
+          grabCursor: false,
+          loop: false,
         },
       };
     }
@@ -48,7 +54,6 @@ export const getSliderConfigs = (section: TSections) => {
       return {
         [dimensions.sm]: {
           slidesPerView: 1,
-          loop: true,
         },
         [dimensions.md]: {
           slidesPerView: 2,
@@ -57,6 +62,7 @@ export const getSliderConfigs = (section: TSections) => {
           slidesPerView: 3,
           spaceBetween: 16,
           watchSlidesProgress: true,
+          lazyPreloadPrevNext: 1,
         },
       };
     }

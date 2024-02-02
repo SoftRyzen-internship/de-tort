@@ -22,6 +22,7 @@ export const SliderNav: React.FC<SliderNavigationProps> = ({
     >
       <li key="prev">
         <button
+          disabled
           className={cn(
             `button-prev-${section} w-[60px] h-[60px] border-2 text-base leading-loose hover:shadow-2xl focus-visible:shadow-2xl md:hover:shadow-3xl md:focus-visible:shadow-3xl transition rounded-full flex-center border-color-accent-primary bg-color-bg-white hover:translate-x-[2px] hover:-translate-y-[2px] md:hover:translate-x-[3px] md:hover:-translate-y-[3px] focus-visible:translate-x-[2px] focus-visible:-translate-y-[2px] md:focus-visible:translate-x-[3px] md:focus-visible:-translate-y-[3px]`,
           )}

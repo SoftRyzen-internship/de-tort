@@ -33,3 +33,9 @@
   content: "";
   @apply absolute top-0 left-0 w-full h-[3px] bg-color-accent-primary;
 }
+/* sliderNav */
+
+.button-next-top.swiper-button-disabled,
+.button-prev-top.swiper-button-disabled {
+  background-color: black;
+}

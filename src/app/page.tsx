@@ -16,11 +16,6 @@ export default async function Home() {
       <Slider section="top" />
       <SliderNav section="top" />
 
-      <Slider section="feedback" />
-      <SliderNav section="feedback" />
-
-      <Slider section="achievements" />
-      <SliderNav section="achievements" />
       <Hero />
       <Sweets />
       <About />
