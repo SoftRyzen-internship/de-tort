@@ -1,9 +1,5 @@
 {
   "companyName": "De Tort",
-  "logo": {
-    "path": "/images/logo.webp",
-    "alt": "De tort logo"
-  },
   "soft_ryzen": {
     "label": {
       "pre": "Made by ",
