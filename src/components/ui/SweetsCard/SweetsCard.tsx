@@ -29,7 +29,7 @@ export const SweetsCard: React.FC<SweetsCardProps> = ({
         />
         <h3
           style={nameStyle}
-          className={`text-center w-full font-unbounded uppercase font-bold text-[28px] absolute top-10 left-1/2 -translate-x-1/2`}
+          className="text-center w-full font-unbounded uppercase font-bold text-[28px] absolute top-10 left-1/2 -translate-x-1/2"
         >
           {name}
         </h3>
