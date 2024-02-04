@@ -18,7 +18,7 @@ export const Logo: React.FC<TLogo> = ({ className = "" }) => {
       )}
       aria-label={companyName}
     >
-      <Image src={logo.path} alt={logo.alt} width={58} height={64} />
+      <Image priority src={logo.path} alt={logo.alt} width={58} height={64} />
     </a>
   );
 };
