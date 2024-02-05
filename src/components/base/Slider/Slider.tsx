@@ -6,41 +6,14 @@ import "swiper/css";
 
 import { getSliderConfigs } from "./SliderConfig";
 
-import { ReviewCard } from "@/components/ui/ReviewCard";
+// import { ReviewCard } from "@/components/ui/ReviewCard";
 
 import { cn } from "@/utils/helpers";
 
 import { SliderProps } from "./types";
 
-const defaultSlides = [
-  <ReviewCard
-    date="12.12.12"
-    author="Супер"
-    text="lorem ipsum lorem ipsum "
-    key={1}
-  />,
-  <ReviewCard
-    date="12.12.12"
-    author="Супер"
-    text="lorem ipsum lorem ipsum "
-    key={2}
-  />,
-  <ReviewCard
-    date="12.12.12"
-    author="Супер"
-    text="lorem ipsum lorem ipsum "
-    key={3}
-  />,
-  <ReviewCard
-    date="12.12.12"
-    author="Супер"
-    text="lorem ipsum lorem ipsum "
-    key={4}
-  />,
-];
-
 export const Slider: React.FC<SliderProps> = ({
-  slides = defaultSlides,
+  slides,
   section = "top",
   customClass = "",
   customSlideClass = "",
