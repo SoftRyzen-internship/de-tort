@@ -179,5 +179,19 @@
         "targetHref": "/"
       }
     ]
+  },
+  "info": {
+    "buttons": [
+      {
+        "id": "privacy_policy",
+        "label": "Політика конфіденційності",
+        "data": ""
+      },
+      {
+        "id": "service_terms",
+        "label": "Умови надання послуг",
+        "data": ""
+      }
+    ]
   }
 }

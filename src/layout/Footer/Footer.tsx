@@ -5,17 +5,15 @@ import { InfoButton } from "@/components/ui/InfoButton";
 import { Logo } from "@/components/ui/Logo";
 
 import data from "@/data/common.json";
-import info from "@/data/info.json";
 
 export const Footer: React.FC = () => {
-  const { soft_ryzen } = data;
-  const { buttons } = info;
+  const { soft_ryzen, info } = data;
 
   return (
     <footer className="footer relative py-10 md:pb-[86px] bg-color-bg-primary">
       <div className="container flex flex-col items-center gap-6 md:flex-row md:justify-between">
         <ul className="flex flex-col items-center gap-4 md:items-start md:gap-5">
-          {buttons.map(({ id, label, data }) => (
+          {info.buttons.map(({ id, label, data }) => (
             <li key={id}>
               <InfoButton label={label} data={data} />
             </li>
