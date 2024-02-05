@@ -57,10 +57,11 @@ export const getSliderConfigs = (section: TSections) => {
         },
         [dimensions.md]: {
           slidesPerView: 2,
+          spaceBetween: 32,
         },
         [dimensions.lg]: {
           slidesPerView: 3,
-          spaceBetween: 16,
+          spaceBetween: 32,
           watchSlidesProgress: true,
           lazyPreloadPrevNext: 1,
         },

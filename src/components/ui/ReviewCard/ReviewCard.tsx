@@ -28,8 +28,10 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({
             <Image
               src={imageHeart.path}
               alt={imageHeart.alt}
-              width={16}
-              height={16}
+              width={0}
+              height={0}
+              className="object-cover w-auto"
+              sizes="16px"
             />
           </div>
         </div>
