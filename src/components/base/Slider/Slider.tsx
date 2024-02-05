@@ -45,7 +45,7 @@ export const Slider: React.FC<SliderProps> = ({
         {slides?.map((slide, idx) => (
           <SwiperSlide
             key={idx}
-            tag="div"
+            tag="li"
             className={cn(
               `overflow-hidden rounded-3xl relative `,
               customSlideClass,
