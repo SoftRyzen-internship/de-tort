@@ -5,11 +5,13 @@ import { Sweets } from "@/sections/Sweets";
 import { CakesAssortment } from "@/sections/CakesAssortment";
 import { QA } from "@/sections/QA";
 import { Reviews } from "@/sections/Reviews";
+import { HeroCakes } from "@/sections/HeroCakes";
 
 export default async function Home() {
   return (
     <>
       <Hero />
+      <HeroCakes />
       <CakesAssortment />
       <Sweets />
       <About />

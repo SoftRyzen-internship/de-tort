@@ -8,22 +8,26 @@
     {
       "label": "Міні торти",
       "caption": "Набір",
-      "slug": "mini-cakes"
+      "slug": "mini-cakes",
+      "bgSrc": "/images/minitort-@2x.jpg"
     },
     {
       "label": "Бенто торти",
       "caption": "2 людей",
-      "slug": "bento-cakes"
+      "slug": "bento-cakes",
+      "bgSrc": "/images/bentotort-@2x.jpg"
     },
     {
       "label": "Торти від 1/1.5 кг",
       "caption": "4-5 людей",
-      "slug": "middle-cakes"
+      "slug": "middle-cakes",
+      "bgSrc": "/images/middletort-@2x.jpg"
     },
     {
       "label": "Торти від 2кг",
       "caption": "8 людей",
-      "slug": "big-cakes"
+      "slug": "big-cakes",
+      "bgSrc": "/images/bigtort-@2x.jpg"
     }
   ]
 }
