@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer utilities {
+  .section {
+    @apply pt-[60px] md:pt-[80px] xl:pt-[120px];
+  }
   .flex-center {
     @apply flex justify-center items-center;
   }
@@ -15,7 +18,6 @@
 }
 
 /* Common utilities: */
-
 .section-heading {
   @apply font-unbounded font-bold text-color-accent-primary text-[28px] leading-[1.2] tracking-[1.12px] uppercase;
 }
@@ -30,4 +32,13 @@
 .footer::before {
   content: "";
   @apply absolute top-0 left-0 w-full h-[3px] bg-color-accent-primary;
+}
+/* sliderNav */
+.slider-button {
+  @apply w-[60px] h-[60px] border-2 text-base leading-loose hover:shadow-xl focus-visible:shadow-xl md:hover:shadow-xl md:focus-visible:shadow-xl transition rounded-full flex-center border-color-accent-primary bg-color-bg-white hover:translate-x-[2px] hover:-translate-y-[2px] md:hover:translate-x-[3px] md:hover:-translate-y-[3px] focus-visible:translate-x-[2px] focus-visible:-translate-y-[2px] md:focus-visible:translate-x-[3px] md:focus-visible:-translate-y-[3px];
+}
+
+.button-next-toppings.swiper-button-disabled,
+.button-prev-toppings.swiper-button-disabled {
+  @apply pointer-events-none opacity-0;
 }

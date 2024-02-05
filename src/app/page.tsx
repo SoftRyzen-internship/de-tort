@@ -1,17 +1,23 @@
 import { Hero } from "@/sections/Hero";
 import { Contacts } from "@/sections/Contacts";
-import { Accordion } from "@/components/base/Accordion";
+import { About } from "@/sections/About";
+import { Sweets } from "@/sections/Sweets";
+import { CakesAssortment } from "@/sections/CakesAssortment";
+import { QA } from "@/sections/QA";
+import { Reviews } from "@/sections/Reviews";
 import { ToppingCard } from "@/components/ui/ToppingCard";
 
 export default async function Home() {
   return (
     <>
-      <Hero />
-      <Contacts />
-      <div className="container">
-        <Accordion />
-      </div>
       <ToppingCard />
+      <Hero />
+      <CakesAssortment />
+      <Sweets />
+      <About />
+      <QA />
+      <Reviews />
+      <Contacts />
     </>
   );
 }
