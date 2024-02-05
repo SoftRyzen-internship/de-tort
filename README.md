@@ -1,4 +1,8 @@
-# DE-TORT
+# DE-TORT :birthday::cupcake::chocolate_bar:
+
+**[VIEW LIVE PAGE](https://de-tort.vercel.app)**
+
+---
 
 ## 📝 Project description
 
@@ -56,7 +60,45 @@ A website for the **De-Tort** service company.
 
 ### Project structure
 
-HERE WILL BE THE STRUCTURE OF THE PROJECT
+```mermaid
+graph LR
+
+  Z{Enter} --> L(Layot)
+  L ---> B(Header)
+  L ---> A((Home page))
+  L ---> C(Footer)
+  B --> BA[Menu]
+  A --> AA[Section 1. Hero]
+  A --> AB[Section 2. CakesAssortment]
+  A --> AC[Section 3. Sweets]
+  A --> AD[Section 4. About]
+  A --> AE[Section 5. Achievement]
+  A --> AF[Section 6. Toppings]
+  A --> AG[Section 6. QA]
+  A --> AH[Section 6. Reviews]
+  A --> AI[Section 6. Contacts]
+  BA --> D((Cakes page))
+  AB --> D
+  D --> DA[Page 1. Mini Cakes]
+  D --> DB[Page 2. Bento Cakes]
+  D --> DC[Page 3. Middle Cakes]
+  D --> DD[Page 4. Big Cakes]
+  BA --> E((Capcakes page))
+  BA --> F((Cheesecakes page))
+  BA --> G((Sweet sets page))
+  BA --> H((Cookies page))
+  BA --> I((Macaron page))
+  BA --> J((Cake-pops page))
+  AC --> E
+  AC --> F
+  AC --> G
+  AC --> H
+  AC --> I
+  AC --> J
+  BA --> K((About us page))
+  BA --> L((For cafe page))
+
+```
 
 ### Components API
 
@@ -110,8 +152,6 @@ is a list of more common components and their API.
 | `icon`   | `undefined` | required, icon Component to show in the card       |
 | `text`   | `undefined` | required, text for the card                        |
 | `isEven` | `undefined` | required, true if current curd is even is the list |
-
-=======
 
 - #### Logo
 
