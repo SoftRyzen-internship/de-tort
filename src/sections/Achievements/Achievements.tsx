@@ -1,14 +1,11 @@
-import React from "react";
-
 import { SectionTitle } from "@/components/ui/SectionTitle";
-
 import { Slider } from "@/components/base/Slider";
 import { SliderNav } from "@/components/base/SliderNav";
 import { AchievementCard } from "@/components/ui/AchievementCard";
 
 import data from "@/data/achievement.json";
 
-export const Achievements = () => {
+export const Achievements: React.FC = () => {
   const { titleSection, cards } = data;
 
   const slides = cards.map(({ id, title, description }) => (
@@ -16,7 +13,7 @@ export const Achievements = () => {
   ));
 
   return (
-    <section className="section pb-[60px] md:pb-[80px] xl:pb-[120px]">
+    <section className="section bg-color-bg-primary pb-[60px] md:pb-[80px] xl:pb-[120px]">
       <div className="container ">
         <div className="md:flex pb-6 md:pb-10 xl:pb-[60px]">
           <SectionTitle text={titleSection} />
@@ -26,8 +23,8 @@ export const Achievements = () => {
           />
         </div>
         <Slider
-          customClass=" xl:!cursor-default"
-          customSlideClass="achievement-slide pt-[18px] xl:pt-[22px] smOnly:!w-full xl:!cursor-auto"
+          customClass="xl:!cursor-default"
+          customSlideClass="pt-[18px] xl:pt-[22px] smOnly:!w-full xl:!cursor-auto"
           slides={slides}
           section="achievements"
         />
