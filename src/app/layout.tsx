@@ -3,7 +3,6 @@ import { Unbounded } from "next/font/google";
 import localFont from "next/font/local";
 
 import { Header } from "@/layout/Header";
-import { Footer } from "@/layout/Footer";
 
 import "./globals.css";
 
@@ -55,7 +54,6 @@ export default function RootLayout({
       <body className={`${fixelDisplay.variable} ${unbounded.className}`}>
         <Header />
         <main>{children}</main>
-        <Footer />
       </body>
     </html>
   );
