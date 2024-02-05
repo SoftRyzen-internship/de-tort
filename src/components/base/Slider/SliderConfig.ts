@@ -18,6 +18,7 @@ export const getSliderConfigs = (section: TSections) => {
         [dimensions.md]: {
           slidesPerView: 2,
           spaceBetween: 32,
+          allowTouchMove: true,
           loop: true,
         },
         [dimensions.lg]: {

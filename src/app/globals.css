@@ -42,7 +42,3 @@
 .button-prev-toppings.swiper-button-disabled {
   @apply pointer-events-none opacity-0;
 }
-
-.swiper-slide.achievement-slide {
-  @apply smOnly:!w-full;
-}

@@ -26,7 +26,8 @@ export const Achievements = () => {
           />
         </div>
         <Slider
-          customSlideClass="achievement-slide pt-[18px] xl:pt-[22px]"
+          customClass=" xl:!cursor-default"
+          customSlideClass="achievement-slide pt-[18px] xl:pt-[22px] smOnly:!w-full xl:!cursor-auto"
           slides={slides}
           section="achievements"
         />
