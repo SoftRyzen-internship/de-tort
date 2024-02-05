@@ -24,6 +24,7 @@ export const getSliderConfigs = (section: TSections) => {
           slidesPerView: 3,
           watchOverFlow: true,
           centeredSlidesBounds: true,
+          grabCursor: false,
         },
       };
     }

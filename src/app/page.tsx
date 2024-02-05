@@ -4,6 +4,7 @@ import { About } from "@/sections/About";
 import { Sweets } from "@/sections/Sweets";
 import { CakesAssortment } from "@/sections/CakesAssortment";
 import { QA } from "@/sections/QA";
+import { Achievements } from "@/sections/Achievements";
 
 export default async function Home() {
   return (
@@ -12,6 +13,7 @@ export default async function Home() {
       <CakesAssortment />
       <Sweets />
       <About />
+      <Achievements />
       <QA />
       <Contacts />
     </>
