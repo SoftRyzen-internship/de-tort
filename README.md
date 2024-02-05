@@ -164,17 +164,17 @@ is a list of more common components and their API.
 
 | Prop               | Default    | Description                                                        |
 | ------------------ | ---------- | ------------------------------------------------------------------ |
-| `section`          | `top`      | required, choose between `achievements`, `top` and `feedback`      |
+| `section`          | `toppings` | required, choose between `achievements`, `toppings` and `feedback` |
 | `slides`           | `string[]` | required, `array` of slides                                        |
 | `customSlideClass` | `''`       | add custom or additional css class you'd need for slide            |
 | `customClass`      | `''`       | add custom or additional css class you'd need for the whole slider |
 
 ### SliderNav
 
-| Prop        | Default | Description                                                        |
-| ----------- | ------- | ------------------------------------------------------------------ |
-| `section`   | `top`   | required, choose between `achievements`, `top` and `feedback`      |
-| `className` | `''`    | add custom or additional css class you'd need for the whole slider |
+| Prop        | Default    | Description                                                        |
+| ----------- | ---------- | ------------------------------------------------------------------ |
+| `section`   | `toppings` | required, choose between `achievements`, `toppings` and `feedback` |
+| `className` | `''`       | add custom or additional css class you'd need for the whole slider |
 
 - #### SweetsCard
 
