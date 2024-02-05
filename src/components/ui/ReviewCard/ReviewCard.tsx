@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { ReviewCardProps } from "./types";
 
-import data from "@/data/common.json";
+import data from "@/data/reviews.json";
 
 const MAX_SYMBOLS = 456;
 
@@ -11,9 +11,7 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({
   text,
   date,
 }) => {
-  const {
-    reviews: { imageHeart },
-  } = data;
+  const { imageHeart } = data;
   const normalizedText = text.slice(0, MAX_SYMBOLS);
 
   return (
