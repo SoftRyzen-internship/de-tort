@@ -27,7 +27,7 @@ export const getSliderConfigs = (section: TSections) => {
         },
       };
     }
-    case "top": {
+    case "toppings": {
       return {
         [dimensions.sm]: {
           slidesPerView: 1,

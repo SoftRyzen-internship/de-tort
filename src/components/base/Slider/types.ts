@@ -1,11 +1,10 @@
-// import { ReactNode } from "react";
+import { ReactNode } from "react";
 
-export type TSections = "achievements" | "top" | "feedback";
+export type TSections = "achievements" | "toppings" | "feedback";
 
 export interface SliderProps {
   section: TSections;
-  // slides?: ReactNode[];
-  slides: any[];
+  slides?: ReactNode[];
   customClass?: string;
   customSlideClass?: string;
 }

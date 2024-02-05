@@ -6,15 +6,21 @@ import "swiper/css";
 
 import { getSliderConfigs } from "./SliderConfig";
 
-// import { ReviewCard } from "@/components/ui/ReviewCard";
+import { ReviewCard } from "@/components/ui/ReviewCard";
+
+import data from "@/data/slides-example.json";
 
 import { cn } from "@/utils/helpers";
 
 import { SliderProps } from "./types";
 
+const defaultSlides = data?.map(({ date, author, text, key }) => (
+  <ReviewCard date={date} author={author} text={text} key={key} />
+));
+
 export const Slider: React.FC<SliderProps> = ({
-  slides,
-  section = "top",
+  slides = defaultSlides,
+  section = "toppings",
   customClass = "",
   customSlideClass = "",
 }) => {
@@ -36,7 +42,7 @@ export const Slider: React.FC<SliderProps> = ({
         breakpoints={getSliderConfigs(section)}
         className={cn("w-full ", customClass)}
       >
-        {slides.map((slide, idx) => (
+        {slides?.map((slide, idx) => (
           <SwiperSlide
             key={idx}
             tag="div"
