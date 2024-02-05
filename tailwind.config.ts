@@ -34,6 +34,7 @@ const config: Config = {
         },
       },
       boxShadow: {
+        xl: "-3px 3px 0px 0px #CC1B73",
         "2xl": "-4px 4px 0px 0px #CC1B73",
         "3xl": "-7px 7px 0px 0px #CC1B73",
         "3xl-a": "-7px 7px 0px 0px #F6B5CA",
