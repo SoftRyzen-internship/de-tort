@@ -127,12 +127,6 @@
       "Швидкість"
     ]
   },
-  "reviews": {
-    "imageHeart": {
-      "path": "/images/heart-512.png",
-      "alt": "Серце"
-    }
-  },
   "info": {
     "buttons": [
       {

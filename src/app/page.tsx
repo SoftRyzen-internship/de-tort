@@ -5,6 +5,7 @@ import { Sweets } from "@/sections/Sweets";
 import { CakesAssortment } from "@/sections/CakesAssortment";
 import { QA } from "@/sections/QA";
 import { Achievements } from "@/sections/Achievements";
+import { Reviews } from "@/sections/Reviews";
 
 export default async function Home() {
   return (
@@ -15,6 +16,7 @@ export default async function Home() {
       <About />
       <Achievements />
       <QA />
+      <Reviews />
       <Contacts />
     </>
   );
