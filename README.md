@@ -63,7 +63,7 @@ A website for the **De-Tort** service company.
 ```mermaid
 graph LR
 
-  Z{Enter} --> L(Layot)
+  Z{Enter} --> L(Layout)
   L ---> B(Header)
   L ---> A((Home page))
   L ---> C(Footer)
@@ -78,7 +78,7 @@ graph LR
   A --> AH[Section 6. Reviews]
   A --> AI[Section 6. Contacts]
   BA --> D((Cakes page))
-  AB --> D
+  AA --> D
   D --> DA[Page 1. Mini Cakes]
   D --> DB[Page 2. Bento Cakes]
   D --> DC[Page 3. Middle Cakes]
@@ -96,7 +96,7 @@ graph LR
   AC --> I
   AC --> J
   BA --> K((About us page))
-  BA --> L((For cafe page))
+  BA --> M((For cafe page))
 
 ```
 
