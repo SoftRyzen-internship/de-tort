@@ -200,6 +200,22 @@ is a list of more common components and their API.
 | `data`      | `undefined` | required, data for modal window inside button |
 | `className` | `''`        | add custom or additional css class you'd need |
 
+#### Slider
+
+| Prop               | Default    | Description                                                        |
+| ------------------ | ---------- | ------------------------------------------------------------------ |
+| `section`          | `toppings` | required, choose between `achievements`, `toppings` and `feedback` |
+| `slides`           | `string[]` | required, `array` of slides                                        |
+| `customSlideClass` | `''`       | add custom or additional css class you'd need for slide            |
+| `customClass`      | `''`       | add custom or additional css class you'd need for the whole slider |
+
+### SliderNav
+
+| Prop        | Default    | Description                                                        |
+| ----------- | ---------- | ------------------------------------------------------------------ |
+| `section`   | `toppings` | required, choose between `achievements`, `toppings` and `feedback` |
+| `className` | `''`       | add custom or additional css class you'd need for the whole slider |
+
 - #### SweetsCard
 
 | Prop         | Default     | Description                    |

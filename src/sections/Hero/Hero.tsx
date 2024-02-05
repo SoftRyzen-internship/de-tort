@@ -1,6 +1,6 @@
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { LinkButton } from "@/components/ui/LinkButton";
-import { HeroImage } from "@/components/base/HeroImage";
+import { HeroImage } from "@/components/ui/HeroImage";
 
 import data from "@/data/common.json";
 

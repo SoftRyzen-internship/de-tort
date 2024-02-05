@@ -4,11 +4,7 @@
     "city": "м. Київ",
     "location": "вул. Миколи Василенко 1/5 (поруч метро Берестейська)",
     "image": {
-      "path": {
-        "mobile": "/images/map/map-mobile.webp",
-        "tablet": "/images/map/map-tablet.webp",
-        "desktop": "/images/map/map-desktop.webp"
-      },
+      "path": "/images/map.webp",
       "alt": "Фрагмент мапи з локацією магазину",
       "href": "https://www.google.com/maps/dir//De+Tort,+Mykoly+Vasylenka+St,+1%2F5,+Kyiv,+02000/@50.4560929,30.4160719,17z/data=!4m17!1m7!3m6!1s0x40d4cdc80284ead5:0x31f1a8f52f0a8a4d!2sDe+Tort!8m2!3d50.4560929!4d30.4186468!16s%2Fg%2F11l32k3qtj!4m8!1m0!1m5!1m1!1s0x40d4cdc80284ead5:0x31f1a8f52f0a8a4d!2m2!1d30.4186468!2d50.4560929!3e3?entry=ttu",
       "ariaLabel": "Переглянути локацію на Google Maps.",
