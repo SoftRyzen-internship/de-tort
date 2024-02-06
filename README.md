@@ -241,6 +241,16 @@ is a list of more common components and their API.
 | `bgSrc` | `undefined` | required, cake image src            |
 | `tbSrc` | `undefined` | required, cake image src for tablet |
 
+- #### ToppingCard
+
+| Prop        | Default     | Description                         |
+| ----------- | ----------- | ----------------------------------- |
+| `label`     | `undefined` | required, topping name              |
+| `src`       | `undefined` | required, path to topping image     |
+| `alt`       | `undefined` | required, topping image alt         |
+| `idx`       | `undefined` | required, idx of card               |
+| `className` | `''`        | optional, if need change card class |
+
 ### Technology stack
 
 - **Main technologies**:
