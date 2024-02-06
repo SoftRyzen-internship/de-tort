@@ -12,7 +12,7 @@ export const ToppingCard: React.FC<ToppingCardProps> = ({
   className = "",
 }) => {
   const bgClass =
-    idx % 2 === 0 ? " bg-topping-card-even " : " bg-topping-card-odd ";
+    idx % 2 === 0 ? "bg-topping-card-even" : "bg-topping-card-odd";
 
   return (
     <div
