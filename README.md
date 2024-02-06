@@ -208,19 +208,19 @@ is a list of more common components and their API.
 
 #### Slider
 
-| Prop               | Default    | Description                                                        |
-| ------------------ | ---------- | ------------------------------------------------------------------ |
-| `section`          | `toppings` | required, choose between `achievements`, `toppings` and `feedback` |
-| `slides`           | `string[]` | required, `array` of slides                                        |
-| `customSlideClass` | `''`       | add custom or additional css class you'd need for slide            |
-| `customClass`      | `''`       | add custom or additional css class you'd need for the whole slider |
+| Prop               | Default     | Description                                                        |
+| ------------------ | ----------- | ------------------------------------------------------------------ |
+| `section`          | `undefined` | required, choose between `achievements`, `toppings` and `feedback` |
+| `slides`           | `undefined` | required, `array` of slides                                        |
+| `customSlideClass` | `''`        | add custom or additional css class you'd need for slide            |
+| `customClass`      | `''`        | add custom or additional css class you'd need for the whole slider |
 
 ### SliderNav
 
-| Prop        | Default    | Description                                                        |
-| ----------- | ---------- | ------------------------------------------------------------------ |
-| `section`   | `toppings` | required, choose between `achievements`, `toppings` and `feedback` |
-| `className` | `''`       | add custom or additional css class you'd need for the whole slider |
+| Prop        | Default     | Description                                                        |
+| ----------- | ----------- | ------------------------------------------------------------------ |
+| `section`   | `undefined` | required, choose between `achievements`, `toppings` and `feedback` |
+| `className` | `''`        | add custom or additional css class you'd need for the whole slider |
 
 - #### SweetsCard
 

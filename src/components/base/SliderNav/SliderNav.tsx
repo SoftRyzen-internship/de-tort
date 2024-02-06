@@ -8,8 +8,8 @@ import data from "@/data/common.json";
 import { SliderNavigationProps } from "./types";
 
 export const SliderNav: React.FC<SliderNavigationProps> = ({
-  className,
-  section = "toppings",
+  className = "",
+  section,
 }) => {
   const { SliderButtonsAriaLabel } = data;
 
