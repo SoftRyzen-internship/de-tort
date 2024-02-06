@@ -17,7 +17,7 @@ export const MapLink: React.FC<MapLinkProps> = ({ className = "" }) => {
         aria-label={ariaLabel}
         target="_blank"
         rel="noopener noreferrer nofollow"
-        className={`group relative box-content w-full h-full md:w-[704px] md:h-[640px] xl:w-[592px] xl:h-[536px] overflow-hidden rounded-3xl border-[1px] border-color-border-map shadow-3xl-map ${className}`}
+        className={`group relative box-content w-full h-full md:w-[704px] md:h-[640px] xl:w-[592px] xl:h-[536px] overflow-hidden rounded-3xl border-[1px] ${className}`}
       >
         <Image
           src={path}
