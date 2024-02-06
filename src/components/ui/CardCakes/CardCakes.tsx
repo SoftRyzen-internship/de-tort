@@ -1,16 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { LinkButton } from "../LinkButton";
 
 import json from "@/data/cakes-assortment.json";
-import Link from "next/link";
 
-export type CardCakesProps = {
-  title: string;
-  slug: string;
-  bgSrc: string;
-  tbSrc: string;
-};
+import { CardCakesProps } from "./types";
 
 export const CardCakes: React.FC<CardCakesProps> = ({
   title,
