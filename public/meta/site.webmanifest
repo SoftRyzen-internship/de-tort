@@ -1,0 +1,29 @@
+{
+  "name": "Кондитерська De-tort – найкращі торти для вас та ваших близьких",
+  "short_name": "De-tort",
+  "title": "De-tort – онлайн кондитерська",
+  "description": "Запрошуємо до нашої онлайн кондитерської De-tort!",
+  "start_url": "/",
+  "id": "/",
+  "locale": "uk_UA",
+  "keywords": "De-tort, торт, печиво, капкейк, чизкейк",
+  "icons": [
+    {
+      "src": "/meta/android-icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "images": [
+    {
+      "url": "/meta/opengraph-image.jpg",
+      "width": 1200,
+      "height": 630,
+      "alt": "De-tort – онлайн кондитерська"
+    }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#fff8f2",
+  "display": "standalone"
+}

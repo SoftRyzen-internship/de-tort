@@ -22,14 +22,14 @@ export const AccordionItem: React.FC<AccordionItemType> = ({
       onClick={setActive}
       onKeyDown={handleKeyDown}
       tabIndex={0}
-      className={`border-b border-color-accent-primary flex flex-col  mb-5 pb-6 last:mb-0 xl:w-[696px]`}
+      className={`border-b border-color-accent-primary flex flex-col mb-5 pb-6 last:mb-0 xl:w-[696px]`}
     >
       <div className="flex justify-between items-center cursor-pointer">
         <p className="font-semibold text-[14px] text-color-text-primary w-[220px] leading-normal md:w-[425px] md:text-[20px] xl:text-[24px] xl:w-[615px]">
           {question}
         </p>
         <div
-          className={`rounded-full border bg-color-bg-white border-color-accent-primary p-[14px] ${isActive ? "transition-all shadow-2xl translate-x-[2px] -translate-y-[2px] " : ""}`}
+          className={`rounded-full border bg-color-bg-white border-color-accent-primary p-[14px] ${isActive ? "transition-all shadow-2xl" : ""}`}
         >
           <span className="inherit">
             <Icon className={`w-5 h-5 ${isActive ? "rotate-180" : ""}`} />

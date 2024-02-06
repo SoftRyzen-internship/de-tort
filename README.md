@@ -1,4 +1,8 @@
-# DE-TORT
+# DE-TORT :birthday::cupcake::chocolate_bar:
+
+**[VIEW LIVE PAGE](https://de-tort.vercel.app)**
+
+---
 
 ## 📝 Project description
 
@@ -56,7 +60,45 @@ A website for the **De-Tort** service company.
 
 ### Project structure
 
-HERE WILL BE THE STRUCTURE OF THE PROJECT
+```mermaid
+graph LR
+
+  Z{Enter} --> L(Layout)
+  L ---> B(Header)
+  L ---> A((Home page))
+  L ---> C(Footer)
+  B --> BA[Menu]
+  A --> AA[Section 1. Hero]
+  A --> AB[Section 2. CakesAssortment]
+  A --> AC[Section 3. Sweets]
+  A --> AD[Section 4. About]
+  A --> AE[Section 5. Achievement]
+  A --> AF[Section 6. Toppings]
+  A --> AG[Section 6. QA]
+  A --> AH[Section 6. Reviews]
+  A --> AI[Section 6. Contacts]
+  BA --> D((Cakes page))
+  AA --> D
+  D --> DA[Page 1. Mini Cakes]
+  D --> DB[Page 2. Bento Cakes]
+  D --> DC[Page 3. Middle Cakes]
+  D --> DD[Page 4. Big Cakes]
+  BA --> E((Capcakes page))
+  BA --> F((Cheesecakes page))
+  BA --> G((Sweet sets page))
+  BA --> H((Cookies page))
+  BA --> I((Macaron page))
+  BA --> J((Cake-pops page))
+  AC --> E
+  AC --> F
+  AC --> G
+  AC --> H
+  AC --> I
+  AC --> J
+  BA --> K((About us page))
+  BA --> M((For cafe page))
+
+```
 
 ### Components API
 
@@ -103,6 +145,12 @@ is a list of more common components and their API.
 | `date`   | `undefined` | required, review date        |
 | `text`   | `undefined` | required, review text        |
 
+- #### Contacts
+
+| Prop      | Default | Description                 |
+| --------- | ------- | --------------------------- |
+| `variant` | `home`  | optional, current page path |
+
 - #### AboutCard
 
 | Prop     | Default     | Description                                        |
@@ -110,8 +158,6 @@ is a list of more common components and their API.
 | `icon`   | `undefined` | required, icon Component to show in the card       |
 | `text`   | `undefined` | required, text for the card                        |
 | `isEven` | `undefined` | required, true if current curd is even is the list |
-
-=======
 
 - #### Logo
 
@@ -160,6 +206,22 @@ is a list of more common components and their API.
 | `data`      | `undefined` | required, data for modal window inside button |
 | `className` | `''`        | add custom or additional css class you'd need |
 
+#### Slider
+
+| Prop               | Default    | Description                                                        |
+| ------------------ | ---------- | ------------------------------------------------------------------ |
+| `section`          | `toppings` | required, choose between `achievements`, `toppings` and `feedback` |
+| `slides`           | `string[]` | required, `array` of slides                                        |
+| `customSlideClass` | `''`       | add custom or additional css class you'd need for slide            |
+| `customClass`      | `''`       | add custom or additional css class you'd need for the whole slider |
+
+### SliderNav
+
+| Prop        | Default    | Description                                                        |
+| ----------- | ---------- | ------------------------------------------------------------------ |
+| `section`   | `toppings` | required, choose between `achievements`, `toppings` and `feedback` |
+| `className` | `''`       | add custom or additional css class you'd need for the whole slider |
+
 - #### SweetsCard
 
 | Prop         | Default     | Description                    |
@@ -169,6 +231,25 @@ is a list of more common components and their API.
 | `bgSrc`      | `undefined` | required, sweet image src      |
 | `bgAlt`      | `undefined` | required, sweet image alt      |
 | `targetHref` | `undefined` | required, on click target Href |
+
+- #### CardCakes
+
+| Prop    | Default     | Description                         |
+| ------- | ----------- | ----------------------------------- |
+| `title` | `undefined` | required, title type of Cake        |
+| `slug`  | `undefined` | required, link on right page        |
+| `bgSrc` | `undefined` | required, cake image src            |
+| `tbSrc` | `undefined` | required, cake image src for tablet |
+
+- #### ToppingCard
+
+| Prop        | Default     | Description                         |
+| ----------- | ----------- | ----------------------------------- |
+| `label`     | `undefined` | required, topping name              |
+| `src`       | `undefined` | required, path to topping image     |
+| `alt`       | `undefined` | required, topping image alt         |
+| `idx`       | `undefined` | required, idx of card               |
+| `className` | `''`        | optional, if need change card class |
 
 ### Technology stack
 

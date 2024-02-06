@@ -34,9 +34,13 @@ const config: Config = {
         },
       },
       boxShadow: {
+        xl: "-3px 3px 0px 0px #CC1B73",
         "2xl": "-4px 4px 0px 0px #CC1B73",
         "3xl": "-7px 7px 0px 0px #CC1B73",
         "3xl-a": "-7px 7px 0px 0px #F6B5CA",
+        "3xl-map-a": "-7px 7px 0px 0px #F7E6D8",
+        "3xl-map-b": "-7px 7px 0px 0px #F6B5CA",
+        "topping-plate": "0 4px 4px 0 rgba(0,0,0,0.25)",
       },
       // COLORS
       colors: {
@@ -67,6 +71,12 @@ const config: Config = {
           eight: "#626262",
           nine: "#683DD2",
           ten: "#5A4BFF",
+        },
+        "color-border-map-a": "#D1B9A4",
+        "color-border-map-b": "#CC1B73",
+        "topping-card": {
+          odd: "#8AC4DA",
+          even: "#EFA7C4",
         },
       },
       background: {
