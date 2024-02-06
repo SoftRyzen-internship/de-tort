@@ -15,11 +15,10 @@ export const CardCakes: React.FC<CardCakesProps> = ({
 }) => {
   return (
     <li className="group block relative rounded-3xl cursor-pointer overflow-hidden h-[360px] md:w-[336px] xl:h-[480px] xl:w-[592px]">
-      <h3 className="absolute top-8 left-1/2 -translate-x-1/2 w-full text-center font-unbounded text-color-accent-primary text-[24px] font-bold leading-normal uppercase xl:text-[28px] xl:top-10">
-        {title}
-      </h3>
-
       <Link href={slug}>
+        <p className="absolute top-8 left-1/2 -translate-x-1/2 w-full text-center font-unbounded text-color-accent-primary text-[24px] font-bold leading-normal uppercase xl:text-[28px] xl:top-10">
+          {title}
+        </p>
         <Image
           src={tbSrc}
           alt={title}

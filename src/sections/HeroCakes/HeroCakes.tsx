@@ -11,6 +11,7 @@ export const HeroCakes: React.FC = () => {
         <SectionTitle
           text={heading}
           className="mb-10 w-[320px] text-center m-auto md:w-[383px] xl:mb-[60px] xl:w-[585px]"
+          hero
         />
         <ul className="flex flex-wrap flex-col gap-8 md:flex-row">
           {links.map(({ label, slug, bgSrc, tbSrc }, i) => (
