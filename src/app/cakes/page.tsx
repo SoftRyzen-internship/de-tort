@@ -1,13 +1,10 @@
 import { Contacts } from "@/sections/Contacts";
+import { HeroCakes } from "@/sections/HeroCakes";
 
 export default async function Page() {
   return (
     <>
-      <section className="pt-[500px] bg-color-bg-primary">
-        <div className="container">
-          <h1>Tesk Cakes</h1>
-        </div>
-      </section>
+      <HeroCakes />
       <Contacts variant="cakes" />
     </>
   );
