@@ -40,6 +40,7 @@ const config: Config = {
         "3xl-a": "-7px 7px 0px 0px #F6B5CA",
         "3xl-map-a": "-7px 7px 0px 0px #F7E6D8",
         "3xl-map-b": "-7px 7px 0px 0px #F6B5CA",
+        "topping-plate": "0 4px 4px 0 rgba(0,0,0,0.25)",
       },
       // COLORS
       colors: {
@@ -73,6 +74,10 @@ const config: Config = {
         },
         "color-border-map-a": "#D1B9A4",
         "color-border-map-b": "#CC1B73",
+        "topping-card": {
+          odd: "#8AC4DA",
+          even: "#EFA7C4",
+        },
       },
       background: {
         gradient: "linear-gradient(180deg, #683DD2 0%, #5A4BFF 100%)",

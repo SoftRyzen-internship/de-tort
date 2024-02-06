@@ -11,7 +11,12 @@ import { ToppingCard } from "@/components/ui/ToppingCard";
 export default async function Home() {
   return (
     <>
-      <ToppingCard />
+      <ToppingCard
+        alt="Зображення"
+        src={"/images/cookies-@x2.jpg"}
+        idx={0}
+        label="груша-карамель-пекан"
+      />
       <Hero />
       <CakesAssortment />
       <Sweets />
