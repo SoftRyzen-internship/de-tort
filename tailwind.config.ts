@@ -38,7 +38,8 @@ const config: Config = {
         "2xl": "-4px 4px 0px 0px #CC1B73",
         "3xl": "-7px 7px 0px 0px #CC1B73",
         "3xl-a": "-7px 7px 0px 0px #F6B5CA",
-        "3xl-map": "-7px 7px 0px 0px #F7E6D8",
+        "3xl-map-a": "-7px 7px 0px 0px #F7E6D8",
+        "3xl-map-b": "-7px 7px 0px 0px #F6B5CA",
       },
       // COLORS
       colors: {
@@ -70,7 +71,8 @@ const config: Config = {
           nine: "#683DD2",
           ten: "#5A4BFF",
         },
-        "color-border-map": "#D1B9A4",
+        "color-border-map-a": "#D1B9A4",
+        "color-border-map-b": "#CC1B73",
       },
       background: {
         gradient: "linear-gradient(180deg, #683DD2 0%, #5A4BFF 100%)",

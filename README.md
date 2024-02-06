@@ -145,6 +145,12 @@ is a list of more common components and their API.
 | `date`   | `undefined` | required, review date        |
 | `text`   | `undefined` | required, review text        |
 
+- #### Contacts
+
+| Prop      | Default | Description                 |
+| --------- | ------- | --------------------------- |
+| `variant` | `home`  | optional, current page path |
+
 - #### AboutCard
 
 | Prop     | Default     | Description                                        |
