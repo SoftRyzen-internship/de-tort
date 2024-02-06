@@ -8,8 +8,8 @@ export const ToppingCard: React.FC<ToppingCardProps> = ({
   label,
   src,
   idx,
-  className,
   alt,
+  className = "",
 }) => {
   const bgClass =
     idx % 2 === 0 ? " bg-topping-card-even " : " bg-topping-card-odd ";

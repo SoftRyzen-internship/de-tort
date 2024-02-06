@@ -240,7 +240,7 @@ is a list of more common components and their API.
 | `src`       | `undefined` | required, path to topping image     |
 | `alt`       | `undefined` | required, topping image alt         |
 | `idx`       | `undefined` | required, idx of card               |
-| `className` | `undefined` | oprional, if need change card class |
+| `className` | `''`        | oprional, if need change card class |
 
 ### Technology stack
 
