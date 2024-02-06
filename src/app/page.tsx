@@ -15,7 +15,7 @@ export default async function Home() {
         alt="Зображення"
         src={"/images/cookies-@x2.jpg"}
         idx={0}
-        label="груша-карамель-пекан"
+        label="груша-карамель-пекан груша-карамель-пекан груша-карамель-пекан груша-карамель-пекан"
       />
       <Hero />
       <CakesAssortment />

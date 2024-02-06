@@ -32,10 +32,12 @@ export const ToppingCard: React.FC<ToppingCardProps> = ({
             className="bg-transparent w-full mx-auto rounded-[32px] "
             alt={alt}
             src={src}
+            width={320}
+            height={320}
           />
         </div>
       </div>
-      <p className="font-semibold uppercase text-2xl text-color-text-secondary leading-normal text-start">
+      <p className="font-semibold uppercase line-clamp-2 text-2xl text-color-text-secondary leading-normal text-start">
         {label}
       </p>
     </div>

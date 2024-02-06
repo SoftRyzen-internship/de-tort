@@ -234,12 +234,13 @@ is a list of more common components and their API.
 
 - #### ToppingCard
 
-| Prop    | Default                | Description                     |
-| ------- | ---------------------- | ------------------------------- |
-| `label` | `груша-карамель-пекан` | required, topping name          |
-| `src`   | `defaultImage`         | required, path to topping image |
-| `alt`   | `undefined`            | required, topping image alt     |
-| `idx`   | `0`                    | required, idx of card           |
+| Prop        | Default     | Description                         |
+| ----------- | ----------- | ----------------------------------- |
+| `label`     | `undefined` | required, topping name              |
+| `src`       | `undefined` | required, path to topping image     |
+| `alt`       | `undefined` | required, topping image alt         |
+| `idx`       | `undefined` | required, idx of card               |
+| `className` | `undefined` | oprional, if need change card class |
 
 ### Technology stack
 
