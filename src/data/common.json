@@ -16,7 +16,7 @@
       "dynamicPages": [
         {
           "label": "Торти",
-          "slug": "slug-1",
+          "slug": "cakes",
           "icon": {
             "path": "/icons/tort.svg",
             "alt": "Мінімалістична іконка з зображенням торта"
