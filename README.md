@@ -232,6 +232,15 @@ is a list of more common components and their API.
 | `bgAlt`      | `undefined` | required, sweet image alt      |
 | `targetHref` | `undefined` | required, on click target Href |
 
+- #### ToppingCard
+
+| Prop    | Default                | Description                     |
+| ------- | ---------------------- | ------------------------------- |
+| `label` | `груша-карамель-пекан` | required, topping name          |
+| `src`   | `defaultImage`         | required, path to topping image |
+| `alt`   | `undefined`            | required, topping image alt     |
+| `idx`   | `0`                    | required, idx of card           |
+
 ### Technology stack
 
 - **Main technologies**:
