@@ -14,8 +14,8 @@ export const Reviews = () => {
 
   return (
     <>
-      <section className="section pb-[60px] md:pb-[73px] bg-color-bg-accent">
-        <div className="container smOnly:pl-[13px] md:pl-[25px] xl:pb-[113px] relative">
+      <section className="section pb-[60px] md:pb-[73px] xl:pb-[113px] bg-color-bg-accent">
+        <div className="container smOnly:pl-[13px] md:pl-[25px] relative">
           <SectionTitle
             text={title}
             className="mb-6 pl-[7px] md:mb-10 xl:mb-[60px]"

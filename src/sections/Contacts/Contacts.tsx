@@ -6,16 +6,26 @@ import { MapLink } from "@/components/ui/MapLink";
 import IconPin from "~/icons/pin.svg";
 
 import data from "@/data/section-contacts.json";
+import { ContactsProps } from "./types";
 
-export const Contacts: React.FC = () => {
+export const Contacts: React.FC<ContactsProps> = ({ variant = "home" }) => {
   const {
     heading,
     contacts,
     address: { city, location },
   } = data;
 
+  const sectionBgColor =
+    variant === "cakes" ? "bg-color-bg-accent" : "bg-color-bg-primary";
+  const mapStyles =
+    variant === "cakes"
+      ? "shadow-3xl-map-b border-color-border-map-b"
+      : "shadow-3xl-map-a border-color-border-map-a";
+
   return (
-    <section className="py-[60px] md:py-20 xl:pt-[120px] xl:pb-[175px] text-color-text-primary leading-[1.4] bg-color-bg-primary">
+    <section
+      className={`py-[60px] md:py-20 xl:pt-[120px] xl:pb-[175px] text-color-text-primary leading-[1.4] ${sectionBgColor}`}
+    >
       <div className="container flex flex-col gap-6 md:gap-10 xl:flex-row xl:gap-0 xl:justify-between xl:items-center">
         <div className="flex flex-col gap-6 md:gap-10 xl:gap-[60px]">
           <SectionTitle text={heading} />
@@ -45,7 +55,7 @@ export const Contacts: React.FC = () => {
           </div>
         </div>
 
-        <MapLink className="self-center" />
+        <MapLink className={`self-center ${mapStyles}`} />
       </div>
     </section>
   );
