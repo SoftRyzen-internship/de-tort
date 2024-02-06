@@ -11,7 +11,9 @@ export default async function Home() {
   return (
     <>
       <Hero />
-      <HeroCakes />
+      <div className="container">
+        <HeroCakes />
+      </div>
       <CakesAssortment />
       <Sweets />
       <About />

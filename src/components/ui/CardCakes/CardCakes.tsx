@@ -1,5 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
+
+import { LinkButton } from "../LinkButton";
+
+import json from "@/data/cakes-assortment.json";
 
 export type CardCakesProps = {
   title: string;
@@ -9,17 +12,18 @@ export type CardCakesProps = {
 
 export const CardCakes: React.FC<CardCakesProps> = ({ title, slug, bgSrc }) => {
   return (
-    <li>
-      <Link href={slug} className="group block relative">
-        <Image
-          src={bgSrc}
-          alt={title}
-          width={592}
-          height={480}
-          className="object-cover"
-        />
-        <h3>{title}</h3>
-      </Link>
+    <li className="group block relative rounded-3xl overflow-hidden w-full h-auto ">
+      <Image
+        src={bgSrc}
+        alt={title}
+        width={592}
+        height={480}
+        className="object-cover w-full h-full"
+      />
+      <h3 className="absolute top-8 left-1/2 -translate-x-1/2 w-full text-center font-unbounded text-color-accent-primary text-[24px] font-bold leading-normal uppercase">
+        {title}
+      </h3>
+      <LinkButton label={json.button} className="w-[297px]" href={slug} />
     </li>
   );
 };

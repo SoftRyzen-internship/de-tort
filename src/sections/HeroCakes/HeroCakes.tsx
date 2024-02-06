@@ -4,7 +4,7 @@ import json from "@/data/cakes-assortment.json";
 export const HeroCakes: React.FC = () => {
   const { links } = json;
   return (
-    <ul className="flex flex-wrap">
+    <ul className="flex flex-wrap flex-col gap-8">
       {links.map(({ label, slug, bgSrc }, i) => (
         <CardCakes key={i} title={label} bgSrc={bgSrc} slug={slug} />
       ))}
