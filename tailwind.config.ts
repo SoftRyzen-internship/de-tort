@@ -40,7 +40,9 @@ const config: Config = {
         "3xl-a": "-7px 7px 0px 0px #F6B5CA",
         "3xl-map-a": "-7px 7px 0px 0px #F7E6D8",
         "3xl-map-b": "-7px 7px 0px 0px #F6B5CA",
-        "topping-plate": "0 4px 4px 0 rgba(0,0,0,0.25)",
+        "topping-plate": "12px 12px 27px 0 rgba(0, 0, 0, 0.2);",
+        "topping-plate-md": "13px 13px 28px 0 rgba(0, 0, 0, 0.2);",
+        "topping-plate-xl": "14px 14px 30px 0 rgba(0, 0, 0, 0.2);",
       },
       // COLORS
       colors: {
