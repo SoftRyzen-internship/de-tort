@@ -153,11 +153,12 @@ is a list of more common components and their API.
 
 - #### AboutCard
 
-| Prop     | Default     | Description                                        |
-| -------- | ----------- | -------------------------------------------------- |
-| `icon`   | `undefined` | required, icon Component to show in the card       |
-| `text`   | `undefined` | required, text for the card                        |
-| `isEven` | `undefined` | required, true if current curd is even is the list |
+| Prop       | Default     | Description                                        |
+| ---------- | ----------- | -------------------------------------------------- |
+| `imageUrl` | `undefined` | required, url of the Image at the card             |
+| `imageAlt` | `undefined` | required, alt of the Image at the card             |
+| `text`     | `undefined` | required, text for the card                        |
+| `isEven`   | `undefined` | required, true if current curd is even is the list |
 
 - #### Logo
 

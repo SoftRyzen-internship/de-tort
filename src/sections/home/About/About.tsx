@@ -5,15 +5,8 @@ import { SectionTitle } from "@/components/ui/SectionTitle";
 
 import about from "@/data/about.json";
 
-import HeartIcon from "~/icons/heart.svg";
-import StarIcon from "~/icons/star.svg";
-import GiftIcon from "~/icons/gift.svg";
-import DropIcon from "~/icons/drop.svg";
-import LightningIcon from "~/icons/lightning.svg";
-
 export const About: React.FC = () => {
   const { values, features, title, description } = about;
-  const icons = [HeartIcon, StarIcon, GiftIcon, DropIcon, LightningIcon];
 
   return (
     <section className="section bg-color-bg-primary">
@@ -35,13 +28,13 @@ export const About: React.FC = () => {
           </div>
         </div>
         <ul className="flex flex-col gap-4">
-          {features.map((text, index) => {
-            const IconComponent = icons[index];
+          {features.map(({ text, image }, index) => {
             const isEven = index % 2 === 0;
             return (
               <AboutCard
                 key={index}
-                icon={<IconComponent />}
+                imageUrl={image.url}
+                imageAlt={image.alt}
                 text={text}
                 isEven={isEven}
               />
