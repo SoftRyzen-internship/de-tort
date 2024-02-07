@@ -1,7 +1,7 @@
 import { Contacts } from "@/sections/Contacts";
 import { HeroCakes } from "@/sections/HeroCakes";
 
-export default async function Page() {
+export default async function Cakes() {
   return (
     <>
       <HeroCakes />
