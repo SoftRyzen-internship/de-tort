@@ -1,7 +1,6 @@
 import { cn } from "@/utils/helpers";
 
 import IconLeft from "~/icons/arrow-left.svg";
-import IconRight from "~/icons/arrow-right.svg";
 
 import data from "@/data/common.json";
 
@@ -12,10 +11,6 @@ export const SliderNav: React.FC<SliderNavigationProps> = ({
   section,
 }) => {
   const { sliderNav } = data;
-  const icons = [
-    <IconLeft key={0} className="h-[31px] w-[31px] " />,
-    <IconRight key={1} className="h-[31px] w-[31px] " />,
-  ];
 
   return (
     <ul
@@ -24,14 +19,19 @@ export const SliderNav: React.FC<SliderNavigationProps> = ({
         className,
       )}
     >
-      {sliderNav?.map(({ id, ariaLabel }, idx) => (
+      {sliderNav?.map(({ id, ariaLabel }) => (
         <li key={id}>
           <button
             className={cn(`button-${id}-${section} slider-button`)}
             type="button"
             aria-label={ariaLabel}
           >
-            {icons[idx]}
+            <IconLeft
+              key={0}
+              className={cn("h-[31px] w-[31px] ", {
+                "rotate-180": id === "next",
+              })}
+            />
           </button>
         </li>
       ))}
