@@ -39,7 +39,7 @@ export const CardCakes: React.FC<CardCakesProps> = ({
           className="notXl:hidden block object-cover object-center w-full h-full"
         />
 
-        <span className="notXL:hidden  absolute bottom-10 left-[147.5px] opacity-0 xl:group-hover:opacity-100 xl:group-focus-visible:opacity-100 hover:shadow-3xl focus:shadow-3xl transition-all rounded-full px-9 py-[14px] text-center flex-center font-bold border-color-accent-primary uppercase text-xl leading-10 text-color-accent-primary bg-color-bg-white hover:translate-x-[3px] hover:-translate-y-[3px] focus:translate-x-[3px] focus:-translate-y-[3px] border-2 w-fit">
+        <span className="notXL:hidden absolute bottom-10 left-[147.5px] opacity-0 xl:group-hover:opacity-100 xl:group-focus-visible:opacity-100 rounded-full px-9 py-[14px] text-center flex-center font-bold border-color-accent-primary uppercase text-xl leading-10 text-color-accent-primary bg-color-bg-white border-2 w-fit">
           {json.button}
         </span>
       </Link>
