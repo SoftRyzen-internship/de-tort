@@ -1,7 +1,6 @@
-import { ReactNode } from "react";
-
 export type AboutCardProps = {
-  icon: ReactNode;
+  imageUrl: string;
+  imageAlt: string;
   text: string;
   isEven: boolean;
 };
