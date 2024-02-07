@@ -1,12 +1,12 @@
-import { Hero } from "@/sections/Hero";
-import { Contacts } from "@/sections/Contacts";
-import { About } from "@/sections/About";
-import { Sweets } from "@/sections/Sweets";
-import { CakesAssortment } from "@/sections/CakesAssortment";
-import { QA } from "@/sections/QA";
-import { Achievements } from "@/sections/Achievements";
-import { Reviews } from "@/sections/Reviews";
-import { Toppings } from "@/sections/Toppings";
+import { Hero } from "@/sections/home/Hero";
+import { Contacts } from "@/sections/home/Contacts";
+import { About } from "@/sections/home/About";
+import { Sweets } from "@/sections/home/Sweets";
+import { CakesAssortment } from "@/sections/home/CakesAssortment";
+import { QA } from "@/sections/home/QA";
+import { Achievements } from "@/sections/home/Achievements";
+import { Reviews } from "@/sections/home/Reviews";
+import { Toppings } from "@/sections/home/Toppings";
 
 export default async function Home() {
   return (
