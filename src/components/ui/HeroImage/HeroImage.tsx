@@ -9,7 +9,7 @@ export const HeroImage: React.FC = () => {
   const { imageFace, imageBack } = hero;
 
   return (
-    <div className="relative md:absolute md:bottom-[-207px] mdOnly:right-0 xl:left-1/2 group translate-x-3 w-fit h-fit smOnly:mx-auto">
+    <div className="relative md:absolute md:bottom-[-207px] mdOnly:right-0 xl:left-1/2 group pointer-events-auto translate-x-3 w-fit h-fit smOnly:mx-auto">
       <Image
         src={imageBack.path}
         alt={imageBack.alt}
