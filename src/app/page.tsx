@@ -15,8 +15,8 @@ export default async function Home() {
       <CakesAssortment />
       <Sweets />
       <About />
-      <Toppings />
       <Achievements />
+      <Toppings />
       <QA />
       <Reviews />
       <Contacts />
