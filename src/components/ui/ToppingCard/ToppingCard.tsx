@@ -27,7 +27,7 @@ export const ToppingCard: React.FC<ToppingCardProps> = ({
           bgClass,
         )}
       >
-        <div className=" mx-auto overflow-hidden shadow-topping-plate w-[232px] h-[232px] md:w-[240px] md:h-[240px] xl:w-[260px] xl:h-[260px] rounded-full ">
+        <div className=" mx-auto overflow-hidden shadow-topping-plate md:shadow-topping-plate-md xl:shadow-topping-plate-xl w-[232px] h-[232px] md:w-[240px] md:h-[240px] xl:w-[260px] xl:h-[260px] rounded-full ">
           <Image
             className="bg-transparent w-full mx-auto rounded-[32px] "
             alt={alt}

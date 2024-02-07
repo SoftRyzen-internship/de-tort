@@ -33,17 +33,13 @@ export const getSliderConfigs = (section: TSections) => {
       return {
         [dimensions.sm]: {
           slidesPerView: 1,
-          slidesPerGroup: 1,
-          allowTouchMove: true,
         },
         [dimensions.md]: {
           slidesPerView: 2,
           spaceBetween: 32,
-          allowTouchMove: true,
         },
         [dimensions.lg]: {
           slidesPerView: 3,
-          allowTouchMove: true,
         },
       };
     }

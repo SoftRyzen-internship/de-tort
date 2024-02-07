@@ -26,7 +26,7 @@ export const ContactLinks: React.FC<TContacts> = ({
       rel="noopener noreferrer nofollow"
     >
       <IconPhone className="w-5 h-5 md:h-6 md:w-6 text-color-accent-primary " />
-      <p className="text-center bg-white">{contacts.phone}</p>
+      <p className="text-center bg-color-bg-primary">{contacts.phone}</p>
     </a>
   ) : (
     <ul

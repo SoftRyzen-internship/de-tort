@@ -29,6 +29,7 @@ export const Slider: React.FC<SliderProps> = ({
         loop={true}
         speed={800}
         spaceBetween={24}
+        lazyPreloadPrevNext={1}
         grabCursor={true}
         breakpoints={getSliderConfigs(section)}
         className={cn("w-full ", customClass)}

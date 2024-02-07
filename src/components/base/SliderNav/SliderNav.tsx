@@ -11,7 +11,11 @@ export const SliderNav: React.FC<SliderNavigationProps> = ({
   className = "",
   section,
 }) => {
-  const { SliderButtonsAriaLabel } = data;
+  const { sliderNav } = data;
+  const icons = [
+    <IconLeft key={0} className="h-[31px] w-[31px] " />,
+    <IconRight key={1} className="h-[31px] w-[31px] " />,
+  ];
 
   return (
     <ul
@@ -20,25 +24,17 @@ export const SliderNav: React.FC<SliderNavigationProps> = ({
         className,
       )}
     >
-      <li key="prev">
-        <button
-          disabled
-          className={cn(`button-prev-${section} slider-button`)}
-          type="button"
-          aria-label={SliderButtonsAriaLabel.left}
-        >
-          <IconLeft className="h-[31px] w-[31px] " />
-        </button>
-      </li>
-      <li key="next">
-        <button
-          className={cn(`button-next-${section} slider-button`)}
-          type="button"
-          aria-label={SliderButtonsAriaLabel.right}
-        >
-          <IconRight className="h-[31px] w-[31px] " />
-        </button>
-      </li>
+      {sliderNav?.map(({ id, ariaLabel }, idx) => (
+        <li key={id}>
+          <button
+            className={cn(`button-${id}-${section} slider-button`)}
+            type="button"
+            aria-label={ariaLabel}
+          >
+            {icons[idx]}
+          </button>
+        </li>
+      ))}
     </ul>
   );
 };
