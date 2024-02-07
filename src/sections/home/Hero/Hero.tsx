@@ -14,7 +14,7 @@ export const Hero = () => {
     <section className="bg-color-bg-hero pt-[56px] pb-[60px] md:pt-[160px] xl:pt-[204px] md:pb-[182px] xl:pb-[212px] overflow-hidden">
       <div className="container relative ">
         <HeroImage />
-        <div className="relative z-10 md:max-w-[539px] xl:max-w-[693px]">
+        <div className="relative z-10 md:max-w-[539px] xl:max-w-[693px] pointer-events-none">
           <SectionTitle
             hero
             text={hero.title}

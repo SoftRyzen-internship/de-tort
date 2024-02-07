@@ -1,7 +1,7 @@
-import { Contacts } from "@/sections/Contacts";
-import { HeroCakes } from "@/sections/HeroCakes";
+import { Contacts } from "@/sections/home/Contacts";
+import { HeroCakes } from "@/sections/cakes/HeroCakes";
 
-export default async function Page() {
+export default async function Cakes() {
   return (
     <>
       <HeroCakes />

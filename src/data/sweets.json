@@ -3,42 +3,36 @@
   "sweetList": [
     {
       "name": "Печиво",
-      "nameColor": "#A33F06",
       "bgSrc": "/images/cookies-@x2.jpg",
       "bgAlt": "Печиво з горіхами",
       "targetHref": "/"
     },
     {
       "name": "Капкейки",
-      "nameColor": "#A63F6B",
       "bgSrc": "/images/cupcakes-@x2.jpg",
       "bgAlt": "Три капкейка",
       "targetHref": "/"
     },
     {
       "name": "Макарон",
-      "nameColor": "#381046",
       "bgSrc": "/images/pasta-@x2.jpg",
       "bgAlt": "Кругле печиво",
       "targetHref": "/"
     },
     {
       "name": "Чизкейки",
-      "nameColor": "#FEEE9F",
       "bgSrc": "/images/cheesecakes-@x2.jpg",
       "bgAlt": "Розрізаний чізкейк",
       "targetHref": "/"
     },
     {
       "name": "Набори",
-      "nameColor": "#197CCB",
       "bgSrc": "/images/sets-@x2.jpg",
       "bgAlt": "Ягоди з тортиком та печивом",
       "targetHref": "/"
     },
     {
       "name": "Кейк-попси",
-      "nameColor": "#A9003A",
       "bgSrc": "/images/cakepops-@x2.jpg",
       "bgAlt": "Печиво з горіхами",
       "targetHref": "/"
