@@ -23,7 +23,7 @@ export const About: React.FC = () => {
 
           <p className="mb-6 font-fixel md:mb-8 xl:mb-12">{description}</p>
 
-          <div className="smOnly:mb-10 flex flex-col gap-6 md:gap-8 xl:gap-10 xl:max-w-[416px]">
+          <div className="smOnly:mb-10 xl:max-w-[416px] space-y-6 md:space-y-8 xl:space-y-10">
             {values.map(({ title, text }, index) => (
               <div key={index}>
                 <h3 className="font-unbounded mb-3 xl:mb-4 font-semibold text-[20px] xl:text-[24px] leading-normal">
