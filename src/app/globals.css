@@ -35,7 +35,7 @@
 }
 /* sliderNav */
 .slider-button {
-  @apply w-[60px] h-[60px] border-2 text-base leading-loose hover:shadow-xl focus-visible:shadow-xl md:hover:shadow-xl md:focus-visible:shadow-xl transition rounded-full flex-center border-color-accent-primary bg-color-bg-white hover:translate-x-[2px] hover:-translate-y-[2px] md:hover:translate-x-[3px] md:hover:-translate-y-[3px] focus-visible:translate-x-[2px] focus-visible:-translate-y-[2px] md:focus-visible:translate-x-[3px] md:focus-visible:-translate-y-[3px];
+  @apply w-[60px] h-[60px] xl:w-[68px] xl:h-[68px] border-2 text-base leading-loose hover:shadow-xl focus-visible:shadow-xl md:hover:shadow-xl md:focus-visible:shadow-xl transition rounded-full flex-center border-color-accent-primary bg-color-bg-white hover:translate-x-[2px] hover:-translate-y-[2px] md:hover:translate-x-[3px] md:hover:-translate-y-[3px] focus-visible:translate-x-[2px] focus-visible:-translate-y-[2px] md:focus-visible:translate-x-[3px] md:focus-visible:-translate-y-[3px];
 }
 
 .button-next-toppings.swiper-button-disabled,

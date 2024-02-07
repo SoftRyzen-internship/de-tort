@@ -1,17 +1,16 @@
 import { cn } from "@/utils/helpers";
 
 import IconLeft from "~/icons/arrow-left.svg";
-import IconRight from "~/icons/arrow-right.svg";
 
 import data from "@/data/common.json";
 
 import { SliderNavigationProps } from "./types";
 
 export const SliderNav: React.FC<SliderNavigationProps> = ({
-  className,
-  section = "toppings",
+  className = "",
+  section,
 }) => {
-  const { SliderButtonsAriaLabel } = data;
+  const { sliderNav } = data;
 
   return (
     <ul
@@ -20,25 +19,22 @@ export const SliderNav: React.FC<SliderNavigationProps> = ({
         className,
       )}
     >
-      <li key="prev">
-        <button
-          disabled
-          className={cn(`button-prev-${section} slider-button`)}
-          type="button"
-          aria-label={SliderButtonsAriaLabel.left}
-        >
-          <IconLeft className="h-[31px] w-[31px] " />
-        </button>
-      </li>
-      <li key="next">
-        <button
-          className={cn(`button-next-${section} slider-button`)}
-          type="button"
-          aria-label={SliderButtonsAriaLabel.right}
-        >
-          <IconRight className="h-[31px] w-[31px] " />
-        </button>
-      </li>
+      {sliderNav?.map(({ id, ariaLabel }) => (
+        <li key={id}>
+          <button
+            className={cn(`button-${id}-${section} slider-button`)}
+            type="button"
+            aria-label={ariaLabel}
+          >
+            <IconLeft
+              key={0}
+              className={cn("h-[31px] w-[31px] ", {
+                "rotate-180": id === "next",
+              })}
+            />
+          </button>
+        </li>
+      ))}
     </ul>
   );
 };

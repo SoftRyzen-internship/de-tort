@@ -1,5 +1,4 @@
 import { ToppingCard } from "@/components/ui/ToppingCard";
-
 import { Slider } from "@/components/base/Slider";
 import { SliderNav } from "@/components/base/SliderNav";
 import { SectionTitle } from "@/components/ui/SectionTitle";
@@ -15,7 +14,7 @@ export const Toppings: React.FC = () => {
 
   return (
     <section className="section bg-color-bg-accent py-[60px] md:py-[80px] xl:py-[120px]">
-      <div className="container ">
+      <div className="container">
         <div className="md:flex md:items-center mb-6 md:mb-10 xl:mb-[60px]">
           <SectionTitle text={sectionTitle} />
           <SliderNav
@@ -24,7 +23,7 @@ export const Toppings: React.FC = () => {
           />
         </div>
         <Slider
-          customSlideClass=" overflow-visible smOnly:!w-full"
+          customSlideClass="overflow-visible smOnly:!w-full"
           slides={slides}
           section="toppings"
         />

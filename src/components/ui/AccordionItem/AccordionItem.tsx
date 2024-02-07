@@ -29,7 +29,7 @@ export const AccordionItem: React.FC<AccordionItemType> = ({
           {question}
         </p>
         <div
-          className={`rounded-full border bg-color-bg-white border-color-accent-primary p-[14px] ${isActive ? "transition-all shadow-2xl" : ""}`}
+          className={`rounded-full border-2 bg-color-bg-white border-color-accent-primary p-[14px] ${isActive ? "transition-all shadow-2xl" : ""}`}
         >
           <span className="inherit">
             <Icon className={`w-5 h-5 ${isActive ? "rotate-180" : ""}`} />
