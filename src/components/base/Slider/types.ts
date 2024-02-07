@@ -4,7 +4,7 @@ export type TSections = "achievements" | "toppings" | "feedback";
 
 export interface SliderProps {
   section: TSections;
-  slides?: ReactNode[];
+  slides: ReactNode[];
   customClass?: string;
   customSlideClass?: string;
 }
