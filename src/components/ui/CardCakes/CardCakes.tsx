@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { LinkButton } from "../LinkButton";
-
 import json from "@/data/cakes-assortment.json";
 
 import { CardCakesProps } from "./types";
@@ -14,35 +12,36 @@ export const CardCakes: React.FC<CardCakesProps> = ({
   tbSrc,
 }) => {
   return (
-    <li className="group block relative rounded-3xl cursor-pointer overflow-hidden h-[360px] md:w-[336px] xl:h-[480px] xl:w-[592px]">
-      <Link href={slug}>
+    <li className="cakes-card">
+      <Link
+        href={slug}
+        className="group relative inline-block overflow-hidden rounded-3xl w-full h-[360px] xl:h-[592px]"
+      >
         <p className="absolute top-8 left-1/2 -translate-x-1/2 w-full text-center font-unbounded text-color-accent-primary text-[24px] font-bold leading-normal uppercase xl:text-[28px] xl:top-10">
           {title}
         </p>
+
         <Image
           src={tbSrc}
           alt={title}
           width={336}
           height={360}
-          className="object-cover w-full h-full xl:hidden"
+          priority
+          className="block object-cover object-center w-full h-full xl:hidden"
         />
+
+        <Image
+          src={bgSrc}
+          alt={title}
+          width={592}
+          height={480}
+          className="notXl:hidden block object-cover object-center w-full h-full"
+        />
+
+        <span className="notXL:hidden  absolute bottom-10 left-[147.5px] opacity-0 xl:group-hover:opacity-100 xl:group-focus-visible:opacity-100 hover:shadow-3xl focus:shadow-3xl transition-all rounded-full px-9 py-[14px] text-center flex-center font-bold border-color-accent-primary uppercase text-xl leading-10 text-color-accent-primary bg-color-bg-white hover:translate-x-[3px] hover:-translate-y-[3px] focus:translate-x-[3px] focus:-translate-y-[3px] border-2 w-fit">
+          {json.button}
+        </span>
       </Link>
-
-      <Image
-        src={bgSrc}
-        alt={title}
-        width={592}
-        height={480}
-        className="notXl:hidden block object-cover w-full h-full"
-      />
-
-      <div className="hidden group-hover:flex notXl:invisible absolute bottom-10 left-[147.5px]">
-        <LinkButton
-          label={json.button}
-          className="px-9 py-4 w-[297px] block"
-          href={slug}
-        />
-      </div>
     </li>
   );
 };

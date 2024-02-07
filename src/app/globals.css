@@ -42,3 +42,10 @@
 .button-prev-toppings.swiper-button-disabled {
   @apply pointer-events-none opacity-0;
 }
+
+/* Cakes Cards */
+@media screen and (min-width: 768px) {
+  .cakes-card {
+    flex-basis: calc((100% - 1 * 32px) / 2);
+  }
+}
