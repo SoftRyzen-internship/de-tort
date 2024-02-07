@@ -42,7 +42,7 @@ export const Contacts: React.FC<ContactsProps> = ({ variant = "home" }) => {
                 </p>
               </div>
 
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col items-start gap-2">
                 <p className="smOnly:max-w-[172px] mdOnly:max-w-[212px] font-unbounded font-semibold text-[16px] md:text-[20px] xl:text-[24px]">
                   {contacts.subtitle}
                 </p>
