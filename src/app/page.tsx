@@ -9,6 +9,7 @@ import { Reviews } from "@/sections/home/Reviews";
 import { Toppings } from "@/sections/home/Toppings";
 
 // import { fetchContacts } from "@/requests/fetchContacts";
+// import { fetchFAQ } from "@/requests/fetchFAQ";
 
 export default async function Home() {
   return (
