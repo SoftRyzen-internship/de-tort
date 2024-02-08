@@ -8,6 +8,11 @@ import { Achievements } from "@/sections/home/Achievements";
 import { Reviews } from "@/sections/home/Reviews";
 import { Toppings } from "@/sections/home/Toppings";
 
+// import { fetchReviews } from "@/requests/fetchReviews";
+// import { fetchAchievements } from "@/requests/fetchAchievements";
+// import { fetchContacts } from "@/requests/fetchContacts";
+// import { fetchFAQ } from "@/requests/fetchFAQ";
+
 export default async function Home() {
   return (
     <>
