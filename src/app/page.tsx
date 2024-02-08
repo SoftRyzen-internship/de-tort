@@ -8,6 +8,8 @@ import { Achievements } from "@/sections/home/Achievements";
 import { Reviews } from "@/sections/home/Reviews";
 import { Toppings } from "@/sections/home/Toppings";
 
+// import { fetchContacts } from "@/requests/fetchContacts";
+
 export default async function Home() {
   return (
     <>
