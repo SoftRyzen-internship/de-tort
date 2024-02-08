@@ -42,7 +42,7 @@ export const BurgerMenu: React.FC<BurgerMenuProps> = ({ isOpen, onClose }) => {
                 type="button"
                 aria-label={close}
                 onClick={onClose}
-                className="group absolute top-0 right-4 w-14 h-14 flex justify-center items-center bg-color-accent-primary rounded-lg md:top-1/2 md:-left-[50px] md:-translate-y-1/2"
+                className="group absolute top-0 right-5 w-12 h-12 xl:w-14 xl:h-14 flex justify-center items-center bg-color-accent-primary rounded-lg md:top-1/2 md:-left-[41px] xl:-left-[49px] md:-translate-y-1/2"
               >
                 <IconClose className="w-6 h-6 group-hover:scale-110 group-focus-visible:scale-110 transition-all" />
               </button>
