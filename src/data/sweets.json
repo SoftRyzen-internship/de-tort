@@ -1,6 +1,7 @@
 {
-  "title": "Смаколики",
-  "sweetList": [
+  "titleHome": "Смаколики",
+  "titleCakes": "Також купують",
+  "sweetsList": [
     {
       "name": "Печиво",
       "bgSrc": "/images/cookies-@x2.jpg",

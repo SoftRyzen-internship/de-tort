@@ -24,7 +24,7 @@ export const CardCakes: React.FC<CardCakesProps> = ({
         <Image
           src={tbSrc}
           alt={title}
-          width={336}
+          width={440}
           height={360}
           priority
           className="block object-cover object-center w-full h-full xl:hidden"
