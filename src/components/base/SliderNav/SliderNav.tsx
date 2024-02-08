@@ -12,10 +12,14 @@ export const SliderNav: React.FC<SliderNavigationProps> = ({
 }) => {
   const { sliderNav } = data;
 
+  const cakesStyles =
+    " absolute z-[2] pointer-events-none w-full justify-between top-2/4";
+
   return (
     <ul
       className={cn(
-        "flex-center smOnly:mx-auto w-fit h-fit gap-2 smOnly:mt-6 ",
+        "flex-center smOnly:mx-auto w-fit h-fit gap-2 smOnly:mt-6 pointer-events-none ",
+        section === "cakes" && cakesStyles,
         className,
       )}
     >
