@@ -4,8 +4,7 @@ import { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 
 import { MainNav } from "@/components/base/MainNav";
-
-import IconClose from "~/icons/close.svg";
+import { CloseButton } from "@/components/ui/CloseButton";
 
 import data from "@/data/common.json";
 
@@ -38,14 +37,11 @@ export const BurgerMenu: React.FC<BurgerMenuProps> = ({ isOpen, onClose }) => {
             <Dialog.Panel
               className={`burger-menu fixed inset-0 ml-auto w-full md:w-[428px] xl:w-1/2 bg-color-bg-primary px-6 pt-14 pb-[50px] md:pl-12 md:pr-[42px] md:pt-16 md:pb-[77px] xl:pl-[66px] xl:pr-12 xl:py-[81px]`}
             >
-              <button
-                type="button"
-                aria-label={close}
+              <CloseButton
+                ariaLabel={close}
                 onClick={onClose}
-                className="group absolute top-0 right-5 w-12 h-12 xl:w-14 xl:h-14 flex justify-center items-center bg-color-accent-primary rounded-lg md:top-1/2 md:-left-[41px] xl:-left-[49px] md:-translate-y-1/2"
-              >
-                <IconClose className="w-6 h-6 group-hover:scale-110 group-focus-visible:scale-110 transition-all" />
-              </button>
+                className="absolute top-0 right-5 md:top-1/2 md:-left-[41px] xl:-left-[49px] md:-translate-y-1/2"
+              />
 
               <MainNav onClick={onClose} />
             </Dialog.Panel>
