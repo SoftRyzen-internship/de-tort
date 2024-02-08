@@ -1,4 +1,5 @@
 import json from "@/data/cakes-assortment.json";
+import { FormStart } from "@/sections/cakes/FormStart/FormStart";
 
 export const dynamicParams = false;
 export const dynamic = "error";
@@ -26,6 +27,7 @@ export default async function CakePage({
           <p>Current page: {cake}</p>
         </div>
       </section>
+      <FormStart />
     </>
   );
 }
