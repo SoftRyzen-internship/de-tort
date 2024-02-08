@@ -13,7 +13,7 @@ export const SliderNav: React.FC<SliderNavigationProps> = ({
   const { sliderNav } = data;
 
   const cakesStyles =
-    " absolute z-[2] pointer-events-none w-full justify-between top-2/4";
+    " absolute z-[2] pointer-events-none w-full !justify-between top-2/4";
 
   return (
     <ul
@@ -24,7 +24,12 @@ export const SliderNav: React.FC<SliderNavigationProps> = ({
       )}
     >
       {sliderNav?.map(({ id, ariaLabel }) => (
-        <li key={id}>
+        <li
+          className={cn({
+            "mx-2 md:mx-9 xl:mx-4": section === "cakes",
+          })}
+          key={id}
+        >
           <button
             className={cn(`button-${id}-${section} slider-button`)}
             type="button"

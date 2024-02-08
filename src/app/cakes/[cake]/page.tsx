@@ -1,3 +1,5 @@
+import { SliderCakes } from "@/sections/cakes/SliderCakes";
+
 import json from "@/data/cakes-assortment.json";
 
 export const dynamicParams = false;
@@ -26,6 +28,7 @@ export default async function CakePage({
           <p>Current page: {cake}</p>
         </div>
       </section>
+      <SliderCakes />
     </>
   );
 }
