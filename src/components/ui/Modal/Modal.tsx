@@ -2,6 +2,10 @@ import { Fragment } from "react";
 
 import { Dialog, Transition } from "@headlessui/react";
 
+import { CloseButton } from "../CloseButton";
+
+import data from "@/data/common.json";
+
 import { ModalProps } from "./types";
 
 export const Modal: React.FC<ModalProps> = ({
@@ -11,12 +15,13 @@ export const Modal: React.FC<ModalProps> = ({
   classNameWrap = "",
   classNameModal = "",
 }) => {
+  const { close } = data.menu.buttons;
   return (
     <Transition show={isOpen} as={Fragment}>
       <Dialog onClose={onClose} className="relative z-50">
-        <div className="fixed inset-0 bg-color-bg-backdrop">
+        <div className="fixed inset-0 bg-color-bg-backdrop w-screen">
           <div
-            className={`flex min-h-full items-start justify-center p-4 text-center ${classNameWrap}`}
+            className={`flex items-start justify-center text-center container min-h-full ${classNameWrap}`}
           >
             <Transition.Child
               as={Fragment}
@@ -28,8 +33,13 @@ export const Modal: React.FC<ModalProps> = ({
               leaveTo="opacity-0 scale-95"
             >
               <Dialog.Panel
-                className={`w-full max-w-md rounded-3xl bg-color-bg-white border-2 border-color-accent-primary p-4 text-left transition-all mt-[147px] md:mt-[352px] ${classNameModal}`}
+                className={`fixed max-w-[480px] h-full rounded-3xl bg-color-bg-white border-2 border-color-accent-primary p-4 text-left transition-all mt-[120px] md:py-[60px] md:px-9 md:max-w-[704px] xl:max-w-[1216px] xl:py-10 xl:px-[104px] ${classNameModal}`}
               >
+                <CloseButton
+                  ariaLabel={close}
+                  onClick={onClose}
+                  className="absolute top-4 right-4 md:top-[60px] md:right-9 xl:top-9"
+                />
                 {children}
               </Dialog.Panel>
             </Transition.Child>
