@@ -153,11 +153,12 @@ is a list of more common components and their API.
 
 - #### AboutCard
 
-| Prop     | Default     | Description                                        |
-| -------- | ----------- | -------------------------------------------------- |
-| `icon`   | `undefined` | required, icon Component to show in the card       |
-| `text`   | `undefined` | required, text for the card                        |
-| `isEven` | `undefined` | required, true if current curd is even is the list |
+| Prop       | Default     | Description                                        |
+| ---------- | ----------- | -------------------------------------------------- |
+| `imageUrl` | `undefined` | required, url of the Image at the card             |
+| `imageAlt` | `undefined` | required, alt of the Image at the card             |
+| `text`     | `undefined` | required, text for the card                        |
+| `isEven`   | `undefined` | required, true if current curd is even is the list |
 
 - #### Logo
 
@@ -250,6 +251,14 @@ is a list of more common components and their API.
 | `alt`       | `undefined` | required, topping image alt         |
 | `idx`       | `undefined` | required, idx of card               |
 | `className` | `''`        | optional, if need change card class |
+
+- #### CloseButton
+
+| Prop        | Default     | Description                                        |
+| ----------- | ----------- | -------------------------------------------------- |
+| `ariaLabel` | `undefined` | required, `string` - accessibility attribute value |
+| `onClick`   | `undefined` | required, `:void` - event-handler on button click  |
+| `className` | `''`        | add custom or additional css class you'd need      |
 
 ### Technology stack
 

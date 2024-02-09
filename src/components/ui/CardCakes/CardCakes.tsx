@@ -14,7 +14,7 @@ export const CardCakes: React.FC<CardCakesProps> = ({
   return (
     <li className="cakes-card">
       <Link
-        href={slug}
+        href={`/cakes/${slug}`}
         className="group relative inline-block overflow-hidden rounded-3xl w-full h-[360px] xl:h-[480px]"
       >
         <p className="absolute top-8 left-1/2 -translate-x-1/2 w-full text-center font-unbounded text-color-accent-primary text-[24px] font-bold leading-normal uppercase xl:text-[28px] xl:top-10">
@@ -24,7 +24,7 @@ export const CardCakes: React.FC<CardCakesProps> = ({
         <Image
           src={tbSrc}
           alt={title}
-          width={336}
+          width={440}
           height={360}
           priority
           className="block object-cover object-center w-full h-full xl:hidden"
@@ -39,7 +39,7 @@ export const CardCakes: React.FC<CardCakesProps> = ({
           className="notXl:hidden block object-cover object-center w-full h-full"
         />
 
-        <span className="notXL:hidden  absolute bottom-10 left-[147.5px] opacity-0 xl:group-hover:opacity-100 xl:group-focus-visible:opacity-100 hover:shadow-3xl focus:shadow-3xl transition-all rounded-full px-9 py-[14px] text-center flex-center font-bold border-color-accent-primary uppercase text-xl leading-10 text-color-accent-primary bg-color-bg-white hover:translate-x-[3px] hover:-translate-y-[3px] focus:translate-x-[3px] focus:-translate-y-[3px] border-2 w-fit">
+        <span className="notXL:hidden absolute bottom-10 left-[147.5px] opacity-0 xl:group-hover:opacity-100 transition xl:group-focus-visible:opacity-100 rounded-full px-9 py-[14px] text-center flex-center font-bold border-color-accent-primary uppercase text-xl leading-10 text-color-accent-primary bg-color-bg-white border-2 w-fit">
           {json.button}
         </span>
       </Link>

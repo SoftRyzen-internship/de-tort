@@ -23,7 +23,7 @@ export const MenuButton: React.FC<MenuButtonProps> = ({ className = "" }) => {
         type="button"
         aria-label={open}
         onClick={() => setIsOpen(true)}
-        className={`w-10 h-10 flex items-center justify-center text-color-accent-primary hover:text-color-bg-white focus-visible:text-color-bg-white transition-all ${className}`}
+        className={`w-10 h-10 flex items-center justify-center text-color-accent-primary transition-all hover:scale-110 focus-visible:scale-110 ${className}`}
       >
         <IconMenu className="w-6 h-6" />
       </button>

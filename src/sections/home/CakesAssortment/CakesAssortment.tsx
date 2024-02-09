@@ -30,7 +30,7 @@ export const CakesAssortment: React.FC = () => {
                 <LinkButton
                   label={label}
                   secondaryLabel={caption}
-                  href={`/${slug}`}
+                  href={`/cakes/${slug}`}
                 />
               </li>
             ))}
