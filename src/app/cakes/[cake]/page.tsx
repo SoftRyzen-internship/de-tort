@@ -1,6 +1,7 @@
 import json from "@/data/cakes-assortment.json";
 import { Sweets } from "@/sections/home/Sweets";
 import { FormStart } from "@/sections/cakes/FormStart/FormStart";
+import { ToppingModalCard } from "@/components/ui/ToppingModalCard";
 
 export const dynamicParams = false;
 export const dynamic = "error";
@@ -25,6 +26,7 @@ export default async function CakePage({
     <>
       <section className="py-[120px] bg-color-bg-primary border-b-2">
         <div className="container">
+          <ToppingModalCard />
           <p className="text-center">Current page: {cake}</p>
         </div>
       </section>
