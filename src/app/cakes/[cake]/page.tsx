@@ -1,6 +1,7 @@
 import { SliderCakes } from "@/sections/cakes/SliderCakes";
 
 import json from "@/data/cakes-assortment.json";
+import { Sweets } from "@/sections/home/Sweets";
 
 export const dynamicParams = false;
 export const dynamic = "error";
@@ -23,12 +24,14 @@ export default async function CakePage({
 
   return (
     <>
-      <section className="py-[240px] bg-color-bg-primary">
+      <section className="py-[120px] bg-color-bg-primary border-b-2">
         <div className="container">
-          <p>Current page: {cake}</p>
+          <p className="text-center">Current page: {cake}</p>
         </div>
       </section>
       <SliderCakes />
+
+      <Sweets />
     </>
   );
 }
