@@ -1,6 +1,5 @@
 import { ContactsType } from "@/types";
 
-export type ContactsProps = {
+export type HeaderProps = {
   contacts: ContactsType;
-  variant?: "cakes" | "home";
 };

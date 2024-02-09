@@ -5,12 +5,24 @@ import { AchievementCard } from "@/components/ui/AchievementCard";
 
 import data from "@/data/achievement.json";
 
-export const Achievements: React.FC = () => {
+import { AchievementsProps } from "./types";
+
+export const Achievements: React.FC<AchievementsProps> = ({ achievements }) => {
   const { titleSection, cards } = data;
 
-  const slides = cards.map(({ id, title, description }) => (
-    <AchievementCard description={description} title={title} id={id} key={id} />
-  ));
+  const slides = cards.map(({ id, title: titleDefault, description, type }) => {
+    const title =
+      achievements.find((item) => item.type === type)?.title || titleDefault;
+
+    return (
+      <AchievementCard
+        description={description}
+        title={title}
+        id={id}
+        key={id}
+      />
+    );
+  });
 
   return (
     <section className="section bg-color-bg-primary pb-[60px] md:pb-[80px] xl:pb-[120px]">

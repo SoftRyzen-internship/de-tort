@@ -1,6 +1,8 @@
 import { request } from "graphql-request";
 
 import { getReviews } from "@/requests/queries/getReviews";
+import { convertDate } from "@/utils/helpers";
+
 import { ReviewsDataType, ReviewsType } from "@/types";
 
 export const fetchReviews = async (): Promise<ReviewsType> => {
@@ -12,7 +14,7 @@ export const fetchReviews = async (): Promise<ReviewsType> => {
 
     return (
       res?.reviews.data?.map(({ attributes: { author, date, text } }) => ({
-        date,
+        date: convertDate(date),
         author,
         text,
       })) || []
