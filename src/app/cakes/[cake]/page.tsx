@@ -30,7 +30,6 @@ export default async function CakePage({
         </div>
       </section>
       <SliderCakes />
-
       <Sweets />
     </>
   );

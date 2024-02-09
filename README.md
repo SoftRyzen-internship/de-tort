@@ -260,6 +260,14 @@ is a list of more common components and their API.
 | `onClick`   | `undefined` | required, `:void` - event-handler on button click  |
 | `className` | `''`        | add custom or additional css class you'd need      |
 
+- #### ScrollBtn
+
+| Prop         | Default     | Description                                                                   |
+| ------------ | ----------- | ----------------------------------------------------------------------------- |
+| `label`      | `undefined` | required, `string` - button's text                                            |
+| `targetName` | `undefined` | required, `string` - The line indicates to which section to scroll the screen |
+| `className`  | `''`        | add custom or additional css class you'd need                                 |
+
 ### Technology stack
 
 - **Main technologies**:
