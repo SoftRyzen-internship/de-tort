@@ -8,12 +8,14 @@ import { Achievements } from "@/sections/home/Achievements";
 import { Reviews } from "@/sections/home/Reviews";
 import { Toppings } from "@/sections/home/Toppings";
 
+import { fetchContacts } from "@/requests/fetchContacts";
 // import { fetchReviews } from "@/requests/fetchReviews";
 // import { fetchAchievements } from "@/requests/fetchAchievements";
-// import { fetchContacts } from "@/requests/fetchContacts";
 // import { fetchFAQ } from "@/requests/fetchFAQ";
 
 export default async function Home() {
+  const contacts = await fetchContacts();
+
   return (
     <>
       <Hero />
@@ -24,7 +26,7 @@ export default async function Home() {
       <Toppings />
       <QA />
       <Reviews />
-      <Contacts />
+      <Contacts contacts={contacts} />
     </>
   );
 }

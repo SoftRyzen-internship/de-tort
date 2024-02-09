@@ -6,7 +6,9 @@ import { Logo } from "@/components/ui/Logo";
 
 import data from "@/data/common.json";
 
-export const Footer: React.FC = () => {
+import { FooterProps } from "./types";
+
+export const Footer: React.FC<FooterProps> = ({ contacts }) => {
   const { soft_ryzen, info } = data;
 
   return (
@@ -20,7 +22,11 @@ export const Footer: React.FC = () => {
           ))}
         </ul>
 
-        <ContactLinks variant="footer" className="smOnly:items-center" />
+        <ContactLinks
+          variant="footer"
+          data={contacts}
+          className="smOnly:items-center"
+        />
 
         <div className="smOnly:static absolute bottom-10 left-1/2 md:-translate-x-1/2 flex flex-col items-center gap-6 ">
           <Logo />
