@@ -18,7 +18,7 @@ export default async function Home() {
     <>
       <Hero />
       <CakesAssortment />
-      <Sweets />
+      <Sweets home />
       <About />
       <Achievements />
       <Toppings />

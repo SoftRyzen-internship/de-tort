@@ -252,6 +252,14 @@ is a list of more common components and their API.
 | `idx`       | `undefined` | required, idx of card               |
 | `className` | `''`        | optional, if need change card class |
 
+- #### CloseButton
+
+| Prop        | Default     | Description                                        |
+| ----------- | ----------- | -------------------------------------------------- |
+| `ariaLabel` | `undefined` | required, `string` - accessibility attribute value |
+| `onClick`   | `undefined` | required, `:void` - event-handler on button click  |
+| `className` | `''`        | add custom or additional css class you'd need      |
+
 ### Technology stack
 
 - **Main technologies**:

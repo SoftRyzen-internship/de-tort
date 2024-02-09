@@ -1,4 +1,5 @@
 import json from "@/data/cakes-assortment.json";
+import { Sweets } from "@/sections/home/Sweets";
 import { FormStart } from "@/sections/cakes/FormStart/FormStart";
 
 export const dynamicParams = false;
@@ -22,11 +23,13 @@ export default async function CakePage({
 
   return (
     <>
-      <section className="py-[240px] bg-color-bg-primary">
+      <section className="py-[120px] bg-color-bg-primary border-b-2">
         <div className="container">
-          <p>Current page: {cake}</p>
+          <p className="text-center">Current page: {cake}</p>
         </div>
       </section>
+
+      <Sweets />
       <FormStart />
     </>
   );
