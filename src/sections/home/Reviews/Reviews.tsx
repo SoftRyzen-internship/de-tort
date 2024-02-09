@@ -5,11 +5,15 @@ import { SectionTitle } from "@/components/ui/SectionTitle";
 
 import data from "@/data/reviews.json";
 
-export const Reviews = () => {
-  const { title, reviewList } = data;
+import { ReviewsProps } from "./types";
 
-  const slides = reviewList?.map(({ date, author, text, key }) => (
-    <ReviewCard date={date} author={author} text={text} key={key} />
+export const Reviews: React.FC<ReviewsProps> = ({ reviews }) => {
+  const { title, reviewList: reviewsDefault } = data;
+
+  const items = reviews.length >= 3 ? reviews : reviewsDefault;
+
+  const slides = items?.map(({ date, author, text }, idx) => (
+    <ReviewCard date={date} author={author} text={text} key={idx} />
   ));
 
   return (
