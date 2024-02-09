@@ -268,6 +268,14 @@ is a list of more common components and their API.
 | `targetName` | `undefined` | required, `string` - The line indicates to which section to scroll the screen |
 | `className`  | `''`        | add custom or additional css class you'd need                                 |
 
+- #### SliderCakeCard
+
+| Prop        | Default     | Description                                   |
+| ----------- | ----------- | --------------------------------------------- |
+| `src`       | `undefined` | required, `string`- path to cake image        |
+| `alt`       | `undefined` | required, `string` - cake image alt           |
+| `className` | `''`        | add custom or additional css class you'd need |
+
 ### Technology stack
 
 - **Main technologies**:

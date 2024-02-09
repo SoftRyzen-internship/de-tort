@@ -4,7 +4,7 @@ import { SliderNav } from "@/components/base/SliderNav";
 import { Slider } from "@/components/base/Slider";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 
-import { ToppingCard } from "@/components/ui/ToppingCard";
+import { SliderCakeCard } from "@/components/ui/SliderCakeCard";
 import { ButtonLink } from "@/components/ui/ScrollBtn";
 
 import Dollar from "~/icons/dollar-circle.svg";
@@ -12,10 +12,15 @@ import Slice from "~/icons/cake-slice.svg";
 import Clock from "~/icons/clock.svg";
 import Star from "~/icons/star.svg";
 
-import data from "@/data/topppings.json";
 import bento from "@/data/slider-cakes.json";
 
-const { toppings } = data;
+const arr = [
+  "/images/minitort-@2x.jpg",
+  "/images/bentotort-@2x.jpg",
+  "/images/middletort-@2x.jpg",
+  "/images/bigtort-@2x.jpg",
+];
+
 const {
   heading,
   button,
@@ -30,8 +35,8 @@ const {
   description,
 } = bento;
 
-const slides = toppings?.map(({ label, src, alt, id }, idx) => (
-  <ToppingCard key={id} label={label} src={src} alt={alt} idx={idx} />
+const slides = arr?.map((string, idx) => (
+  <SliderCakeCard key={idx} src={string} alt={"alt"} />
 ));
 
 export const SliderCakes: FC = () => {
@@ -44,7 +49,10 @@ export const SliderCakes: FC = () => {
             section="cakes"
             customClass="md:w-[704px] xl:w-[592px] mb-6 md:mb-10"
           />
-          <SliderNav section="cakes" />
+          <SliderNav
+            section="cakes"
+            className={slides.length === 1 ? "!hidden" : ""}
+          />
         </div>
         <div className="">
           <SectionTitle text={heading} className="mb-6 md:mb-8 xl:mb-6" />
