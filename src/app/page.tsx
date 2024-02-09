@@ -11,12 +11,13 @@ import { Toppings } from "@/sections/home/Toppings";
 import { fetchContacts } from "@/requests/fetchContacts";
 import { fetchAchievements } from "@/requests/fetchAchievements";
 import { fetchReviews } from "@/requests/fetchReviews";
-// import { fetchFAQ } from "@/requests/fetchFAQ";
+import { fetchFAQ } from "@/requests/fetchFAQ";
 
 export default async function Home() {
   const contacts = await fetchContacts();
   const achievements = await fetchAchievements();
   const reviews = await fetchReviews();
+  const faq = await fetchFAQ();
 
   return (
     <>
@@ -26,7 +27,7 @@ export default async function Home() {
       <About />
       <Achievements achievements={achievements} />
       <Toppings />
-      <QA />
+      <QA faq={faq} />
       <Reviews reviews={reviews} />
       <Contacts contacts={contacts} />
     </>
