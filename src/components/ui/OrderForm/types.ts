@@ -1,3 +1,5 @@
+import { ZodSchema } from "zod";
+
 export type FieldType =
   | "textarea"
   | "text"
@@ -13,6 +15,7 @@ interface IFormField {
   label: string;
   optionalPaths: string[];
   disabledPaths: string[];
+  schema: ZodSchema<any>;
 }
 
 export interface IFormConfig {

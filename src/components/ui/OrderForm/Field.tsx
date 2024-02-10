@@ -48,8 +48,8 @@ export const Field: React.FC<IField> = ({
 `;
   const labelStyles = isDisabled ? "text-[#EAEAEA]" : "text-[#383838]";
 
-  const requiredStext = isOptional ? "" : "Обовʼязково";
-  const messageText = error[name] ? error[name] : requiredStext;
+  const requiredText = isOptional ? "" : "Обовʼязково";
+  const messageText = error[name] ? error[name] : requiredText;
 
   return (
     <FormField
@@ -73,9 +73,7 @@ export const Field: React.FC<IField> = ({
               />
             </FormControl>
           )}
-          {(type === "tel" ||
-            (type === "text" && name !== "dob") ||
-            type === "number") && (
+          {(type === "tel" || type === "text" || type === "number") && (
             <FormControl>
               <Input
                 {...field}
@@ -89,7 +87,7 @@ export const Field: React.FC<IField> = ({
           <FormDescription className="sr-only">{label}</FormDescription>
           {messageText && (
             <FormMessage
-              className={`absolute bottom-[-20px] right-0 text-right ${errorClass}`}
+              className={`absolute top-0 right-0 text-right ${errorClass}`}
             >
               {messageText}
             </FormMessage>

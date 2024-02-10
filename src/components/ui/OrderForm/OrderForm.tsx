@@ -7,19 +7,16 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import useFormPersist from "react-hook-form-persist";
 import { Form } from "@/components/ui/form";
-import { defaultValues, orderFormSchema } from "./schema";
 import { Field } from "./Field";
-import { FORM_CONFIG } from "./order";
+import { FORM_CONFIG, defaultValues, orderFormSchema } from "./order";
 import { SubmitButton } from "./SubmitButton";
-
-// const slugToDisable = "/dfg";
 
 export const OrderForm: React.FC = () => {
   const pathname = usePathname();
   const shortPathname = pathname.substring(pathname.lastIndexOf("/") + 1);
   const form = useForm<z.infer<typeof orderFormSchema>>({
     resolver: zodResolver(orderFormSchema),
-    defaultValues: defaultValues,
+    defaultValues,
   });
 
   const { formState, watch, setValue, register, handleSubmit, control } = form;

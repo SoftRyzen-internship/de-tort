@@ -1,3 +1,4 @@
+import { z } from "zod";
 import { IFormConfig } from "./types";
 
 export const FORM_CONFIG: IFormConfig = {
@@ -9,6 +10,18 @@ export const FORM_CONFIG: IFormConfig = {
       label: "Дата отримання:",
       optionalPaths: ["mini-cakes"],
       disabledPaths: [],
+      schema: z.string().min(2, { message: "✕ Потрібна дата " }),
+    },
+    {
+      name: "numberOfPeople",
+      placeholder: "8",
+      type: "number",
+      label: "На яку кількість людей?",
+      optionalPaths: [],
+      disabledPaths: [],
+      schema: z.string().refine((value) => value.trim() !== "", {
+        message: "Необхідно указати кількість людей",
+      }),
     },
     {
       name: "topping",
@@ -17,6 +30,7 @@ export const FORM_CONFIG: IFormConfig = {
       label: "Начинка:",
       optionalPaths: ["mini-cakes"],
       disabledPaths: [],
+      schema: z.string().min(2, { message: "✕ Потрібна начінка" }),
     },
     {
       name: "username",
@@ -25,13 +39,8 @@ export const FORM_CONFIG: IFormConfig = {
       label: "Ваше імʼя та прізвище:",
       optionalPaths: [],
       disabledPaths: [],
+      schema: z.string().min(2, { message: "✕ Потрібен Ім'я" }),
     },
-    // {
-    //   name: "numberOfPeople",
-    //   placeholder: "8",
-    //   type: "number",
-    //   label: "На яку кількість людей?",
-    // },
     // {
     //   name: "phone",
     //   placeholder: "+380",
@@ -50,3 +59,18 @@ export const FORM_CONFIG: IFormConfig = {
     labelInProgress: "Відсилка...",
   },
 };
+
+export const defaultValues: Record<string, string> = FORM_CONFIG.inputs.reduce(
+  (accumulator, current) => ({ ...accumulator, [current.name]: "" }),
+  {},
+);
+
+export const orderFormSchema = z.object(
+  FORM_CONFIG.inputs.reduce(
+    (accumulator, current) => ({
+      ...accumulator,
+      [current.name]: current.schema,
+    }),
+    {},
+  ),
+);
