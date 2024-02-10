@@ -11,6 +11,8 @@ interface IFormField {
   placeholder: string;
   type: FieldType;
   label: string;
+  optionalPaths: string[];
+  disabledPaths: string[];
 }
 
 export interface IFormConfig {

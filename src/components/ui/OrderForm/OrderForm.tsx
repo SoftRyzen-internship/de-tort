@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-// import { usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -15,6 +15,8 @@ import { SubmitButton } from "./SubmitButton";
 // const slugToDisable = "/dfg";
 
 export const OrderForm: React.FC = () => {
+  const pathname = usePathname();
+  const shortPathname = pathname.substring(pathname.lastIndexOf("/") + 1);
   const form = useForm<z.infer<typeof orderFormSchema>>({
     resolver: zodResolver(orderFormSchema),
     defaultValues: defaultValues,
@@ -37,7 +39,8 @@ export const OrderForm: React.FC = () => {
       <Form {...form}>
         <form onSubmit={handleSubmit(onSubmit)} className="relative ">
           {FORM_CONFIG.inputs.map((field) => {
-            const isDisabled = false;
+            const isDisabled = field.disabledPaths.includes(shortPathname);
+            const isOptional = field.optionalPaths.includes(shortPathname);
 
             return (
               <Field
@@ -50,6 +53,7 @@ export const OrderForm: React.FC = () => {
                 label={field.label}
                 error={formState.errors}
                 isDisabled={isDisabled}
+                isOptional={isOptional}
               />
             );
           })}

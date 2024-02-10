@@ -24,6 +24,7 @@ export interface IField {
   type?: FieldType | undefined;
   error?: any;
   isDisabled?: boolean;
+  isOptional?: boolean;
 }
 
 export const Field: React.FC<IField> = ({
@@ -34,7 +35,8 @@ export const Field: React.FC<IField> = ({
   type = "text",
   placeholder,
   error,
-  isDisabled = false,
+  isDisabled,
+  isOptional,
 }) => {
   const errorClass = error && error[name] && "text-[#681212]";
   const commonStyles = ``;
@@ -46,17 +48,21 @@ export const Field: React.FC<IField> = ({
 `;
   const labelStyles = isDisabled ? "text-[#EAEAEA]" : "text-[#383838]";
 
+  const requiredStext = isOptional ? "" : "Обовʼязково";
+  const messageText = error[name] ? error[name] : requiredStext;
+
   return (
     <FormField
       control={control}
       disabled={isDisabled}
       name={name}
-      defaultValue=""
       render={({ field }) => (
         <FormItem className="relative">
           <FormLabel className={labelStyles}>{label}</FormLabel>
           {type === "calendar" && <CalendarControl field={field} />}
-          {type === "topping" && <ToppingControl field={field} />}
+          {type === "topping" && (
+            <ToppingControl field={field} placeholder={placeholder} />
+          )}
           {type === "textarea" && (
             <FormControl>
               <textarea
@@ -81,9 +87,13 @@ export const Field: React.FC<IField> = ({
             </FormControl>
           )}
           <FormDescription className="sr-only">{label}</FormDescription>
-          <FormMessage
-            className={`absolute bottom-[-20px] right-0 text-right text-[12px] font-extralight tracking-[0.20em] ${errorClass}`}
-          />
+          {messageText && (
+            <FormMessage
+              className={`absolute bottom-[-20px] right-0 text-right ${errorClass}`}
+            >
+              {messageText}
+            </FormMessage>
+          )}
         </FormItem>
       )}
     />

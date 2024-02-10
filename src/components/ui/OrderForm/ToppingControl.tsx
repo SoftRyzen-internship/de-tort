@@ -7,9 +7,13 @@ import { cn } from "@/utils/helpers";
 
 interface ToppingControlProps {
   field: FieldValues;
+  placeholder?: string;
 }
 
-const ToppingControl: React.FC<ToppingControlProps> = ({ field }) => {
+const ToppingControl: React.FC<ToppingControlProps> = ({
+  field,
+  placeholder,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const onClose = () => {
     field.onChange("кокос-мигдаль");
@@ -21,13 +25,14 @@ const ToppingControl: React.FC<ToppingControlProps> = ({ field }) => {
     <>
       <FormControl>
         <button onClick={onOpen}>
-          {field.value ? field.value : <span>Обрати начинку</span>}
+          {field.value ? field.value : placeholder}
         </button>
       </FormControl>
       <div
         className={cn(
           {
-            "fixed top-0 bottom-0 left-0 right-0 bg-green-500/90": isOpen,
+            "fixed top-0 z-50 p-16 rounded-3xl bottom-0 left-0 right-0 bg-green-500/90":
+              isOpen,
           },
           {
             "sr-only": !isOpen,
@@ -40,7 +45,9 @@ const ToppingControl: React.FC<ToppingControlProps> = ({ field }) => {
           incidunt amet. Itaque, temporibus sint aliquid aperiam velit ducimus
           laudantium minus fugit.
         </p>
-        <button onClick={onClose}>Close Modal!!!</button>
+        <button onClick={onClose} tabIndex={-1} className="bg-yellow-500 p-4 ">
+          Close Modal!!!
+        </button>
       </div>
     </>
   );
