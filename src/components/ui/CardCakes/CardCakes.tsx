@@ -14,7 +14,7 @@ export const CardCakes: React.FC<CardCakesProps> = ({
   return (
     <li className="cakes-card">
       <Link
-        href={slug}
+        href={`/cakes/${slug}`}
         className="group relative inline-block overflow-hidden rounded-3xl w-full h-[360px] xl:h-[480px]"
       >
         <p className="absolute top-8 left-1/2 -translate-x-1/2 w-full text-center font-unbounded text-color-accent-primary text-[24px] font-bold leading-normal uppercase xl:text-[28px] xl:top-10">
@@ -24,7 +24,7 @@ export const CardCakes: React.FC<CardCakesProps> = ({
         <Image
           src={tbSrc}
           alt={title}
-          width={336}
+          width={440}
           height={360}
           priority
           className="block object-cover object-center w-full h-full xl:hidden"
