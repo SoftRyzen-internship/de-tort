@@ -11,6 +11,7 @@ export type FieldType =
 interface IFormField {
   name: string;
   placeholder: string;
+  placeholderMiniTorts?: string;
   type: FieldType;
   label: string;
   optionalPaths: string[];

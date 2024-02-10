@@ -39,14 +39,17 @@ export const OrderForm: React.FC = () => {
           {FORM_CONFIG.inputs.map((field) => {
             const isDisabled = field.disabledPaths.includes(shortPathname);
             const isOptional = field.optionalPaths.includes(shortPathname);
-
+            const placeholder =
+              shortPathname === "mini-cakes"
+                ? field.placeholderMiniTorts
+                : field.placeholder;
             return (
               <Field
                 key={field.name}
                 register={register}
                 control={control}
                 name={field.name}
-                placeholder={field.placeholder}
+                placeholder={placeholder}
                 type={field.type}
                 label={field.label}
                 error={formState.errors}

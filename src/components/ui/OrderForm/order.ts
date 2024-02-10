@@ -62,6 +62,8 @@ export const FORM_CONFIG: IFormConfig = {
     {
       name: "comments",
       placeholder: "Тут ви можете описати свою ідею",
+      placeholderMiniTorts:
+        "Ви хочете замовити набір чи окремі смаки міні-тортів?",
       type: "textarea",
       label: "Коментар:",
       optionalPaths: ["mini-cakes", "bento-cakes", "middle-cakes", "big-cakes"],
