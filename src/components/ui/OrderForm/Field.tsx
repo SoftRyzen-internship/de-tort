@@ -57,6 +57,7 @@ export const Field: React.FC<IField> = ({
     <FormField
       control={control}
       disabled={isDisabled}
+      defaultValue=""
       name={name}
       render={({ field }) => (
         <FormItem className="relative outline outline-1  last-of-type:row-span-2 text-silver text-base leading-5 font-fixel">

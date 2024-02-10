@@ -19,8 +19,12 @@
     @apply [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none;
   }
   .input-field {
-    @apply block w-full border rounded-lg py-[11px] px-4 text-left font-fixel border-alto;
+    @apply block w-full border rounded-lg px-4 text-left font-fixel border-alto text-silver text-base h-11 flex-start;
   }
+}
+
+input[type="number"]::placeholder {
+  color: #383838;
 }
 
 /* Common utilities: */

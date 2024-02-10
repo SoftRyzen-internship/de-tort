@@ -24,7 +24,17 @@ const ToppingControl: React.FC<ToppingControlProps> = ({
   return (
     <>
       <FormControl>
-        <button onClick={onOpen} className="input-field">
+        <button
+          onClick={onOpen}
+          className={cn(
+            "input-field",
+            "font-semibold capitalize !justify-center",
+            {
+              "!text-color-accent-primary": field.value,
+              "text-mine": !field.value,
+            },
+          )}
+        >
           {field.value ? field.value : placeholder}
         </button>
       </FormControl>

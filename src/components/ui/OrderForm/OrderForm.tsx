@@ -11,10 +11,10 @@ import { Field } from "./Field";
 import { FORM_CONFIG, defaultValues, generateOrderFormSchema } from "./order";
 import { SubmitButton } from "./SubmitButton";
 
+const orderFormSchema = generateOrderFormSchema("bento-cakes");
 export const OrderForm: React.FC = () => {
   const pathname = usePathname();
   const shortPathname = pathname.substring(pathname.lastIndexOf("/") + 1);
-  const orderFormSchema = generateOrderFormSchema(shortPathname);
   const form = useForm<z.infer<typeof orderFormSchema>>({
     resolver: zodResolver(orderFormSchema),
     defaultValues,
