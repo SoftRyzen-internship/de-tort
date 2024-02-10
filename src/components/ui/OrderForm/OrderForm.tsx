@@ -8,12 +8,13 @@ import { useForm } from "react-hook-form";
 import useFormPersist from "react-hook-form-persist";
 import { Form } from "@/components/ui/form";
 import { Field } from "./Field";
-import { FORM_CONFIG, defaultValues, orderFormSchema } from "./order";
+import { FORM_CONFIG, defaultValues, generateOrderFormSchema } from "./order";
 import { SubmitButton } from "./SubmitButton";
 
 export const OrderForm: React.FC = () => {
   const pathname = usePathname();
   const shortPathname = pathname.substring(pathname.lastIndexOf("/") + 1);
+  const orderFormSchema = generateOrderFormSchema(shortPathname);
   const form = useForm<z.infer<typeof orderFormSchema>>({
     resolver: zodResolver(orderFormSchema),
     defaultValues,

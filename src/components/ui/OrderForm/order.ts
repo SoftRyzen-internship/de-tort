@@ -29,8 +29,17 @@ export const FORM_CONFIG: IFormConfig = {
       type: "topping",
       label: "Начинка:",
       optionalPaths: ["mini-cakes"],
-      disabledPaths: [],
+      disabledPaths: ["mini-cakes"],
       schema: z.string().min(2, { message: "✕ Потрібна начінка" }),
+    },
+    {
+      name: "link",
+      placeholder: "https://pinterest.com/cakedesign",
+      type: "text",
+      label: "Дизайн (посилання):",
+      optionalPaths: ["mini-cakes", "bento-cakes", "middle-cakes", "big-cakes"],
+      disabledPaths: ["mini-cakes"],
+      schema: z.string(),
     },
     {
       name: "username",
@@ -41,18 +50,24 @@ export const FORM_CONFIG: IFormConfig = {
       disabledPaths: [],
       schema: z.string().min(2, { message: "✕ Потрібен Ім'я" }),
     },
-    // {
-    //   name: "phone",
-    //   placeholder: "+380",
-    //   type: "tel",
-    //   label: "Phone",
-    // },
-    // {
-    //   name: "comments",
-    //   placeholder: "Тут ви можете описати свою ідею",
-    //   type: "textarea",
-    //   label: "Коментар:",
-    // },
+    {
+      name: "phone",
+      placeholder: "+380",
+      type: "tel",
+      label: "Телефон:",
+      optionalPaths: [],
+      disabledPaths: [],
+      schema: z.string().min(2, { message: "✕ Потрібен телефон" }),
+    },
+    {
+      name: "comments",
+      placeholder: "Тут ви можете описати свою ідею",
+      type: "textarea",
+      label: "Коментар:",
+      optionalPaths: ["mini-cakes", "bento-cakes", "middle-cakes", "big-cakes"],
+      disabledPaths: [],
+      schema: z.string(),
+    },
   ],
   button: {
     label: "Замовити торт",
@@ -65,12 +80,14 @@ export const defaultValues: Record<string, string> = FORM_CONFIG.inputs.reduce(
   {},
 );
 
-export const orderFormSchema = z.object(
-  FORM_CONFIG.inputs.reduce(
-    (accumulator, current) => ({
-      ...accumulator,
-      [current.name]: current.schema,
-    }),
-    {},
-  ),
-);
+export const generateOrderFormSchema = (path: string) => {
+  return z.object(
+    FORM_CONFIG.inputs.reduce((accumulator, current) => {
+      const isOptional = current.optionalPaths.includes(path);
+      return {
+        ...accumulator,
+        [current.name]: isOptional ? current.schema.optional() : current.schema,
+      };
+    }, {}),
+  );
+};

@@ -14,6 +14,7 @@ import {
 import CalendarControl from "./CalendarControl";
 import { FieldType } from "./types";
 import ToppingControl from "./ToppingControl";
+import { cn } from "@/utils/helpers";
 
 export interface IField {
   register: any;
@@ -38,7 +39,7 @@ export const Field: React.FC<IField> = ({
   isDisabled,
   isOptional,
 }) => {
-  const errorClass = error && error[name] && "text-[#681212]";
+  const errorClass = error && error[name] && "text-red-700";
   const commonStyles = ``;
 
   const inputStyles = `${errorClass} ${commonStyles} input-reset`;
@@ -87,7 +88,9 @@ export const Field: React.FC<IField> = ({
           <FormDescription className="sr-only">{label}</FormDescription>
           {messageText && (
             <FormMessage
-              className={`absolute top-0 right-0 text-right ${errorClass}`}
+              className={cn("absolute top-0 right-0 text-right text-silver", {
+                "text-red-700": error && error[name],
+              })}
             >
               {messageText}
             </FormMessage>
