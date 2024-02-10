@@ -49,3 +49,15 @@
     flex-basis: calc((100% - 1 * 32px) / 2);
   }
 }
+
+/* Modal Cards */
+@media screen and (min-width: 768px) {
+  .modal-card {
+    flex-basis: calc((100% - 1 * 16px) / 2);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .modal-card {
+    flex-basis: calc((100% - 1 * 4px) / 3);
+  }
+}

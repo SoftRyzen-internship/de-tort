@@ -3,6 +3,7 @@ import { SectionTitle } from "@/components/ui/SectionTitle";
 import data from "@/data/topping-modal.json";
 
 import { ToppingModalProps } from "./types";
+import { ToppingModalCard } from "@/components/ui/ToppingModalCard";
 
 export const ToppingsModal: React.FC<ToppingModalProps> = ({
   onClose,
@@ -17,20 +18,21 @@ export const ToppingsModal: React.FC<ToppingModalProps> = ({
 
   return (
     <div className="flex flex-col h-full gap-8">
-      <SectionTitle text={titleSection} className="smOnly:w-[186px]" />
+      <SectionTitle text={titleSection} className="smOnly:w-[186px] md:pl-1" />
 
       <div className="grow overflow-y-auto">
-        <ul className="flex justify-center flex-col gap-[17px] md:gap-3 md:flex-row md:flex-wrap">
+        <div className="flex justify-center flex-col gap-[17px] md:gap-3 xl:gap-6 md:flex-row md:justify-start md:flex-wrap pb-2 pl-2 ">
           {toppings.map((topping) => (
-            <li
-              className="shrink-0 w-[310px] h-[404px] bg-color-bg-hero card-cakes"
+            <ToppingModalCard
               onClick={() => handleSelectTopping(topping.title)}
+              title={topping.title}
+              description={topping.description}
               key={topping.id}
-            >
-              <p>{topping.title}</p>
-            </li>
+              price={topping.price}
+              weight={topping.weight}
+            />
           ))}
-        </ul>
+        </div>
       </div>
     </div>
   );

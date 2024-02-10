@@ -34,7 +34,7 @@ export const Modal: React.FC<ModalProps> = ({
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel
-                  className={`relative max-w-[480px] h-[90vh] rounded-3xl bg-color-bg-white border-2 border-color-accent-primary p-4 text-left md:py-[60px] md:px-9 md:max-w-[704px] xl:max-w-[1216px] xl:py-10 xl:px-[104px] ${classNameModal}`}
+                  className={`relative max-w-[480px] h-[90vh] rounded-3xl bg-color-bg-white border-2 border-color-accent-primary p-4 text-left md:py-[60px] md:px-8 md:max-w-[705px] xl:max-w-[1216px] xl:py-10 xl:px-[104px] ${classNameModal}`}
                 >
                   <CloseButton
                     ariaLabel={close}
