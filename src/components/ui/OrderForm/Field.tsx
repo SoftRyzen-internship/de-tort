@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import React from "react";
 import { Input } from "@/components/ui/input";
@@ -55,7 +55,7 @@ export const Field: React.FC<IField> = ({
       render={({ field }) => (
         <FormItem className="relative">
           <FormLabel className={labelStyles}>{label}</FormLabel>
-          {name === "dob" && <CalendarControl field={field} />}
+          {type === "calendar" && <CalendarControl field={field} />}
           {type === "textarea" && (
             <FormControl>
               <textarea
@@ -67,7 +67,7 @@ export const Field: React.FC<IField> = ({
             </FormControl>
           )}
           {(type === "tel" ||
-            (type === "text" && name !== "dobs") ||
+            (type === "text" && name !== "dob") ||
             type === "number") && (
             <FormControl>
               <Input

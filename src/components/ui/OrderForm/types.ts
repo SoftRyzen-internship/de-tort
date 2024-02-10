@@ -1,4 +1,4 @@
-export type FieldType = "textarea" | "text" | "tel" | "date" | "number";
+export type FieldType = "textarea" | "text" | "tel" | "calendar" | "number";
 
 interface IFormField {
   name: string;

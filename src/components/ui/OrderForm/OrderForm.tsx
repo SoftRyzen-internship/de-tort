@@ -7,12 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import useFormPersist from "react-hook-form-persist";
 import { Form } from "@/components/ui/form";
-import {
-  orderFormSchema,
-  // bentoOrderFormSchema,
-  // bentoOrderDefaultValues,
-  // orderDefaultValues,
-} from "./schema";
+import { defaultValues, orderFormSchema } from "./schema";
 import { Field } from "./Field";
 import { FORM_CONFIG } from "./order";
 import { SubmitButton } from "./SubmitButton";
@@ -22,7 +17,7 @@ import { SubmitButton } from "./SubmitButton";
 export const OrderForm: React.FC = () => {
   const form = useForm<z.infer<typeof orderFormSchema>>({
     resolver: zodResolver(orderFormSchema),
-    // defaultValues: orderDefaultValues,
+    defaultValues: defaultValues,
   });
 
   const { formState, watch, setValue, register, handleSubmit, control } = form;
@@ -33,6 +28,7 @@ export const OrderForm: React.FC = () => {
 
   function onSubmit(values: z.infer<typeof orderFormSchema>) {
     console.log("🚀 ~ values:", values);
+    // form.reset(orderDefaultValues);
     form.reset();
   }
 
@@ -42,23 +38,14 @@ export const OrderForm: React.FC = () => {
         <form onSubmit={handleSubmit(onSubmit)} className="relative ">
           {FORM_CONFIG.inputs.map((field) => {
             const isDisabled = false;
-            // const isDisabled =
-            //   pathname === slugToDisable && field.name === "link"
-            //     ? true
-            //     : false;
-            const placeholder =
-              "Ви хочете замовити набір чи окремі смаки міні-тортів?";
-            // const placeholder =
-            //   pathname === slugToDisable && field.name === "comments"
-            //     ? "Ви хочете замовити набір чи окремі смаки міні-тортів?"
-            //     : field.placeholder;
+
             return (
               <Field
                 key={field.name}
                 register={register}
                 control={control}
                 name={field.name}
-                placeholder={placeholder}
+                placeholder={field.placeholder}
                 type={field.type}
                 label={field.label}
                 error={formState.errors}

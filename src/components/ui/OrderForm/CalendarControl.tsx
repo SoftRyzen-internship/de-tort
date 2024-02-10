@@ -27,9 +27,6 @@ const CalendarControl: React.FC<CalendarControlProps> = ({ field }) => {
     setIsOpen(true);
   };
 
-  const selectedDate = field.value ? new Date(field.value) : new Date();
-  console.log("🚀 ~ selectedDate:", field.value, selectedDate);
-
   return (
     <Popover open={isOpen} onOpenChange={(newOpen) => setIsOpen(newOpen)}>
       <PopoverTrigger asChild>
@@ -39,9 +36,8 @@ const CalendarControl: React.FC<CalendarControlProps> = ({ field }) => {
             className={cn("w-[240px]", !field.value && "text-gray-400")}
           >
             {field.value ? (
-              field.value
+              <span>{format(new Date(field.value), `dd.MM.yyyy`)}</span>
             ) : (
-              // format(field.value, "dd.MM.yyyy")
               <span>{format(new Date(), "dd.MM.yyyy")}</span>
             )}
           </button>
@@ -52,10 +48,9 @@ const CalendarControl: React.FC<CalendarControlProps> = ({ field }) => {
         <Calendar
           locale={uk}
           mode="single"
-          // need to set here or parsed date or if empty string - current date
           selected={field.value}
           onSelect={(date) => {
-            field.onChange(JSON.stringify(date));
+            field.onChange(date?.toString());
             handleClose();
           }}
           disabled={(date) => {
