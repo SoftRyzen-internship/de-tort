@@ -24,7 +24,7 @@ const ToppingControl: React.FC<ToppingControlProps> = ({
   return (
     <>
       <FormControl>
-        <button onClick={onOpen}>
+        <button onClick={onOpen} className="input-field">
           {field.value ? field.value : placeholder}
         </button>
       </FormControl>

@@ -81,6 +81,8 @@ const config: Config = {
           even: "#EFA7C4",
         },
         silver: "#ACACAC",
+        alto: "#CECECE",
+        mine: "#383838",
       },
       background: {
         gradient: "linear-gradient(180deg, #683DD2 0%, #5A4BFF 100%)",

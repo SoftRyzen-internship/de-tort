@@ -18,11 +18,8 @@
   .input-reset {
     @apply [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none;
   }
-  .test {
-    display: grid;
-    gap: 16px;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-auto-flow: column;
+  .input-field {
+    @apply block w-full border rounded-lg py-[11px] px-4 text-left font-fixel border-alto;
   }
 }
 

@@ -28,14 +28,16 @@ export const OrderForm: React.FC = () => {
 
   function onSubmit(values: z.infer<typeof orderFormSchema>) {
     console.log("🚀 ~ values:", values);
-    // form.reset(orderDefaultValues);
     form.reset();
   }
 
   return (
     <div className="container ">
       <Form {...form}>
-        <form onSubmit={handleSubmit(onSubmit)} className="relative ">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="relative grid xl:grid-flow-col xl:grid-cols-2 xl:grid-rows-4 gap-6"
+        >
           {FORM_CONFIG.inputs.map((field) => {
             const isDisabled = field.disabledPaths.includes(shortPathname);
             const isOptional = field.optionalPaths.includes(shortPathname);

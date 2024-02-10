@@ -20,7 +20,7 @@ export const FORM_CONFIG: IFormConfig = {
       optionalPaths: [],
       disabledPaths: [],
       schema: z.string().refine((value) => value.trim() !== "", {
-        message: "Необхідно указати кількість людей",
+        message: "✕ Потрібна кількість",
       }),
     },
     {

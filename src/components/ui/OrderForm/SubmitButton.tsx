@@ -12,7 +12,11 @@ export const SubmitButton: React.FC<ISubmitButton> = ({
   labelInProgress,
 }) => {
   return (
-    <button type="submit" className=" p-4 bg-green-400" disabled={isSubmitting}>
+    <button
+      type="submit"
+      className="absolute -bottom-8 translate-y-full left-1/2 p-4 bg-green-400"
+      disabled={isSubmitting}
+    >
       {isSubmitting ? labelInProgress : label}
     </button>
   );

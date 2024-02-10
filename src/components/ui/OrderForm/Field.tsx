@@ -42,13 +42,14 @@ export const Field: React.FC<IField> = ({
   const errorClass = error && error[name] && "text-red-700";
   const commonStyles = ``;
 
-  const inputStyles = `${errorClass} ${commonStyles} input-reset`;
+  const inputStyles = `${errorClass} ${commonStyles} input-field input-reset`;
 
   const textareaStyles = `
-   w-full grow resize-none ${commonStyles}
+  input-field grow resize-none ${commonStyles}
 `;
-  const labelStyles = isDisabled ? "text-[#EAEAEA]" : "text-[#383838]";
-
+  const labelStyles = isDisabled
+    ? "text-[#EAEAEA]"
+    : "text-mine text-sm leading-4 mb-2 block";
   const requiredText = isOptional ? "" : "Обовʼязково";
   const messageText = error[name] ? error[name] : requiredText;
 
@@ -58,7 +59,7 @@ export const Field: React.FC<IField> = ({
       disabled={isDisabled}
       name={name}
       render={({ field }) => (
-        <FormItem className="relative">
+        <FormItem className="relative outline outline-1  last-of-type:row-span-2 text-silver text-base leading-5 font-fixel">
           <FormLabel className={labelStyles}>{label}</FormLabel>
           {type === "calendar" && <CalendarControl field={field} />}
           {type === "topping" && (
@@ -88,9 +89,12 @@ export const Field: React.FC<IField> = ({
           <FormDescription className="sr-only">{label}</FormDescription>
           {messageText && (
             <FormMessage
-              className={cn("absolute top-0 right-0 text-right text-silver", {
-                "text-red-700": error && error[name],
-              })}
+              className={cn(
+                "absolute top-0 right-0 text-right text-silver text-xs italic",
+                {
+                  "text-red-700": error && error[name],
+                },
+              )}
             >
               {messageText}
             </FormMessage>

@@ -33,13 +33,11 @@ const CalendarControl: React.FC<CalendarControlProps> = ({ field }) => {
         <FormControl>
           <button
             onClick={handleOpen}
-            className={cn("w-[240px]", !field.value && "text-gray-400")}
+            className={cn("input-field", !field.value && "text-gray-400")}
           >
-            {field.value ? (
-              <span>{format(new Date(field.value), `dd.MM.yyyy`)}</span>
-            ) : (
-              <span>{format(new Date(), "dd.MM.yyyy")}</span>
-            )}
+            {field.value
+              ? format(new Date(field.value), `dd.MM.yyyy`)
+              : format(new Date(), "dd.MM.yyyy")}
           </button>
         </FormControl>
       </PopoverTrigger>
