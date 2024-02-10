@@ -33,7 +33,7 @@ export const Field: React.FC<IField> = ({
   name,
   control,
   label,
-  type = "text",
+  type,
   placeholder,
   error,
   isDisabled,

@@ -8,7 +8,7 @@ import { useForm } from "react-hook-form";
 import useFormPersist from "react-hook-form-persist";
 import { Form } from "@/components/ui/form";
 import { Field } from "./Field";
-import { FORM_CONFIG, defaultValues, generateOrderFormSchema } from "./order";
+import { FORM_CONFIG, generateOrderFormSchema, defaultValues } from "./order";
 import { SubmitButton } from "./SubmitButton";
 
 const orderFormSchema = generateOrderFormSchema("bento-cakes");
@@ -17,7 +17,6 @@ export const OrderForm: React.FC = () => {
   const shortPathname = pathname.substring(pathname.lastIndexOf("/") + 1);
   const form = useForm<z.infer<typeof orderFormSchema>>({
     resolver: zodResolver(orderFormSchema),
-    defaultValues,
   });
 
   const { formState, watch, setValue, register, handleSubmit, control } = form;
@@ -28,7 +27,7 @@ export const OrderForm: React.FC = () => {
 
   function onSubmit(values: z.infer<typeof orderFormSchema>) {
     console.log("🚀 ~ values:", values);
-    form.reset();
+    form.reset(defaultValues);
   }
 
   return (
