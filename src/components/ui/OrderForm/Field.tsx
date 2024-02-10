@@ -13,7 +13,7 @@ import {
 
 import CalendarControl from "./CalendarControl";
 import { FieldType } from "./types";
-// import ToppingControl from "./ToppingControl";
+import ToppingControl from "./ToppingControl";
 
 export interface IField {
   register: any;
@@ -56,6 +56,7 @@ export const Field: React.FC<IField> = ({
         <FormItem className="relative">
           <FormLabel className={labelStyles}>{label}</FormLabel>
           {type === "calendar" && <CalendarControl field={field} />}
+          {type === "topping" && <ToppingControl field={field} />}
           {type === "textarea" && (
             <FormControl>
               <textarea

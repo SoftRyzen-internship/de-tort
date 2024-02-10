@@ -9,6 +9,12 @@ export const FORM_CONFIG: IFormConfig = {
       label: "Дата отримання:",
     },
     {
+      name: "topping",
+      placeholder: "Обрати начинку",
+      type: "topping",
+      label: "Начинка:",
+    },
+    {
       name: "username",
       placeholder: "Наталія",
       type: "text",
