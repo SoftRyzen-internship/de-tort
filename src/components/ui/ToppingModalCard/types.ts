@@ -4,4 +4,9 @@ export interface ToppingModalCardProps {
   description: string;
   price: number;
   weight: number;
+  plate: ToppingPlate;
 }
+export type ToppingPlate = {
+  src: string;
+  alt: string;
+};

@@ -3,7 +3,7 @@ import { Slider } from "@/components/base/Slider";
 import { SliderNav } from "@/components/base/SliderNav";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 
-import data from "@/data/topppings.json";
+import data from "@/data/toppings.json";
 
 export const Toppings: React.FC = () => {
   const { sectionTitle, toppings } = data;
