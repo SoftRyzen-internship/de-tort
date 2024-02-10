@@ -31,10 +31,7 @@ const CalendarControl: React.FC<CalendarControlProps> = ({ field }) => {
     <Popover open={isOpen} onOpenChange={(newOpen) => setIsOpen(newOpen)}>
       <PopoverTrigger asChild>
         <FormControl>
-          <button
-            onClick={handleOpen}
-            className={cn("input-field", !field.value && "text-gray-400")}
-          >
+          <button onClick={handleOpen} className={cn("input-field", "h-11")}>
             {field.value
               ? format(new Date(field.value), `dd.MM.yyyy`)
               : format(new Date(), "dd.MM.yyyy")}

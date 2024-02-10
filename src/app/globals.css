@@ -19,7 +19,10 @@
     @apply [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none;
   }
   .input-field {
-    @apply block w-full border rounded-lg px-4 text-left font-fixel border-alto text-silver text-base h-11 flex-start;
+    @apply w-full border rounded-lg px-4 text-left font-fixel border-alto text-silver text-base;
+  }
+  .submit-button {
+    @apply py-4 rounded-[36px] border-color-accent-primary border-2 uppercase font-unbounded font-bold text-color-accent-primary;
   }
 }
 

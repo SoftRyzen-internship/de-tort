@@ -1,5 +1,5 @@
-import { OrderForm } from "@/components/ui/OrderForm/OrderForm";
 import json from "@/data/cakes-assortment.json";
+import { FormCakes } from "@/sections/cakes/FormCakes";
 import { Sweets } from "@/sections/home/Sweets";
 
 export const dynamicParams = false;
@@ -22,14 +22,14 @@ export default async function CakePage({
   console.log("slug: ", cake);
 
   return (
-    <>
-      <section className="py-[120px] bg-color-bg-primary border-b-2">
+    <div className="bg-color-bg-primary">
+      <section className="py-[120px] border-b-2">
         <div className="container">
           <p className="text-center">Current page: {cake}</p>
         </div>
       </section>
-      <OrderForm />
+      <FormCakes />
       <Sweets />
-    </>
+    </div>
   );
 }

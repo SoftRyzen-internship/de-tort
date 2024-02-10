@@ -14,7 +14,7 @@ export const SubmitButton: React.FC<ISubmitButton> = ({
   return (
     <button
       type="submit"
-      className="absolute -bottom-8 translate-y-full left-1/2 p-4 bg-green-400"
+      className="notXl:mt-2 xl:absolute xl:-bottom-8 xl:translate-y-full xl:left-1/2 submit-button"
       disabled={isSubmitting}
     >
       {isSubmitting ? labelInProgress : label}

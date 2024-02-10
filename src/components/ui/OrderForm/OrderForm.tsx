@@ -31,42 +31,40 @@ export const OrderForm: React.FC = () => {
   }
 
   return (
-    <div className="container ">
-      <Form {...form}>
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="relative grid xl:grid-flow-col xl:grid-cols-2 xl:grid-rows-4 gap-6"
-        >
-          {FORM_CONFIG.inputs.map((field) => {
-            const isDisabled = field.disabledPaths.includes(shortPathname);
-            const isOptional = field.optionalPaths.includes(shortPathname);
-            const placeholder =
-              shortPathname === "mini-cakes"
-                ? field.placeholderMiniTorts
-                : field.placeholder;
-            return (
-              <Field
-                key={field.name}
-                register={register}
-                control={control}
-                name={field.name}
-                placeholder={placeholder}
-                type={field.type}
-                label={field.label}
-                error={formState.errors}
-                isDisabled={isDisabled}
-                isOptional={isOptional}
-              />
-            );
-          })}
+    <Form {...form}>
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="relative grid xl:grid-flow-col xl:grid-cols-2 xl:grid-rows-4 gap-6"
+      >
+        {FORM_CONFIG.inputs.map((field) => {
+          const isDisabled = field.disabledPaths.includes(shortPathname);
+          const isOptional = field.optionalPaths.includes(shortPathname);
+          const placeholder =
+            shortPathname === "mini-cakes"
+              ? field.placeholderMiniTorts
+              : field.placeholder;
+          return (
+            <Field
+              key={field.name}
+              register={register}
+              control={control}
+              name={field.name}
+              placeholder={placeholder}
+              type={field.type}
+              label={field.label}
+              error={formState.errors}
+              isDisabled={isDisabled}
+              isOptional={isOptional}
+            />
+          );
+        })}
 
-          <SubmitButton
-            isSubmitting={formState.isSubmitting}
-            label={FORM_CONFIG.button.label}
-            labelInProgress={FORM_CONFIG.button.labelInProgress}
-          />
-        </form>
-      </Form>
-    </div>
+        <SubmitButton
+          isSubmitting={formState.isSubmitting}
+          label={FORM_CONFIG.button.label}
+          labelInProgress={FORM_CONFIG.button.labelInProgress}
+        />
+      </form>
+    </Form>
   );
 };

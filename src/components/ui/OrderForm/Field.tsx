@@ -42,11 +42,13 @@ export const Field: React.FC<IField> = ({
   const errorClass = error && error[name] && "text-red-700";
   const commonStyles = ``;
 
-  const inputStyles = `${errorClass} ${commonStyles} input-field input-reset`;
+  const inputStyles = `${errorClass} ${commonStyles} h-11 input-field input-reset`;
 
-  const textareaStyles = `
-  input-field grow resize-none ${commonStyles}
-`;
+  const textareaStyles = cn(
+    "input-field grow resize-none",
+    "h-[136px] pt-3 pb-6",
+    commonStyles,
+  );
   const labelStyles = isDisabled
     ? "text-[#EAEAEA]"
     : "text-mine text-sm leading-4 mb-2 block";

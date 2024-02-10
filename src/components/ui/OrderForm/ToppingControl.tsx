@@ -28,7 +28,7 @@ const ToppingControl: React.FC<ToppingControlProps> = ({
           onClick={onOpen}
           className={cn(
             "input-field",
-            "font-semibold capitalize !justify-center",
+            "font-semibold capitalize justify-center h-11 flex-center",
             {
               "!text-color-accent-primary": field.value,
               "text-mine": !field.value,
