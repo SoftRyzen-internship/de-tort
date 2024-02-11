@@ -45,7 +45,7 @@ export const Field: React.FC<IField> = ({
   const inputStyles = `${errorClass} ${commonStyles} h-11 input-field input-reset`;
 
   const textareaStyles = cn(
-    "input-field grow resize-none",
+    "input-field block resize-none",
     "h-[136px] pt-3 pb-6",
     commonStyles,
   );
@@ -62,7 +62,7 @@ export const Field: React.FC<IField> = ({
       defaultValue=""
       name={name}
       render={({ field }) => (
-        <FormItem className="relative outline outline-1  last-of-type:row-span-2 text-silver text-base leading-5 font-fixel">
+        <FormItem className="relative xl:last-of-type:row-span-2 text-silver text-base leading-5 font-fixel">
           <FormLabel className={labelStyles}>{label}</FormLabel>
           {type === "calendar" && <CalendarControl field={field} />}
           {type === "topping" && (

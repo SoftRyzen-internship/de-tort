@@ -22,7 +22,7 @@
     @apply w-full border rounded-lg px-4 text-left font-fixel border-alto text-silver text-base;
   }
   .submit-button {
-    @apply py-4 rounded-[36px] border-color-accent-primary border-2 uppercase font-unbounded font-bold text-color-accent-primary;
+    @apply block w-full md:w-[368px] md:mx-auto py-[14px] rounded-[36px] border-color-accent-primary border-2 uppercase font-unbounded font-bold leading-8 text-color-accent-primary;
   }
 }
 
