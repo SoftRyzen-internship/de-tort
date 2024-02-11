@@ -33,6 +33,12 @@ type CakeToppingDataType = {
   };
 };
 
+export type CakeToppingsDataType = {
+  toppings: {
+    data: CakeToppingDataType[];
+  };
+};
+
 export type CakeToppingType = {
   name: string;
   description: string;

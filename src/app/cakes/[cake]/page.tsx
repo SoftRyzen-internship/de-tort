@@ -1,6 +1,6 @@
 import { Sweets } from "@/sections/home/Sweets";
 
-import { fetchCake } from "@/requests/fetchCake";
+import { fetchCake } from "@/requests";
 
 import json from "@/data/cakes-assortment.json";
 
