@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "cakes",
+    "title": "Торти",
+    "description": "",
+    "keywords": ""
+  },
+  {
+    "slug": "cupcakes",
+    "title": "Капкейки",
+    "description": "",
+    "keywords": ""
+  },
+  {
+    "slug": "cheesecakes",
+    "title": "Чизкейки",
+    "description": "",
+    "keywords": ""
+  },
+  {
+    "slug": "sweet-sets",
+    "title": "Солодкі набори",
+    "description": "",
+    "keywords": ""
+  },
+  {
+    "slug": "cookies",
+    "title": "Печиво",
+    "description": "",
+    "keywords": ""
+  },
+  {
+    "slug": "macaron",
+    "title": "Макарон",
+    "description": "",
+    "keywords": ""
+  },
+  {
+    "slug": "cake-pops",
+    "title": "Кейк-попси",
+    "description": "",
+    "keywords": ""
+  }
+]
