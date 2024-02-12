@@ -5,7 +5,7 @@ import localFont from "next/font/local";
 import { Header } from "@/layout/Header";
 import { Footer } from "@/layout/Footer";
 
-import { fetchContacts } from "@/requests/fetchContacts";
+import { fetchContacts } from "@/requests";
 
 import meta from "@/data/meta";
 

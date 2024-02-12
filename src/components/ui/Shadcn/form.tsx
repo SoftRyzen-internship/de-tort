@@ -10,7 +10,7 @@ import {
   useFormContext,
 } from "react-hook-form";
 
-import { Label } from "@/components/ui/label";
+// import { Label } from "@/components/ui/Shadcn/label";
 import { cn } from "@/utils/helpers";
 
 const Form = FormProvider;
@@ -91,7 +91,7 @@ const FormLabel = React.forwardRef<
   const { error, formItemId } = useFormField();
 
   return (
-    <Label
+    <LabelPrimitive.Label
       ref={ref}
       className={cn(error && "text-red-500 dark:text-red-900", className)}
       htmlFor={formItemId}

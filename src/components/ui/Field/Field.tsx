@@ -1,7 +1,5 @@
-// "use client";
-
 import React from "react";
-import { Input } from "@/components/ui/input";
+
 import {
   FormItem,
   FormLabel,
@@ -9,26 +7,16 @@ import {
   FormMessage,
   FormField,
   FormDescription,
-} from "@/components/ui/form";
+} from "@/components/ui/Shadcn/form";
+import { Input } from "@/components/ui/Shadcn/input";
+import { CalendarControl } from "@/components/ui/CalendarControl";
+import { ToppingControl } from "@/components/ui/ToppingControl";
 
-import CalendarControl from "./CalendarControl";
-import { FieldType } from "./types";
-import ToppingControl from "./ToppingControl";
 import { cn } from "@/utils/helpers";
 
-export interface IField {
-  register: any;
-  name: string;
-  control: any;
-  label: string;
-  placeholder?: string;
-  type?: FieldType | undefined;
-  error?: any;
-  isDisabled?: boolean;
-  isOptional?: boolean;
-}
+import { FieldProps } from "./types";
 
-export const Field: React.FC<IField> = ({
+export const Field: React.FC<FieldProps> = ({
   register,
   name,
   control,
@@ -38,22 +26,24 @@ export const Field: React.FC<IField> = ({
   error,
   isDisabled,
   isOptional,
+  toppings,
 }) => {
-  const errorClass = error && error[name] && "text-color-accent-primary";
-  const commonStyles = ``;
-
-  const inputStyles = `${errorClass} ${commonStyles} h-11 input-field input-reset`;
+  const errorClass = error && error[name] && "text-error border-error";
+  const inputStyles = `${errorClass} h-11 input-field input-reset`;
 
   const textareaStyles = cn(
     "input-field block resize-none",
     "h-[136px] pt-3 pb-6",
-    commonStyles,
+    { "border-error": error && error[name] },
   );
-  const labelStyles = isDisabled
-    ? "text-[#EAEAEA]"
-    : "text-mine text-sm leading-4 mb-2 block";
+  const labelStyles = cn("text-sm leading-4 mb-2 block text-mine", {
+    "text-mine": !isDisabled && !error,
+    "opacity-25": isDisabled,
+    "text-error": error && error[name],
+  });
+
   const requiredText = isOptional ? "" : "Обовʼязково";
-  const messageText = error[name] ? error[name] : requiredText;
+  const messageText = error && error[name] ? error[name] : requiredText;
 
   return (
     <FormField
@@ -64,12 +54,16 @@ export const Field: React.FC<IField> = ({
       render={({ field }) => (
         <FormItem className="relative xl:last-of-type:row-span-2 text-mine text-base leading-5 font-fixel">
           <FormLabel className={labelStyles}>{label}</FormLabel>
-          {type === "calendar" && <CalendarControl field={field} />}
+          {type === "calendar" && (
+            <CalendarControl field={field} isError={error && error[name]} />
+          )}
           {type === "topping" && (
             <ToppingControl
               field={field}
               placeholder={placeholder}
               disabled={isDisabled}
+              toppings={toppings}
+              isError={error && error[name]}
             />
           )}
           {type === "textarea" && (
@@ -99,7 +93,7 @@ export const Field: React.FC<IField> = ({
               className={cn(
                 "absolute top-0 right-0 text-right text-silver text-xs italic font-normal",
                 {
-                  "text-color-accent-primary": error && error[name],
+                  "text-error": error && error[name],
                 },
               )}
             >

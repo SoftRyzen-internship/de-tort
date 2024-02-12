@@ -1,7 +1,8 @@
 import { z } from "zod";
-import { IFormConfig } from "./types";
 
-export const FORM_CONFIG: IFormConfig = {
+import { IFormConfig } from "@/types";
+
+export const cakesFormData: IFormConfig = {
   inputs: [
     {
       name: "date",
@@ -98,16 +99,14 @@ export const FORM_CONFIG: IFormConfig = {
   },
 };
 
-export const defaultValues: Record<string, string> = FORM_CONFIG.inputs.reduce(
-  (accumulator, current) => {
+export const defaultValues: Record<string, string> =
+  cakesFormData.inputs.reduce((accumulator, current) => {
     return { ...accumulator, [current.name]: "" };
-  },
-  {},
-);
+  }, {});
 
 export const generateOrderFormSchema = (pathname: string) => {
   return z.object(
-    FORM_CONFIG.inputs.reduce((accumulator, current) => {
+    cakesFormData.inputs.reduce((accumulator, current) => {
       const isOptional = current.optionalPaths.includes(pathname);
       const isDisabled = current.disabledPaths.includes(pathname);
       if (isDisabled) {

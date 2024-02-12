@@ -1,24 +1,25 @@
 "use client";
 
 import React, { useState } from "react";
+import { isBefore, isSameDay, format } from "date-fns";
+import { uk } from "date-fns/locale";
+
 import { cn } from "@/utils/helpers";
-import { FieldValues } from "react-hook-form";
+
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover";
-import { isBefore, isSameDay, format } from "date-fns";
+} from "@/components/ui/Shadcn/popover";
+import { Calendar } from "@/components/ui/Shadcn/calendar";
+import { FormControl } from "@/components/ui/Shadcn/form";
 
-import { uk } from "date-fns/locale";
-import { Calendar } from "@/components/ui/calendar";
-import { FormControl } from "@/components/ui/form";
+import { CalendarControlProps } from "./types";
 
-interface CalendarControlProps {
-  field: FieldValues;
-}
-
-const CalendarControl: React.FC<CalendarControlProps> = ({ field }) => {
+export const CalendarControl: React.FC<CalendarControlProps> = ({
+  field,
+  isError,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClose = () => {
@@ -37,6 +38,7 @@ const CalendarControl: React.FC<CalendarControlProps> = ({ field }) => {
             className={cn("input-field", "h-11", {
               "text-mine": field.value,
               "text-silver": !field.value,
+              "border-error": isError,
             })}
           >
             {field.value
@@ -65,5 +67,3 @@ const CalendarControl: React.FC<CalendarControlProps> = ({ field }) => {
     </Popover>
   );
 };
-
-export default CalendarControl;
