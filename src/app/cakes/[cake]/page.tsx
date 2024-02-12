@@ -30,7 +30,7 @@ export default async function CakePage({
     <>
       <section className="py-[120px] bg-color-bg-primary border-b-2">
         <div className="container">
-          <p className="text-center">Current page: {data.title || cake}</p>
+          <p className="text-center">Current page: {data?.title || cake}</p>
         </div>
       </section>
       <SliderCakes />

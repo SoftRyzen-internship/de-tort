@@ -1,5 +1,3 @@
-import { FC } from "react";
-
 import { SliderNav } from "@/components/base/SliderNav";
 import { Slider } from "@/components/base/Slider";
 import { SectionTitle } from "@/components/ui/SectionTitle";
@@ -14,13 +12,6 @@ import Star from "~/icons/star.svg";
 
 import bento from "@/data/slider-cakes.json";
 
-const arr = [
-  "/images/minitort-@2x.jpg",
-  // "/images/bentotort-@2x.jpg",
-  // "/images/middletort-@2x.jpg",
-  // "/images/bigtort-@2x.jpg",
-];
-
 const {
   heading,
   button,
@@ -33,13 +24,14 @@ const {
   price,
   priceValue,
   description,
+  images,
 } = bento;
 
-const slides = arr?.map((string, idx) => (
+const slides = images?.map((string, idx) => (
   <SliderCakeCard key={idx} src={string} alt={"alt"} />
 ));
 
-export const SliderCakes: FC = () => {
+export const SliderCakes: React.FC = () => {
   return (
     <section className="section bg-color-bg-primary">
       <div className="container xl:flex xl:gap-[60px]">
@@ -47,19 +39,19 @@ export const SliderCakes: FC = () => {
           <Slider
             slides={slides}
             section="cakes"
-            customClass="md:w-[704px] xl:w-[592px] mb-6 md:mb-10"
+            customClass="md:w-[704px] xl:w-[592px] mb-6 md:mb-10 xlOnly:mb-0"
           />
           <SliderNav
             section="cakes"
             className={slides.length === 1 ? "!hidden" : ""}
           />
         </div>
-        <div className="">
+        <div>
           <SectionTitle text={heading} className="mb-6 md:mb-8 xl:mb-6" />
           <div className="flex relative flex-col gap-2 md:gap-32 xl:gap-12 mb-6 md:mb-8 md:flex-row  font-fixel ">
-            <div className="flex gap-2 relative after:-right-16 md:after:-right-6 after:absolute after:block after:bg-color-bg-cakeLine after:w-[1px] after:h-full">
+            <div className="flex gap-2 relative after:-right-16 xl:after:-right-6 after:hidden after:absolute md:after:block after:bg-color-bg-cakeLine after:w-[1px] after:h-full">
               <Slice className="w-6" />
-              <div className="">
+              <div>
                 <p className="font-bold text-base leading-normal text-color-text-secondary">
                   {caption}
                 </p>
@@ -71,7 +63,7 @@ export const SliderCakes: FC = () => {
             </div>
             <div className="flex gap-2">
               <Clock className="w-6" />
-              <div className="">
+              <div>
                 <p className="font-bold text-base leading-normal text-color-text-secondary">
                   {termin}
                 </p>

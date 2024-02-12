@@ -12,5 +12,11 @@
   "decor": "Декор",
   "decorValue": "Напис, малюнок",
   "price": "Вартість",
-  "priceValue": "600 грн - з малюнком700 грн - з написом"
+  "priceValue": "600 грн - з малюнком 700 грн - з написом",
+  "images": [
+    "/images/minitort-@2x.jpg",
+    "/images/bentotort-@2x.jpg",
+    "/images/middletort-@2x.jpg",
+    "/images/bigtort-@2x.jpg"
+  ]
 }

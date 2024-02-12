@@ -43,6 +43,13 @@
   @apply pointer-events-none opacity-0;
 }
 
+.cakes-slider-nav {
+  top: calc(50% - 60px / 2);
+  @media screen and (min-width: 1280px) {
+    top: calc(50% - 68px / 2);
+  }
+}
+
 /* Cakes Cards */
 @media screen and (min-width: 768px) {
   .cakes-card {
