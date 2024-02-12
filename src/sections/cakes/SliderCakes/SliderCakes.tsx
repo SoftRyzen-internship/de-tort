@@ -37,6 +37,7 @@ export const SliderCakes: React.FC<SliderCakeProps> = ({ cake }) => {
             slides={slides}
             section="cakes"
             customClass="md:w-[704px] xl:w-[592px] mb-6 md:mb-10 xlOnly:mb-0"
+            customSlideClass="md:w-[660px] xl:w-[555px]"
           />
           <SliderNav
             section="cakes"
