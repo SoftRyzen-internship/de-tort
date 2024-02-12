@@ -41,7 +41,7 @@ export const SliderCakes: React.FC<SliderCakeProps> = ({ cake }) => {
           />
           <SliderNav
             section="cakes"
-            className={slides.length === 1 ? "!hidden" : ""}
+            className={slides?.length === 1 ? "!hidden" : ""}
           />
         </div>
         <div>
@@ -51,11 +51,11 @@ export const SliderCakes: React.FC<SliderCakeProps> = ({ cake }) => {
               <Slice className="w-6" />
               <div>
                 <p className="font-bold text-base leading-normal text-color-text-secondary">
-                  {portion_size.label}
+                  {portion_size?.label}
                 </p>
 
                 <p className="text-base leading-normal text-color-text-secondary md:text-xl xl:text-lg">
-                  {portion_size.size}
+                  {portion_size?.size}
                 </p>
               </div>
             </div>

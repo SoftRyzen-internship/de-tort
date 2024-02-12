@@ -1,5 +1,6 @@
 import { SliderCakes } from "@/sections/cakes/SliderCakes";
 import { Sweets } from "@/sections/home/Sweets";
+import { FormStart } from "@/sections/cakes/FormStart/FormStart";
 
 import { fetchCake } from "@/requests";
 
@@ -24,17 +25,19 @@ export default async function CakePage({
 }: {
   params: { cake: CakeSlug };
 }) {
-  const [data] = await fetchCake(cake);
+  const data = await fetchCake(cake);
+  console.log("PAGE DATA: ", data);
 
   return (
     <>
       <section className="py-[120px] bg-color-bg-primary border-b-2">
         <div className="container">
-          <p className="text-center">Current page: {data?.title || cake}</p>
+          <p className="text-center">Current page: {cake}</p>
         </div>
       </section>
       <SliderCakes cake={data} />
       <Sweets />
+      <FormStart />
     </>
   );
 }
