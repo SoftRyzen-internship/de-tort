@@ -24,7 +24,7 @@
         },
         {
           "label": "Капкейки",
-          "slug": "slug-2",
+          "slug": "cupcakes",
           "icon": {
             "path": "/icons/cupcake.svg",
             "alt": "Мінімалістична іконка з зображенням капкейка"
@@ -32,7 +32,7 @@
         },
         {
           "label": "Чизкейки",
-          "slug": "slug-3",
+          "slug": "cheesecakes",
           "icon": {
             "path": "/icons/cheesecake.svg",
             "alt": "Мінімалістична іконка з зображенням чизкейка"
@@ -40,7 +40,7 @@
         },
         {
           "label": "Солодкі набори",
-          "slug": "slug-4",
+          "slug": "sweet-sets",
           "icon": {
             "path": "/icons/kit.svg",
             "alt": "Мінімалістична іконка з зображенням подарункового пакунку"
@@ -48,7 +48,7 @@
         },
         {
           "label": "Печиво",
-          "slug": "slug-5",
+          "slug": "cookies",
           "icon": {
             "path": "/icons/cookie.svg",
             "alt": "Мінімалістична іконка з зображенням печива"
@@ -56,7 +56,7 @@
         },
         {
           "label": "Макарон",
-          "slug": "slug-6",
+          "slug": "macaron",
           "icon": {
             "path": "/icons/pasta.svg",
             "alt": "Мінімалістична іконка з зображенням тістечка-макарон"
@@ -64,7 +64,7 @@
         },
         {
           "label": "Кейк-попси",
-          "slug": "slug-7",
+          "slug": "cake-pops",
           "icon": {
             "path": "/icons/cake-pops.svg",
             "alt": "Мінімалістична іконка з зображенням кейк-попса"
@@ -74,11 +74,11 @@
       "staticPages": [
         {
           "label": "Про нас",
-          "slug": "slug-8"
+          "slug": "about-us"
         },
         {
           "label": "Для кав’ярень",
-          "slug": "slug-9"
+          "slug": "coffee-shops"
         }
       ]
     }
