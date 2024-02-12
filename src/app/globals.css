@@ -26,10 +26,6 @@
   }
 }
 
-input[type="number"]::placeholder {
-  color: #383838;
-}
-
 /* Common utilities: */
 .text-title {
   @apply font-unbounded font-bold text-color-accent-primary uppercase;

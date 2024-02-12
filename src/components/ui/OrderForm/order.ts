@@ -8,9 +8,9 @@ export const FORM_CONFIG: IFormConfig = {
       placeholder: "",
       type: "calendar",
       label: "Дата отримання:",
-      optionalPaths: ["mini-cakes"],
+      optionalPaths: [],
       disabledPaths: [],
-      schema: z.string().min(2, { message: "✕ Потрібна дата " }),
+      schema: z.string().min(2, { message: "✕ Виберіть дату..." }),
     },
     {
       name: "numberOfPeople",
@@ -19,8 +19,8 @@ export const FORM_CONFIG: IFormConfig = {
       label: "На яку кількість людей?",
       optionalPaths: [],
       disabledPaths: [],
-      schema: z.string().refine((value) => value.trim() !== "", {
-        message: "✕ Потрібна кількість",
+      schema: z.string().refine((value) => /^\d{1,4}$/.test(value), {
+        message: "✕ Заповніть кількість (не більше 4 цифр)",
       }),
     },
     {
@@ -30,7 +30,7 @@ export const FORM_CONFIG: IFormConfig = {
       label: "Начинка:",
       optionalPaths: ["mini-cakes"],
       disabledPaths: ["mini-cakes"],
-      schema: z.string().min(2, { message: "✕ Потрібна начінка" }),
+      schema: z.string().min(2, { message: "✕ Потрібна начінка..." }),
     },
     {
       name: "link",
@@ -39,7 +39,21 @@ export const FORM_CONFIG: IFormConfig = {
       label: "Дизайн (посилання):",
       optionalPaths: ["mini-cakes", "bento-cakes", "middle-cakes", "big-cakes"],
       disabledPaths: ["mini-cakes"],
-      schema: z.string(),
+      schema: z
+        .string()
+        .refine((value) => value.length <= 255, {
+          message: "✕ Максимальна кількість символів для 'Дизайн' - 255",
+        })
+        .refine((value) => value.length === 0 || /^[^\s]+$/.test(value), {
+          message: "✕ Поле 'Дизайн' не повинно містити пробіли",
+        })
+        .refine(
+          (value) =>
+            value.length === 0 || /^[\p{L}\d\p{P}\p{S}]+$/u.test(value),
+          {
+            message: "✕ Недопустимі символи...",
+          },
+        ),
     },
     {
       name: "username",
@@ -48,7 +62,7 @@ export const FORM_CONFIG: IFormConfig = {
       label: "Ваше імʼя та прізвище:",
       optionalPaths: [],
       disabledPaths: [],
-      schema: z.string().min(2, { message: "✕ Потрібен Ім'я" }),
+      schema: z.string().min(2, { message: "✕ Потрібне ім'я..." }),
     },
     {
       name: "phone",
@@ -57,7 +71,14 @@ export const FORM_CONFIG: IFormConfig = {
       label: "Телефон:",
       optionalPaths: [],
       disabledPaths: [],
-      schema: z.string().min(2, { message: "✕ Потрібен телефон" }),
+      schema: z
+        .string()
+        .refine((value) => /^\+\d{12}$/.test(value), {
+          message: "✕ Потрібен телефон у форматі +380...",
+        })
+        .refine((value) => value.length > 1, {
+          message: "✕ Потрібен телефон...",
+        }),
     },
     {
       name: "comments",
@@ -78,17 +99,26 @@ export const FORM_CONFIG: IFormConfig = {
 };
 
 export const defaultValues: Record<string, string> = FORM_CONFIG.inputs.reduce(
-  (accumulator, current) => ({ ...accumulator, [current.name]: "" }),
+  (accumulator, current) => {
+    return { ...accumulator, [current.name]: "" };
+  },
   {},
 );
 
-export const generateOrderFormSchema = (path: string) => {
+export const generateOrderFormSchema = (pathname: string) => {
   return z.object(
     FORM_CONFIG.inputs.reduce((accumulator, current) => {
-      const isOptional = current.optionalPaths.includes(path);
+      const isOptional = current.optionalPaths.includes(pathname);
+      const isDisabled = current.disabledPaths.includes(pathname);
+      if (isDisabled) {
+        return { ...accumulator };
+      }
+      const schemaForOptional = isDisabled
+        ? z.string()
+        : current.schema.optional();
       return {
         ...accumulator,
-        [current.name]: isOptional ? current.schema.optional() : current.schema,
+        [current.name]: isOptional ? schemaForOptional : current.schema,
       };
     }, {}),
   );

@@ -66,7 +66,11 @@ export const Field: React.FC<IField> = ({
           <FormLabel className={labelStyles}>{label}</FormLabel>
           {type === "calendar" && <CalendarControl field={field} />}
           {type === "topping" && (
-            <ToppingControl field={field} placeholder={placeholder} />
+            <ToppingControl
+              field={field}
+              placeholder={placeholder}
+              disabled={isDisabled}
+            />
           )}
           {type === "textarea" && (
             <FormControl>

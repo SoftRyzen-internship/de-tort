@@ -8,7 +8,8 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { format, addDays, isBefore, isAfter } from "date-fns";
+import { isBefore, isSameDay, format } from "date-fns";
+
 import { uk } from "date-fns/locale";
 import { Calendar } from "@/components/ui/calendar";
 import { FormControl } from "@/components/ui/form";
@@ -31,7 +32,13 @@ const CalendarControl: React.FC<CalendarControlProps> = ({ field }) => {
     <Popover open={isOpen} onOpenChange={(newOpen) => setIsOpen(newOpen)}>
       <PopoverTrigger asChild>
         <FormControl>
-          <button onClick={handleOpen} className={cn("input-field", "h-11")}>
+          <button
+            onClick={handleOpen}
+            className={cn("input-field", "h-11", {
+              "text-mine": field.value,
+              "text-silver": !field.value,
+            })}
+          >
             {field.value
               ? format(new Date(field.value), `dd.MM.yyyy`)
               : format(new Date(), "dd.MM.yyyy")}
@@ -50,8 +57,7 @@ const CalendarControl: React.FC<CalendarControlProps> = ({ field }) => {
           }}
           disabled={(date) => {
             const today = new Date();
-            const twoWeeksLater = addDays(today, 14);
-            return isBefore(date, today) || isAfter(date, twoWeeksLater);
+            return isBefore(date, today) || isSameDay(date, today);
           }}
           initialFocus
         />

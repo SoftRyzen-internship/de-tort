@@ -8,11 +8,13 @@ import { cn } from "@/utils/helpers";
 interface ToppingControlProps {
   field: FieldValues;
   placeholder?: string;
+  disabled?: boolean;
 }
 
 const ToppingControl: React.FC<ToppingControlProps> = ({
   field,
   placeholder,
+  disabled = false,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const onClose = () => {
@@ -27,6 +29,7 @@ const ToppingControl: React.FC<ToppingControlProps> = ({
         <button
           onClick={onOpen}
           type="button"
+          disabled={disabled}
           className={cn(
             "input-field",
             "font-semibold justify-center h-11 flex-center",
@@ -34,6 +37,7 @@ const ToppingControl: React.FC<ToppingControlProps> = ({
               "text-color-accent-primary border-color-accent-primary":
                 field.value,
               "text-mine": !field.value,
+              "opacity-20": disabled,
             },
           )}
         >

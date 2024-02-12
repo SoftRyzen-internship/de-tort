@@ -11,10 +11,10 @@ import { Field } from "./Field";
 import { FORM_CONFIG, generateOrderFormSchema, defaultValues } from "./order";
 import { SubmitButton } from "./SubmitButton";
 
-const orderFormSchema = generateOrderFormSchema("bento-cakes");
 export const OrderForm: React.FC = () => {
   const pathname = usePathname();
   const shortPathname = pathname.substring(pathname.lastIndexOf("/") + 1);
+  const orderFormSchema = generateOrderFormSchema(shortPathname);
   const form = useForm<z.infer<typeof orderFormSchema>>({
     resolver: zodResolver(orderFormSchema),
   });
@@ -38,7 +38,7 @@ export const OrderForm: React.FC = () => {
             const isDisabled = field.disabledPaths.includes(shortPathname);
             const isOptional = field.optionalPaths.includes(shortPathname);
             const placeholder =
-              shortPathname === "mini-cakes"
+              shortPathname === "mini-cakes" && field.name === "comments"
                 ? field.placeholderMiniTorts
                 : field.placeholder;
             return (
