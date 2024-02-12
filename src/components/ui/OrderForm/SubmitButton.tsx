@@ -12,7 +12,7 @@ export const SubmitButton: React.FC<ISubmitButton> = ({
   labelInProgress,
 }) => {
   return (
-    <button type="submit" className="submit-button " disabled={isSubmitting}>
+    <button type="submit" className="submit-button" disabled={isSubmitting}>
       {isSubmitting ? labelInProgress : label}
     </button>
   );

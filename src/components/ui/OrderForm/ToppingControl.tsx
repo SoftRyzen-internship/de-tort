@@ -16,7 +16,7 @@ const ToppingControl: React.FC<ToppingControlProps> = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const onClose = () => {
-    field.onChange("кокос-мигдаль");
+    field.onChange("Кокос-Мигдаль");
     setIsOpen(false);
   };
   const onOpen = () => setIsOpen(true);
@@ -26,11 +26,13 @@ const ToppingControl: React.FC<ToppingControlProps> = ({
       <FormControl>
         <button
           onClick={onOpen}
+          type="button"
           className={cn(
             "input-field",
-            "font-semibold capitalize justify-center h-11 flex-center",
+            "font-semibold justify-center h-11 flex-center",
             {
-              "!text-color-accent-primary": field.value,
+              "text-color-accent-primary border-color-accent-primary":
+                field.value,
               "text-mine": !field.value,
             },
           )}
@@ -55,7 +57,12 @@ const ToppingControl: React.FC<ToppingControlProps> = ({
           incidunt amet. Itaque, temporibus sint aliquid aperiam velit ducimus
           laudantium minus fugit.
         </p>
-        <button onClick={onClose} tabIndex={-1} className="bg-yellow-500 p-4 ">
+        <button
+          onClick={onClose}
+          type="button"
+          tabIndex={-1}
+          className="bg-yellow-500 p-4 "
+        >
           Close Modal!!!
         </button>
       </div>

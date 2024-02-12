@@ -39,7 +39,7 @@ export const Field: React.FC<IField> = ({
   isDisabled,
   isOptional,
 }) => {
-  const errorClass = error && error[name] && "text-red-700";
+  const errorClass = error && error[name] && "text-color-accent-primary";
   const commonStyles = ``;
 
   const inputStyles = `${errorClass} ${commonStyles} h-11 input-field input-reset`;
@@ -62,7 +62,7 @@ export const Field: React.FC<IField> = ({
       defaultValue=""
       name={name}
       render={({ field }) => (
-        <FormItem className="relative xl:last-of-type:row-span-2 text-silver text-base leading-5 font-fixel">
+        <FormItem className="relative xl:last-of-type:row-span-2 text-mine text-base leading-5 font-fixel">
           <FormLabel className={labelStyles}>{label}</FormLabel>
           {type === "calendar" && <CalendarControl field={field} />}
           {type === "topping" && (
@@ -93,9 +93,9 @@ export const Field: React.FC<IField> = ({
           {messageText && (
             <FormMessage
               className={cn(
-                "absolute top-0 right-0 text-right text-silver text-xs italic",
+                "absolute top-0 right-0 text-right text-silver text-xs italic font-normal",
                 {
-                  "text-red-700": error && error[name],
+                  "text-color-accent-primary": error && error[name],
                 },
               )}
             >

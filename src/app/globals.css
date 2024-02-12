@@ -19,10 +19,10 @@
     @apply [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none;
   }
   .input-field {
-    @apply w-full border rounded-lg px-4 text-left font-fixel border-alto text-silver text-base;
+    @apply w-full border rounded-lg px-4 text-left font-fixel [:where(&)]:border-alto text-base placeholder-silver;
   }
   .submit-button {
-    @apply block w-full md:w-[368px] md:mx-auto py-[14px] rounded-[36px] border-color-accent-primary border-2 uppercase font-unbounded font-bold leading-8 text-color-accent-primary;
+    @apply text-title block w-full md:w-[368px] md:mx-auto py-[14px] rounded-[36px] border-color-accent-primary border-2 leading-8;
   }
 }
 
@@ -31,8 +31,12 @@ input[type="number"]::placeholder {
 }
 
 /* Common utilities: */
+.text-title {
+  @apply font-unbounded font-bold text-color-accent-primary uppercase;
+}
+
 .section-heading {
-  @apply font-unbounded font-bold text-color-accent-primary text-[28px] leading-[1.2] tracking-[1.12px] uppercase;
+  @apply text-title text-[28px] leading-[1.2] tracking-[1.12px];
 }
 
 /* Burger-Menu */
