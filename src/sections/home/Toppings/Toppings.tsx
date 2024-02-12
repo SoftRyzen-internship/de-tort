@@ -4,9 +4,15 @@ import { SliderNav } from "@/components/base/SliderNav";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 
 import data from "@/data/topppings.json";
+import { ToppingsProps } from "./types";
 
-export const Toppings: React.FC = () => {
+export const Toppings: React.FC<ToppingsProps> = ({
+  toppings: toppingsDynamicData,
+}) => {
   const { sectionTitle, toppings } = data;
+
+  // todo: Update ToppingCards with dynamic data:
+  console.log("Toppings (bento) from CMS: ", toppingsDynamicData.length);
 
   const slides = toppings?.map(({ label, src, alt, id }, idx) => (
     <ToppingCard key={id} label={label} src={src} alt={alt} idx={idx} />
