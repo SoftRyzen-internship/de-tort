@@ -16,9 +16,9 @@ import bento from "@/data/slider-cakes.json";
 
 const arr = [
   "/images/minitort-@2x.jpg",
-  "/images/bentotort-@2x.jpg",
-  "/images/middletort-@2x.jpg",
-  "/images/bigtort-@2x.jpg",
+  // "/images/bentotort-@2x.jpg",
+  // "/images/middletort-@2x.jpg",
+  // "/images/bigtort-@2x.jpg",
 ];
 
 const {

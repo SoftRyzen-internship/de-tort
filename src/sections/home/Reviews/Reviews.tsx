@@ -10,7 +10,7 @@ import { ReviewsProps } from "./types";
 export const Reviews: React.FC<ReviewsProps> = ({ reviews }) => {
   const { title, reviewList: reviewsDefault } = data;
 
-  const items = reviews.length >= 3 ? reviews : reviewsDefault;
+  const items = reviews.length > 3 ? reviews : reviewsDefault;
 
   const slides = items?.map(({ date, author, text }, idx) => (
     <ReviewCard date={date} author={author} text={text} key={idx} />
