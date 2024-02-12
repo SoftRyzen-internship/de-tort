@@ -10,28 +10,25 @@ import Slice from "~/icons/cake-slice.svg";
 import Clock from "~/icons/clock.svg";
 import Star from "~/icons/star.svg";
 
+import { SliderCakeProps, TImage } from "./types";
+
 import bento from "@/data/slider-cakes.json";
 
-const {
-  heading,
-  button,
-  caption,
-  captionValue,
-  termin,
-  terminValue,
-  decor,
-  decorValue,
-  price,
-  priceValue,
-  description,
-  images,
-} = bento;
+export const SliderCakes: React.FC<SliderCakeProps> = ({ cake }) => {
+  const {
+    title,
+    portion_size,
+    production_time,
+    decor,
+    price,
+    description,
+    images,
+  } = cake;
 
-const slides = images?.map((string, idx) => (
-  <SliderCakeCard key={idx} src={string} alt={"alt"} />
-));
+  const slides = images?.map(({ url, desc }: TImage, idx: number) => (
+    <SliderCakeCard key={idx} src={url} alt={desc} />
+  ));
 
-export const SliderCakes: React.FC = () => {
   return (
     <section className="section bg-color-bg-primary">
       <div className="container xl:flex xl:gap-[60px]">
@@ -47,17 +44,17 @@ export const SliderCakes: React.FC = () => {
           />
         </div>
         <div>
-          <SectionTitle text={heading} className="mb-6 md:mb-8 xl:mb-6" />
+          <SectionTitle text={title} className="mb-6 md:mb-8 xl:mb-6" />
           <div className="flex relative flex-col gap-2 md:gap-32 xl:gap-12 mb-6 md:mb-8 md:flex-row  font-fixel ">
             <div className="flex gap-2 relative after:-right-16 xl:after:-right-6 after:hidden after:absolute md:after:block after:bg-color-bg-cakeLine after:w-[1px] after:h-full">
               <Slice className="w-6" />
               <div>
                 <p className="font-bold text-base leading-normal text-color-text-secondary">
-                  {caption}
+                  {portion_size.label}
                 </p>
 
                 <p className="text-base leading-normal text-color-text-secondary md:text-xl xl:text-lg">
-                  {captionValue}
+                  {portion_size.size}
                 </p>
               </div>
             </div>
@@ -65,10 +62,10 @@ export const SliderCakes: React.FC = () => {
               <Clock className="w-6" />
               <div>
                 <p className="font-bold text-base leading-normal text-color-text-secondary">
-                  {termin}
+                  {bento.termin}
                 </p>
                 <p className="text-base leading-normal text-color-text-secondary md:text-xl xl:text-lg">
-                  {terminValue}
+                  {production_time}
                 </p>
               </div>
             </div>
@@ -81,10 +78,10 @@ export const SliderCakes: React.FC = () => {
               <Star className="w-6 mb-auto" />
               <div>
                 <p className="font-bold text-base leading-normal text-color-text-secondary">
-                  {decor}
+                  {bento.decor}
                 </p>
                 <p className="text-base leading-normal text-color-text-secondary md:text-xl xl:text-lg">
-                  {decorValue}
+                  {decor}
                 </p>
               </div>
             </div>
@@ -92,17 +89,17 @@ export const SliderCakes: React.FC = () => {
               <Dollar className="w-6 mb-auto" />
               <div>
                 <p className="font-bold text-base leading-normal text-color-text-secondary">
-                  {price}
+                  {bento.price}
                 </p>
                 <p className="text-base leading-normal text-color-text-secondary md:text-xl xl:text-lg">
-                  {priceValue}
+                  {price}
                 </p>
               </div>
             </div>
           </div>
           <ButtonLink
-            label={button.label}
-            targetName={button.target}
+            label={bento.button.label}
+            targetName={bento.button.target}
             className=" notXl:hidden"
           />
         </div>

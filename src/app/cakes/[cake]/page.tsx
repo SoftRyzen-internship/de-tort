@@ -33,7 +33,7 @@ export default async function CakePage({
           <p className="text-center">Current page: {data?.title || cake}</p>
         </div>
       </section>
-      <SliderCakes />
+      <SliderCakes cake={data} />
       <Sweets />
     </>
   );
