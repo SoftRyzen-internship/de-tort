@@ -55,7 +55,6 @@ export const getSliderConfigs = (section: TSections) => {
         [dimensions.lg]: {
           slidesPerView: 3,
           spaceBetween: 32,
-          watchSlidesProgress: true,
         },
       };
     }
