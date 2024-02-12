@@ -12,7 +12,7 @@ export const Toppings: React.FC<ToppingsProps> = ({
   const { sectionTitle, toppings } = data;
 
   // todo: Update ToppingCards with dynamic data:
-  console.log("Toppings (bento) from CMS: ", toppingsDynamicData.length);
+  console.log("Toppings (middle) from CMS: ", toppingsDynamicData.length);
 
   const slides = toppings?.map(({ label, src, alt, id }, idx) => (
     <ToppingCard key={id} label={label} src={src} alt={alt} idx={idx} />

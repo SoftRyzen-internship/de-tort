@@ -24,14 +24,15 @@ export default async function CakePage({
 }: {
   params: { cake: CakeSlug };
 }) {
-  const [data] = await fetchCake(cake);
-  // console.log("PAGE DATA: ", data);
+  // const [data] = await fetchCake(cake);
+  const data = await fetchCake(cake);
+  console.log("PAGE DATA: ", data);
 
   return (
     <>
       <section className="py-[120px] bg-color-bg-primary border-b-2">
         <div className="container">
-          <p className="text-center">Current page: {data.title || cake}</p>
+          <p className="text-center">Current page: {cake}</p>
         </div>
       </section>
 

@@ -22,7 +22,7 @@ export default async function Home() {
   const reviews = await fetchReviews();
   const faq = await fetchFAQ();
 
-  const toppings = await fetchCakeToppings("bento-cakes");
+  const toppings = await fetchCakeToppings("middle-cakes");
 
   return (
     <>

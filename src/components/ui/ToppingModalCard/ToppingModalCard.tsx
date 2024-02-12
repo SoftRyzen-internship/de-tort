@@ -1,3 +1,4 @@
+import React from "react";
 import Image from "next/image";
 import { ToppingModalCardProps } from "./types";
 
@@ -9,9 +10,16 @@ export const ToppingModalCard: React.FC<ToppingModalCardProps> = ({
   weight,
   plate,
 }) => {
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    if (event.key === " " || event.key === "Enter") {
+      onClick();
+    }
+  };
   return (
     <div
       onClick={onClick}
+      tabIndex={0}
+      onKeyDown={handleKeyDown}
       className="modal-card shrink-0 w-[288px] h-[411px] md:w-auto md:h-[404px] xl:h-[386px] px-3 md:px-4 pb-[15px] md:pb-[30px] xl:pb-[24px] text-[16px] font-unbounded border rounded-3xl leading-normal group border-topping-card-even hover:border-color-accent-primary focus-visible:border-color-accent-primary bg-color-bg-white hover:shadow-3xl focus:shadow-3xl transition-all cursor-pointer"
     >
       <div className="relative plate-modal h-[173px] xl:h-[162px] overflow-hidden">
