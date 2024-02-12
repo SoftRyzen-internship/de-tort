@@ -5,6 +5,8 @@ import localFont from "next/font/local";
 import { Header } from "@/layout/Header";
 import { Footer } from "@/layout/Footer";
 
+import { fetchContacts } from "@/requests";
+
 import meta from "@/data/meta";
 
 import "./globals.css";
@@ -51,17 +53,19 @@ const fixelDisplay = localFont({
   variable: "--font-fixelDisplay",
 });
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const contacts = await fetchContacts();
+
   return (
     <html lang="uk">
       <body className={`${fixelDisplay.variable} ${unbounded.className}`}>
-        <Header />
+        <Header contacts={contacts} />
         <main>{children}</main>
-        <Footer />
+        <Footer contacts={contacts} />
       </body>
     </html>
   );

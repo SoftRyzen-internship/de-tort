@@ -1,6 +1,5 @@
 import { ContactsType } from "@/types";
 
-export type ContactsProps = {
+export type FooterProps = {
   contacts: ContactsType;
-  variant?: "cakes" | "home";
 };

@@ -1,6 +1,11 @@
-import json from "@/data/cakes-assortment.json";
 import { Sweets } from "@/sections/home/Sweets";
 import { FormStart } from "@/sections/cakes/FormStart/FormStart";
+
+import { fetchCake } from "@/requests";
+
+import json from "@/data/cakes-assortment.json";
+
+import { CakeSlug } from "@/types";
 
 export const dynamicParams = false;
 export const dynamic = "error";
@@ -17,15 +22,16 @@ export async function generateStaticParams() {
 export default async function CakePage({
   params: { cake },
 }: {
-  params: { cake: string };
+  params: { cake: CakeSlug };
 }) {
-  console.log("slug: ", cake);
+  const [data] = await fetchCake(cake);
+  // console.log("PAGE DATA: ", data);
 
   return (
     <>
       <section className="py-[120px] bg-color-bg-primary border-b-2">
         <div className="container">
-          <p className="text-center">Current page: {cake}</p>
+          <p className="text-center">Current page: {data.title || cake}</p>
         </div>
       </section>
 

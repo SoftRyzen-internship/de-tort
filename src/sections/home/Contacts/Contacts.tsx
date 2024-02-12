@@ -6,12 +6,16 @@ import { MapLink } from "@/components/ui/MapLink";
 import IconPin from "~/icons/pin.svg";
 
 import data from "@/data/section-contacts.json";
+
 import { ContactsProps } from "./types";
 
-export const Contacts: React.FC<ContactsProps> = ({ variant = "home" }) => {
+export const Contacts: React.FC<ContactsProps> = ({
+  contacts,
+  variant = "home",
+}) => {
   const {
     heading,
-    contacts,
+    contacts: { subtitle },
     address: { city, location },
   } = data;
 
@@ -44,10 +48,10 @@ export const Contacts: React.FC<ContactsProps> = ({ variant = "home" }) => {
 
               <div className="flex flex-col items-start gap-2">
                 <p className="smOnly:max-w-[172px] mdOnly:max-w-[212px] font-unbounded font-semibold text-[16px] md:text-[20px] xl:text-[24px]">
-                  {contacts.subtitle}
+                  {subtitle}
                 </p>
 
-                <ContactLinks variant="phone" />
+                <ContactLinks data={contacts} variant="phone" />
               </div>
             </div>
 
