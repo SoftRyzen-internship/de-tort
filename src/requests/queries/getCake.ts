@@ -29,7 +29,7 @@ export const getCake = gql`
             data {
               attributes {
                 name
-                uniqe
+                unique
                 description
                 price_double
                 images {

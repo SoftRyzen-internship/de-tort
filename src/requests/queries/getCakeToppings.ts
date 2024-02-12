@@ -9,7 +9,7 @@ export const getCakeToppings = gql`
       data {
         attributes {
           name
-          uniqe
+          unique
           description
           price_double
           images {
