@@ -38,7 +38,7 @@ export const Field: React.FC<FieldProps> = ({
   );
   const labelStyles = cn("text-sm leading-4 mb-2 block text-mine", {
     "text-mine": !isDisabled && !error,
-    "opacity-25": isDisabled,
+    "text-gallery": isDisabled,
     "text-error": error && error[name],
   });
 

@@ -1,6 +1,6 @@
 import { Sweets } from "@/sections/home/Sweets";
 
-import { fetchCake } from "@/requests";
+// import { fetchCake } from "@/requests";
 
 import json from "@/data/cakes-assortment.json";
 
@@ -24,7 +24,7 @@ export default async function CakePage({
 }: {
   params: { cake: CakeSlug };
 }) {
-  const data = await fetchCake(cake);
+  // const data = await fetchCake(cake);
 
   return (
     <div className="bg-color-bg-primary">
@@ -33,7 +33,8 @@ export default async function CakePage({
           <p className="text-center">Current page: {cake}</p>
         </div>
       </section>
-      <FormCakes slug={data[0].slug} toppings={data[0].toppings} />
+      <FormCakes slug="mini-cakes" toppings={[]} />
+      {/* <FormCakes slug={data[0].slug} toppings={data[0].toppings} /> */}
       <Sweets />
     </div>
   );

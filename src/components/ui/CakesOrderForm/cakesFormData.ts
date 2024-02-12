@@ -105,20 +105,29 @@ export const defaultValues: Record<string, string> =
   }, {});
 
 export const generateOrderFormSchema = (pathname: string) => {
-  return z.object(
-    cakesFormData.inputs.reduce((accumulator, current) => {
-      const isOptional = current.optionalPaths.includes(pathname);
-      const isDisabled = current.disabledPaths.includes(pathname);
-      if (isDisabled) {
-        return { ...accumulator };
-      }
-      const schemaForOptional = isDisabled
-        ? z.string()
-        : current.schema.optional();
-      return {
-        ...accumulator,
-        [current.name]: isOptional ? schemaForOptional : current.schema,
-      };
-    }, {}),
-  );
+  const schema = cakesFormData.inputs.reduce((accumulator, current) => {
+    const isOptional = current.optionalPaths.includes(pathname);
+    const isDisabled = current.disabledPaths.includes(pathname);
+    if (isDisabled) {
+      return { ...accumulator };
+    }
+    const schemaForOptional = isDisabled
+      ? z.string()
+      : current.schema.optional();
+    return {
+      ...accumulator,
+      [current.name]: isOptional ? schemaForOptional : current.schema,
+    };
+  }, {});
+
+  const consent = z
+    .boolean()
+    .refine((value) => value === true, {
+      message: "You must consent to send this message",
+    })
+    .default(false);
+
+  const schemaWithConsent = { ...schema, consent: consent };
+
+  return z.object(schemaWithConsent);
 };

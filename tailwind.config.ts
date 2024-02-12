@@ -84,6 +84,7 @@ const config: Config = {
         alto: "#CECECE",
         mine: "#383838",
         error: "#EE1111",
+        gallery: "#EAEAEA",
       },
       background: {
         gradient: "linear-gradient(180deg, #683DD2 0%, #5A4BFF 100%)",

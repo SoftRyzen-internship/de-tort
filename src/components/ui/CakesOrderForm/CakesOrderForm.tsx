@@ -16,6 +16,7 @@ import {
   generateOrderFormSchema,
   defaultValues,
 } from "./cakesFormData";
+import { CheckboxWrapper } from "@/components/ui/CheckBoxWrapper";
 
 export const CakesOrderForm: React.FC<CakesOrderFormProps> = ({
   slug,
@@ -65,7 +66,13 @@ export const CakesOrderForm: React.FC<CakesOrderFormProps> = ({
             );
           })}
         </div>
-
+        <CheckboxWrapper
+          name="consent"
+          control={control}
+          register={register}
+          label="Даю згоду на обробку персональних данних"
+          description="Підтвердіть згоду на обробку персональних данних"
+        />
         <button
           type="submit"
           className="submit-button"
