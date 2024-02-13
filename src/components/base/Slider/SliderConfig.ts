@@ -55,8 +55,13 @@ export const getSliderConfigs = (section: TSections) => {
         [dimensions.lg]: {
           slidesPerView: 3,
           spaceBetween: 32,
-          watchSlidesProgress: true,
-          lazyPreloadPrevNext: 1,
+        },
+      };
+    }
+    case "cakes": {
+      return {
+        [dimensions.sm]: {
+          slidesPerView: 1,
         },
       };
     }
@@ -65,14 +70,6 @@ export const getSliderConfigs = (section: TSections) => {
       return {
         [dimensions.sm]: {
           slidesPerView: 1,
-        },
-        [dimensions.md]: {
-          slidesPerView: 2,
-          spaceBetween: 16,
-        },
-        [dimensions.lg]: {
-          slidesPerView: 3,
-          spaceBetween: 24,
         },
       };
     }

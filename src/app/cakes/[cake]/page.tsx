@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 
+import { SliderCakes } from "@/sections/cakes/SliderCakes";
 import { Sweets } from "@/sections/home/Sweets";
 import { FormStart } from "@/sections/cakes/FormStart/FormStart";
 
@@ -51,7 +52,6 @@ export default async function CakePage({
 }: {
   params: { cake: CakeSlug };
 }) {
-  // const [data] = await fetchCake(cake);
   const data = await fetchCake(cake);
   console.log("PAGE DATA: ", data);
 
@@ -62,7 +62,7 @@ export default async function CakePage({
           <p className="text-center">Current page: {cake}</p>
         </div>
       </section>
-
+      <SliderCakes cake={data} />
       <Sweets />
       <FormStart />
     </>

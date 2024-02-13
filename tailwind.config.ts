@@ -54,6 +54,7 @@ const config: Config = {
           grey: "#EFEFEF",
           extraAccent: "#FFF4CB",
           backdrop: "rgba(0, 0, 0, 0.66)",
+          cakeLine: "rgba(0, 0, 0, 0.2)",
         },
         "color-accent": {
           primary: "#CC1B73",
