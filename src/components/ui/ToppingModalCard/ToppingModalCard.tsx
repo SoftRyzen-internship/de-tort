@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+
 import { ToppingModalCardProps } from "./types";
 
 export const ToppingModalCard: React.FC<ToppingModalCardProps> = ({
