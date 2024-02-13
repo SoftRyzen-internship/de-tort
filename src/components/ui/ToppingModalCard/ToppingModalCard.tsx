@@ -1,5 +1,7 @@
 import React from "react";
+
 import Image from "next/image";
+
 import { ToppingModalCardProps } from "./types";
 
 export const ToppingModalCard: React.FC<ToppingModalCardProps> = ({
@@ -26,8 +28,8 @@ export const ToppingModalCard: React.FC<ToppingModalCardProps> = ({
           src={plate[0].url}
           className="plate-img bg-transparent w-[240px] h-[240px]"
           alt={plate[0].desc}
-          width={280}
-          height={280}
+          width={240}
+          height={240}
         />
       </div>
       <div className="md:h-[162px] xl:h-[166px]">
