@@ -8,7 +8,9 @@ import { ToppingModalProps } from "./types";
 export const ToppingsModal: React.FC<ToppingModalProps> = ({
   onClose,
   onSelectTopping,
+  toppings: toppingsFromBackend,
 }) => {
+  console.log("🚀 ~ toppingsFromBackend:", toppingsFromBackend);
   const { titleSection, toppings } = data;
 
   const handleSelectTopping = (title: string) => {

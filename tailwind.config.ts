@@ -81,6 +81,11 @@ const config: Config = {
           odd: "#8AC4DA",
           even: "#EFA7C4",
         },
+        silver: "#ACACAC",
+        alto: "#CECECE",
+        mine: "#383838",
+        error: "#EE1111",
+        gallery: "#EAEAEA",
       },
       background: {
         gradient: "linear-gradient(180deg, #683DD2 0%, #5A4BFF 100%)",
