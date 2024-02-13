@@ -1,13 +1,12 @@
 "use client";
 
-import { FC } from "react";
 import { Link } from "react-scroll";
 
 import { cn } from "@/utils/helpers";
 
 import { ScrollBtnProps } from "./types";
 
-export const ButtonLink: FC<ScrollBtnProps> = ({
+export const ButtonLink: React.FC<ScrollBtnProps> = ({
   label,
   targetName,
   className = "",

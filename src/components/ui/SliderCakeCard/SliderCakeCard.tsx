@@ -1,12 +1,10 @@
-import { FC } from "react";
-
 import Image from "next/image";
 
 import { cn } from "@/utils/helpers";
 
 import { SliderCakeCardProps } from "./types";
 
-export const SliderCakeCard: FC<SliderCakeCardProps> = ({
+export const SliderCakeCard: React.FC<SliderCakeCardProps> = ({
   src,
   alt,
   className = "",
