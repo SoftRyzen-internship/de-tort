@@ -45,11 +45,14 @@ export const CakesOrderForm: React.FC<CakesOrderFormProps> = ({
         <div className="relative grid xl:grid-flow-col xl:grid-cols-2 xl:grid-rows-4 gap-6 mb-8 md:mx-auto">
           {inputs.map((field) => {
             const isDisabled = field.disabledPaths.includes(slug);
+
             const isOptional = field.optionalPaths.includes(slug);
+
             const placeholder =
               slug === "mini-cakes" && field.name === "comments"
                 ? field.placeholderMiniTorts
                 : field.placeholder;
+
             return (
               <Field
                 key={field.name}

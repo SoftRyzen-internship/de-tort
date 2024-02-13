@@ -151,6 +151,39 @@ is a list of more common components and their API.
 | --------- | ------- | ------------------------------------------- |
 | `variant` | `home`  | optional, choose between "home" and "cakes" |
 
+- #### FormCakes
+
+| Prop       | Default   | Description                          |
+| ---------- | --------- | ------------------------------------ |
+| `slug`     | undefined | required, the slug of a current page |
+| `toppings` | undefined | required, the array of toppings      |
+
+- #### CakesOrderForm
+
+| Prop       | Default   | Description                          |
+| ---------- | --------- | ------------------------------------ |
+| `slug`     | undefined | required, the slug of a current page |
+| `toppings` | undefined | required, the array of toppings      |
+
+# Field Component
+
+The `Field` component is a versatile form field wrapper used to render various input types, such as text, calendar, topping selection, number, and textarea.
+
+## Props
+
+| Prop          | Type      | Description                                                                                                |
+| ------------- | --------- | ---------------------------------------------------------------------------------------------------------- |
+| `register`    | Function  | A function from a form library (e.g., React Hook Form) used to register the input field in the form state. |
+| `name`        | String    | The unique name for the input field.                                                                       |
+| `control`     | Object    | An object representing the form control (e.g., from React Hook Form) to manage the input field's state.    |
+| `label`       | String    | The label for the input field.                                                                             |
+| `placeholder` | String    | The placeholder text for the input field.                                                                  |
+| `type`        | FieldType | The type of the input field (e.g., "calendar," "topping," "textarea," "tel," "text," "number").            |
+| `error`       | Object    | An object containing validation errors for the input field.                                                |
+| `isDisabled`  | Boolean   | Indicates whether the input field is disabled.                                                             |
+| `isOptional`  | Boolean   | Indicates whether the input field is optional.                                                             |
+| `toppings`    | Array     | An array of CakeToppingType for the "topping" type input field.                                            |
+
 - #### AboutCard
 
 | Prop       | Default     | Description                                        |

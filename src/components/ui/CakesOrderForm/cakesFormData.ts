@@ -22,9 +22,11 @@ export const cakesFormData: IFormConfig = {
       label: "На яку кількість людей?",
       optionalPaths: [],
       disabledPaths: [],
-      schema: z.string().refine((value) => /^\d{1,4}$/.test(value), {
-        message: errorText,
-      }),
+      schema: z
+        .string()
+        .refine((value) => /^\d{1,4}$/.test(value) && +value !== 0, {
+          message: errorText,
+        }),
     },
     {
       name: "topping",
@@ -98,7 +100,12 @@ export const cakesFormData: IFormConfig = {
       label: "Коментар:",
       optionalPaths: ["mini-cakes", "bento-cakes", "middle-cakes", "big-cakes"],
       disabledPaths: [],
-      schema: z.string(),
+      schema: z
+        .string()
+        .regex(/^[a-zA-Zа-яА-ЯЇїІіЄєҐґ'0-9\s\p{P}\p{S}\r\n]+$/u, {
+          message: errorText,
+        })
+        .max(1000, { message: errorText }),
     },
   ],
   checkbox: {
