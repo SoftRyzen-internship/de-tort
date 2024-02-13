@@ -10,7 +10,6 @@ export const ToppingsModal: React.FC<ToppingModalProps> = ({
   onSelectTopping,
   toppings,
 }) => {
-  console.log("🚀 ~ toppingsFromBackend:", toppings);
   const { titleSection } = data;
 
   const handleSelectTopping = (title: string) => {

@@ -1,5 +1,3 @@
-import React from "react";
-
 import { AboutCard } from "@/components/ui/AboutCard";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 

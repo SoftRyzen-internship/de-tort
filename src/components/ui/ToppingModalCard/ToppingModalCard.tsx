@@ -42,7 +42,7 @@ export const ToppingModalCard: React.FC<ToppingModalCardProps> = ({
       </div>
 
       <p className="font-semibold mt-4 xl:mt-3 uppercase text-color-text-primary group-hover:text-color-accent-primary focus:text-color-accent-primary">
-        ₴ <span>{price_double}</span>
+        ₴ {price_double}
       </p>
     </div>
   );
