@@ -32,20 +32,19 @@ export const SliderCakes: React.FC<CakeInfoProps> = ({ cake }) => {
   return (
     <section className="section pb-[60px] md:pb-[80px] xl:pb-[120px] bg-color-bg-primary">
       <div className="container xl:flex xl:gap-[60px]">
-        <div className="relative md:w-[704px] md:h-[660px] xl:w-[592px] xl:h-[555px]">
-          <Slider
-            slides={slides}
-            section="cakes"
-            customClass="mb-6 md:mb-10 xlOnly:mb-0"
-            customSlideClass=""
-          />
+        <div className="relative mb-6 md:mb-10 md:w-[704px] md:h-[660px] xl:w-[592px] xl:h-[555px] xlOnly:mb-0">
+          <Slider slides={slides} section="cakes" customSlideClass="" />
           <SliderNav
             section="cakes"
             className={slides?.length === 1 ? "!hidden" : ""}
           />
         </div>
         <div className="xl:max-w-[564px]">
-          <SectionTitle text={title} className="mb-6 md:mb-8 xl:mb-6" />
+          <SectionTitle
+            hero={true}
+            text={title}
+            className="mb-6 md:mb-8 xl:mb-6 md:text-[40px] xl:text-[48px] xl:tracking-normal"
+          />
           <div className="flex relative flex-col gap-2 md:gap-32 xl:gap-12 mb-6 md:mb-8 md:flex-row  font-fixel ">
             <div className="flex gap-2 relative after:-right-16 xl:after:-right-6 after:hidden after:absolute md:after:block after:bg-color-bg-cakeLine after:w-[1px] after:h-full">
               <Slice className="w-6 flex-shrink-0" />
