@@ -93,7 +93,7 @@ export const SliderCakes: React.FC<CakeInfoProps> = ({ cake }) => {
                 <p className="font-bold text-base leading-normal text-color-text-secondary">
                   {bento.price}
                 </p>
-                <pre className="whitespace-pre-wrap text-base leading-normal text-color-text-secondary md:text-xl xl:text-lg">
+                <pre className="font-fixel whitespace-pre-wrap text-base leading-normal text-color-text-secondary md:text-xl xl:text-lg">
                   {price}
                 </pre>
               </div>
