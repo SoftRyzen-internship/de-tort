@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import { SliderCakes } from "@/sections/cakes/SliderCakes";
+import { SliderCakes } from "@/sections/cakes/CakeInfo";
 import { Sweets } from "@/sections/home/Sweets";
 import { FormStart } from "@/sections/cakes/FormStart/FormStart";
 

@@ -5,16 +5,16 @@ import { SectionTitle } from "@/components/ui/SectionTitle";
 import { SliderCakeCard } from "@/components/ui/SliderCakeCard";
 import { ButtonLink } from "@/components/ui/ScrollBtn";
 
-import Dollar from "~/icons/dollar-circle.svg";
-import Slice from "~/icons/cake-slice.svg";
+import Dollar from "~/icons/dollar.svg";
+import Slice from "~/icons/cake-cherry.svg";
 import Clock from "~/icons/clock.svg";
 import Star from "~/icons/star.svg";
 
-import { SliderCakeProps, TImage } from "./types";
+import { CakeInfoProps, TImage } from "./types";
 
 import bento from "@/data/slider-cakes.json";
 
-export const SliderCakes: React.FC<SliderCakeProps> = ({ cake }) => {
+export const SliderCakes: React.FC<CakeInfoProps> = ({ cake }) => {
   const {
     title,
     portion_size,
