@@ -21,7 +21,6 @@ export default async function Home() {
   const achievements = await fetchAchievements();
   const reviews = await fetchReviews();
   const faq = await fetchFAQ();
-
   const toppings = await fetchCakeToppings("middle-cakes");
 
   return (
@@ -31,7 +30,7 @@ export default async function Home() {
       <Sweets home />
       <About />
       <Achievements achievements={achievements} />
-      <Toppings toppings={toppings} />
+      {toppings?.length > 3 && <Toppings toppings={toppings} />}
       <QA faq={faq} />
       <Reviews reviews={reviews} />
       <Contacts contacts={contacts} />
