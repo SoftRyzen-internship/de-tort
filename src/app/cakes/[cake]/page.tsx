@@ -54,7 +54,6 @@ export default async function CakePage({
   params: { cake: CakeSlug };
 }) {
   const data = await fetchCake(cake);
-  console.log("🚀 ~ data:", data);
 
   return (
     <div className="bg-color-bg-primary">

@@ -65,7 +65,13 @@ export const cakesFormData: IFormConfig = {
       label: "Ваше імʼя та прізвище:",
       optionalPaths: [],
       disabledPaths: [],
-      schema: z.string().min(2, { message: errorText }),
+      schema: z
+        .string()
+        .regex(/^[a-zA-Zа-яА-ЯЇїІіЄєҐґ' -]+$/, errorText)
+        .max(90)
+        .refine((data) => !data.includes("--"), errorText)
+        .refine((data) => !data.includes(" - "), errorText)
+        .refine((data) => !(data.trim().length === 0), errorText),
     },
     {
       name: "phone",
@@ -76,7 +82,7 @@ export const cakesFormData: IFormConfig = {
       disabledPaths: [],
       schema: z
         .string()
-        .refine((value) => /^\+\d{12}$/.test(value), {
+        .refine((value) => /^\+\d{11,12}$/.test(value), {
           message: errorText,
         })
         .refine((value) => value.length > 1, {
