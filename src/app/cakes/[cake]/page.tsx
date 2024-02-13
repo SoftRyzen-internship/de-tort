@@ -10,6 +10,7 @@ import metaBase from "@/data/meta/base.json";
 import metaCakes from "@/data/meta/cakes.json";
 
 import { CakeSlug } from "@/types";
+import { FormCakes } from "@/sections/cakes/FormCakes";
 // import { FormCakes } from "@/sections/cakes/FormCakes";
 
 export const dynamicParams = false;
@@ -53,6 +54,9 @@ export default async function CakePage({
   params: { cake: CakeSlug };
 }) {
   const data = await fetchCake(cake);
+  const slug = data[0]?.slug;
+  const toppings = data[0].toppings;
+  // console.log("🚀 ~ data:", data);
 
   return (
     <div className="bg-color-bg-primary">
@@ -62,7 +66,7 @@ export default async function CakePage({
         </div>
       </section>
       <SliderCakes cake={data} />
-      {/* <FormCakes slug={data[0].slug} toppings={data[0].toppings} /> */}
+      <FormCakes slug={slug} toppings={toppings} />
       <Sweets />
     </div>
   );
