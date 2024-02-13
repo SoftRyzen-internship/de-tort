@@ -4,7 +4,7 @@ import { HeroImage } from "@/components/ui/HeroImage";
 
 import data from "@/data/common.json";
 
-export const Hero = () => {
+export const Hero: React.FC = () => {
   const { dynamicPages } = data.menu.navigation;
   const { hero } = data;
   const tortsSlug = dynamicPages.filter(({ label }) => label === "Торти")[0]

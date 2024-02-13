@@ -1,6 +1,6 @@
 import { CakeType } from "@/types";
 
-export type SliderCakeProps = {
+export type CakeInfoProps = {
   cake: CakeType;
 };
 

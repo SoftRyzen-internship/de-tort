@@ -8,10 +8,9 @@ import { ToppingModalProps } from "./types";
 export const ToppingsModal: React.FC<ToppingModalProps> = ({
   onClose,
   onSelectTopping,
-  toppings: toppingsFromBackend,
+  toppings,
 }) => {
-  console.log("🚀 ~ toppingsFromBackend:", toppingsFromBackend);
-  const { titleSection, toppings } = data;
+  const { titleSection } = data;
 
   const handleSelectTopping = (title: string) => {
     onSelectTopping(title);
@@ -24,15 +23,14 @@ export const ToppingsModal: React.FC<ToppingModalProps> = ({
 
       <div className="grow overflow-y-auto">
         <div className="flex justify-center flex-col gap-[17px] md:gap-3 xl:gap-6 md:flex-row md:justify-start md:flex-wrap pb-2 pl-2 ">
-          {toppings.map(({ title, description, price, id, weight, plate }) => (
+          {toppings.map(({ name, description, price_double, images }, i) => (
             <ToppingModalCard
-              onClick={() => handleSelectTopping(title)}
-              title={title}
+              onClick={() => handleSelectTopping(name)}
+              name={name}
               description={description}
-              key={id}
-              price={price}
-              weight={weight}
-              plate={plate}
+              key={i}
+              price_double={price_double}
+              plate={images}
             />
           ))}
         </div>

@@ -7,6 +7,7 @@ import { MainNavProps } from "./types";
 
 export const MainNav: React.FC<MainNavProps> = ({ onClick }) => {
   const { staticPages, dynamicPages } = data.menu.navigation;
+
   return (
     <div className="overflow-y-auto flex flex-col justify-between gap-2 h-full font-unbounded font-bold leading-[1.4] xl:leading-[1.3] uppercase text-color-text-primary">
       <ul className="flex flex-col gap-6 xl:gap-7">

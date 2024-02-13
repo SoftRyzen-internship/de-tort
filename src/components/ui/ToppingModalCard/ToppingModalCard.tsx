@@ -1,13 +1,14 @@
 import React from "react";
+
 import Image from "next/image";
+
 import { ToppingModalCardProps } from "./types";
 
 export const ToppingModalCard: React.FC<ToppingModalCardProps> = ({
   onClick,
-  title,
+  name,
   description,
-  price,
-  weight,
+  price_double,
   plate,
 }) => {
   const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
@@ -24,16 +25,16 @@ export const ToppingModalCard: React.FC<ToppingModalCardProps> = ({
     >
       <div className="relative plate-modal h-[173px] xl:h-[162px] overflow-hidden">
         <Image
-          src={plate.src}
-          className="plate-img bg-transparent"
-          alt={plate.alt}
+          src={plate[0].url}
+          className="plate-img bg-transparent w-[240px] h-[240px]"
+          alt={plate[0].desc}
           width={240}
           height={240}
         />
       </div>
       <div className="md:h-[162px] xl:h-[166px]">
         <p className="font-semibold uppercase text-color-text-primary group-hover:text-color-accent-primary focus:text-color-accent-primary">
-          {title}
+          {name}
         </p>
         <p className="font-fixel font-normal mt-2 xl:mt-3 text-color-text-secondary h-[132px]">
           {description}
@@ -41,7 +42,7 @@ export const ToppingModalCard: React.FC<ToppingModalCardProps> = ({
       </div>
 
       <p className="font-semibold mt-4 xl:mt-3 uppercase text-color-text-primary group-hover:text-color-accent-primary focus:text-color-accent-primary">
-        ₴ <span>{price}</span> / <span>{weight}</span> грам
+        ₴ {price_double}
       </p>
     </div>
   );

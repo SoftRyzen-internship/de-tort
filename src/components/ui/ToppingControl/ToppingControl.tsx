@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 
 import { ToppingsModal } from "@/sections/cakes/ToppingsModal";
 import { Modal } from "@/components/ui/Modal";
@@ -35,7 +35,7 @@ export const ToppingControl: React.FC<ToppingControlProps> = ({
                 field.value,
               "text-mine": !field.value,
               "text-gallery border-gallery": disabled,
-              "border-error": isError,
+              "border-error text-error": isError,
             },
           )}
           onClick={() => setIsOpen(true)}

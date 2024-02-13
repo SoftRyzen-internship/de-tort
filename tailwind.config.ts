@@ -84,7 +84,7 @@ const config: Config = {
         silver: "#ACACAC",
         alto: "#CECECE",
         mine: "#383838",
-        error: "#EE1111",
+        error: "#EF5A5A",
         gallery: "#EAEAEA",
       },
       background: {

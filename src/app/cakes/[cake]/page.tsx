@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import { SliderCakes } from "@/sections/cakes/SliderCakes";
+import { SliderCakes } from "@/sections/cakes/CakeInfo";
 import { Sweets } from "@/sections/home/Sweets";
 
 import { fetchCake } from "@/requests";
@@ -11,7 +11,6 @@ import metaCakes from "@/data/meta/cakes.json";
 
 import { CakeSlug } from "@/types";
 import { FormCakes } from "@/sections/cakes/FormCakes";
-// import { FormCakes } from "@/sections/cakes/FormCakes";
 
 export const dynamicParams = false;
 export const dynamic = "error";
@@ -63,8 +62,10 @@ export default async function CakePage({
         </div>
       </section>
       {data.length && <SliderCakes cake={data[0]} />}
-      {data.length && (
+      {data.length ? (
         <FormCakes slug={data[0]?.slug} toppings={data[0]?.toppings} />
+      ) : (
+        <FormCakes slug="bento-cakes" toppings={[]} />
       )}
       <Sweets />
     </div>
