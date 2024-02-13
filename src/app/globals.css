@@ -27,6 +27,9 @@
   .submit-button {
     @apply text-title block w-full md:w-[368px] md:mx-auto py-[14px] rounded-[36px] hover-style border-2 leading-8;
   }
+  .label {
+    @apply font-fixel text-sm leading-4 [:where(&)]:block [:where(&)]:text-mine [:where(&)]:font-medium;
+  }
 }
 
 /* Common utilities: */

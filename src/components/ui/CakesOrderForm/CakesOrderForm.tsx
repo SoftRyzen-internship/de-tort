@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -22,6 +21,7 @@ export const CakesOrderForm: React.FC<CakesOrderFormProps> = ({
   slug,
   toppings,
 }) => {
+  const { inputs, checkbox, button } = cakesFormData;
   const orderFormSchema = generateOrderFormSchema(slug);
   const form = useForm<z.infer<typeof orderFormSchema>>({
     resolver: zodResolver(orderFormSchema),
@@ -34,6 +34,7 @@ export const CakesOrderForm: React.FC<CakesOrderFormProps> = ({
   });
 
   function onSubmit(values: z.infer<typeof orderFormSchema>) {
+    // буде замінено на серверний хук з запитом на Телеграм
     console.log("🚀 ~ values:", values);
     form.reset(defaultValues);
   }
@@ -41,8 +42,8 @@ export const CakesOrderForm: React.FC<CakesOrderFormProps> = ({
   return (
     <Form {...form}>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="relative grid xl:grid-flow-col xl:grid-cols-2 xl:grid-rows-4 gap-6 mb-8 md:w-[472px] xl:w-[968px] md:mx-auto">
-          {cakesFormData.inputs.map((field) => {
+        <div className="relative grid xl:grid-flow-col xl:grid-cols-2 xl:grid-rows-4 gap-6 mb-8 md:mx-auto">
+          {inputs.map((field) => {
             const isDisabled = field.disabledPaths.includes(slug);
             const isOptional = field.optionalPaths.includes(slug);
             const placeholder =
@@ -67,20 +68,18 @@ export const CakesOrderForm: React.FC<CakesOrderFormProps> = ({
           })}
         </div>
         <CheckboxWrapper
-          name="consent"
+          name={checkbox.name}
           control={control}
           register={register}
-          label="Даю згоду на обробку персональних данних"
-          description="Підтвердіть згоду на обробку персональних данних"
+          label={checkbox.label}
+          description={checkbox.description}
         />
         <button
           type="submit"
           className="submit-button"
           disabled={formState.isSubmitting}
         >
-          {formState.isSubmitting
-            ? cakesFormData.button.labelInProgress
-            : cakesFormData.button.label}
+          {formState.isSubmitting ? button.labelInProgress : button.label}
         </button>
       </form>
     </Form>

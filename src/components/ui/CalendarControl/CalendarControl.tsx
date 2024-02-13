@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { isBefore, isSameDay, format } from "date-fns";
 import { uk } from "date-fns/locale";
 
@@ -38,7 +38,7 @@ export const CalendarControl: React.FC<CalendarControlProps> = ({
             className={cn("input-field", "h-11", {
               "text-mine": field.value,
               "text-silver": !field.value,
-              "border-error": isError,
+              "border-error text-error": isError,
             })}
           >
             {field.value
