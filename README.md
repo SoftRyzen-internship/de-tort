@@ -276,6 +276,28 @@ is a list of more common components and their API.
 | `alt`       | `undefined` | required, `string` - cake image alt           |
 | `className` | `''`        | add custom or additional css class you'd need |
 
+- #### ToppingModalCard
+
+| Prop           | Default     | Description                                                                  |
+| -------------- | ----------- | ---------------------------------------------------------------------------- |
+| `onClick`      | `undefined` | required, `:void` - event-handler on button click                            |
+| `name`         | `undefined` | required, `string`- title of type topping cake                               |
+| `description`  | `undefined` | required, `string` - contain description of topping                          |
+| `price_double` | `undefined` | required, `string` - describe price to weight ratio                          |
+| `plate`        | `undefined` | required, `array` - contain different types toppings                         |
+|                |             | with "double" or "single" layers, in object of array should contain url,desc |
+|                |             | and layers: "single" or "double"                                             |
+
+- #### Modal
+
+| Prop             | Default     | Description                                                        |
+| ---------------- | ----------- | ------------------------------------------------------------------ |
+| `isOpen`         | `undefined` | required, `boolean` - current state of element                     |
+| `onClose`        | `undefined` | required, `:void` - event-handler on closing menu                  |
+| `children`       | `undefined` | add component for locating into modal window                       |
+| `classNameWrap`  | `""`        | add custom or additional css class you'd need for wrapper of modal |
+| `classNameModal` | `""`        | add custom or additional css class you'd need for modal            |
+
 ### Technology stack
 
 - **Main technologies**:

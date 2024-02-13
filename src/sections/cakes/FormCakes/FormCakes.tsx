@@ -1,5 +1,3 @@
-import React from "react";
-
 import { CakesOrderForm } from "@/components/ui/CakesOrderForm";
 
 import { FormCakesProps } from "./types";

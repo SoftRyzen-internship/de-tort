@@ -1,12 +1,12 @@
 export interface ToppingModalCardProps {
   onClick: () => void;
-  title: string;
+  name: string;
   description: string;
-  price: number;
-  weight: number;
-  plate: ToppingPlate;
+  price_double: string;
+  plate: ToppingPlate[];
 }
 export type ToppingPlate = {
-  src: string;
-  alt: string;
+  url: string;
+  desc: string;
+  layers: "single" | "double";
 };
