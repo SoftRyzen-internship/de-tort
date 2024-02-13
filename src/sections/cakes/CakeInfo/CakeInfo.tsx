@@ -30,21 +30,21 @@ export const SliderCakes: React.FC<CakeInfoProps> = ({ cake }) => {
   ));
 
   return (
-    <section className="section bg-color-bg-primary">
+    <section className="section pb-[60px] md:pb-[80px] xl:pb-[120px] bg-color-bg-primary">
       <div className="container xl:flex xl:gap-[60px]">
-        <div className="relative xl:w-[592px]">
+        <div className="relative md:w-[704px] md:h-[660px] xl:w-[592px] xl:h-[555px]">
           <Slider
             slides={slides}
             section="cakes"
-            customClass="md:w-[704px] xl:w-[592px] mb-6 md:mb-10 xlOnly:mb-0"
-            customSlideClass="md:w-[660px] xl:w-[555px]"
+            customClass="mb-6 md:mb-10 xlOnly:mb-0"
+            customSlideClass=""
           />
           <SliderNav
             section="cakes"
             className={slides?.length === 1 ? "!hidden" : ""}
           />
         </div>
-        <div>
+        <div className="xl:max-w-[564px]">
           <SectionTitle text={title} className="mb-6 md:mb-8 xl:mb-6" />
           <div className="flex relative flex-col gap-2 md:gap-32 xl:gap-12 mb-6 md:mb-8 md:flex-row  font-fixel ">
             <div className="flex gap-2 relative after:-right-16 xl:after:-right-6 after:hidden after:absolute md:after:block after:bg-color-bg-cakeLine after:w-[1px] after:h-full">
@@ -94,9 +94,9 @@ export const SliderCakes: React.FC<CakeInfoProps> = ({ cake }) => {
                 <p className="font-bold text-base leading-normal text-color-text-secondary">
                   {bento.price}
                 </p>
-                <p className="text-base leading-normal text-color-text-secondary md:text-xl xl:text-lg">
+                <pre className="whitespace-pre-wrap text-base leading-normal text-color-text-secondary md:text-xl xl:text-lg">
                   {price}
-                </p>
+                </pre>
               </div>
             </div>
           </div>

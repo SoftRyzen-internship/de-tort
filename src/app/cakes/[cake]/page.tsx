@@ -11,7 +11,6 @@ import metaCakes from "@/data/meta/cakes.json";
 
 import { CakeSlug } from "@/types";
 import { FormCakes } from "@/sections/cakes/FormCakes";
-// import { FormCakes } from "@/sections/cakes/FormCakes";
 
 export const dynamicParams = false;
 export const dynamic = "error";
