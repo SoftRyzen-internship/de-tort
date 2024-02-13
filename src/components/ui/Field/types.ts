@@ -1,4 +1,4 @@
-import { FieldType, CakeToppingType } from "@/types";
+import { CakeToppingType, FieldType } from "@/types";
 
 export interface FieldProps {
   register: any;

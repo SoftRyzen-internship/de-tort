@@ -19,13 +19,16 @@
     @apply [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none;
   }
   .input-field {
-    @apply w-full border rounded-lg px-4 text-left font-fixel [:where(&)]:border-alto text-base placeholder-silver disabled:placeholder-gallery;
+    @apply w-full border rounded-lg px-4 [:where(&)]:py-0 [:where(&)]:flex-start text-left font-fixel [:where(&)]:border-alto text-base placeholder-silver disabled:placeholder-gallery;
   }
   .hover-style {
     @apply hover:shadow-2xl focus:shadow-2xl md:hover:shadow-3xl md:focus:shadow-3xl transition border-color-accent-primary   bg-color-bg-white hover:translate-x-[2px] hover:-translate-y-[2px] md:hover:translate-x-[3px] md:hover:-translate-y-[3px] focus:translate-x-[2px] focus:-translate-y-[2px] md:focus:translate-x-[3px] md:focus:-translate-y-[3px];
   }
   .submit-button {
     @apply text-title block w-full md:w-[368px] md:mx-auto py-[14px] rounded-[36px] hover-style border-2 leading-8;
+  }
+  .label {
+    @apply font-fixel text-sm leading-4 [:where(&)]:block [:where(&)]:text-mine [:where(&)]:font-medium;
   }
 }
 

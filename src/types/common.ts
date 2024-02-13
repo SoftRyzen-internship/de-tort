@@ -1,5 +1,3 @@
-import { ZodSchema } from "zod";
-
 export type CakeSlug =
   | "mini-cakes"
   | "bento-cakes"
@@ -29,22 +27,3 @@ export type FieldType =
   | "calendar"
   | "topping"
   | "number";
-
-interface IFormField {
-  name: string;
-  placeholder: string;
-  placeholderMiniTorts?: string;
-  type: FieldType;
-  label: string;
-  optionalPaths: string[];
-  disabledPaths: string[];
-  schema: ZodSchema<any>;
-}
-
-export interface IFormConfig {
-  inputs: IFormField[];
-  button: {
-    label: string;
-    labelInProgress: string;
-  };
-}

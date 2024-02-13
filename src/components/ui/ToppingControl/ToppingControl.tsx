@@ -35,7 +35,7 @@ export const ToppingControl: React.FC<ToppingControlProps> = ({
                 field.value,
               "text-mine": !field.value,
               "text-gallery border-gallery": disabled,
-              "border-error": isError,
+              "border-error text-error": isError,
             },
           )}
           onClick={() => setIsOpen(true)}

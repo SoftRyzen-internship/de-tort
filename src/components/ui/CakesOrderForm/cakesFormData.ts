@@ -1,6 +1,8 @@
 import { z } from "zod";
 
-import { IFormConfig } from "@/types";
+import { IFormConfig } from "./types";
+
+const errorText = "Невірно введене значення";
 
 export const cakesFormData: IFormConfig = {
   inputs: [
@@ -11,7 +13,7 @@ export const cakesFormData: IFormConfig = {
       label: "Дата отримання:",
       optionalPaths: [],
       disabledPaths: [],
-      schema: z.string().min(2, { message: "✕ Виберіть дату..." }),
+      schema: z.string().min(2, { message: errorText }),
     },
     {
       name: "numberOfPeople",
@@ -21,7 +23,7 @@ export const cakesFormData: IFormConfig = {
       optionalPaths: [],
       disabledPaths: [],
       schema: z.string().refine((value) => /^\d{1,4}$/.test(value), {
-        message: "✕ Заповніть кількість (не більше 4 цифр)",
+        message: errorText,
       }),
     },
     {
@@ -31,7 +33,7 @@ export const cakesFormData: IFormConfig = {
       label: "Начинка:",
       optionalPaths: ["mini-cakes"],
       disabledPaths: ["mini-cakes"],
-      schema: z.string().min(2, { message: "✕ Потрібна начінка..." }),
+      schema: z.string().min(2, { message: errorText }),
     },
     {
       name: "link",
@@ -43,16 +45,16 @@ export const cakesFormData: IFormConfig = {
       schema: z
         .string()
         .refine((value) => value.length <= 255, {
-          message: "✕ Максимальна кількість символів для 'Дизайн' - 255",
+          message: errorText,
         })
         .refine((value) => value.length === 0 || /^[^\s]+$/.test(value), {
-          message: "✕ Поле 'Дизайн' не повинно містити пробіли",
+          message: errorText,
         })
         .refine(
           (value) =>
             value.length === 0 || /^[\p{L}\d\p{P}\p{S}]+$/u.test(value),
           {
-            message: "✕ Недопустимі символи...",
+            message: errorText,
           },
         ),
     },
@@ -63,7 +65,13 @@ export const cakesFormData: IFormConfig = {
       label: "Ваше імʼя та прізвище:",
       optionalPaths: [],
       disabledPaths: [],
-      schema: z.string().min(2, { message: "✕ Потрібне ім'я..." }),
+      schema: z
+        .string()
+        .regex(/^[a-zA-Zа-яА-ЯЇїІіЄєҐґ' -]+$/, errorText)
+        .max(90)
+        .refine((data) => !data.includes("--"), errorText)
+        .refine((data) => !data.includes(" - "), errorText)
+        .refine((data) => !(data.trim().length === 0), errorText),
     },
     {
       name: "phone",
@@ -74,11 +82,11 @@ export const cakesFormData: IFormConfig = {
       disabledPaths: [],
       schema: z
         .string()
-        .refine((value) => /^\+\d{12}$/.test(value), {
-          message: "✕ Потрібен телефон у форматі +380...",
+        .refine((value) => /^\+\d{11,12}$/.test(value), {
+          message: errorText,
         })
         .refine((value) => value.length > 1, {
-          message: "✕ Потрібен телефон...",
+          message: errorText,
         }),
     },
     {
@@ -93,10 +101,17 @@ export const cakesFormData: IFormConfig = {
       schema: z.string(),
     },
   ],
+  checkbox: {
+    name: "consent",
+    label: "Даю згоду на обробку персональних данних",
+    description: "Підтвердіть згоду на обробку персональних данних",
+    message: "Для відсилки форми потрібна Ваша згода",
+  },
   button: {
     label: "Замовити торт",
     labelInProgress: "Відсилка...",
   },
+  title: "Онлайн замовлення",
 };
 
 export const defaultValues: Record<string, string> =
@@ -123,7 +138,7 @@ export const generateOrderFormSchema = (pathname: string) => {
   const consent = z
     .boolean()
     .refine((value) => value === true, {
-      message: "You must consent to send this message",
+      message: cakesFormData.checkbox.message,
     })
     .default(false);
 

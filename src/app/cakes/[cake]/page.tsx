@@ -62,8 +62,10 @@ export default async function CakePage({
         </div>
       </section>
       {data.length && <SliderCakes cake={data[0]} />}
-      {data.length && (
+      {data.length ? (
         <FormCakes slug={data[0]?.slug} toppings={data[0]?.toppings} />
+      ) : (
+        <FormCakes slug="bento-cakes" toppings={[]} />
       )}
       <Sweets />
     </div>

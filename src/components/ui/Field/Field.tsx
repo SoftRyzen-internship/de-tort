@@ -26,23 +26,24 @@ export const Field: React.FC<FieldProps> = ({
   isOptional,
   toppings,
 }) => {
-  const errorClass = error && error[name] && "text-error border-error";
-  const inputStyles = `${errorClass} h-11 input-field input-reset`;
+  const errorText = error && error[name];
+
+  const inputStyles = cn("h-11 input-field", {
+    "text-error border-error": errorText,
+  });
 
   const textareaStyles = cn(
     "input-field block resize-none",
     "h-[136px] pt-3 pb-6",
-    { "border-error": error && error[name] },
+    { "border-error": errorText },
   );
-  const labelStyles = cn("text-sm leading-4 mb-2 block text-mine", {
-    "text-mine": !isDisabled && !error,
+
+  const labelStyles = cn("label mb-2", {
     "text-gallery": isDisabled,
-    "text-error": error && error[name],
-    "after:content-['Обовʼязково'] after:text-silver flex-between after:text-xs after:italic":
+    "text-mine": !isDisabled,
+    "after:content-['Обовʼязково'] after:text-silver flex-between after:text-xs after:italic after:font-normal":
       !isOptional,
   });
-
-  const errorText = error && error[name];
 
   return (
     <FormField
@@ -82,7 +83,7 @@ export const Field: React.FC<FieldProps> = ({
                 {...register(name)}
                 placeholder={placeholder}
                 type={type}
-                className={`${inputStyles}`}
+                className={`${inputStyles} input-reset`}
               />
             </FormControl>
           )}

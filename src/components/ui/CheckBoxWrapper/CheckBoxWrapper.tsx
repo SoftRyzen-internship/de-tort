@@ -24,7 +24,7 @@ export const CheckboxWrapper: React.FC<ICheckbox> = ({
       defaultValue={false}
       render={({ field }) => (
         <>
-          <FormItem className="flex-center gap-2 mb-8">
+          <FormItem className="flex-center gap-2 mb-8 relative">
             <FormControl className="flex-center p-[9.3px] ">
               <Checkbox
                 checked={field.value}
@@ -33,14 +33,17 @@ export const CheckboxWrapper: React.FC<ICheckbox> = ({
                 {...register(name)}
               />
             </FormControl>
-            <FormLabel className="text-[12px] font-extralight leading-[22px] transition hover:cursor-pointer">
+
+            <FormLabel className="label transition hover:cursor-pointer">
               {label}
             </FormLabel>
+
             <FormDescription className="sr-only">{description}</FormDescription>
+
+            <FormMessage
+              className={`absolute text-xs italic font-normal font-fixel -bottom-4 text-error `}
+            />
           </FormItem>
-          <FormMessage
-            className={`absolute bottom-[5px] text-[12px] font-extralight tracking-[0.20em] text-[#FF5757] max-md:max-w-[200px] md:bottom-[-25px]`}
-          />
         </>
       )}
     />
