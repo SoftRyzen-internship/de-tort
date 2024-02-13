@@ -5,8 +5,11 @@ import sweets from "@/data/sweets.json";
 
 import { SweetsProps } from "./types";
 
-export const Sweets: React.FC<SweetsProps> = ({ home = false }) => {
-  const { titleHome, titleCakes } = sweets;
+export const Sweets: React.FC<SweetsProps> = ({
+  slug = "cakes",
+  home = false,
+}) => {
+  const { titlePrimary, titleSecondary } = sweets;
 
   const styles = home ? "" : "pb-[60px] md:pb-[80px] xl:pb-[120px]";
 
@@ -14,7 +17,7 @@ export const Sweets: React.FC<SweetsProps> = ({ home = false }) => {
     <section className={`section bg-color-bg-primary ${styles}`}>
       <div className="container">
         <SectionTitle
-          text={home ? titleHome : titleCakes}
+          text={home ? titlePrimary : titleSecondary}
           className={
             home
               ? "sr-only"
@@ -22,7 +25,7 @@ export const Sweets: React.FC<SweetsProps> = ({ home = false }) => {
           }
         />
 
-        <SweetsList />
+        <SweetsList slug={slug} />
       </div>
     </section>
   );

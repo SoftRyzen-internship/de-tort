@@ -207,7 +207,7 @@ is a list of more common components and their API.
 | `data`      | `undefined` | required, data for modal window inside button |
 | `className` | `''`        | add custom or additional css class you'd need |
 
-#### Slider
+- #### Slider
 
 | Prop               | Default     | Description                                                                 |
 | ------------------ | ----------- | --------------------------------------------------------------------------- |
@@ -216,22 +216,29 @@ is a list of more common components and their API.
 | `customSlideClass` | `''`        | add custom or additional css class you'd need for slide                     |
 | `customClass`      | `''`        | add custom or additional css class you'd need for the whole slider          |
 
-### SliderNav
+- ### SliderNav
 
 | Prop        | Default     | Description                                                                 |
 | ----------- | ----------- | --------------------------------------------------------------------------- |
 | `section`   | `undefined` | required, choose between `achievements`, `toppings`, `cakes` and `feedback` |
 | `className` | `''`        | add custom or additional css class you'd need for the whole slider          |
 
+- #### SweetsList
+
+| Prop   | Default     | Description                                                               |
+| ------ | ----------- | ------------------------------------------------------------------------- |
+| `slug` | `undefined` | required, `string` variable to manage list structure & items title styles |
+
 - #### SweetsCard
 
-| Prop         | Default     | Description                    |
-| ------------ | ----------- | ------------------------------ |
-| `name`       | `undefined` | required, sweets name          |
-| `nameColor`  | `undefined` | required, sweet color          |
-| `bgSrc`      | `undefined` | required, sweet image src      |
-| `bgAlt`      | `undefined` | required, sweet image alt      |
-| `targetHref` | `undefined` | required, on click target Href |
+| Prop         | Default     | Description                               |
+| ------------ | ----------- | ----------------------------------------- |
+| `name`       | `undefined` | required, sweets name                     |
+| `nameColor`  | `undefined` | required, sweet color                     |
+| `bgSrc`      | `undefined` | required, sweet image src                 |
+| `bgAlt`      | `undefined` | required, sweet image alt                 |
+| `targetHref` | `undefined` | required, on click target Href            |
+| `titleClass` | `undefined` | required, ocustom or additional css class |
 
 - #### CardCakes
 
