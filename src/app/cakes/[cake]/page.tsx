@@ -62,7 +62,7 @@ export default async function CakePage({
           <p className="text-center">Current page: {cake}</p>
         </div>
       </section>
-      <SliderCakes cake={data} />
+      {data.length > 0 && <SliderCakes cake={data[0]} />}
       <Sweets />
       <FormStart />
     </>

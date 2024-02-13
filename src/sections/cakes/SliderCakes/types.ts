@@ -1,5 +1,7 @@
+import { CakeType } from "@/types";
+
 export type SliderCakeProps = {
-  cake: any;
+  cake: CakeType;
 };
 
 export type TImage = {
