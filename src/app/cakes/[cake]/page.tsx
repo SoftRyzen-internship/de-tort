@@ -54,8 +54,6 @@ export default async function CakePage({
   params: { cake: CakeSlug };
 }) {
   const data = await fetchCake(cake);
-  const slug = data && data[0]?.slug;
-  const toppings = data && data[0]?.toppings;
 
   return (
     <div className="bg-color-bg-primary">
@@ -64,8 +62,10 @@ export default async function CakePage({
           <p className="text-center">Current page: {cake}</p>
         </div>
       </section>
-      <SliderCakes cake={data} />
-      <FormCakes slug={slug} toppings={toppings} />
+      {data.length && <SliderCakes cake={data[0]} />}
+      {data.length && (
+        <FormCakes slug={data[0]?.slug} toppings={data[0]?.toppings} />
+      )}
       <Sweets />
     </div>
   );
