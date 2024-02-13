@@ -43,7 +43,7 @@ export const SliderCakes: React.FC<CakeInfoProps> = ({ cake }) => {
           <SectionTitle
             hero={true}
             text={title}
-            className="mb-6 md:mb-8 xl:mb-6 md:text-[40px] xl:text-[48px] xl:tracking-normal"
+            className="mb-6 md:mb-8 xl:mb-6 md:!text-[40px] xl:!text-[48px] xl:!tracking-normal"
           />
           <div className="flex relative flex-col gap-2 md:gap-32 xl:gap-12 mb-6 md:mb-8 md:flex-row  font-fixel ">
             <div className="flex gap-2 relative after:-right-16 xl:after:-right-6 after:hidden after:absolute md:after:block after:bg-color-bg-cakeLine after:w-[1px] after:h-full">
