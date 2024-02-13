@@ -3,6 +3,8 @@ import { SliderNav } from "@/components/base/SliderNav";
 import { ReviewCard } from "@/components/ui/ReviewCard";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 
+import { cn } from "@/utils/helpers";
+
 import data from "@/data/reviews.json";
 
 import { ReviewsProps } from "./types";
@@ -28,11 +30,14 @@ export const Reviews: React.FC<ReviewsProps> = ({ reviews }) => {
             section="feedback"
             slides={slides}
             customClass="!pl-[7px] !pb-[7px]"
-            customSlideClass=" overflow-visible"
+            customSlideClass="overflow-visible"
           />
           <SliderNav
             section="feedback"
-            className="smOnly:mt-[17px] md:absolute md:right-8 xl:right-[32px] md:top-0 xl:top-[2px] xl:h-[68px]"
+            className={cn(
+              "smOnly:mt-[17px] md:absolute md:right-8 xl:right-[32px] md:top-0 xl:top-[2px] xl:h-[68px] ",
+              slides.length <= 3 ? "!hidden" : "",
+            )}
           />
         </div>
       </section>

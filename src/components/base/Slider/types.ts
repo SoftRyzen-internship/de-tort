@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-export type TSections = "achievements" | "toppings" | "feedback";
+export type TSections = "achievements" | "toppings" | "feedback" | "cakes";
 
 export interface SliderProps {
   section: TSections;

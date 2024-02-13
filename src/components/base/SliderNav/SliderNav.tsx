@@ -12,15 +12,24 @@ export const SliderNav: React.FC<SliderNavigationProps> = ({
 }) => {
   const { sliderNav } = data;
 
+  const cakesStyles =
+    " absolute z-[2] pointer-events-none w-full !justify-between cakes-slider-nav !m-0 ";
+
   return (
     <ul
       className={cn(
-        "flex-center smOnly:mx-auto w-fit h-fit gap-2 smOnly:mt-6 ",
+        "flex-center smOnly:mx-auto w-fit h-fit gap-2 smOnly:mt-6 pointer-events-none ",
+        section === "cakes" && cakesStyles,
         className,
       )}
     >
       {sliderNav?.map(({ id, ariaLabel }) => (
-        <li key={id}>
+        <li
+          className={cn({
+            "mx-2 md:mx-9 xl:mx-4": section === "cakes",
+          })}
+          key={id}
+        >
           <button
             className={cn(`button-${id}-${section} slider-button`)}
             type="button"

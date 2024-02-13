@@ -1,0 +1,72 @@
+{
+  "title": "De Tort",
+  "description": "Онлайн кондитерська De Tort",
+  "keywords": "Кондитерська, Солодощі, Торти, Капкейки, Чизкейки, Солодкі набори, Печиво, Макарон, Кейк-попси, Київ",
+  "manifest": "/meta/site.webmanifest",
+  "twitter": {
+    "title": "De Tort",
+    "card": "summary_large_image",
+    "description": "Онлайн кондитерська De Tort",
+    "images": [
+      {
+        "url": "/meta/ogp-image.jpg",
+        "width": 1200,
+        "height": 630,
+        "alt": "Онлайн кондитерська De Tort"
+      }
+    ]
+  },
+  "openGraph": {
+    "title": "De Tort",
+    "description": "Онлайн кондитерська De Tort",
+    "siteName": "De Tort",
+    "locale": "uk_UA",
+    "type": "website",
+    "images": [
+      {
+        "url": "/meta/ogp-image.jpg",
+        "width": 1200,
+        "height": 630,
+        "alt": "Онлайн кондитерська De Tort"
+      }
+    ]
+  },
+  "icons": {
+    "icon": [
+      {
+        "url": "/meta/favicon.ico"
+      },
+      {
+        "url": "/meta/favicon-16x16.png",
+        "sizes": "16x16",
+        "type": "image/png"
+      },
+      {
+        "url": "/meta/favicon-32x32.png",
+        "sizes": "32x32",
+        "type": "image/png"
+      },
+      {
+        "url": "/meta/android-chrome-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "url": "/meta/android-chrome-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "shortcut": "/meta/favicon.ico",
+    "apple": "/meta/apple-touch-icon.png",
+    "other": {
+      "rel": "/meta/apple-touch-icon.png",
+      "url": "/meta/apple-touch-icon.png"
+    }
+  },
+  "robots": {
+    "index": true,
+    "follow": true,
+    "nocache": true
+  }
+}
