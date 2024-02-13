@@ -4,19 +4,26 @@ import { SliderNav } from "@/components/base/SliderNav";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 
 import data from "@/data/toppings.json";
+
 import { ToppingsProps } from "./types";
 
-export const Toppings: React.FC<ToppingsProps> = ({
-  toppings: toppingsDynamicData,
-}) => {
-  const { sectionTitle, toppings } = data;
+export const Toppings: React.FC<ToppingsProps> = ({ toppings }) => {
+  const { sectionTitle } = data;
 
-  // todo: Update ToppingCards with dynamic data:
-  console.log("Toppings (middle) from CMS: ", toppingsDynamicData.length);
+  const cards = [...toppings, ...toppings];
 
-  const slides = toppings?.map(({ label, src, alt, id }, idx) => (
-    <ToppingCard key={id} label={label} src={src} alt={alt} idx={idx} />
-  ));
+  const slides = cards.map(({ name, images }, idx) => {
+    const img = images.find(({ layers }) => layers === "double") || images[0];
+    return (
+      <ToppingCard
+        key={idx}
+        label={name}
+        src={img.url}
+        alt={img.desc}
+        idx={idx}
+      />
+    );
+  });
 
   return (
     <section className="section bg-color-bg-accent py-[60px] md:py-[80px] xl:py-[120px]">
