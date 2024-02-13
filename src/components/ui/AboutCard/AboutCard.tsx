@@ -1,5 +1,7 @@
 import { cn } from "@/utils/helpers";
+
 import { AboutCardProps } from "./types";
+
 import Image from "next/image";
 
 export const AboutCard: React.FC<AboutCardProps> = ({
