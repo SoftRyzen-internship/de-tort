@@ -1,6 +1,6 @@
 import { Sweets } from "@/sections/home/Sweets";
 
-// import { fetchCake } from "@/requests";
+import { fetchCake } from "@/requests";
 
 import json from "@/data/cakes-assortment.json";
 
@@ -24,7 +24,8 @@ export default async function CakePage({
 }: {
   params: { cake: CakeSlug };
 }) {
-  // const data = await fetchCake(cake);
+  const data = await fetchCake(cake);
+  console.log("🚀 ~ data:", data);
 
   return (
     <div className="bg-color-bg-primary">

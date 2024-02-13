@@ -8,6 +8,7 @@ import useFormPersist from "react-hook-form-persist";
 
 import { Form } from "@/components/ui/Shadcn/form";
 import { Field } from "@/components/ui/Field";
+import { CheckboxWrapper } from "@/components/ui/CheckBoxWrapper";
 
 import { CakesOrderFormProps } from "./types";
 
@@ -16,7 +17,6 @@ import {
   generateOrderFormSchema,
   defaultValues,
 } from "./cakesFormData";
-import { CheckboxWrapper } from "@/components/ui/CheckBoxWrapper";
 
 export const CakesOrderForm: React.FC<CakesOrderFormProps> = ({
   slug,

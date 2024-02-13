@@ -25,16 +25,14 @@ export const CheckboxWrapper: React.FC<ICheckbox> = ({
       render={({ field }) => (
         <>
           <FormItem className="flex-center gap-2 mb-8">
-            <div className="flex-center border rounded border-white bg-white p-0">
-              <FormControl className="flex-center border p-[9.3px] transition focus:outline-white">
-                <Checkbox
-                  checked={field.value}
-                  onCheckedChange={field.onChange}
-                  className="border border-color-border-map-b rounded"
-                  {...register(name)}
-                />
-              </FormControl>
-            </div>
+            <FormControl className="flex-center p-[9.3px] ">
+              <Checkbox
+                checked={field.value}
+                onCheckedChange={field.onChange}
+                className="border border-color-border-map-b rounded"
+                {...register(name)}
+              />
+            </FormControl>
             <FormLabel className="text-[12px] font-extralight leading-[22px] transition hover:cursor-pointer">
               {label}
             </FormLabel>

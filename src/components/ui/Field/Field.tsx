@@ -40,10 +40,11 @@ export const Field: React.FC<FieldProps> = ({
     "text-mine": !isDisabled && !error,
     "text-gallery": isDisabled,
     "text-error": error && error[name],
+    "after:content-['Обовʼязково'] after:text-silver flex-between after:text-xs after:italic":
+      !isOptional,
   });
 
-  const requiredText = isOptional ? "" : "Обовʼязково";
-  const messageText = error && error[name] ? error[name] : requiredText;
+  const errorText = error && error[name];
 
   return (
     <FormField
@@ -88,18 +89,12 @@ export const Field: React.FC<FieldProps> = ({
             </FormControl>
           )}
           <FormDescription className="sr-only">{label}</FormDescription>
-          {messageText && (
-            <FormMessage
-              className={cn(
-                "absolute top-0 right-0 text-right text-silver text-xs italic font-normal",
-                {
-                  "text-error": error && error[name],
-                },
-              )}
-            >
-              {messageText}
-            </FormMessage>
-          )}
+
+          <FormMessage
+            className={cn("text-error text-right text-xs italic font-normal")}
+          >
+            {errorText}
+          </FormMessage>
         </FormItem>
       )}
     />
