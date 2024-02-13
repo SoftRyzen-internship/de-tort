@@ -111,6 +111,7 @@ export const cakesFormData: IFormConfig = {
     label: "Замовити торт",
     labelInProgress: "Відсилка...",
   },
+  title: "Онлайн замовлення",
 };
 
 export const defaultValues: Record<string, string> =
