@@ -23,7 +23,7 @@ export const SliderCakes: React.FC<CakeInfoProps> = ({ cake }) => {
     price,
     description,
     images,
-  } = cake[0];
+  } = cake;
 
   const slides = images?.map(({ url, desc }: TImage, idx: number) => (
     <SliderCakeCard key={idx} src={url} alt={desc} />

@@ -23,7 +23,7 @@ export type CakeDataType = {
   };
 };
 
-type CakeToppingDataType = {
+export type CakeToppingDataType = {
   attributes: {
     name: string;
     description: string;
