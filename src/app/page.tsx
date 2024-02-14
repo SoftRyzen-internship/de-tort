@@ -31,7 +31,7 @@ export default async function Home() {
       <Sweets home />
       <About />
       <Achievements achievements={achievements} />
-      <Toppings toppings={toppings} />
+      {toppings?.length > 3 && <Toppings toppings={toppings} />}
       <QA faq={faq} />
       <Reviews reviews={reviews} />
       <Contacts contacts={contacts} />

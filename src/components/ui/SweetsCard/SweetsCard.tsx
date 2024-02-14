@@ -8,6 +8,7 @@ export const SweetsCard: React.FC<SweetsCardProps> = ({
   bgSrc,
   bgAlt,
   targetHref,
+  titleClass,
 }) => {
   return (
     <li>
@@ -22,9 +23,11 @@ export const SweetsCard: React.FC<SweetsCardProps> = ({
           height={412}
           className="overflow-hidden object-cover w-full h-full group-hover:scale-110 group-focus:scale-110 transition-transform"
         />
-        <h3 className="text-center w-full font-unbounded uppercase font-bold text-[28px] absolute top-10 left-1/2 -translate-x-1/2">
+        <p
+          className={`text-center w-full font-unbounded uppercase font-bold text-[28px] absolute top-10 left-1/2 -translate-x-1/2 ${titleClass}`}
+        >
           {name}
-        </h3>
+        </p>
       </Link>
     </li>
   );

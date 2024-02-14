@@ -4,6 +4,14 @@ export type CakeSlug =
   | "middle-cakes"
   | "big-cakes";
 
+export type SweetsSlug =
+  | "cupcakes"
+  | "cheesecakes"
+  | "sweet-sets"
+  | "cookies"
+  | "macaron"
+  | "cake-pops";
+
 export type ImageDataType = {
   image_description: string;
   photo: {
