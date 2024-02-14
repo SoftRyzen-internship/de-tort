@@ -105,3 +105,32 @@
     flex-basis: calc((100% - 1 * 48px) / 3);
   }
 }
+
+/* Sweet Cards (title style utilities) */
+.sweets-card-title_cakes {
+  @apply text-color-accent-primary;
+}
+
+.sweets-card-title_cookies {
+  @apply text-color-option-first;
+}
+
+.sweets-card-title_cupcakes {
+  @apply text-color-option-second;
+}
+
+.sweets-card-title_macaron {
+  @apply text-color-option-third;
+}
+
+.sweets-card-title_cheesecakes {
+  @apply text-color-option-fourth;
+}
+
+.sweets-card-title_sweet-sets {
+  @apply text-color-option-fifth;
+}
+
+.sweets-card-title_cake-pops {
+  @apply text-color-option-first;
+}

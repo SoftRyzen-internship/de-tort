@@ -1,14 +1,14 @@
-import data from "@/data/utils.json";
-
 export const convertDate = (date: string) => {
-  const { months } = data;
-
   // Incoming date example: 2024-01-07
-  const arr = date.split("-");
 
-  const year = arr[0];
-  const month = months[Number(arr[1]) - 1];
-  const day = Number(arr[2]);
+  const dateObj = new Date(date);
 
-  return `${day} ${month} ${year}`;
+  const res = dateObj.toLocaleString("uk-UA", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+
+  return res.slice(0, res.length - 3);
+  // Outcoming date example: 1 січня 2023
 };
