@@ -19,13 +19,7 @@ export const fetchCakeToppings = async (
 
     const data = res.toppings.data.map(
       ({
-        attributes: {
-          name,
-          description,
-          price_double,
-          unique,
-          images: imagesData,
-        },
+        attributes: { name, description, price_double, images: imagesData },
       }) => {
         const images = imagesData.map(({ layers, image }) => ({
           layers,
@@ -37,7 +31,6 @@ export const fetchCakeToppings = async (
           name,
           description,
           price_double,
-          unique,
           images,
         };
       },
