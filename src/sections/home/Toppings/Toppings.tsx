@@ -4,19 +4,32 @@ import { SliderNav } from "@/components/base/SliderNav";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 
 import data from "@/data/common.json";
+
 import { ToppingsProps } from "./types";
 
-export const Toppings: React.FC<ToppingsProps> = ({
-  toppings: toppingsDynamicData,
-}) => {
-  const { sectionTitle, availableTopings } = data.toppings;
+export const Toppings: React.FC<ToppingsProps> = ({ toppings }) => {
+  const { sectionTitle } = data.toppings;
 
-  // todo: Update ToppingCards with dynamic data:
-  console.log("Toppings (middle) from CMS: ", toppingsDynamicData.length);
+  // Filter dynamic data to prevent showing mistaken toppings (without double layers)
+  const filteredToppings = toppings.filter(({ images }) =>
+    images.find(({ layers }) => layers === "double"),
+  );
 
-  const slides = availableTopings?.map(({ label, src, alt, id }, idx) => (
-    <ToppingCard key={id} label={label} src={src} alt={alt} idx={idx} />
-  ));
+  // Duplicate the array to provide different backgrounds regardless of the number of toppings (DESIGN)
+  const cards = [...filteredToppings, ...filteredToppings];
+
+  const slides = cards.map(({ name, images }, idx) => {
+    const img = images.find(({ layers }) => layers === "double")!; // we are positive that "double" is available because of filtering above
+    return (
+      <ToppingCard
+        key={idx}
+        label={name}
+        src={img.url}
+        alt={img.desc}
+        idx={idx}
+      />
+    );
+  });
 
   return (
     <section className="section bg-color-bg-accent py-[60px] md:py-[80px] xl:py-[120px]">

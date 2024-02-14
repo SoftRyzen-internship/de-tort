@@ -2,6 +2,7 @@ import { Metadata } from "next";
 
 import { DessertInfo } from "@/sections/cakes/DessertInfo";
 import { Sweets } from "@/sections/home/Sweets";
+import { FormCakes } from "@/sections/cakes/FormCakes";
 
 import { fetchCake } from "@/requests";
 
@@ -10,7 +11,6 @@ import metaBase from "@/data/meta/base.json";
 import metaCakes from "@/data/meta/cakes.json";
 
 import { CakeSlug } from "@/types";
-import { FormCakes } from "@/sections/cakes/FormCakes";
 
 export const dynamicParams = false;
 export const dynamic = "error";

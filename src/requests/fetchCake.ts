@@ -35,13 +35,7 @@ export const fetchCake = async (cake: CakeSlug): Promise<CakeType[]> => {
 
       const toppings = toppingsData.data.map(
         ({
-          attributes: {
-            name,
-            description,
-            price_double,
-            unique,
-            images: imagesData,
-          },
+          attributes: { name, description, price_double, images: imagesData },
         }) => {
           const images = imagesData.map(({ layers, image }) => ({
             layers,
@@ -53,7 +47,6 @@ export const fetchCake = async (cake: CakeSlug): Promise<CakeType[]> => {
             name,
             description,
             price_double,
-            unique,
             images,
           };
         },

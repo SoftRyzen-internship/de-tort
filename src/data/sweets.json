@@ -1,42 +1,48 @@
 {
-  "titleHome": "Смаколики",
-  "titleCakes": "Також купують",
+  "titlePrimary": "Смаколики",
+  "titleSecondary": "Також купують",
   "sweetsList": [
     {
+      "slug": "cakes",
+      "name": "Торти",
+      "bgSrc": "/images/cakes-@x2.jpg",
+      "bgAlt": "Рожевий торт, декорований до дня народження, на тарілці."
+    },
+    {
+      "slug": "cookies",
       "name": "Печиво",
       "bgSrc": "/images/cookies-@x2.jpg",
-      "bgAlt": "Печиво з горіхами",
-      "targetHref": "/"
+      "bgAlt": "Печиво з горіхами"
     },
     {
+      "slug": "cupcakes",
       "name": "Капкейки",
       "bgSrc": "/images/cupcakes-@x2.jpg",
-      "bgAlt": "Три капкейка",
-      "targetHref": "/"
+      "bgAlt": "Три капкейка"
     },
     {
+      "slug": "macaron",
       "name": "Макарон",
       "bgSrc": "/images/pasta-@x2.jpg",
-      "bgAlt": "Кругле печиво",
-      "targetHref": "/"
+      "bgAlt": "Кругле печиво"
     },
     {
+      "slug": "cheesecakes",
       "name": "Чизкейки",
       "bgSrc": "/images/cheesecakes-@x2.jpg",
-      "bgAlt": "Розрізаний чізкейк",
-      "targetHref": "/"
+      "bgAlt": "Розрізаний чізкейк"
     },
     {
+      "slug": "sweet-sets",
       "name": "Набори",
       "bgSrc": "/images/sets-@x2.jpg",
-      "bgAlt": "Ягоди з тортиком та печивом",
-      "targetHref": "/"
+      "bgAlt": "Ягоди з тортиком та печивом"
     },
     {
+      "slug": "cake-pops",
       "name": "Кейк-попси",
       "bgSrc": "/images/cakepops-@x2.jpg",
-      "bgAlt": "Печиво з горіхами",
-      "targetHref": "/"
+      "bgAlt": "Печиво з горіхами"
     }
   ]
 }

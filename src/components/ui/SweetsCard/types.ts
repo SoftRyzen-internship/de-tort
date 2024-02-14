@@ -3,4 +3,5 @@ export type SweetsCardProps = {
   bgSrc: string;
   bgAlt: string;
   targetHref: string;
+  titleClass: string;
 };
