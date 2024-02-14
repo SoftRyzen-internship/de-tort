@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import { SliderCakes } from "@/sections/cakes/CakeInfo";
+import { DessertInfo } from "@/sections/cakes/DessertInfo";
 import { Sweets } from "@/sections/home/Sweets";
 
 import { fetchCake } from "@/requests";
@@ -61,7 +61,7 @@ export default async function CakePage({
           <p className="text-center">Current page: {cake}</p>
         </div>
       </section>
-      {data.length && <SliderCakes cake={data[0]} />}
+      {data.length && <DessertInfo cake={data[0]} />}
       {data.length ? (
         <FormCakes slug={data[0]?.slug} toppings={data[0]?.toppings} />
       ) : (
