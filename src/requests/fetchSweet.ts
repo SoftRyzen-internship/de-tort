@@ -15,7 +15,6 @@ export const fetchSweet = async (
         sweet: sweet,
       },
     );
-    // console.log("fetch res: ", res);
 
     const data = res.sweets.data.map(({ attributes }) => {
       const sweetImages = attributes.images.map(

@@ -15,7 +15,6 @@ export const fetchCakeToppings = async (
         cake: cake,
       },
     );
-    // console.log("res: ", res.toppings.data);
 
     const data = res.toppings.data.map(
       ({
