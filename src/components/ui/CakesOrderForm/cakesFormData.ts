@@ -102,7 +102,7 @@ export const cakesFormData: IFormConfig = {
       disabledPaths: [],
       schema: z
         .string()
-        .regex(/^[a-zA-Zа-яА-ЯЇїІіЄєҐґ'0-9\s\p{P}\p{S}\r\n]+$/u, {
+        .regex(/^[a-zA-Zа-яА-ЯЇїІіЄєҐґ'0-9\s\p{P}\p{S}\r\n]*$/u, {
           message: errorText,
         })
         .max(1000, { message: errorText }),
@@ -119,37 +119,8 @@ export const cakesFormData: IFormConfig = {
     labelInProgress: "Відсилка...",
   },
   title: "Онлайн замовлення",
-};
-
-export const defaultValues: Record<string, string> =
-  cakesFormData.inputs.reduce((accumulator, current) => {
-    return { ...accumulator, [current.name]: "" };
-  }, {});
-
-export const generateOrderFormSchema = (pathname: string) => {
-  const schema = cakesFormData.inputs.reduce((accumulator, current) => {
-    const isOptional = current.optionalPaths.includes(pathname);
-    const isDisabled = current.disabledPaths.includes(pathname);
-    if (isDisabled) {
-      return { ...accumulator };
-    }
-    const schemaForOptional = isDisabled
-      ? z.string()
-      : current.schema.optional();
-    return {
-      ...accumulator,
-      [current.name]: isOptional ? schemaForOptional : current.schema,
-    };
-  }, {});
-
-  const consent = z
-    .boolean()
-    .refine((value) => value === true, {
-      message: cakesFormData.checkbox.message,
-    })
-    .default(false);
-
-  const schemaWithConsent = { ...schema, consent: consent };
-
-  return z.object(schemaWithConsent);
+  messages: {
+    success: "Замовлення відправлено!",
+    error: "Помилка відправлення форми",
+  },
 };

@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -11,32 +12,39 @@ import { CheckboxWrapper } from "@/components/ui/CheckBoxWrapper";
 
 import { CakesOrderFormProps } from "./types";
 
-import {
-  cakesFormData,
-  generateOrderFormSchema,
-  defaultValues,
-} from "./cakesFormData";
+import { cakesFormData } from "./cakesFormData";
+import { defaultValues, generateOrderFormSchema } from "@/utils/helpers/schema";
+import { processFormValues } from "@/utils/helpers/processFormValues";
+import { cn } from "@/utils/helpers";
+import { send } from "@/actions/telegram";
 
 export const CakesOrderForm: React.FC<CakesOrderFormProps> = ({
   slug,
   toppings,
 }) => {
-  const { inputs, checkbox, button } = cakesFormData;
+  const [resultMessage, setResultMessage] = useState<string | null>(null);
+
+  const { inputs, checkbox, button, messages } = cakesFormData;
   const orderFormSchema = generateOrderFormSchema(slug);
   const form = useForm<z.infer<typeof orderFormSchema>>({
     resolver: zodResolver(orderFormSchema),
   });
 
   const { formState, watch, setValue, register, handleSubmit, control } = form;
-  useFormPersist("orderFormNew", {
+  useFormPersist(`order-${slug}`, {
     watch,
     setValue,
+    exclude: [checkbox.name],
   });
 
-  function onSubmit(values: z.infer<typeof orderFormSchema>) {
-    // буде замінено на серверний хук з запитом на Телеграм
-    console.log("🚀 ~ values:", values);
+  async function onSubmit(values: z.infer<typeof orderFormSchema>) {
+    const processedValues = processFormValues(values);
+    const result = await send(processedValues);
+    setResultMessage(result ? messages.success : messages.error);
     form.reset(defaultValues);
+    setTimeout(() => {
+      setResultMessage(null);
+    }, 5000);
   }
 
   return (
@@ -84,6 +92,16 @@ export const CakesOrderForm: React.FC<CakesOrderFormProps> = ({
         >
           {formState.isSubmitting ? button.labelInProgress : button.label}
         </button>
+        {resultMessage && (
+          <h3
+            className={cn("message", {
+              "text-success": resultMessage.includes(messages.success),
+              "text-error": !resultMessage.includes(messages.success),
+            })}
+          >
+            {resultMessage}
+          </h3>
+        )}
       </form>
     </Form>
   );
