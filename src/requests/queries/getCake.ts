@@ -25,7 +25,7 @@ export const getCake = gql`
               }
             }
           }
-          toppings(sort: "createdAt:asc", pagination: { limit: 100 }) {
+          toppings(sort: "createdAt:desc", pagination: { limit: 100 }) {
             data {
               attributes {
                 name

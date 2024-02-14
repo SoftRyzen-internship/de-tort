@@ -4,7 +4,7 @@ export const getCakeToppings = gql`
   query ($cake: String) {
     toppings(
       filters: { cakes: { slug: { eq: $cake } } }
-      sort: "createdAt:asc"
+      sort: "createdAt:desc"
       pagination: { limit: 100 }
     ) {
       data {
