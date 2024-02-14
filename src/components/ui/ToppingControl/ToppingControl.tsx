@@ -34,7 +34,7 @@ export const ToppingControl: React.FC<ToppingControlProps> = ({
               "text-color-accent-primary border-color-accent-primary":
                 field.value,
               "text-mine": !field.value,
-              "text-gallery border-gallery": disabled,
+              "text-alto border-alto bg-color-bg-dead": disabled,
               "border-error text-error": isError,
             },
           )}

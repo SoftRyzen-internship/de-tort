@@ -4,8 +4,8 @@ import { CakeToppingType } from "@/types";
 
 export interface ToppingControlProps {
   field: FieldValues;
-  placeholder?: string;
-  disabled?: boolean;
   toppings: CakeToppingType[];
   isError: boolean;
+  disabled?: boolean;
+  placeholder?: string;
 }

@@ -31,4 +31,8 @@ export interface IFormConfig {
     labelInProgress: string;
   };
   title: string;
+  messages: {
+    success: string;
+    error: string;
+  };
 }

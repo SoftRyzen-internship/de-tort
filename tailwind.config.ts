@@ -50,6 +50,7 @@ const config: Config = {
           white: "#FFFFFF",
           primary: "#FFF8F2",
           hero: "#FFCFD3",
+          dead: "#F8F8F8",
           accent: "#F5D9E2",
           grey: "#EFEFEF",
           extraAccent: "#FFF4CB",
@@ -85,6 +86,7 @@ const config: Config = {
         alto: "#CECECE",
         mine: "#383838",
         error: "#EF5A5A",
+        success: "#00FF66",
         gallery: "#EAEAEA",
       },
       background: {
