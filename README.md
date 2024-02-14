@@ -209,19 +209,19 @@ is a list of more common components and their API.
 
 #### Slider
 
-| Prop               | Default     | Description                                                        |
-| ------------------ | ----------- | ------------------------------------------------------------------ |
-| `section`          | `undefined` | required, choose between `achievements`, `toppings` and `feedback` |
-| `slides`           | `undefined` | required, `array` of slides                                        |
-| `customSlideClass` | `''`        | add custom or additional css class you'd need for slide            |
-| `customClass`      | `''`        | add custom or additional css class you'd need for the whole slider |
+| Prop               | Default     | Description                                                                 |
+| ------------------ | ----------- | --------------------------------------------------------------------------- |
+| `section`          | `undefined` | required, choose between `achievements`, `toppings`, `cakes` and `feedback` |
+| `slides`           | `undefined` | required, `array` of slides                                                 |
+| `customSlideClass` | `''`        | add custom or additional css class you'd need for slide                     |
+| `customClass`      | `''`        | add custom or additional css class you'd need for the whole slider          |
 
 ### SliderNav
 
-| Prop        | Default     | Description                                                        |
-| ----------- | ----------- | ------------------------------------------------------------------ |
-| `section`   | `undefined` | required, choose between `achievements`, `toppings` and `feedback` |
-| `className` | `''`        | add custom or additional css class you'd need for the whole slider |
+| Prop        | Default     | Description                                                                 |
+| ----------- | ----------- | --------------------------------------------------------------------------- |
+| `section`   | `undefined` | required, choose between `achievements`, `toppings`, `cakes` and `feedback` |
+| `className` | `''`        | add custom or additional css class you'd need for the whole slider          |
 
 - #### SweetsCard
 
@@ -259,6 +259,44 @@ is a list of more common components and their API.
 | `ariaLabel` | `undefined` | required, `string` - accessibility attribute value |
 | `onClick`   | `undefined` | required, `:void` - event-handler on button click  |
 | `className` | `''`        | add custom or additional css class you'd need      |
+
+- #### ScrollBtn
+
+| Prop         | Default     | Description                                                                   |
+| ------------ | ----------- | ----------------------------------------------------------------------------- |
+| `label`      | `undefined` | required, `string` - button's text                                            |
+| `targetName` | `undefined` | required, `string` - The line indicates to which section to scroll the screen |
+| `className`  | `''`        | add custom or additional css class you'd need                                 |
+
+- #### SliderCakeCard
+
+| Prop        | Default     | Description                                   |
+| ----------- | ----------- | --------------------------------------------- |
+| `src`       | `undefined` | required, `string`- path to cake image        |
+| `alt`       | `undefined` | required, `string` - cake image alt           |
+| `className` | `''`        | add custom or additional css class you'd need |
+
+- #### ToppingModalCard
+
+| Prop           | Default     | Description                                                                  |
+| -------------- | ----------- | ---------------------------------------------------------------------------- |
+| `onClick`      | `undefined` | required, `:void` - event-handler on button click                            |
+| `name`         | `undefined` | required, `string`- title of type topping cake                               |
+| `description`  | `undefined` | required, `string` - contain description of topping                          |
+| `price_double` | `undefined` | required, `string` - describe price to weight ratio                          |
+| `plate`        | `undefined` | required, `array` - contain different types toppings                         |
+|                |             | with "double" or "single" layers, in object of array should contain url,desc |
+|                |             | and layers: "single" or "double"                                             |
+
+- #### Modal
+
+| Prop             | Default     | Description                                                        |
+| ---------------- | ----------- | ------------------------------------------------------------------ |
+| `isOpen`         | `undefined` | required, `boolean` - current state of element                     |
+| `onClose`        | `undefined` | required, `:void` - event-handler on closing menu                  |
+| `children`       | `undefined` | add component for locating into modal window                       |
+| `classNameWrap`  | `""`        | add custom or additional css class you'd need for wrapper of modal |
+| `classNameModal` | `""`        | add custom or additional css class you'd need for modal            |
 
 ### Technology stack
 

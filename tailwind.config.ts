@@ -54,6 +54,7 @@ const config: Config = {
           grey: "#EFEFEF",
           extraAccent: "#FFF4CB",
           backdrop: "rgba(0, 0, 0, 0.66)",
+          cakeLine: "rgba(0, 0, 0, 0.2)",
         },
         "color-accent": {
           primary: "#CC1B73",
@@ -80,6 +81,11 @@ const config: Config = {
           odd: "#8AC4DA",
           even: "#EFA7C4",
         },
+        silver: "#ACACAC",
+        alto: "#CECECE",
+        mine: "#383838",
+        error: "#EF5A5A",
+        gallery: "#EAEAEA",
       },
       background: {
         gradient: "linear-gradient(180deg, #683DD2 0%, #5A4BFF 100%)",

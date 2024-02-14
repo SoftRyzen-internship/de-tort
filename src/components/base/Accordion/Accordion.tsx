@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 
 import { AccordionItem } from "@/components/ui/AccordionItem";
@@ -13,6 +14,7 @@ export const Accordion: React.FC<AccordionProps> = ({ data }) => {
       setActiveIndex(idx);
     }
   };
+
   return (
     <ul>
       {data.map((item, idx) => (

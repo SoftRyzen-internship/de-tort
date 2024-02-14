@@ -8,16 +8,21 @@ import { Achievements } from "@/sections/home/Achievements";
 import { Reviews } from "@/sections/home/Reviews";
 import { Toppings } from "@/sections/home/Toppings";
 
-import { fetchContacts } from "@/requests/fetchContacts";
-import { fetchAchievements } from "@/requests/fetchAchievements";
-import { fetchReviews } from "@/requests/fetchReviews";
-import { fetchFAQ } from "@/requests/fetchFAQ";
+import {
+  fetchAchievements,
+  fetchCakeToppings,
+  fetchContacts,
+  fetchFAQ,
+  fetchReviews,
+} from "@/requests";
 
 export default async function Home() {
   const contacts = await fetchContacts();
   const achievements = await fetchAchievements();
   const reviews = await fetchReviews();
   const faq = await fetchFAQ();
+
+  const toppings = await fetchCakeToppings("middle-cakes");
 
   return (
     <>
@@ -26,7 +31,7 @@ export default async function Home() {
       <Sweets home />
       <About />
       <Achievements achievements={achievements} />
-      <Toppings />
+      <Toppings toppings={toppings} />
       <QA faq={faq} />
       <Reviews reviews={reviews} />
       <Contacts contacts={contacts} />

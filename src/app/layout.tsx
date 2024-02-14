@@ -5,13 +5,11 @@ import localFont from "next/font/local";
 import { Header } from "@/layout/Header";
 import { Footer } from "@/layout/Footer";
 
-import { fetchContacts } from "@/requests/fetchContacts";
+import { fetchContacts } from "@/requests";
 
-import meta from "@/data/meta";
+import meta from "@/data/meta/base.json";
 
 import "./globals.css";
-
-export const metadata: Metadata = meta;
 
 export const viewport: Viewport = {
   colorScheme: "light",
@@ -52,6 +50,39 @@ const fixelDisplay = localFont({
   display: "swap",
   variable: "--font-fixelDisplay",
 });
+
+export async function generateMetadata(): Promise<Metadata> {
+  const baseUrl = process.env.NEXT_PUBLIC_MAIN_SITE_URL as string;
+
+  const {
+    title,
+    description,
+    manifest,
+    keywords,
+    twitter,
+    openGraph,
+    icons,
+    robots,
+  } = meta;
+
+  return {
+    title: {
+      template: `${title} | %s`,
+      default: title,
+    },
+    description,
+    metadataBase: new URL(baseUrl),
+    alternates: {
+      canonical: baseUrl,
+    },
+    manifest,
+    keywords,
+    twitter,
+    openGraph: { ...openGraph, url: `${baseUrl}` },
+    icons,
+    robots,
+  };
+}
 
 export default async function RootLayout({
   children,
