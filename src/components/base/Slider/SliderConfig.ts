@@ -12,6 +12,7 @@ export const getSliderConfigs = (section: TSections) => {
       return {
         [dimensions.sm]: {
           slidesPerView: 1,
+          spaceBetween: 32,
           watchSlidesProgress: false,
           loop: true,
         },

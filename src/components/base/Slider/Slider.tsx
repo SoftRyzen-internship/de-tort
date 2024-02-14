@@ -18,7 +18,7 @@ export const Slider: React.FC<SliderProps> = ({
   return (
     <>
       <Swiper
-        wrapperTag="ul"
+        wrapperTag={slides?.length === 1 ? "div" : "ul"}
         modules={[Navigation, Pagination, A11y]}
         navigation={{
           nextEl: `.button-next-${section}`,
@@ -26,9 +26,9 @@ export const Slider: React.FC<SliderProps> = ({
         }}
         slidesPerView={1}
         updateOnWindowResize={true}
-        loop={true}
+        loop={slides?.length !== 1}
         speed={800}
-        spaceBetween={24}
+        spaceBetween={slides?.length === 1 ? 0 : 24}
         lazyPreloadPrevNext={1}
         grabCursor={true}
         breakpoints={getSliderConfigs(section)}
@@ -37,7 +37,7 @@ export const Slider: React.FC<SliderProps> = ({
         {slides?.map((slide, idx) => (
           <SwiperSlide
             key={idx}
-            tag="li"
+            tag={slides?.length === 1 ? "div" : "li"}
             className={cn(
               `overflow-hidden rounded-3xl relative `,
               customSlideClass,

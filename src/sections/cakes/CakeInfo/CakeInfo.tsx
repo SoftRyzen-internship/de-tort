@@ -32,7 +32,7 @@ export const SliderCakes: React.FC<CakeInfoProps> = ({ cake }) => {
   return (
     <section className="section pb-[60px] md:pb-[80px] xl:pb-[120px] bg-color-bg-primary">
       <div className="container xl:flex xl:gap-[60px]">
-        <div className="relative mb-6 md:mb-10 md:w-[704px] md:h-[660px] xl:w-[592px] xl:h-[555px] xlOnly:mb-0">
+        <div className="relative mb-6 md:mb-10 md:w-[704px] md:h-[660px] xl:w-[592px] xl:h-[555px] xl:mb-0">
           <Slider slides={slides} section="cakes" customSlideClass="" />
           <SliderNav
             section="cakes"
@@ -87,7 +87,7 @@ export const SliderCakes: React.FC<CakeInfoProps> = ({ cake }) => {
                 </div>
               </div>
             )}
-            <div className="flex gap-2 mb-2 md:mb-3">
+            <div className="flex gap-2">
               <Dollar className="w-6 flex-shrink-0 mb-auto" />
               <div>
                 <p className="font-bold text-base leading-normal text-color-text-secondary">
