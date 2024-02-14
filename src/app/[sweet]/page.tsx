@@ -1,13 +1,6 @@
-// import { CakeInfo } from "@/sections/cakes/CakeInfo";
 import { Sweets } from "@/sections/home/Sweets";
 
-// import { fetchCake } from "@/requests";
-
-// import metaBase from "@/data/meta/base.json";
-// import metaCakes from "@/data/meta/cakes.json";
-
 import json from "@/data/sweets-assortment.json";
-// import sweets from "@/data/sweets.json";
 
 import { SweetsSlug } from "@/types";
 
@@ -28,8 +21,6 @@ export default async function SweetPage({
 }: {
   params: { sweet: SweetsSlug };
 }) {
-  //   const data = await fetchCake(sweet);
-
   return (
     <>
       <section className="py-[240px] bg-color-bg-primary">
@@ -38,7 +29,6 @@ export default async function SweetPage({
         </div>
       </section>
 
-      {/* {data.length && <CakeInfo cake={data[0]} />} */}
       <Sweets />
     </>
   );
