@@ -14,7 +14,7 @@ import { CakeInfoProps, TImage } from "./types";
 
 import bento from "@/data/slider-cakes.json";
 
-export const SliderCakes: React.FC<CakeInfoProps> = ({ cake }) => {
+export const CakeInfo: React.FC<CakeInfoProps> = ({ cake }) => {
   const {
     title,
     portion_size,

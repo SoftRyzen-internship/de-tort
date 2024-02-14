@@ -27,3 +27,12 @@ export type FieldType =
   | "calendar"
   | "topping"
   | "number";
+
+export type SweetsSlug =
+  | "cakes"
+  | "cupcakes"
+  | "cheesecakes"
+  | "sweet-sets"
+  | "cookies"
+  | "macaron"
+  | "cake-pops";
