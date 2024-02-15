@@ -9,12 +9,13 @@ import Dollar from "~/icons/dollar.svg";
 import Slice from "~/icons/cake-cherry.svg";
 import Clock from "~/icons/clock.svg";
 import Star from "~/icons/star.svg";
+import Orange from "~/icons/orange-slice.svg";
 
-import { CakeInfoProps, TImage } from "./types";
+import { DessertInfoProps, TImage } from "./types";
 
 import bento from "@/data/slider-cakes.json";
 
-export const DessertInfo: React.FC<CakeInfoProps> = ({ cake }) => {
+export const DessertInfo: React.FC<DessertInfoProps> = ({ dessert }) => {
   const {
     title,
     portion_size,
@@ -22,8 +23,9 @@ export const DessertInfo: React.FC<CakeInfoProps> = ({ cake }) => {
     decor,
     price,
     description,
+    tastes,
     images,
-  } = cake;
+  } = dessert;
 
   const slides = images?.map(({ url, desc }: TImage, idx: number) => (
     <SliderCakeCard key={idx} src={url} alt={desc} />
@@ -33,9 +35,9 @@ export const DessertInfo: React.FC<CakeInfoProps> = ({ cake }) => {
     <section className="section pb-[60px] md:pb-[80px] xl:pb-[120px] bg-color-bg-primary">
       <div className="container xl:flex xl:gap-[60px]">
         <div className="relative mb-6 md:mb-10 md:w-[704px] md:h-[660px] xl:w-[592px] xl:h-[555px] xl:mb-0">
-          <Slider slides={slides} section="cakes" customSlideClass="" />
+          <Slider slides={slides} section="desserts" customSlideClass="" />
           <SliderNav
-            section="cakes"
+            section="desserts"
             className={slides?.length === 1 ? "!hidden" : ""}
           />
         </div>
@@ -46,18 +48,20 @@ export const DessertInfo: React.FC<CakeInfoProps> = ({ cake }) => {
             className="mb-6 md:mb-8 xl:mb-6 md:!text-[40px] xl:!text-[48px] xl:!tracking-normal"
           />
           <div className="flex relative flex-col gap-2 md:gap-32 xl:gap-12 mb-6 md:mb-8 md:flex-row  font-fixel ">
-            <div className="flex gap-2 relative after:-right-16 xl:after:-right-6 after:hidden after:absolute md:after:block after:bg-color-bg-cakeLine after:w-[1px] after:h-full">
-              <Slice className="w-6 flex-shrink-0" />
-              <div>
-                <p className="font-bold text-base leading-normal text-color-text-secondary">
-                  {portion_size?.label}
-                </p>
+            {portion_size && (
+              <div className="flex gap-2 relative after:-right-16 xl:after:-right-6 after:hidden after:absolute md:after:block after:bg-color-bg-cakeLine after:w-[1px] after:h-full">
+                <Slice className="w-6 flex-shrink-0" />
+                <div>
+                  <p className="font-bold text-base leading-normal text-color-text-secondary">
+                    {portion_size?.label}
+                  </p>
 
-                <p className="text-base leading-normal text-color-text-secondary md:text-xl xl:text-lg">
-                  {portion_size?.size}
-                </p>
+                  <p className="text-base leading-normal text-color-text-secondary md:text-xl xl:text-lg">
+                    {portion_size?.size}
+                  </p>
+                </div>
               </div>
-            </div>
+            )}
             <div className="flex gap-2">
               <Clock className="w-6 flex-shrink-0" />
               <div>
@@ -87,17 +91,32 @@ export const DessertInfo: React.FC<CakeInfoProps> = ({ cake }) => {
                 </div>
               </div>
             )}
-            <div className="flex gap-2">
-              <Dollar className="w-6 flex-shrink-0 mb-auto" />
-              <div>
-                <p className="font-bold text-base leading-normal text-color-text-secondary">
-                  {bento.price}
-                </p>
-                <pre className="font-fixel whitespace-pre-wrap text-base leading-normal text-color-text-secondary md:text-xl xl:text-lg">
-                  {price}
-                </pre>
+            {tastes && (
+              <div className="flex gap-2 mb-2 md:mb-3 xl:mb-6">
+                <Orange className="w-6 flex-shrink-0 mb-auto" />
+                <div>
+                  <p className="font-bold text-base leading-normal text-color-text-secondary">
+                    {bento.tastes}
+                  </p>
+                  <pre className="font-fixel whitespace-pre-wrap text-base leading-normal text-color-text-secondary md:text-xl xl:text-lg">
+                    {tastes}
+                  </pre>
+                </div>
               </div>
-            </div>
+            )}
+            {price && (
+              <div className="flex gap-2">
+                <Dollar className="w-6 flex-shrink-0 mb-auto" />
+                <div>
+                  <p className="font-bold text-base leading-normal text-color-text-secondary">
+                    {bento.price}
+                  </p>
+                  <pre className="font-fixel whitespace-pre-wrap text-base leading-normal text-color-text-secondary md:text-xl xl:text-lg">
+                    {price}
+                  </pre>
+                </div>
+              </div>
+            )}
           </div>
           <ButtonLink
             label={bento.button.label}

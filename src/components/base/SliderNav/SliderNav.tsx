@@ -19,14 +19,14 @@ export const SliderNav: React.FC<SliderNavigationProps> = ({
     <ul
       className={cn(
         "flex-center smOnly:mx-auto w-fit h-fit gap-2 smOnly:mt-6 pointer-events-none ",
-        section === "cakes" && cakesStyles,
+        section === "desserts" && cakesStyles,
         className,
       )}
     >
       {sliderNav?.map(({ id, ariaLabel }) => (
         <li
           className={cn({
-            "mx-2 md:mx-9 xl:mx-4": section === "cakes",
+            "mx-2 md:mx-9 xl:mx-4": section === "desserts",
           })}
           key={id}
         >

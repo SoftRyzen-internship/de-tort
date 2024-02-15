@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 
 import { Sweets } from "@/sections/home/Sweets";
+import { DessertInfo } from "@/sections/cakes/DessertInfo";
 
 import { fetchSweet } from "@/requests";
 
@@ -59,7 +60,7 @@ export default async function SweetPage({
           <p>Current page: {sweet}</p>
         </div>
       </section>
-
+      {data.length && <DessertInfo dessert={data[0]} />}
       <Sweets slug={sweet} />
     </>
   );

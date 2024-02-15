@@ -61,7 +61,7 @@ export default async function CakePage({
           <p className="text-center">Current page: {cake}</p>
         </div>
       </section>
-      {data.length && <DessertInfo cake={data[0]} />}
+      {data.length && <DessertInfo dessert={data[0]} />}
       {data.length ? (
         <FormCakes slug={data[0]?.slug} toppings={data[0]?.toppings} />
       ) : (

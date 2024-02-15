@@ -81,6 +81,7 @@ const config: Config = {
           odd: "#8AC4DA",
           even: "#EFA7C4",
         },
+        "disabled-bg": "#F8F8F8",
         silver: "#ACACAC",
         alto: "#CECECE",
         mine: "#383838",
