@@ -242,19 +242,19 @@ The `Field` component is a versatile form field wrapper used to render various i
 
 - #### Slider
 
-| Prop               | Default     | Description                                                                 |
-| ------------------ | ----------- | --------------------------------------------------------------------------- |
-| `section`          | `undefined` | required, choose between `achievements`, `toppings`, `cakes` and `feedback` |
-| `slides`           | `undefined` | required, `array` of slides                                                 |
-| `customSlideClass` | `''`        | add custom or additional css class you'd need for slide                     |
-| `customClass`      | `''`        | add custom or additional css class you'd need for the whole slider          |
+| Prop               | Default     | Description                                                                    |
+| ------------------ | ----------- | ------------------------------------------------------------------------------ |
+| `section`          | `undefined` | required, choose between `achievements`, `toppings`, `desserts` and `feedback` |
+| `slides`           | `undefined` | required, `array` of slides                                                    |
+| `customSlideClass` | `''`        | add custom or additional css class you'd need for slide                        |
+| `customClass`      | `''`        | add custom or additional css class you'd need for the whole slider             |
 
 - ### SliderNav
 
-| Prop        | Default     | Description                                                                 |
-| ----------- | ----------- | --------------------------------------------------------------------------- |
-| `section`   | `undefined` | required, choose between `achievements`, `toppings`, `cakes` and `feedback` |
-| `className` | `''`        | add custom or additional css class you'd need for the whole slider          |
+| Prop        | Default     | Description                                                                    |
+| ----------- | ----------- | ------------------------------------------------------------------------------ |
+| `section`   | `undefined` | required, choose between `achievements`, `toppings`, `desserts` and `feedback` |
+| `className` | `''`        | add custom or additional css class you'd need for the whole slider             |
 
 - #### SweetsList
 

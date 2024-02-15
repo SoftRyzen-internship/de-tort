@@ -12,16 +12,18 @@ export const SliderCakeCard: React.FC<SliderCakeCardProps> = ({
   return (
     <div
       className={cn(
-        "smOnly:max-w-[440px] md:w-[704px] xl:w-[592px]  ",
+        "relative xsOnly:aspect-[17/16] sm:w-[440px] sm:h-[415px] md:w-[704px] xl:w-[592px] md:h-[660px] xl:h-[555px] ",
         className,
       )}
     >
       <Image
-        className="bg-transparent w-full rounded-3xl md:h-[660px] xl:h-[555px]"
+        className="bg-transparent rounded-3xl"
         alt={alt}
         src={src}
-        width={320}
-        height={300}
+        loading="eager"
+        sizes=" 100vw, (min-width: 480px) 440px ,(min-width: 768px) 704px, (min-width: 1280px) 592px"
+        priority
+        fill
       />
     </div>
   );
