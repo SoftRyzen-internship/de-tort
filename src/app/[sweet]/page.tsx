@@ -56,7 +56,7 @@ export default async function SweetPage({
   return (
     <>
       {data.length && <DessertInfo dessert={data[0]} />}
-      {data.length && <FormCakes slug={data[0].slug} />}
+      <FormCakes slug={sweet} />
       <Sweets slug={sweet} />
     </>
   );
