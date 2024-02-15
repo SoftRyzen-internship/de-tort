@@ -54,13 +54,12 @@ export default async function CakePage({
 }) {
   const data = await fetchCake(cake);
   const toppings = (data.length && data[0]?.toppings) || [];
-  const slug = (data.length && data[0]?.slug) || "mini-cakes";
 
   return (
     <>
       {data.length && <DessertInfo dessert={data[0]} />}
 
-      <FormCakes slug={slug} toppings={toppings} />
+      <FormCakes slug={cake} toppings={toppings} />
 
       <Sweets />
     </>

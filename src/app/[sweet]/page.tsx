@@ -9,6 +9,7 @@ import metaBase from "@/data/meta/base.json";
 import metaSweets from "@/data/meta/sweets.json";
 
 import { SweetsSlug } from "@/types";
+import { FormCakes } from "@/sections/cakes/FormCakes";
 
 export const dynamicParams = false;
 export const dynamic = "error";
@@ -55,6 +56,7 @@ export default async function SweetPage({
   return (
     <>
       {data.length && <DessertInfo dessert={data[0]} />}
+      <FormCakes slug={sweet} />
       <Sweets slug={sweet} />
     </>
   );

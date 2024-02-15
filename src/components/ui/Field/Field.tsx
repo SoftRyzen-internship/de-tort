@@ -110,6 +110,7 @@ export const Field: React.FC<FieldProps> = ({
           {type === "number" && (
             <FormControl>
               <NumericFormat
+                placeholder={placeholder}
                 allowNegative={false}
                 allowLeadingZeros={false}
                 decimalScale={0}

@@ -1,4 +1,4 @@
-import { CakeSlug } from "@/types";
+import { CakeSlug, SweetsSlug } from "@/types";
 
 export interface ToppingModalCardProps {
   onClick: () => void;
@@ -6,7 +6,7 @@ export interface ToppingModalCardProps {
   description: string;
   price_double: string;
   plate: ToppingPlate[];
-  slug: CakeSlug;
+  slug: CakeSlug | SweetsSlug;
 }
 export type ToppingPlate = {
   url: string;
