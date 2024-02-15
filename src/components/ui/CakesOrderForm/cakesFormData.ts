@@ -63,7 +63,6 @@ export const cakesFormData: IFormConfig = {
         "bento-cakes",
         "middle-cakes",
         "big-cakes",
-        "mini-cakes",
         "cupcakes",
         "cheesecakes",
         "sweet-sets",

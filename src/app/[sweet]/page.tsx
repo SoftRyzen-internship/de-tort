@@ -52,12 +52,11 @@ export default async function SweetPage({
   params: { sweet: SweetsSlug };
 }) {
   const data = await fetchSweet(sweet);
-  const slug = (data.length && data[0]?.slug) || "cupcakes"; //cupcakes -default, на час розробки. Чи може вже зайве ?
 
   return (
     <>
       {data.length && <DessertInfo dessert={data[0]} />}
-      <FormCakes slug={slug} />
+      {data.length && <FormCakes slug={data[0].slug} />}
       <Sweets slug={sweet} />
     </>
   );
