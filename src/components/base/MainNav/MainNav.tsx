@@ -39,12 +39,14 @@ export const MainNav: React.FC<MainNavProps> = ({ onClick }) => {
         {staticPages.map((link, idx) => {
           return (
             <li key={idx}>
-              <Link
-                href={`/${link.slug}`}
-                className="text-[18px] md:text-[20px] xl:text-[24px] hover:text-color-accent-primary focus-visible:text-color-accent-primary transition-all"
-              >
-                {link.label}
-              </Link>
+              <span onClick={onClick} className="inline-block">
+                <Link
+                  href={`/${link.slug}`}
+                  className="text-[18px] md:text-[20px] xl:text-[24px] hover:text-color-accent-primary focus-visible:text-color-accent-primary transition-all"
+                >
+                  {link.label}
+                </Link>
+              </span>
             </li>
           );
         })}
