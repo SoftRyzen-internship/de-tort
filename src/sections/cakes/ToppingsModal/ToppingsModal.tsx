@@ -1,7 +1,7 @@
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { ToppingModalCard } from "@/components/ui/ToppingModalCard";
 
-import data from "@/data/topping-modal.json";
+import data from "@/data/common.json";
 
 import { ToppingModalProps } from "./types";
 
@@ -9,8 +9,9 @@ export const ToppingsModal: React.FC<ToppingModalProps> = ({
   onClose,
   onSelectTopping,
   toppings,
+  slug,
 }) => {
-  const { titleSection } = data;
+  const { titleSection } = data.modal;
 
   const handleSelectTopping = (title: string) => {
     onSelectTopping(title);
@@ -31,6 +32,7 @@ export const ToppingsModal: React.FC<ToppingModalProps> = ({
               key={i}
               price_double={price_double}
               plate={images}
+              slug={slug}
             />
           ))}
         </div>

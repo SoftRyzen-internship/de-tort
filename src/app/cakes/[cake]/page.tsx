@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import { CakeInfo } from "@/sections/cakes/CakeInfo";
+import { DessertInfo } from "@/sections/cakes/DessertInfo";
 import { Sweets } from "@/sections/home/Sweets";
 import { FormCakes } from "@/sections/cakes/FormCakes";
 
@@ -57,17 +57,12 @@ export default async function CakePage({
   const slug = (data.length && data[0]?.slug) || "mini-cakes"; // "mini-cakes" -default, на час розробки
 
   return (
-    <div className="bg-color-bg-primary">
-      <section className="py-[120px] border-b-2">
-        <div className="container">
-          <p className="text-center">Current page: {cake}</p>
-        </div>
-      </section>
-      {data.length && <CakeInfo cake={data[0]} />}
+    <>
+      {data.length && <DessertInfo dessert={data[0]} />}
 
       <FormCakes slug={slug} toppings={toppings} />
 
       <Sweets />
-    </div>
+    </>
   );
 }

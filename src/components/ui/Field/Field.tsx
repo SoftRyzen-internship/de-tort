@@ -27,6 +27,7 @@ export const Field: React.FC<FieldProps> = ({
   isDisabled,
   isOptional,
   toppings,
+  slug,
 }) => {
   const errorText = error && error[name];
 
@@ -67,6 +68,7 @@ export const Field: React.FC<FieldProps> = ({
               disabled={isDisabled}
               toppings={toppings}
               isError={error && error[name]}
+              slug={slug}
             />
           )}
           {type === "textarea" && (

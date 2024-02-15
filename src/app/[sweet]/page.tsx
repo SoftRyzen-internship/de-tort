@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 
 import { Sweets } from "@/sections/home/Sweets";
+import { DessertInfo } from "@/sections/cakes/DessertInfo";
 
 import { fetchSweet } from "@/requests";
 
@@ -51,16 +52,11 @@ export default async function SweetPage({
   params: { sweet: SweetsSlug };
 }) {
   const data = await fetchSweet(sweet);
-  console.log("DATA: ", data);
   const slug = (data.length && data[0]?.slug) || "cupcakes"; //cupcakes -default, на час розробки. Чи може вже зайве ?
 
   return (
     <>
-      <section className="py-[240px] bg-color-bg-primary">
-        <div className="container">
-          <p>Current page: {sweet}</p>
-        </div>
-      </section>
+      {data.length && <DessertInfo dessert={data[0]} />}
       <FormCakes slug={slug} />
       <Sweets slug={sweet} />
     </>

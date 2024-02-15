@@ -3,12 +3,12 @@ import { Slider } from "@/components/base/Slider";
 import { SliderNav } from "@/components/base/SliderNav";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 
-import data from "@/data/toppings.json";
+import data from "@/data/common.json";
 
 import { ToppingsProps } from "./types";
 
 export const Toppings: React.FC<ToppingsProps> = ({ toppings }) => {
-  const { sectionTitle } = data;
+  const { sectionTitle } = data.toppings;
 
   // Filter dynamic data to prevent showing mistaken toppings (without double layers)
   const filteredToppings = toppings.filter(({ images }) =>
