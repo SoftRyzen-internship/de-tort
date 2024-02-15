@@ -13,7 +13,7 @@ export const SliderNav: React.FC<SliderNavigationProps> = ({
   const { sliderNav } = data;
 
   const cakesStyles =
-    " absolute z-[2] pointer-events-none w-full !justify-between cakes-slider-nav !m-0 ";
+    " absolute z-[2] pointer-events-none w-full !justify-between desserts-slider-nav !m-0 ";
 
   return (
     <ul

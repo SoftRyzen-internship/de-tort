@@ -55,12 +55,7 @@ export default async function CakePage({
   const data = await fetchCake(cake);
 
   return (
-    <div className="bg-color-bg-primary">
-      <section className="py-[120px] border-b-2">
-        <div className="container">
-          <p className="text-center">Current page: {cake}</p>
-        </div>
-      </section>
+    <>
       {data.length && <DessertInfo dessert={data[0]} />}
       {data.length ? (
         <FormCakes slug={data[0]?.slug} toppings={data[0]?.toppings} />
@@ -68,6 +63,6 @@ export default async function CakePage({
         <FormCakes slug="bento-cakes" toppings={[]} />
       )}
       <Sweets />
-    </div>
+    </>
   );
 }

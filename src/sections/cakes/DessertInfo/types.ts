@@ -8,9 +8,9 @@ export type DessertInfoProps = {
     price: string;
     decor: string | null;
     production_time: string;
+    images: ImageType[];
     tastes?: string;
     portion_size?: { label: string; size: string } | null | undefined;
-    images: ImageType[];
     toppings?: CakeToppingType[];
   };
 };
