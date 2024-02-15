@@ -147,9 +147,9 @@ is a list of more common components and their API.
 
 - #### Contacts
 
-| Prop      | Default | Description                                 |
-| --------- | ------- | ------------------------------------------- |
-| `variant` | `home`  | optional, choose between "home" and "cakes" |
+| Prop      | Default | Description                                                 |
+| --------- | ------- | ----------------------------------------------------------- |
+| `variant` | `home`  | optional, choose between "home", "coffee-shops" and "cakes" |
 
 - #### FormCakes
 

@@ -35,3 +35,15 @@ export type FieldType =
   | "calendar"
   | "topping"
   | "number";
+
+export type B2bPageDataType = {
+  b2BPage: {
+    data: {
+      attributes: B2bPageType;
+    };
+  };
+};
+
+export type B2bPageType = {
+  heading: string;
+};

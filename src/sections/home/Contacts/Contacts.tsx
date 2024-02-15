@@ -20,11 +20,11 @@ export const Contacts: React.FC<ContactsProps> = ({
   } = data;
 
   const sectionBgColor =
-    variant === "cakes" ? "bg-color-bg-accent" : "bg-color-bg-primary";
+    variant === "home" ? "bg-color-bg-primary" : "bg-color-bg-accent";
   const mapStyles =
-    variant === "cakes"
-      ? "shadow-3xl-map-b border-color-border-map-b"
-      : "shadow-3xl-map-a border-color-border-map-a";
+    variant === "home"
+      ? "shadow-3xl-map-a border-color-border-map-a"
+      : "shadow-3xl-map-b border-color-border-map-b";
 
   return (
     <section
