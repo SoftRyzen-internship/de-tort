@@ -53,8 +53,8 @@ export default async function CakePage({
   params: { cake: CakeSlug };
 }) {
   const data = await fetchCake(cake);
-  const toppings = (data.length && data[0]?.toppings) || [];
-  const slug = (data.length && data[0]?.slug) || "mini-cakes";
+  const toppings = (data.length && data[0]?.toppings) || undefined;
+  const slug = (data.length && data[0].slug) || "mini-cakes";
 
   return (
     <>

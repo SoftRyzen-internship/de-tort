@@ -22,7 +22,7 @@ import { CakesOrderFormProps } from "./types";
 
 export const CakesOrderForm: React.FC<CakesOrderFormProps> = ({
   slug,
-  toppings,
+  toppings = [],
 }) => {
   const [resultMessage, setResultMessage] = useState<string | null>(null);
 
