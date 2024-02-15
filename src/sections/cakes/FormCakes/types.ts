@@ -1,6 +1,6 @@
-import { CakeSlug, CakeToppingType } from "@/types";
+import { CakeSlug, CakeToppingType, SweetsSlug } from "@/types";
 
 export interface FormCakesProps {
-  slug: CakeSlug;
-  toppings: CakeToppingType[];
+  slug: CakeSlug | SweetsSlug;
+  toppings?: CakeToppingType[];
 }

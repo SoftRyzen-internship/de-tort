@@ -8,6 +8,7 @@ import metaBase from "@/data/meta/base.json";
 import metaSweets from "@/data/meta/sweets.json";
 
 import { SweetsSlug } from "@/types";
+import { FormCakes } from "@/sections/cakes/FormCakes";
 
 export const dynamicParams = false;
 export const dynamic = "error";
@@ -51,6 +52,7 @@ export default async function SweetPage({
 }) {
   const data = await fetchSweet(sweet);
   console.log("DATA: ", data);
+  const slug = (data.length && data[0]?.slug) || "cupcakes"; //cupcakes -default, на час розробки. Чи може вже зайве ?
 
   return (
     <>
@@ -59,7 +61,7 @@ export default async function SweetPage({
           <p>Current page: {sweet}</p>
         </div>
       </section>
-
+      <FormCakes slug={slug} />
       <Sweets slug={sweet} />
     </>
   );

@@ -20,7 +20,7 @@ import { send } from "@/actions/telegram";
 
 export const CakesOrderForm: React.FC<CakesOrderFormProps> = ({
   slug,
-  toppings,
+  toppings = [],
 }) => {
   const [resultMessage, setResultMessage] = useState<string | null>(null);
 
