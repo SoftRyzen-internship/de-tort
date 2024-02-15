@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 import { Contacts } from "@/sections/home/Contacts";
 
-import { fetchContacts } from "@/requests";
+import { fetchB2bPageData, fetchContacts } from "@/requests";
 
 import metaBase from "@/data/meta/base.json";
 import metaShops from "@/data/meta/coffee-shops.json";
@@ -26,12 +26,12 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function CoffeeShopsPage() {
   const contacts = await fetchContacts();
 
+  const { heading } = await fetchB2bPageData();
+
   return (
     <>
       <section className="py-[200px] border-b-2 bg-color-bg-primary">
-        <div className="container text-center">
-          HERO SECTION: For Coffee Shops Page
-        </div>
+        <div className="container text-center">{heading}</div>
       </section>
 
       <Contacts contacts={contacts} variant="coffee-shops" />
