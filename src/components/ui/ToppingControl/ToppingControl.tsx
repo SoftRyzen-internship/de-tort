@@ -16,6 +16,7 @@ export const ToppingControl: React.FC<ToppingControlProps> = ({
   disabled = false,
   toppings,
   isError,
+  slug,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -47,6 +48,7 @@ export const ToppingControl: React.FC<ToppingControlProps> = ({
         <ToppingsModal
           toppings={toppings}
           onClose={onClose}
+          slug={slug}
           onSelectTopping={(title) => {
             field.onChange(title);
           }}

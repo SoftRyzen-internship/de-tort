@@ -1,4 +1,4 @@
-import { CakeToppingType, FieldType } from "@/types";
+import { CakeSlug, CakeToppingType, FieldType } from "@/types";
 
 export interface FieldProps {
   register: any;
@@ -11,4 +11,5 @@ export interface FieldProps {
   error?: any;
   isDisabled?: boolean;
   isOptional?: boolean;
+  slug: CakeSlug;
 }

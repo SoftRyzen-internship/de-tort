@@ -10,13 +10,15 @@ import { Form } from "@/components/ui/Shadcn/form";
 import { Field } from "@/components/ui/Field";
 import { CheckboxWrapper } from "@/components/ui/CheckBoxWrapper";
 
-import { CakesOrderFormProps } from "./types";
-
 import { cakesFormData } from "./cakesFormData";
+
+import { send } from "@/actions/telegram";
+
 import { defaultValues, generateOrderFormSchema } from "@/utils/helpers/schema";
 import { processFormValues } from "@/utils/helpers/processFormValues";
 import { cn } from "@/utils/helpers";
-import { send } from "@/actions/telegram";
+
+import { CakesOrderFormProps } from "./types";
 
 export const CakesOrderForm: React.FC<CakesOrderFormProps> = ({
   slug,
@@ -74,6 +76,7 @@ export const CakesOrderForm: React.FC<CakesOrderFormProps> = ({
                 isDisabled={isDisabled}
                 isOptional={isOptional}
                 toppings={toppings}
+                slug={slug}
               />
             );
           })}
