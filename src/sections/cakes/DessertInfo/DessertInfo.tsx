@@ -28,9 +28,7 @@ export const DessertInfo: React.FC<DessertInfoProps> = ({ dessert }) => {
     slug,
   } = dessert;
 
-  const img = [...images, ...images, ...images];
-
-  const slides = img?.map(({ url, desc }: TImage, idx: number) => (
+  const slides = images?.map(({ url, desc }: TImage, idx: number) => (
     <SliderCakeCard key={idx} src={url} alt={desc} />
   ));
 

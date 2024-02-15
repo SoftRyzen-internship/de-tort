@@ -51,7 +51,6 @@ export default async function SweetPage({
   params: { sweet: SweetsSlug };
 }) {
   const data = await fetchSweet(sweet);
-  console.log("DATA: ", data);
 
   return (
     <>

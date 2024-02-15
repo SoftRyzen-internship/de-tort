@@ -10,14 +10,16 @@ import { ToppingsProps } from "./types";
 export const Toppings: React.FC<ToppingsProps> = ({ toppings }) => {
   const { sectionTitle } = data.toppings;
 
+  // Filter dynamic data to prevent showing mistaken toppings (without double layers)
   const filteredToppings = toppings.filter(({ images }) =>
     images.find(({ layers }) => layers === "double"),
   );
 
+  // Duplicate the array to provide different backgrounds regardless of the number of toppings (DESIGN)
   const cards = [...filteredToppings, ...filteredToppings];
 
   const slides = cards.map(({ name, images }, idx) => {
-    const img = images.find(({ layers }) => layers === "double")!;
+    const img = images.find(({ layers }) => layers === "double")!; // we are positive that "double" is available because of filtering above
     return (
       <ToppingCard
         key={idx}
