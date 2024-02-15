@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 
+import { B2bHero } from "@/sections/coffee-shops/B2bHero";
 import { Contacts } from "@/sections/home/Contacts";
 
 import { fetchB2bPageData, fetchContacts } from "@/requests";
@@ -30,10 +31,7 @@ export default async function CoffeeShopsPage() {
 
   return (
     <>
-      <section className="py-[200px] border-b-2 bg-color-bg-primary">
-        <div className="container text-center">{heading}</div>
-      </section>
-
+      <B2bHero heading={heading} />
       <Contacts contacts={contacts} variant="coffee-shops" />
     </>
   );
