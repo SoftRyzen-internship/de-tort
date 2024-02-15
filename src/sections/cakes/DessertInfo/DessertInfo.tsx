@@ -53,11 +53,11 @@ export const DessertInfo: React.FC<DessertInfoProps> = ({ dessert }) => {
                 <Slice className="w-6 flex-shrink-0" />
                 <div>
                   <p className="font-bold text-base leading-normal text-color-text-secondary">
-                    {portion_size?.label}
+                    {portion_size.label}
                   </p>
 
                   <p className="text-base leading-normal text-color-text-secondary md:text-xl xl:text-lg">
-                    {portion_size?.size}
+                    {portion_size.size}
                   </p>
                 </div>
               </div>

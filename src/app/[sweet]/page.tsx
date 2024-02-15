@@ -55,11 +55,6 @@ export default async function SweetPage({
 
   return (
     <>
-      <section className="py-[240px] bg-color-bg-primary">
-        <div className="container">
-          <p>Current page: {sweet}</p>
-        </div>
-      </section>
       {data.length && <DessertInfo dessert={data[0]} />}
       <Sweets slug={sweet} />
     </>

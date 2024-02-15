@@ -1,9 +1,4 @@
-// import { CakeType, SweetsItemType } from "@/types";
 import { SweetsSlug, CakeToppingType, ImageType, CakeSlug } from "@/types";
-
-// export type DessertInfoProps = {
-//   cake: CakeType & SweetsItemType;
-// };
 
 export type DessertInfoProps = {
   dessert: {
