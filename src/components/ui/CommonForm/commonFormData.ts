@@ -154,7 +154,13 @@ export const commonFormData: IFormConfig = {
       },
       type: "textarea",
       label: "Коментар:",
-      optionalPaths: ["mini-cakes", "bento-cakes", "middle-cakes", "big-cakes"],
+      optionalPaths: [
+        "mini-cakes",
+        "bento-cakes",
+        "middle-cakes",
+        "big-cakes",
+        "coffee-shops",
+      ],
       disabledPaths: [],
       hiddenPaths: [],
       schema: z
