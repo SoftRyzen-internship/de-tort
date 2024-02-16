@@ -147,9 +147,42 @@ is a list of more common components and their API.
 
 - #### Contacts
 
-| Prop      | Default | Description                                 |
-| --------- | ------- | ------------------------------------------- |
-| `variant` | `home`  | optional, choose between "home" and "cakes" |
+| Prop      | Default | Description                                                 |
+| --------- | ------- | ----------------------------------------------------------- |
+| `variant` | `home`  | optional, choose between "home", "coffee-shops" and "cakes" |
+
+- #### FormCakes
+
+| Prop       | Default   | Description                          |
+| ---------- | --------- | ------------------------------------ |
+| `slug`     | undefined | required, the slug of a current page |
+| `toppings` | undefined | required, the array of toppings      |
+
+- #### CakesOrderForm
+
+| Prop       | Default   | Description                          |
+| ---------- | --------- | ------------------------------------ |
+| `slug`     | undefined | required, the slug of a current page |
+| `toppings` | undefined | required, the array of toppings      |
+
+# Field Component
+
+The `Field` component is a versatile form field wrapper used to render various input types, such as text, calendar, topping selection, number, and textarea.
+
+## Props
+
+| Prop          | Type      | Description                                                                                                |
+| ------------- | --------- | ---------------------------------------------------------------------------------------------------------- |
+| `register`    | Function  | A function from a form library (e.g., React Hook Form) used to register the input field in the form state. |
+| `name`        | String    | The unique name for the input field.                                                                       |
+| `control`     | Object    | An object representing the form control (e.g., from React Hook Form) to manage the input field's state.    |
+| `label`       | String    | The label for the input field.                                                                             |
+| `placeholder` | String    | The placeholder text for the input field.                                                                  |
+| `type`        | FieldType | The type of the input field (e.g., "calendar," "topping," "textarea," "tel," "text," "number").            |
+| `error`       | Object    | An object containing validation errors for the input field.                                                |
+| `isDisabled`  | Boolean   | Indicates whether the input field is disabled.                                                             |
+| `isOptional`  | Boolean   | Indicates whether the input field is optional.                                                             |
+| `toppings`    | Array     | An array of CakeToppingType for the "topping" type input field.                                            |
 
 - #### AboutCard
 
@@ -207,31 +240,38 @@ is a list of more common components and their API.
 | `data`      | `undefined` | required, data for modal window inside button |
 | `className` | `''`        | add custom or additional css class you'd need |
 
-#### Slider
+- #### Slider
 
-| Prop               | Default     | Description                                                                 |
-| ------------------ | ----------- | --------------------------------------------------------------------------- |
-| `section`          | `undefined` | required, choose between `achievements`, `toppings`, `cakes` and `feedback` |
-| `slides`           | `undefined` | required, `array` of slides                                                 |
-| `customSlideClass` | `''`        | add custom or additional css class you'd need for slide                     |
-| `customClass`      | `''`        | add custom or additional css class you'd need for the whole slider          |
+| Prop               | Default     | Description                                                                    |
+| ------------------ | ----------- | ------------------------------------------------------------------------------ |
+| `section`          | `undefined` | required, choose between `achievements`, `toppings`, `desserts` and `feedback` |
+| `slides`           | `undefined` | required, `array` of slides                                                    |
+| `customSlideClass` | `''`        | add custom or additional css class you'd need for slide                        |
+| `customClass`      | `''`        | add custom or additional css class you'd need for the whole slider             |
 
-### SliderNav
+- ### SliderNav
 
-| Prop        | Default     | Description                                                                 |
-| ----------- | ----------- | --------------------------------------------------------------------------- |
-| `section`   | `undefined` | required, choose between `achievements`, `toppings`, `cakes` and `feedback` |
-| `className` | `''`        | add custom or additional css class you'd need for the whole slider          |
+| Prop        | Default     | Description                                                                    |
+| ----------- | ----------- | ------------------------------------------------------------------------------ |
+| `section`   | `undefined` | required, choose between `achievements`, `toppings`, `desserts` and `feedback` |
+| `className` | `''`        | add custom or additional css class you'd need for the whole slider             |
+
+- #### SweetsList
+
+| Prop   | Default     | Description                                                               |
+| ------ | ----------- | ------------------------------------------------------------------------- |
+| `slug` | `undefined` | required, `string` variable to manage list structure & items title styles |
 
 - #### SweetsCard
 
-| Prop         | Default     | Description                    |
-| ------------ | ----------- | ------------------------------ |
-| `name`       | `undefined` | required, sweets name          |
-| `nameColor`  | `undefined` | required, sweet color          |
-| `bgSrc`      | `undefined` | required, sweet image src      |
-| `bgAlt`      | `undefined` | required, sweet image alt      |
-| `targetHref` | `undefined` | required, on click target Href |
+| Prop         | Default     | Description                               |
+| ------------ | ----------- | ----------------------------------------- |
+| `name`       | `undefined` | required, sweets name                     |
+| `nameColor`  | `undefined` | required, sweet color                     |
+| `bgSrc`      | `undefined` | required, sweet image src                 |
+| `bgAlt`      | `undefined` | required, sweet image alt                 |
+| `targetHref` | `undefined` | required, on click target Href            |
+| `titleClass` | `undefined` | required, ocustom or additional css class |
 
 - #### CardCakes
 

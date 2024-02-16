@@ -1,7 +1,8 @@
 import { Metadata } from "next";
 
-import { SliderCakes } from "@/sections/cakes/CakeInfo";
+import { DessertInfo } from "@/sections/cakes/DessertInfo";
 import { Sweets } from "@/sections/home/Sweets";
+import { FormCakes } from "@/sections/cakes/FormCakes";
 
 import { fetchCake } from "@/requests";
 
@@ -10,7 +11,6 @@ import metaBase from "@/data/meta/base.json";
 import metaCakes from "@/data/meta/cakes.json";
 
 import { CakeSlug } from "@/types";
-import { FormCakes } from "@/sections/cakes/FormCakes";
 
 export const dynamicParams = false;
 export const dynamic = "error";
@@ -53,21 +53,15 @@ export default async function CakePage({
   params: { cake: CakeSlug };
 }) {
   const data = await fetchCake(cake);
+  const toppings = (data.length && data[0]?.toppings) || [];
 
   return (
-    <div className="bg-color-bg-primary">
-      <section className="py-[120px] border-b-2">
-        <div className="container">
-          <p className="text-center">Current page: {cake}</p>
-        </div>
-      </section>
-      {data.length && <SliderCakes cake={data[0]} />}
-      {data.length ? (
-        <FormCakes slug={data[0]?.slug} toppings={data[0]?.toppings} />
-      ) : (
-        <FormCakes slug="bento-cakes" toppings={[]} />
-      )}
+    <>
+      {data.length && <DessertInfo dessert={data[0]} />}
+
+      <FormCakes slug={cake} toppings={toppings} />
+
       <Sweets />
-    </div>
+    </>
   );
 }

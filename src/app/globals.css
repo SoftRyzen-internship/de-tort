@@ -6,29 +6,40 @@
   .section {
     @apply pt-[60px] md:pt-[80px] xl:pt-[120px];
   }
+
   .flex-center {
     @apply flex justify-center items-center;
   }
+
   .flex-between {
     @apply flex justify-between items-center;
   }
+
   .flex-start {
     @apply flex justify-start items-center;
   }
+
   .input-reset {
     @apply [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none;
   }
+
   .input-field {
-    @apply w-full border rounded-lg px-4 [:where(&)]:py-0 [:where(&)]:flex-start text-left font-fixel [:where(&)]:border-alto text-base placeholder-silver disabled:placeholder-gallery;
+    @apply w-full border rounded-lg px-4 [:where(&)]:py-0 [:where(&)]:flex-start text-left font-fixel [:where(&)]:border-alto [:where(&)]:text-silver text-base placeholder-silver disabled:placeholder-alto;
   }
+
   .hover-style {
     @apply hover:shadow-2xl focus:shadow-2xl md:hover:shadow-3xl md:focus:shadow-3xl transition border-color-accent-primary   bg-color-bg-white hover:translate-x-[2px] hover:-translate-y-[2px] md:hover:translate-x-[3px] md:hover:-translate-y-[3px] focus:translate-x-[2px] focus:-translate-y-[2px] md:focus:translate-x-[3px] md:focus:-translate-y-[3px];
   }
+
   .submit-button {
     @apply text-title block w-full md:w-[368px] md:mx-auto py-[14px] rounded-[36px] hover-style border-2 leading-8;
   }
+
   .label {
     @apply font-fixel text-sm leading-4 [:where(&)]:block [:where(&)]:text-mine [:where(&)]:font-medium;
+  }
+  .message {
+    @apply absolute bottom-3 md:bottom-5 left-1/2 w-full text-center -translate-x-1/2 font-bold text-sm md:text-xl;
   }
 }
 
@@ -54,15 +65,15 @@
 }
 /* sliderNav */
 .slider-button {
-  @apply w-[60px] h-[60px] xl:w-[68px] xl:h-[68px] border-2 text-base leading-loose hover:shadow-xl focus-visible:shadow-xl md:hover:shadow-xl md:focus-visible:shadow-xl transition rounded-full flex-center border-color-accent-primary bg-color-bg-white hover:translate-x-[2px] hover:-translate-y-[2px] md:hover:translate-x-[3px] md:hover:-translate-y-[3px] focus-visible:translate-x-[2px] focus-visible:-translate-y-[2px] md:focus-visible:translate-x-[3px] md:focus-visible:-translate-y-[3px] pointer-events-auto;
+  @apply w-[60px] h-[60px] xl:w-[68px] xl:h-[68px] stroke-color-accent-primary border-2 text-base leading-loose hover:shadow-xl focus-visible:shadow-xl md:hover:shadow-xl md:focus-visible:shadow-xl transition rounded-full flex-center border-color-accent-primary bg-color-bg-white hover:translate-x-[2px] hover:-translate-y-[2px] md:hover:translate-x-[3px] md:hover:-translate-y-[3px] focus-visible:translate-x-[2px] focus-visible:-translate-y-[2px] md:focus-visible:translate-x-[3px] md:focus-visible:-translate-y-[3px] pointer-events-auto;
 }
 
 .button-next-toppings.swiper-button-disabled,
 .button-prev-toppings.swiper-button-disabled {
-  @apply pointer-events-none opacity-0;
+  @apply pointer-events-none border-alto bg-disabled-bg stroke-alto;
 }
 
-.cakes-slider-nav {
+.desserts-slider-nav {
   top: calc(50% - 60px / 2);
   @media screen and (min-width: 1280px) {
     top: calc(50% - 68px / 2);
@@ -104,4 +115,33 @@
   .modal-card {
     flex-basis: calc((100% - 1 * 48px) / 3);
   }
+}
+
+/* Sweet Cards (title style utilities) */
+.sweets-card-title_cakes {
+  @apply text-color-accent-primary;
+}
+
+.sweets-card-title_cookies {
+  @apply text-color-option-first;
+}
+
+.sweets-card-title_cupcakes {
+  @apply text-color-option-second;
+}
+
+.sweets-card-title_macaron {
+  @apply text-color-option-third;
+}
+
+.sweets-card-title_cheesecakes {
+  @apply text-color-option-fourth;
+}
+
+.sweets-card-title_sweet-sets {
+  @apply text-color-option-fifth;
+}
+
+.sweets-card-title_cake-pops {
+  @apply text-color-option-first;
 }

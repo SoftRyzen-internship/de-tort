@@ -12,6 +12,7 @@ export const getSliderConfigs = (section: TSections) => {
       return {
         [dimensions.sm]: {
           slidesPerView: 1,
+          spaceBetween: 32,
           watchSlidesProgress: false,
           loop: true,
         },
@@ -33,13 +34,16 @@ export const getSliderConfigs = (section: TSections) => {
       return {
         [dimensions.sm]: {
           slidesPerView: 1,
+          loop: false,
         },
         [dimensions.md]: {
           slidesPerView: 2,
           spaceBetween: 32,
+          loop: false,
         },
         [dimensions.lg]: {
           slidesPerView: 3,
+          loop: false,
         },
       };
     }
@@ -58,7 +62,7 @@ export const getSliderConfigs = (section: TSections) => {
         },
       };
     }
-    case "cakes": {
+    case "desserts": {
       return {
         [dimensions.sm]: {
           slidesPerView: 1,

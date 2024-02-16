@@ -1,9 +1,9 @@
 import { ZodSchema } from "zod";
 
-import { CakeSlug, CakeToppingType, FieldType } from "@/types";
+import { CakeSlug, CakeToppingType, FieldType, SweetsSlug } from "@/types";
 
 export interface CakesOrderFormProps {
-  slug: CakeSlug;
+  slug: CakeSlug | SweetsSlug;
   toppings: CakeToppingType[];
 }
 
@@ -31,4 +31,8 @@ export interface IFormConfig {
     labelInProgress: string;
   };
   title: string;
+  messages: {
+    success: string;
+    error: string;
+  };
 }

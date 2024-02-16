@@ -29,7 +29,6 @@ export type CakeToppingDataType = {
     description: string;
     price_double: string;
     images: ToppingImageDataType[];
-    unique?: boolean;
   };
 };
 
@@ -44,7 +43,6 @@ export type CakeToppingType = {
   description: string;
   price_double: string;
   images: CakeToppingImageType[];
-  unique?: boolean;
 };
 
 export type CakeType = {
