@@ -1,10 +1,26 @@
 import { AboutCard } from "@/components/ui/AboutCard";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 
+import IconHeart from "~/icons/heart.svg";
+import IconStar from "~/icons/star.svg";
+import IconGift from "~/icons/gift.svg";
+import IconDrop from "~/icons/drop.svg";
+import IconLightning from "~/icons/lightning.svg";
+
 import about from "@/data/about.json";
+
+import { IconsAbout } from "@/components/ui/AboutCard/types";
 
 export const About: React.FC = () => {
   const { values, features, title, description } = about;
+
+  const IconsAbout: IconsAbout = {
+    1: <IconHeart />,
+    2: <IconStar />,
+    3: <IconGift />,
+    4: <IconDrop />,
+    5: <IconLightning />,
+  };
 
   const subHeaderStyle =
     "font-unbounded mb-3 xl:mb-4 font-semibold text-[20px] xl:text-[24px] leading-normal";
@@ -28,14 +44,13 @@ export const About: React.FC = () => {
           <p className="font-fixel">{values[1].text}</p>
         </div>
         <ul className="flex flex-col gap-4">
-          {features.map(({ text, image }, index) => {
+          {features.map((el, index) => {
             const isEven = index % 2 === 0;
             return (
               <AboutCard
                 key={index}
-                imageUrl={image.url}
-                imageAlt={image.alt}
-                text={text}
+                icon={IconsAbout[el.id.toString()]}
+                text={el.text}
                 isEven={isEven}
               />
             );

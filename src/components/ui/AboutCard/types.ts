@@ -1,6 +1,7 @@
 export type AboutCardProps = {
-  imageUrl: string;
-  imageAlt: string;
+  icon: JSX.Element;
   text: string;
   isEven: boolean;
 };
+
+export type IconsAbout = Record<string, JSX.Element>;
