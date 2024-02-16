@@ -4,24 +4,30 @@ import { IFormConfig } from "./types";
 
 const errorText = "Невірно введене значення";
 
-export const cakesFormData: IFormConfig = {
+export const commonFormData: IFormConfig = {
   inputs: [
     {
       name: "date",
-      placeholder: "",
+      placeholders: {
+        default: "",
+      },
       type: "calendar",
       label: "Дата отримання:",
       optionalPaths: [],
       disabledPaths: [],
+      hiddenPaths: ["coffee-shops"],
       schema: z.string().min(2, { message: errorText }),
     },
     {
       name: "numberOfPeople",
-      placeholder: "8",
+      placeholders: {
+        default: "8",
+      },
       type: "number",
       label: "На яку кількість людей?",
       optionalPaths: [],
       disabledPaths: [],
+      hiddenPaths: ["coffee-shops"],
       schema: z
         .string()
         .refine((value) => /^\d{1,4}$/.test(value) && +value !== 0, {
@@ -30,7 +36,9 @@ export const cakesFormData: IFormConfig = {
     },
     {
       name: "topping",
-      placeholder: "Обрати начинку",
+      placeholders: {
+        default: "Обрати начинку",
+      },
       type: "topping",
       label: "Начинка:",
       optionalPaths: [
@@ -51,11 +59,14 @@ export const cakesFormData: IFormConfig = {
         "macaron",
         "cake-pops",
       ],
+      hiddenPaths: ["coffee-shops"],
       schema: z.string().min(2, { message: errorText }),
     },
     {
       name: "link",
-      placeholder: "https://pinterest.com/cakedesign",
+      placeholders: {
+        default: "https://pinterest.com/cakedesign",
+      },
       type: "text",
       label: "Дизайн (посилання):",
       optionalPaths: [
@@ -80,6 +91,7 @@ export const cakesFormData: IFormConfig = {
         "macaron",
         "cake-pops",
       ],
+      hiddenPaths: ["coffee-shops"],
       schema: z
         .string()
         .refine((value) => value.length <= 255, {
@@ -98,11 +110,14 @@ export const cakesFormData: IFormConfig = {
     },
     {
       name: "username",
-      placeholder: "Наталія",
+      placeholders: {
+        default: "Наталія",
+      },
       type: "text",
       label: "Ваше імʼя та прізвище:",
       optionalPaths: [],
       disabledPaths: [],
+      hiddenPaths: [],
       schema: z
         .string()
         .regex(/^[a-zA-Zа-яА-ЯЇїІіЄєҐґ' -]+$/, errorText)
@@ -113,11 +128,14 @@ export const cakesFormData: IFormConfig = {
     },
     {
       name: "phone",
-      placeholder: "+380",
+      placeholders: {
+        default: "+380",
+      },
       type: "tel",
       label: "Телефон:",
       optionalPaths: [],
       disabledPaths: [],
+      hiddenPaths: [],
       schema: z
         .string()
         .refine((value) => /^\+\d{11,12}$/.test(value), {
@@ -129,13 +147,22 @@ export const cakesFormData: IFormConfig = {
     },
     {
       name: "comments",
-      placeholder: "Тут ви можете описати свою ідею",
-      placeholderMiniTorts:
-        "Ви хочете замовити набір чи окремі смаки міні-тортів?",
+      placeholders: {
+        default: "Тут ви можете описати свою ідею",
+        "mini-cakes": "Ви хочете замовити набір чи окремі смаки міні-тортів?",
+        "coffee-shops": "Вкажіть додаткову інформацію про вашу кавʼярню",
+      },
       type: "textarea",
       label: "Коментар:",
-      optionalPaths: ["mini-cakes", "bento-cakes", "middle-cakes", "big-cakes"],
+      optionalPaths: [
+        "mini-cakes",
+        "bento-cakes",
+        "middle-cakes",
+        "big-cakes",
+        "coffee-shops",
+      ],
       disabledPaths: [],
+      hiddenPaths: [],
       schema: z
         .string()
         .regex(/^[a-zA-Zа-яА-ЯЇїІіЄєҐґ'0-9\s\p{P}\p{S}\r\n]*$/u, {
@@ -149,14 +176,22 @@ export const cakesFormData: IFormConfig = {
     label: "Даю згоду на обробку персональних данних",
     description: "Підтвердіть згоду на обробку персональних данних",
     message: "Для відсилки форми потрібна Ваша згода",
+    hiddenPaths: ["coffee-shops"],
   },
   button: {
-    label: "Замовити торт",
+    labels: {
+      default: "Замовити торт",
+      "coffee-shops": "Надіслати",
+      cookies: "Замовити",
+    },
     labelInProgress: "Відсилка...",
   },
-  title: "Онлайн замовлення",
+  titles: {
+    default: "Онлайн замовлення",
+    "coffee-shops": "Розкажіть більше про себе",
+  },
   messages: {
-    success: "Замовлення відправлено!",
+    success: "Форму відправлено!",
     error: "Помилка відправлення форми",
   },
 };

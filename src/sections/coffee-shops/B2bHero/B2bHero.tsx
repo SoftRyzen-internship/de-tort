@@ -1,4 +1,5 @@
 import { SectionTitle } from "@/components/ui/SectionTitle";
+import { CommonForm } from "@/components/ui/CommonForm";
 
 import { B2bHeroProps } from "./types";
 
@@ -9,8 +10,9 @@ export const B2bHero: React.FC<B2bHeroProps> = ({ heading }) => {
         <SectionTitle
           hero
           text={heading}
-          className="text-center md:text-[40px]"
+          className="text-center md:text-[40px] mb-10 xl:mb-20"
         />
+        <CommonForm />
       </div>
     </section>
   );

@@ -1,20 +1,20 @@
 import { ZodSchema } from "zod";
 
-import { CakeSlug, CakeToppingType, FieldType, SweetsSlug } from "@/types";
+import { CakeToppingType, FieldType, TKeyValue } from "@/types";
 
-export interface CakesOrderFormProps {
-  slug: CakeSlug | SweetsSlug;
-  toppings: CakeToppingType[];
+export interface CommonFormProps {
+  toppings?: CakeToppingType[];
 }
 
 interface IFormField {
   name: string;
-  placeholder: string;
+  placeholders: TKeyValue;
   placeholderMiniTorts?: string;
   type: FieldType;
   label: string;
   optionalPaths: string[];
   disabledPaths: string[];
+  hiddenPaths: string[];
   schema: ZodSchema<any>;
 }
 
@@ -25,12 +25,13 @@ export interface IFormConfig {
     description: string;
     name: string;
     message: string;
+    hiddenPaths: string[];
   };
   button: {
-    label: string;
+    labels: TKeyValue;
     labelInProgress: string;
   };
-  title: string;
+  titles: TKeyValue;
   messages: {
     success: string;
     error: string;
