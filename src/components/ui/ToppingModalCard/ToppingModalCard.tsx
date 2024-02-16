@@ -30,7 +30,7 @@ export const ToppingModalCard: React.FC<ToppingModalCardProps> = ({
       onClick={onClick}
       tabIndex={0}
       onKeyDown={handleKeyDown}
-      className="modal-card shrink-0 w-[288px] h-auto md:w-auto px-3 md:px-4 pb-[15px] md:pb-[30px] xl:pb-[24px] text-[16px] font-unbounded border rounded-3xl leading-normal group border-topping-card-even hover:border-color-accent-primary focus-visible:border-color-accent-primary bg-color-bg-white hover:shadow-3xl focus:shadow-3xl transition-all cursor-pointer"
+      className="flex flex-col modal-card shrink-0 w-[288px] h-auto md:w-auto px-3 md:px-4 pb-[15px] md:pb-[30px] xl:pb-[24px] text-[16px] font-unbounded border rounded-3xl leading-normal group border-topping-card-even hover:border-color-accent-primary focus-visible:border-color-accent-primary bg-color-bg-white hover:shadow-3xl focus:shadow-3xl transition-all cursor-pointer"
     >
       <div className="relative plate-modal h-[173px] xl:h-[162px] overflow-hidden">
         <Image
@@ -42,18 +42,18 @@ export const ToppingModalCard: React.FC<ToppingModalCardProps> = ({
         />
       </div>
 
-      <div className="md:h-[162px] xl:h-[166px]">
+      <div className={`h-auto ${slug === "big-cakes" ? "mb-4 xl:mb-3" : ""}`}>
         <p className="font-semibold uppercase text-color-text-primary group-hover:text-color-accent-primary group-focus:text-color-accent-primary transition-all">
           {name}
         </p>
 
-        <p className="font-fixel font-normal mt-2 xl:mt-3 text-color-text-secondary h-[132px]">
+        <p className="font-fixel font-normal mt-2 xl:mt-3 text-color-text-secondary h-auto">
           {description}
         </p>
       </div>
 
       {slug === "big-cakes" && (
-        <p className="font-semibold mt-4 xl:mt-3 uppercase text-color-text-primary group-hover:text-color-accent-primary group-focus:text-color-accent-primary transition-all">
+        <p className="font-semibold mt-auto uppercase text-color-text-primary group-hover:text-color-accent-primary group-focus:text-color-accent-primary transition-all">
           ₴ {price_double}
         </p>
       )}
