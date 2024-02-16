@@ -15,10 +15,7 @@ export const Toppings: React.FC<ToppingsProps> = ({ toppings }) => {
     images.find(({ layers }) => layers === "double"),
   );
 
-  // Duplicate the array to provide different backgrounds regardless of the number of toppings (DESIGN)
-  const cards = [...filteredToppings, ...filteredToppings];
-
-  const slides = cards.map(({ name, images }, idx) => {
+  const slides = filteredToppings.map(({ name, images }, idx) => {
     const img = images.find(({ layers }) => layers === "double")!; // we are positive that "double" is available because of filtering above
     return (
       <ToppingCard
