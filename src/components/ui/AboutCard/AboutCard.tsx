@@ -2,14 +2,7 @@ import { cn } from "@/utils/helpers";
 
 import { AboutCardProps } from "./types";
 
-import Image from "next/image";
-
-export const AboutCard: React.FC<AboutCardProps> = ({
-  imageAlt,
-  imageUrl,
-  text,
-  isEven,
-}) => {
+export const AboutCard: React.FC<AboutCardProps> = ({ icon, text, isEven }) => {
   return (
     <li
       className={cn(
@@ -17,13 +10,8 @@ export const AboutCard: React.FC<AboutCardProps> = ({
         isEven ? "bg-color-bg-extraAccent" : "bg-color-bg-accent",
       )}
     >
-      <Image
-        src={imageUrl}
-        alt={imageAlt}
-        width={32}
-        height={32}
-        className="size-8 shrink-0"
-      />
+      <span className="w-8 h-8 flex justify-center">{icon}</span>
+
       <p className="text-color-text-primary font-semibold text-base xl:text-[20px] leading-normal">
         {text}
       </p>
