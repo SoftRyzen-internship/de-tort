@@ -22,7 +22,7 @@ export const ToppingsModal: React.FC<ToppingModalProps> = ({
     <div className="flex flex-col h-full gap-8">
       <SectionTitle text={titleSection} className="smOnly:w-[186px] md:pl-1" />
 
-      <div className="grow overflow-y-auto">
+      <div className="grow overflow-y-auto smOnly:self-center">
         <div className="flex justify-center flex-col gap-[17px] md:gap-3 xl:gap-6 md:flex-row md:justify-start md:flex-wrap pb-2 pl-2 ">
           {toppings.map(({ name, description, price_double, images }, i) => (
             <ToppingModalCard
