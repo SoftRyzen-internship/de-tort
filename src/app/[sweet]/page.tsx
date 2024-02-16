@@ -16,9 +16,11 @@ export const dynamic = "error";
 export const revalidate = false;
 
 export async function generateStaticParams() {
-  const staticParams = metaSweets.map(({ slug }) => {
-    return { sweet: slug };
-  });
+  const staticParams = metaSweets
+    .filter(({ slug }) => slug !== "cakes")
+    .map(({ slug }) => {
+      return { sweet: slug };
+    });
 
   return staticParams;
 }
