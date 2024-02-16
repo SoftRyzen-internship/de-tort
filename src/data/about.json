@@ -13,39 +13,24 @@
   ],
   "features": [
     {
-      "text": "Індивідуальний підхід до кожного клієнта",
-      "image": {
-        "url": "/icons/heart.svg",
-        "alt": "heart"
-      }
+      "id": 1,
+      "text": "Індивідуальний підхід до кожного клієнта"
     },
     {
-      "text": "Індивідуальний дизайн",
-      "image": {
-        "url": "/icons/star.svg",
-        "alt": "star"
-      }
+      "id": 2,
+      "text": "Індивідуальний дизайн"
     },
     {
-      "text": "Святкова упаковка",
-      "image": {
-        "url": "/icons/gift.svg",
-        "alt": "gift"
-      }
+      "id": 3,
+      "text": "Святкова упаковка"
     },
     {
-      "text": "Соковиті тортики",
-      "image": {
-        "url": "/icons/drop.svg",
-        "alt": "drop"
-      }
+      "id": 4,
+      "text": "Соковиті тортики"
     },
     {
-      "text": "Швидкість",
-      "image": {
-        "url": "/icons/lightning.svg",
-        "alt": "lightning"
-      }
+      "id": 5,
+      "text": "Швидкість"
     }
   ]
 }
