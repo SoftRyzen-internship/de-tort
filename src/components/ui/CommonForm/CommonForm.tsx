@@ -26,10 +26,7 @@ export const CommonForm: React.FC<CommonFormProps> = ({ toppings = [] }) => {
 
   const { inputs, checkbox, button, messages } = commonFormData;
   const orderFormSchema = generateOrderFormSchema(slug);
-  const activeInputs = inputs.filter((input) => {
-    const isHidden = input.hiddenPaths.includes(slug);
-    return !isHidden;
-  });
+
   const form = useForm<z.infer<typeof orderFormSchema>>({
     resolver: zodResolver(orderFormSchema),
   });
@@ -62,11 +59,8 @@ export const CommonForm: React.FC<CommonFormProps> = ({ toppings = [] }) => {
       <Form {...form}>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="relative grid xl:grid-flow-col xl:grid-rows-4 gap-6 mb-8 md:mx-auto xl:grid-cols-auto xl:justify-items-center">
-            {activeInputs
-              .filter((input) => {
-                const isHidden = input.hiddenPaths.includes(slug);
-                return !isHidden;
-              })
+            {inputs
+              .filter((input) => !input.hiddenPaths.includes(slug))
               .map((field) => {
                 const isDisabled = field.disabledPaths.includes(slug);
 
