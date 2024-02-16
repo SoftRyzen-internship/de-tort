@@ -185,7 +185,7 @@ export const commonFormData: IFormConfig = {
     "coffee-shops": "Розкажіть більше про себе",
   },
   messages: {
-    success: "Замовлення відправлено!",
+    success: "Форму відправлено!",
     error: "Помилка відправлення форми",
   },
 };

@@ -22,9 +22,7 @@ import { CommonFormProps } from "./types";
 
 export const CommonForm: React.FC<CommonFormProps> = ({ toppings = [] }) => {
   const slug = getLastPath(usePathname());
-  const [resultMessage, setResultMessage] = useState<string | null>(
-    "sdgfsdfasdf sdegtwt",
-  );
+  const [resultMessage, setResultMessage] = useState<string | null>(null);
 
   const { inputs, checkbox, button, messages } = commonFormData;
   const orderFormSchema = generateOrderFormSchema(slug);

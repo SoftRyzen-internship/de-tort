@@ -87,7 +87,7 @@ const config: Config = {
         alto: "#CECECE",
         mine: "#383838",
         error: "#EF5A5A",
-        success: "#00FF66",
+        success: "#4caf50",
         gallery: "#EAEAEA",
       },
       background: {
