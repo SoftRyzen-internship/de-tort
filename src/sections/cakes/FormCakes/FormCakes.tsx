@@ -1,4 +1,4 @@
-import { CakesOrderForm } from "@/components/ui/CakesOrderForm";
+import { CommonForm } from "@/components/ui/CommonForm";
 
 import { FormCakesProps } from "./types";
 
@@ -6,7 +6,7 @@ export const FormCakes: React.FC<FormCakesProps> = ({ toppings = [] }) => {
   return (
     <section className="section bg-color-bg-primary" id="orderForm">
       <div className="container">
-        <CakesOrderForm toppings={toppings} />
+        <CommonForm toppings={toppings} />
       </div>
     </section>
   );

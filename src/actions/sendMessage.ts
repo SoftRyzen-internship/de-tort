@@ -4,11 +4,11 @@ const TG_BOT_TOKEN = process.env.NEXT_PUBLIC_TG_BOT_TOKEN;
 const TG_CHAT_ID = process.env.NEXT_PUBLIC_TG_CHAT_ID;
 const URI_API = `https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage`;
 
-let message = "Заявка з сайту:\n";
+let message = "Заявка з сайту:\n\n";
 
-export const send = async (values: { [x: string]: any }) => {
+export const sendMessage = async (values: { [x: string]: any }) => {
   const dataToSend = Object.entries(values).reduce(
-    (aggr, [key, value]) => (aggr += `${key}: ${value}\n`),
+    (aggr, [key, value]) => (aggr += `${key} ${value}\n`),
     message,
   );
 
@@ -23,8 +23,6 @@ export const send = async (values: { [x: string]: any }) => {
         text: dataToSend,
       }),
     });
-
-    console.log("Sending:", response);
 
     if (response.ok) {
       return true;

@@ -11,3 +11,4 @@ export * from "./formatDate";
 export * from "./schema";
 export * from "./getLabelFromName";
 export * from "./getLastPath";
+export * from "./getValue";

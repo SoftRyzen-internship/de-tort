@@ -1,14 +1,14 @@
 import { ZodSchema } from "zod";
 
-import { CakeToppingType, FieldType } from "@/types";
+import { CakeToppingType, FieldType, TKeyValue } from "@/types";
 
-export interface CakesOrderFormProps {
+export interface CommonFormProps {
   toppings?: CakeToppingType[];
 }
 
 interface IFormField {
   name: string;
-  placeholder: string;
+  placeholders: TKeyValue;
   placeholderMiniTorts?: string;
   type: FieldType;
   label: string;
@@ -28,10 +28,10 @@ export interface IFormConfig {
     hiddenPaths: string[];
   };
   button: {
-    label: string;
+    labels: TKeyValue;
     labelInProgress: string;
   };
-  title: string;
+  titles: TKeyValue;
   messages: {
     success: string;
     error: string;

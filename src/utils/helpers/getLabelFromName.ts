@@ -1,8 +1,8 @@
-import { cakesFormData } from "@/components/ui/CakesOrderForm/cakesFormData";
+import { commonFormData } from "@/components/ui/CommonForm/commonFormData";
 
 export const getLabelFromName = (name: string) => {
-  const input = cakesFormData.inputs.find((input) => input.name === name);
-  const checkbox = cakesFormData.checkbox;
+  const input = commonFormData.inputs.find((input) => input.name === name);
+  const checkbox = commonFormData.checkbox;
 
   if (input) {
     return input.label;

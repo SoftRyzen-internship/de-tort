@@ -1,9 +1,9 @@
 import { z } from "zod";
 
-import { cakesFormData } from "@/components/ui/CakesOrderForm/cakesFormData";
+import { commonFormData } from "@/components/ui/CommonForm/commonFormData";
 
 export const generateOrderFormSchema = (pathname: string) => {
-  const schema = cakesFormData.inputs.reduce((accumulator, current) => {
+  const schema = commonFormData.inputs.reduce((accumulator, current) => {
     const isOptional = current.optionalPaths.includes(pathname);
     const isDisabled = current.disabledPaths.includes(pathname);
     const isHiddden = current.hiddenPaths.includes(pathname);
@@ -19,14 +19,14 @@ export const generateOrderFormSchema = (pathname: string) => {
     };
   }, {});
 
-  if (cakesFormData.checkbox.hiddenPaths.includes(pathname)) {
+  if (commonFormData.checkbox.hiddenPaths.includes(pathname)) {
     return z.object(schema);
   }
 
   const consent = z
     .boolean()
     .refine((value) => value === true, {
-      message: cakesFormData.checkbox.message,
+      message: commonFormData.checkbox.message,
     })
     .default(false);
 
@@ -36,6 +36,6 @@ export const generateOrderFormSchema = (pathname: string) => {
 };
 
 export const defaultValues: Record<string, string> =
-  cakesFormData.inputs.reduce((accumulator, current) => {
+  commonFormData.inputs.reduce((accumulator, current) => {
     return { ...accumulator, [current.name]: "" };
   }, {});

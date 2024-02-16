@@ -10,23 +10,23 @@ import useFormPersist from "react-hook-form-persist";
 import { Form } from "@/components/ui/Shadcn/form";
 import { Field } from "@/components/ui/Field";
 import { CheckboxWrapper } from "@/components/ui/CheckBoxWrapper";
-import { cakesFormData } from "@/components/ui/CakesOrderForm/cakesFormData";
+import { commonFormData } from "@/components/ui/CommonForm/commonFormData";
 
-import { send } from "@/actions/telegram";
+import { sendMessage } from "@/actions/sendMessage";
 
 import { defaultValues, generateOrderFormSchema } from "@/utils/helpers/schema";
 import { processFormValues } from "@/utils/helpers/processFormValues";
-import { cn, getLastPath } from "@/utils/helpers";
+import { cn, getLastPath, getValue } from "@/utils/helpers";
 
-import { CakesOrderFormProps } from "./types";
+import { CommonFormProps } from "./types";
 
-export const CakesOrderForm: React.FC<CakesOrderFormProps> = ({
-  toppings = [],
-}) => {
+export const CommonForm: React.FC<CommonFormProps> = ({ toppings = [] }) => {
   const slug = getLastPath(usePathname());
-  const [resultMessage, setResultMessage] = useState<string | null>(null);
+  const [resultMessage, setResultMessage] = useState<string | null>(
+    "sdgfsdfasdf sdegtwt",
+  );
 
-  const { inputs, checkbox, button, messages } = cakesFormData;
+  const { inputs, checkbox, button, messages } = commonFormData;
   const orderFormSchema = generateOrderFormSchema(slug);
   const activeInputs = inputs.filter((input) => {
     const isHidden = input.hiddenPaths.includes(slug);
@@ -45,7 +45,7 @@ export const CakesOrderForm: React.FC<CakesOrderFormProps> = ({
 
   async function onSubmit(values: z.infer<typeof orderFormSchema>) {
     const processedValues = processFormValues(values);
-    const result = await send(processedValues);
+    const result = await sendMessage(processedValues);
     setResultMessage(result ? messages.success : messages.error);
     form.reset(defaultValues);
     setTimeout(() => {
@@ -53,22 +53,17 @@ export const CakesOrderForm: React.FC<CakesOrderFormProps> = ({
     }, 5000);
   }
 
-  const columnsStyle =
-    activeInputs.length > 4 ? "xl:grid-cols-2" : "xl:grid-cols-1";
+  const title = getValue(commonFormData.titles, slug);
+  const buttonText = getValue(commonFormData.button.labels, slug);
 
   return (
     <div className="relative bg-white py-10 px-[14px] md:px-[114px] xl:px-[122px] md:py-[60px] rounded-3xl border-2 border-topping-card-even">
-      <h2 className="text-title mb-8 text-[20px] md:text-[28px] leading-normal text-center">
-        {cakesFormData.title}
-      </h2>
+      <h3 className="text-title mb-8 text-[20px] md:text-[28px] leading-normal text-center">
+        {title}
+      </h3>
       <Form {...form}>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div
-            className={cn(
-              "relative grid xl:grid-flow-col xl:grid-rows-4 gap-6 mb-8 md:mx-auto",
-              columnsStyle,
-            )}
-          >
+          <div className="relative grid xl:grid-flow-col xl:grid-rows-4 gap-6 mb-8 md:mx-auto xl:grid-cols-auto xl:justify-items-center">
             {activeInputs
               .filter((input) => {
                 const isHidden = input.hiddenPaths.includes(slug);
@@ -79,10 +74,7 @@ export const CakesOrderForm: React.FC<CakesOrderFormProps> = ({
 
                 const isOptional = field.optionalPaths.includes(slug);
 
-                const placeholder =
-                  slug === "mini-cakes" && field.name === "comments"
-                    ? field.placeholderMiniTorts
-                    : field.placeholder;
+                const placeholder = getValue(field.placeholders, slug);
 
                 return (
                   <Field
@@ -116,7 +108,7 @@ export const CakesOrderForm: React.FC<CakesOrderFormProps> = ({
             className="submit-button"
             disabled={formState.isSubmitting}
           >
-            {formState.isSubmitting ? button.labelInProgress : button.label}
+            {formState.isSubmitting ? button.labelInProgress : buttonText}
           </button>
           {resultMessage && (
             <h3
