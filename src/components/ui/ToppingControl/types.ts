@@ -1,11 +1,11 @@
 import { FieldValues } from "react-hook-form";
 
-import { CakeSlug, CakeToppingType, SweetsSlug } from "@/types";
+import { CakeToppingType } from "@/types";
 
 export interface ToppingControlProps {
   field: FieldValues;
   toppings: CakeToppingType[];
-  slug: CakeSlug | SweetsSlug;
+  slug: string;
   isError: boolean;
   disabled?: boolean;
   placeholder?: string;

@@ -56,7 +56,7 @@ export const Field: React.FC<FieldProps> = ({
       defaultValue=""
       name={name}
       render={({ field }) => (
-        <FormItem className="relative xl:last-of-type:row-span-2 text-mine text-base leading-5 font-fixel">
+        <FormItem className="relative xl:last-of-type:row-span-2 text-mine text-base leading-5 font-fixel basis-1/3">
           <FormLabel className={labelStyles}>{label}</FormLabel>
           {type === "calendar" && (
             <CalendarControl field={field} isError={error && error[name]} />
@@ -64,11 +64,11 @@ export const Field: React.FC<FieldProps> = ({
           {type === "topping" && (
             <ToppingControl
               field={field}
+              slug={slug}
               placeholder={placeholder}
               disabled={isDisabled}
               toppings={toppings}
               isError={error && error[name]}
-              slug={slug}
             />
           )}
           {type === "textarea" && (

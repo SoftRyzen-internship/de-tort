@@ -41,6 +41,9 @@
   .message {
     @apply absolute bottom-3 md:bottom-5 left-1/2 w-full text-center -translate-x-1/2 font-bold text-sm md:text-xl;
   }
+  .test {
+    grid-template-columns: repeat(auto-fill, minmax(min(600px, 60vw), 1fr));
+  }
 }
 
 /* Common utilities: */

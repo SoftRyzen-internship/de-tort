@@ -58,9 +58,7 @@ export default async function CakePage({
   return (
     <>
       {data.length && <DessertInfo dessert={data[0]} />}
-
-      <FormCakes slug={cake} toppings={toppings} />
-
+      <FormCakes toppings={toppings} />
       <Sweets />
     </>
   );

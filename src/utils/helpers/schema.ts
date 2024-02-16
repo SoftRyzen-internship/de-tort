@@ -6,7 +6,8 @@ export const generateOrderFormSchema = (pathname: string) => {
   const schema = cakesFormData.inputs.reduce((accumulator, current) => {
     const isOptional = current.optionalPaths.includes(pathname);
     const isDisabled = current.disabledPaths.includes(pathname);
-    if (isDisabled) {
+    const isHiddden = current.hiddenPaths.includes(pathname);
+    if (isDisabled || isHiddden) {
       return { ...accumulator };
     }
     const schemaForOptional = isDisabled
@@ -17,6 +18,10 @@ export const generateOrderFormSchema = (pathname: string) => {
       [current.name]: isOptional ? schemaForOptional : current.schema,
     };
   }, {});
+
+  if (cakesFormData.checkbox.hiddenPaths.includes(pathname)) {
+    return z.object(schema);
+  }
 
   const consent = z
     .boolean()

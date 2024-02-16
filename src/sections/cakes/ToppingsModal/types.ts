@@ -4,5 +4,5 @@ export interface ToppingModalProps {
   onClose: () => void;
   onSelectTopping: (title: string) => void;
   toppings: CakeToppingType[];
-  slug: CakeSlug | SweetsSlug;
+  slug: CakeSlug | SweetsSlug | string;
 }

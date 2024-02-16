@@ -13,6 +13,7 @@ export const cakesFormData: IFormConfig = {
       label: "Дата отримання:",
       optionalPaths: [],
       disabledPaths: [],
+      hiddenPaths: ["coffee-shops"],
       schema: z.string().min(2, { message: errorText }),
     },
     {
@@ -22,6 +23,7 @@ export const cakesFormData: IFormConfig = {
       label: "На яку кількість людей?",
       optionalPaths: [],
       disabledPaths: [],
+      hiddenPaths: ["coffee-shops"],
       schema: z
         .string()
         .refine((value) => /^\d{1,4}$/.test(value) && +value !== 0, {
@@ -51,6 +53,7 @@ export const cakesFormData: IFormConfig = {
         "macaron",
         "cake-pops",
       ],
+      hiddenPaths: ["coffee-shops"],
       schema: z.string().min(2, { message: errorText }),
     },
     {
@@ -80,6 +83,7 @@ export const cakesFormData: IFormConfig = {
         "macaron",
         "cake-pops",
       ],
+      hiddenPaths: ["coffee-shops"],
       schema: z
         .string()
         .refine((value) => value.length <= 255, {
@@ -103,6 +107,7 @@ export const cakesFormData: IFormConfig = {
       label: "Ваше імʼя та прізвище:",
       optionalPaths: [],
       disabledPaths: [],
+      hiddenPaths: [],
       schema: z
         .string()
         .regex(/^[a-zA-Zа-яА-ЯЇїІіЄєҐґ' -]+$/, errorText)
@@ -118,6 +123,7 @@ export const cakesFormData: IFormConfig = {
       label: "Телефон:",
       optionalPaths: [],
       disabledPaths: [],
+      hiddenPaths: [],
       schema: z
         .string()
         .refine((value) => /^\+\d{11,12}$/.test(value), {
@@ -136,6 +142,7 @@ export const cakesFormData: IFormConfig = {
       label: "Коментар:",
       optionalPaths: ["mini-cakes", "bento-cakes", "middle-cakes", "big-cakes"],
       disabledPaths: [],
+      hiddenPaths: [],
       schema: z
         .string()
         .regex(/^[a-zA-Zа-яА-ЯЇїІіЄєҐґ'0-9\s\p{P}\p{S}\r\n]*$/u, {
@@ -149,6 +156,7 @@ export const cakesFormData: IFormConfig = {
     label: "Даю згоду на обробку персональних данних",
     description: "Підтвердіть згоду на обробку персональних данних",
     message: "Для відсилки форми потрібна Ваша згода",
+    hiddenPaths: ["coffee-shops"],
   },
   button: {
     label: "Замовити торт",
