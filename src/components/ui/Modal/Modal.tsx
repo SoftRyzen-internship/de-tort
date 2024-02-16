@@ -22,7 +22,7 @@ export const Modal: React.FC<ModalProps> = ({
         <div className="fixed inset-0 bg-color-bg-backdrop">
           <div className="fixed inset-0 w-screen overflow-y-auto">
             <div
-              className={`min-h-full py-6 flex items-center justify-center text-center smOnly:my-[20px] ${classNameWrap}`}
+              className={`min-h-full py-6 flex items-center justify-center text-center smOnly:mx-[20px] ${classNameWrap}`}
             >
               <Transition.Child
                 as={Fragment}
