@@ -22,7 +22,7 @@ export const Modal: React.FC<ModalProps> = ({
         <div className="fixed inset-0 bg-color-bg-backdrop">
           <div className="fixed inset-0 w-screen overflow-y-auto">
             <div
-              className={`min-h-full py-6 flex items-center justify-center text-center ${classNameWrap}`}
+              className={`min-h-full py-6 flex items-center justify-center text-center smOnly:my-[20px] ${classNameWrap}`}
             >
               <Transition.Child
                 as={Fragment}
@@ -34,7 +34,7 @@ export const Modal: React.FC<ModalProps> = ({
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel
-                  className={`relative max-w-[480px] h-[90vh] rounded-3xl bg-color-bg-white border-2 border-color-accent-primary p-4 text-left md:py-[60px] md:px-8 md:max-w-[705px] xl:max-w-[1216px] xl:py-10 xl:px-[104px] ${classNameModal}`}
+                  className={`relative w-full max-w-[440px] h-[90vh] rounded-3xl bg-color-bg-white border-2 border-color-accent-primary p-4 text-left md:py-[60px] md:px-8 md:max-w-[705px] xl:max-w-[1216px] xl:py-10 xl:px-[104px] ${classNameModal}`}
                 >
                   <CloseButton
                     ariaLabel={close}
