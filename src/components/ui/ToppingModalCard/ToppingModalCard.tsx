@@ -43,7 +43,7 @@ export const ToppingModalCard: React.FC<ToppingModalCardProps> = ({
       </div>
 
       <div className="md:h-[162px] xl:h-[166px]">
-        <p className="font-semibold uppercase text-color-text-primary group-hover:text-color-accent-primary group-focus:text-color-accent-primary">
+        <p className="font-semibold uppercase text-color-text-primary group-hover:text-color-accent-primary group-focus:text-color-accent-primary transition-all">
           {name}
         </p>
 
@@ -53,7 +53,7 @@ export const ToppingModalCard: React.FC<ToppingModalCardProps> = ({
       </div>
 
       {slug === "big-cakes" && (
-        <p className="font-semibold mt-4 xl:mt-3 uppercase text-color-text-primary group-hover:text-color-accent-primary group-focus:text-color-accent-primary">
+        <p className="font-semibold mt-4 xl:mt-3 uppercase text-color-text-primary group-hover:text-color-accent-primary group-focus:text-color-accent-primary transition-all">
           ₴ {price_double}
         </p>
       )}

@@ -16,35 +16,35 @@
       "text": "Індивідуальний підхід до кожного клієнта",
       "image": {
         "url": "/icons/heart.svg",
-        "alt": "heart"
+        "alt": "Серце"
       }
     },
     {
       "text": "Індивідуальний дизайн",
       "image": {
         "url": "/icons/star.svg",
-        "alt": "star"
+        "alt": "Зірка"
       }
     },
     {
       "text": "Святкова упаковка",
       "image": {
         "url": "/icons/gift.svg",
-        "alt": "gift"
+        "alt": "Подарунок"
       }
     },
     {
       "text": "Соковиті тортики",
       "image": {
         "url": "/icons/drop.svg",
-        "alt": "drop"
+        "alt": "Капля"
       }
     },
     {
       "text": "Швидкість",
       "image": {
         "url": "/icons/lightning.svg",
-        "alt": "lightning"
+        "alt": "Блискавка"
       }
     }
   ]
