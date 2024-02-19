@@ -3,11 +3,12 @@ import { Slider } from "@/components/base/Slider";
 import { SliderNav } from "@/components/base/SliderNav";
 import { AchievementCard } from "@/components/ui/AchievementCard";
 
+import { fetchAchievements } from "@/requests";
+
 import data from "@/data/achievement.json";
 
-import { AchievementsProps } from "./types";
-
-export const Achievements: React.FC<AchievementsProps> = ({ achievements }) => {
+export const Achievements: React.FC = async () => {
+  const achievements = await fetchAchievements();
   const { titleSection, cards } = data;
 
   const slides = cards.map(({ id, title: titleDefault, description, type }) => {
