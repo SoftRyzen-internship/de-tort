@@ -95,7 +95,7 @@ export const commonFormData: IFormConfig = {
       schema: z
         .string()
         .refine((value) => value.length <= 255, {
-          message: errorText,
+          message: "Довжина тексту не може перевищувати 255 символів",
         })
         .refine((value) => value.length === 0 || /^[^\s]+$/.test(value), {
           message: errorText,
@@ -121,7 +121,9 @@ export const commonFormData: IFormConfig = {
       schema: z
         .string()
         .regex(/^[a-zA-Zа-яА-ЯЇїІіЄєҐґ' -]+$/, errorText)
-        .max(90)
+        .max(90, {
+          message: "Довжина тексту не може перевищувати 90 символів",
+        })
         .refine((data) => !data.includes("--"), errorText)
         .refine((data) => !data.includes(" - "), errorText)
         .refine((data) => !(data.trim().length === 0), errorText),
@@ -138,7 +140,7 @@ export const commonFormData: IFormConfig = {
       hiddenPaths: [],
       schema: z
         .string()
-        .refine((value) => /^\+\d{11,12}$/.test(value), {
+        .refine((value) => /^\+\d{11,12}\s*$/.test(value), {
           message: errorText,
         })
         .refine((value) => value.length > 1, {
@@ -168,7 +170,9 @@ export const commonFormData: IFormConfig = {
         .regex(/^[a-zA-Zа-яА-ЯЇїІіЄєҐґ'0-9\s\p{P}\p{S}\r\n]*$/u, {
           message: errorText,
         })
-        .max(1000, { message: errorText }),
+        .max(1000, {
+          message: "Довжина тексту не може перевищувати 1000 символів",
+        }),
     },
   ],
   checkbox: {
