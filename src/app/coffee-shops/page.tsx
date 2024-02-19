@@ -5,23 +5,10 @@ import { Contacts } from "@/sections/home/Contacts";
 
 import { fetchB2bPageData, fetchContacts } from "@/requests";
 
-import metaBase from "@/data/meta/base.json";
-import metaShops from "@/data/meta/coffee-shops.json";
+import { metadataGenerator } from "@/utils/helpers";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const baseUrl = process.env.NEXT_PUBLIC_MAIN_SITE_URL as string;
-
-  const { openGraph, description, keywords } = metaBase;
-
-  return {
-    title: metaShops.title,
-    description: metaShops.description || description,
-    keywords: metaShops.keywords || keywords,
-    alternates: {
-      canonical: baseUrl + "coffee-shops" + "/",
-    },
-    openGraph: { ...openGraph, url: baseUrl + "coffee-shops" + "/" },
-  };
+  return metadataGenerator({ page: "b2b" });
 }
 
 export default async function CoffeeShopsPage() {
