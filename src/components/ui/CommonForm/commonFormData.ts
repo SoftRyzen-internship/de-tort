@@ -198,4 +198,5 @@ export const commonFormData: IFormConfig = {
     success: "Форму відправлено!",
     error: "Помилка відправлення форми",
   },
+  slugTitle: "Категорія:",
 };

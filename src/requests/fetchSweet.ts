@@ -34,7 +34,7 @@ export const fetchSweet = async (
 
     return data;
   } catch (error) {
-    console.log("fetch sweet error: ", error);
+    console.error("fetch sweet error: ", error);
     return [];
   }
 };

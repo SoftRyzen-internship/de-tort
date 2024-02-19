@@ -11,6 +11,7 @@ export const sendMessage = async (values: { [x: string]: any }) => {
     (aggr, [key, value]) => (aggr += `${key} ${value}\n`),
     message,
   );
+  console.log("🚀 ~ dataToSend:", dataToSend);
 
   try {
     const response = await fetch(URI_API, {
