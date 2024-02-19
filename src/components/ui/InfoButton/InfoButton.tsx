@@ -12,7 +12,6 @@ export const InfoButton: React.FC<InfoButtonProps> = ({
 
   const onClick = () => {
     setIsOpen(true);
-    console.log(`IN PROGRESS: open modal with info ("${label}").`);
   };
 
   return (

@@ -6,7 +6,11 @@ export function processFormValues(values: any): { [key: string]: string } {
       const label = getLabelFromName(fieldName);
       if (fieldName === "date") {
         accumulator[label] = formatDate(value?.toString() || "");
-      } else if (fieldName !== "consent") {
+      } else if (
+        fieldName !== "consent" &&
+        typeof value == "string" &&
+        value.length
+      ) {
         // згода не відсилається в message
         accumulator[label] = value;
       }

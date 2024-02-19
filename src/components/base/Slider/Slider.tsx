@@ -1,7 +1,7 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, A11y } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 
 import { cn } from "@/utils/helpers";
@@ -19,7 +19,7 @@ export const Slider: React.FC<SliderProps> = ({
     <>
       <Swiper
         wrapperTag={slides?.length === 1 ? "div" : "ul"}
-        modules={[Navigation, Pagination, A11y]}
+        modules={[Navigation, Pagination]}
         navigation={{
           nextEl: `.button-next-${section}`,
           prevEl: `.button-prev-${section}`,

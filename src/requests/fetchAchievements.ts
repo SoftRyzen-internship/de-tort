@@ -12,7 +12,7 @@ export const fetchAchievements = async (): Promise<AchievementsType> => {
 
     return res?.achievement.data?.attributes.achievement || [];
   } catch (error) {
-    console.log("fetch achievements error: ", error);
+    console.error("fetch achievements error: ", error);
     return [];
   }
 };
