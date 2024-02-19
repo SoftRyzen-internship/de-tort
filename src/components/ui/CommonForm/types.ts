@@ -36,4 +36,5 @@ export interface IFormConfig {
     success: string;
     error: string;
   };
+  slugTitle: string;
 }

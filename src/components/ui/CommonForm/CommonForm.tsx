@@ -24,7 +24,7 @@ export const CommonForm: React.FC<CommonFormProps> = ({ toppings = [] }) => {
   const slug = getLastPath(usePathname());
   const [resultMessage, setResultMessage] = useState<string | null>(null);
 
-  const { inputs, checkbox, button, messages } = commonFormData;
+  const { inputs, checkbox, button, messages, slugTitle } = commonFormData;
   const orderFormSchema = generateOrderFormSchema(slug);
 
   const form = useForm<z.infer<typeof orderFormSchema>>({
@@ -40,7 +40,8 @@ export const CommonForm: React.FC<CommonFormProps> = ({ toppings = [] }) => {
 
   async function onSubmit(values: z.infer<typeof orderFormSchema>) {
     const processedValues = processFormValues(values);
-    const result = await sendMessage(processedValues);
+    const valuesWithCategory = { [slugTitle]: slug, ...processedValues };
+    const result = await sendMessage(valuesWithCategory);
     setResultMessage(result ? messages.success : messages.error);
     form.reset(defaultValues);
     setTimeout(() => {
@@ -103,14 +104,14 @@ export const CommonForm: React.FC<CommonFormProps> = ({ toppings = [] }) => {
             {formState.isSubmitting ? button.labelInProgress : buttonText}
           </button>
           {resultMessage && (
-            <h3
+            <p
               className={cn("message", {
                 "text-success": resultMessage.includes(messages.success),
                 "text-error": !resultMessage.includes(messages.success),
               })}
             >
               {resultMessage}
-            </h3>
+            </p>
           )}
         </form>
       </Form>

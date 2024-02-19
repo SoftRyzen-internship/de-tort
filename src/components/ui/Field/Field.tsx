@@ -59,7 +59,11 @@ export const Field: React.FC<FieldProps> = ({
         <FormItem className="relative xl:last-of-type:row-span-2 text-mine text-base leading-5 font-fixel xl:w-[472px]">
           <FormLabel className={labelStyles}>{label}</FormLabel>
           {type === "calendar" && (
-            <CalendarControl field={field} isError={error && error[name]} />
+            <CalendarControl
+              field={field}
+              isError={error && error[name]}
+              disabled={isDisabled}
+            />
           )}
           {type === "topping" && (
             <ToppingControl
