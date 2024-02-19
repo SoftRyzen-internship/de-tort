@@ -26,7 +26,7 @@ export const About: React.FC = () => {
     "font-unbounded mb-3 xl:mb-4 font-semibold text-[20px] xl:text-[24px] leading-normal";
 
   return (
-    <section className="section bg-color-bg-primary">
+    <section className="section">
       <div className="container text-base md:text-xl text-color-text-secondary whitespace-pre-line leading-normal md:flex md:gap-[34px] xl:gap-[240px]">
         <div className="smOnly:mb-10">
           <SectionTitle text={title} className="mb-4" />

@@ -8,7 +8,7 @@ import data from "@/data/cakes-assortment.json";
 export const CakesAssortment: React.FC = () => {
   const { heading, links, image } = data;
   return (
-    <section className="section bg-color-bg-primary">
+    <section className="section">
       <div className="container xl:flex items-center justify-between">
         <Image
           src={image.path}

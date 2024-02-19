@@ -25,7 +25,7 @@ export const Achievements: React.FC<AchievementsProps> = ({ achievements }) => {
   });
 
   return (
-    <section className="section bg-color-bg-primary pb-[60px] md:pb-[80px] xl:pb-[120px]">
+    <section className="section pb-[60px] md:pb-[80px] xl:pb-[120px]">
       <div className="container ">
         <div className="md:flex md:items-center mb-6 md:mb-10 xl:mb-[60px]">
           <SectionTitle text={titleSection} />
