@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@supports (scrollbar-gutter: stable) {
+  html,
+  body {
+    scrollbar-gutter: stable;
+  }
+}
+@supports not (scrollbar-gutter: stable) {
+  html,
+  body {
+    overflow-y: scroll;
+  }
+}
+
 @layer utilities {
   .section {
     @apply pt-[60px] md:pt-[80px] xl:pt-[120px];

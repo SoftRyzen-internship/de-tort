@@ -33,7 +33,7 @@ export const DessertInfo: React.FC<DessertInfoProps> = ({ dessert }) => {
   ));
 
   return (
-    <section className="pt-[148px] md:pt-[156px] xl:pt-[208px] bg-color-bg-primary">
+    <section className="pt-[148px] md:pt-[156px] xl:pt-[208px]">
       <div className="container xl:flex xl:gap-[60px]">
         <div className="relative mb-6 md:mb-10 md:w-[704px] md:h-[660px] xl:w-[592px] xl:h-[555px] xl:mb-0">
           <Slider slides={slides} section="desserts" />

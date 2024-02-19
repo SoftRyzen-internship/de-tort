@@ -5,7 +5,7 @@ import { HeaderProps } from "./types";
 
 export const Header: React.FC<HeaderProps> = ({ contacts }) => {
   return (
-    <header className="absolute top-0 left-0 right-0 py-3">
+    <header className="absolute top-0 left-0 py-3 w-full">
       <div className="container flex items-center gap-[60px]">
         <Logo className="mr-auto" />
 

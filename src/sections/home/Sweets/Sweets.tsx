@@ -14,7 +14,7 @@ export const Sweets: React.FC<SweetsProps> = ({
   const styles = home ? "" : "pb-[60px] md:pb-[80px] xl:pb-[120px]";
 
   return (
-    <section className={`section bg-color-bg-primary ${styles}`}>
+    <section className={`section ${styles}`}>
       <div className="container">
         <SectionTitle
           text={home ? titlePrimary : titleSecondary}

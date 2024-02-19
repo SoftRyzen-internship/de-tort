@@ -7,7 +7,7 @@ import { QAProps } from "./types";
 
 export const QA: React.FC<QAProps> = ({ faq }) => {
   return (
-    <section className="section bg-color-bg-primary pb-[60px] mdOnly:pb-20 xl:pb-[120px]">
+    <section className="section pb-[60px] mdOnly:pb-20 xl:pb-[120px]">
       <div className="container flex flex-col xl:flex-row xl:gap-8">
         <SectionTitle
           text={json.qa.titleSection}
