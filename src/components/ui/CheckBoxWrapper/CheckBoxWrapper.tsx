@@ -27,6 +27,7 @@ export const CheckboxWrapper: React.FC<ICheckbox> = ({
           <FormItem className="flex-center gap-2 mb-8 relative">
             <FormControl className="flex-center p-[9.3px] ">
               <Checkbox
+                aria-labelledby={name}
                 checked={field.value}
                 onCheckedChange={field.onChange}
                 className="border border-color-border-map-b rounded"
@@ -34,7 +35,10 @@ export const CheckboxWrapper: React.FC<ICheckbox> = ({
               />
             </FormControl>
 
-            <FormLabel className="label transition hover:cursor-pointer">
+            <FormLabel
+              id={name}
+              className="label transition hover:cursor-pointer"
+            >
               {label}
             </FormLabel>
 
