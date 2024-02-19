@@ -104,14 +104,14 @@ export const CommonForm: React.FC<CommonFormProps> = ({ toppings = [] }) => {
             {formState.isSubmitting ? button.labelInProgress : buttonText}
           </button>
           {resultMessage && (
-            <h3
+            <p
               className={cn("message", {
                 "text-success": resultMessage.includes(messages.success),
                 "text-error": !resultMessage.includes(messages.success),
               })}
             >
               {resultMessage}
-            </h3>
+            </p>
           )}
         </form>
       </Form>
