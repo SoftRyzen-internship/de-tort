@@ -17,11 +17,11 @@ export const SliderCakeCard: React.FC<SliderCakeCardProps> = ({
       )}
     >
       <Image
-        className="bg-transparent rounded-3xl"
+        className="bg-transparent rounded-3xl object-cover"
         alt={alt}
         src={src}
         loading="eager"
-        sizes=" 100vw, (min-width: 480px) 440px ,(min-width: 768px) 704px, (min-width: 1280px) 592px"
+        sizes="(max-width: 479px) 100vw, (min-width: 480px) 440px ,(min-width: 768px) 704px, (min-width: 1280px) 592px"
         priority
         fill
       />
