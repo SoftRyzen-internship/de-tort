@@ -71,16 +71,10 @@
           }
         }
       ],
-      "staticPages": [
-        {
-          "label": "Про нас",
-          "slug": "about-us"
-        },
-        {
-          "label": "Для кав’ярень",
-          "slug": "coffee-shops"
-        }
-      ]
+      "b2bPage": {
+        "label": "Для кав’ярень",
+        "slug": "coffee-shops"
+      }
     }
   },
   "contacts": {
