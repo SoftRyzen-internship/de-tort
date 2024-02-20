@@ -21,61 +21,24 @@ export const metadataGenerator = ({
 
   const { description, keywords, openGraph } = metaBase;
 
-  const cakesObj = metaSweets.find(({ slug }) => slug === "cakes");
-  const cakeObj = metaCakes.find(({ slug }) => slug === cake);
-  const sweetObj = metaSweets.find(({ slug }) => slug === sweet);
-  const infoObj = metaInfo.find(({ slug }) => slug === info);
-
-  const getTitle = () => {
+  const getData = () => {
     switch (page) {
       case "cakes":
-        return cakesObj?.title || "";
+        return metaSweets.find(({ slug }) => slug === "cakes");
       case "cake":
-        return cakeObj?.title || "";
+        return metaCakes.find(({ slug }) => slug === cake);
       case "sweet":
-        return sweetObj?.title || "";
+        return metaSweets.find(({ slug }) => slug === sweet);
       case "b2b":
-        return metaB2B.title;
+        return metaB2B;
       case "info":
-        return infoObj?.title || "";
+        return metaInfo.find(({ slug }) => slug === info);
       default:
-        return "";
+        return undefined;
     }
   };
 
-  const getDesc = () => {
-    switch (page) {
-      case "cakes":
-        return cakesObj?.description || description;
-      case "cake":
-        return cakeObj?.description || description;
-      case "sweet":
-        return sweetObj?.description || description;
-      case "b2b":
-        return metaB2B.description || description;
-      case "info":
-        return infoObj?.description || description;
-      default:
-        return description;
-    }
-  };
-
-  const getKeywords = () => {
-    switch (page) {
-      case "cakes":
-        return cakesObj?.keywords || keywords;
-      case "cake":
-        return cakeObj?.keywords || keywords;
-      case "sweet":
-        return sweetObj?.keywords || keywords;
-      case "b2b":
-        return metaB2B.keywords || keywords;
-      case "info":
-        return infoObj?.keywords || keywords;
-      default:
-        return keywords;
-    }
-  };
+  const metadata = getData();
 
   const getUrl = () => {
     switch (page) {
@@ -95,9 +58,9 @@ export const metadataGenerator = ({
   };
 
   return {
-    title: getTitle(),
-    description: getDesc(),
-    keywords: getKeywords(),
+    title: metadata?.title || "",
+    description: metadata?.description || description,
+    keywords: metadata?.keywords || keywords,
     alternates: {
       canonical: getUrl(),
     },
