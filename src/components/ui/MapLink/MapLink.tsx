@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 
 import IconMapPin from "~/icons/pin-cake.svg";
@@ -6,9 +6,10 @@ import IconMapPin from "~/icons/pin-cake.svg";
 import data from "@/data/section-contacts.json";
 
 import { MapLinkProps } from "./types";
+import { BlurredImage } from "../BlurredImage/BlurredImage";
 
 export const MapLink: React.FC<MapLinkProps> = ({ className = "" }) => {
-  const { href, path, alt, ariaLabel, caption } = data.address.image;
+  const { href, alt, ariaLabel, caption } = data.address.image;
 
   return (
     <>
@@ -19,8 +20,9 @@ export const MapLink: React.FC<MapLinkProps> = ({ className = "" }) => {
         rel="noopener noreferrer nofollow"
         className={`group relative box-content w-full h-full md:w-[704px] md:h-[640px] xl:w-[592px] xl:h-[536px] overflow-hidden rounded-3xl border-[1px] ${className}`}
       >
-        <Image
-          src={path}
+        <BlurredImage
+          src="./public/images/map.webp"
+          // src={path}
           width={592}
           height={536}
           alt={alt}
