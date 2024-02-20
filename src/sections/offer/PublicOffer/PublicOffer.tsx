@@ -7,8 +7,12 @@ import { OfferProps } from "./types";
 export const PublicOffer: React.FC<OfferProps> = ({ heading }) => {
   const content = offer.data.map(({ title, text }) => (
     <>
-      {title && <h2 className="mb-4 font-fixel">{title}</h2>}
-      <pre className="font-fixel whitespace-pre-wrap text-base leading-normal text-color-text-secondary md:text-xl xl:text-lg">
+      {title && (
+        <h2 className="mb-4 text-center text-xl leading-normal text-color-text-secondary font-fixel font-semibold uppercase">
+          {title}
+        </h2>
+      )}
+      <pre className="font-fixel whitespace-pre-wrap text-base leading-normal xl:text-justify text-color-text-secondary md:text-xl">
         {text}
       </pre>
     </>
@@ -28,25 +32,15 @@ export const PublicOffer: React.FC<OfferProps> = ({ heading }) => {
   );
 };
 /*h2
-font-weight: 600;
-font-size: 20px;
-line-height: 140%;
-color: #383838;
-
-
-tablet and more
-font-size: 24px;
-text-align: center;
 
 
 pre
-font-weight: 400;
-font-size: 16px;
-line-height: 140%;
-color: #383838;
+
+
+
 
 tablet
-font-size: 20px;
+
 
 desk
 text-align: justify;
