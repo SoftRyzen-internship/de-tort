@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { cn } from "@/utils/helpers";
+import { cn, convertImage, getBase64 } from "@/utils/helpers";
 
 import { ToppingCardProps } from "./types";
 
@@ -34,6 +34,11 @@ export const ToppingCard: React.FC<ToppingCardProps> = ({
             src={src}
             width={320}
             height={320}
+            placeholder="blur"
+            blurDataURL={`data:image/svg+xml;base64,${getBase64(
+              convertImage(320, 320, "#f5d9e2"),
+            )}`}
+            sizes="(max-width: 767px) 232px, (min-width: 768px) 240px,  (min-width: 1280px) 260px"
           />
         </div>
       </div>

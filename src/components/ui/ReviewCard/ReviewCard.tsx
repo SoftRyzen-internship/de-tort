@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ReviewCardProps } from "./types";
 
 import data from "@/data/reviews.json";
+import { getBase64, convertImage } from "@/utils/helpers";
 
 const MAX_SYMBOLS = 456;
 
@@ -31,6 +32,10 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({
               width={512}
               height={544}
               className="object-cover w-[16px] h-auto"
+              placeholder="blur"
+              blurDataURL={`data:image/svg+xml;base64,${getBase64(
+                convertImage(16, 16),
+              )}`}
               sizes="16px"
             />
           </div>

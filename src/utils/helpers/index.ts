@@ -12,3 +12,5 @@ export * from "./schema";
 export * from "./getLabelFromName";
 export * from "./getLastPath";
 export * from "./getValue";
+export * from "./getBase64";
+export * from "./convertImage";
