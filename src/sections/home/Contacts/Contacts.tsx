@@ -3,16 +3,19 @@ import { ContactLinks } from "@/components/ui/ContactLinks";
 import { Schedule } from "@/components/ui/Schedule";
 import { MapLink } from "@/components/ui/MapLink";
 
+import { fetchContacts } from "@/requests";
+
 import IconPin from "~/icons/pin.svg";
 
 import data from "@/data/section-contacts.json";
 
 import { ContactsProps } from "./types";
 
-export const Contacts: React.FC<ContactsProps> = ({
-  contacts,
+export const Contacts: React.FC<ContactsProps> = async ({
   variant = "home",
 }) => {
+  const contacts = await fetchContacts();
+
   const {
     heading,
     contacts: { subtitle },

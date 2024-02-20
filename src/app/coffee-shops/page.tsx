@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import { B2bHero } from "@/sections/coffee-shops/B2bHero";
 import { Contacts } from "@/sections/home/Contacts";
 
-import { fetchB2bPageData, fetchContacts } from "@/requests";
+import { fetchB2bPageData } from "@/requests";
 
 import { metadataGenerator } from "@/utils/helpers";
 
@@ -12,14 +12,12 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function CoffeeShopsPage() {
-  const contacts = await fetchContacts();
-
   const { heading } = await fetchB2bPageData();
 
   return (
     <>
       <B2bHero heading={heading} />
-      <Contacts contacts={contacts} variant="coffee-shops" />
+      <Contacts variant="coffee-shops" />
     </>
   );
 }
