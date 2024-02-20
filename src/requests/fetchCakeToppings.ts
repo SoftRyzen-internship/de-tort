@@ -37,7 +37,6 @@ export const fetchCakeToppings = async (
 
     return data;
   } catch (error) {
-    console.error("fetch cake's toppings error: ", error);
     return [];
   }
 };

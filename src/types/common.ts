@@ -51,3 +51,16 @@ export type B2bPageType = {
 export type TKeyValue = {
   [key: string]: string;
 };
+
+export type InfoPageDataType = {
+  information: {
+    data: {
+      attributes: InfoPageType;
+    };
+  };
+};
+
+export type InfoPageType = {
+  contract_offer: string;
+  service_terms: string;
+};

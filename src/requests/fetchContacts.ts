@@ -25,8 +25,6 @@ export const fetchContacts = async (): Promise<ContactsType> => {
 
     return res.contact.data.attributes || staticJson;
   } catch (error) {
-    console.error("fetch contacts error: ", error);
-
     return staticJson;
   }
 };
