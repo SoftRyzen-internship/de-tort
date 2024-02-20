@@ -20,8 +20,6 @@ export const fetchReviews = async (): Promise<ReviewsType> => {
       })) || []
     );
   } catch (error) {
-    console.error("fetch reviews error: ", error);
-
     return [];
   }
 };

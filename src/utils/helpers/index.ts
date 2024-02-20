@@ -14,3 +14,4 @@ export * from "./getLastPath";
 export * from "./getValue";
 export * from "./getBase64";
 export * from "./convertImage";
+export * from "./metadataGenerator";

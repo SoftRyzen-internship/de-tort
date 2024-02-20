@@ -18,7 +18,6 @@ export const fetchFAQ = async (): Promise<FAQType> => {
       })) || []
     );
   } catch (error) {
-    console.error("fetch FAQ error: ", error);
     return [];
   }
 };

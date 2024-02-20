@@ -6,3 +6,4 @@ export * from "./fetchFAQ";
 export * from "./fetchReviews";
 export * from "./fetchSweet";
 export * from "./fetchB2bPageData";
+export * from "./fetchInformation";
