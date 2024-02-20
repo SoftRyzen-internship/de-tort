@@ -11,6 +11,7 @@ export const AchievementCard: React.FC<AchievementCardProps> = ({
         <span>#</span>
         {id}
       </p>
+
       <h3 className="font-unbounded font-semibold text-[24px] leading-normal mb-4 text-color-text-primary xl:text-[28px] xl:font-bold">
         {title}
       </h3>

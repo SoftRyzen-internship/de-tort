@@ -56,19 +56,23 @@ export const Field: React.FC<FieldProps> = ({
       defaultValue=""
       name={name}
       render={({ field }) => (
-        <FormItem className="relative xl:last-of-type:row-span-2 text-mine text-base leading-5 font-fixel">
+        <FormItem className="relative xl:last-of-type:row-span-2 text-mine text-base leading-5 font-fixel xl:w-[472px]">
           <FormLabel className={labelStyles}>{label}</FormLabel>
           {type === "calendar" && (
-            <CalendarControl field={field} isError={error && error[name]} />
+            <CalendarControl
+              field={field}
+              isError={error && error[name]}
+              disabled={isDisabled}
+            />
           )}
           {type === "topping" && (
             <ToppingControl
               field={field}
+              slug={slug}
               placeholder={placeholder}
               disabled={isDisabled}
               toppings={toppings}
               isError={error && error[name]}
-              slug={slug}
             />
           )}
           {type === "textarea" && (
@@ -127,7 +131,7 @@ export const Field: React.FC<FieldProps> = ({
 
           <FormMessage
             className={cn(
-              "text-error absolute bottom-0 right-0 translate-y-full text-xs italic font-normal",
+              "text-error absolute -bottom-[3px] right-0 translate-y-full text-xs italic font-normal",
             )}
           >
             {errorText}

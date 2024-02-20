@@ -47,3 +47,7 @@ export type B2bPageDataType = {
 export type B2bPageType = {
   heading: string;
 };
+
+export type TKeyValue = {
+  [key: string]: string;
+};

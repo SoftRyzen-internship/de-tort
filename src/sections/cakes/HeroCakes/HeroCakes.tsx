@@ -6,7 +6,7 @@ import json from "@/data/cakes-assortment.json";
 export const HeroCakes: React.FC = () => {
   const { links, heading } = json;
   return (
-    <section className="pt-[148px] pb-[60px] md:pt-[168px] md:pb-20 xl:pb-[120px] xl:pt-[208px] bg-color-bg-primary ">
+    <section className="pt-[148px] pb-[60px] md:pt-[168px] md:pb-20 xl:pb-[120px] xl:pt-[208px]">
       <div className="container">
         <SectionTitle
           text={heading}

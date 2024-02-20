@@ -93,7 +93,9 @@ export default async function RootLayout({
 
   return (
     <html lang="uk">
-      <body className={`${fixelDisplay.variable} ${unbounded.className}`}>
+      <body
+        className={`${fixelDisplay.variable} ${unbounded.className} bg-color-bg-primary flex flex-col min-h-screen`}
+      >
         <Header contacts={contacts} />
         <main>{children}</main>
         <Footer contacts={contacts} />

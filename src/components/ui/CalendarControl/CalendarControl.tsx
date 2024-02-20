@@ -19,6 +19,7 @@ import { CalendarControlProps } from "./types";
 export const CalendarControl: React.FC<CalendarControlProps> = ({
   field,
   isError,
+  disabled = false,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -31,10 +32,11 @@ export const CalendarControl: React.FC<CalendarControlProps> = ({
 
   return (
     <Popover open={isOpen} onOpenChange={(newOpen) => setIsOpen(newOpen)}>
-      <PopoverTrigger asChild>
+      <PopoverTrigger asChild aria-controls="radix-:R2idbrrqkq:">
         <FormControl>
           <button
             onClick={handleOpen}
+            disabled={disabled}
             className={cn("input-field", "h-11", {
               "text-mine": field.value,
               "text-silver": !field.value,

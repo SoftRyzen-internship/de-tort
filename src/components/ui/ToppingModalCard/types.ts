@@ -6,7 +6,7 @@ export interface ToppingModalCardProps {
   description: string;
   price_double: string;
   plate: ToppingPlate[];
-  slug: CakeSlug | SweetsSlug;
+  slug: CakeSlug | SweetsSlug | string;
 }
 export type ToppingPlate = {
   url: string;

@@ -16,7 +16,7 @@ export const HeroImage: React.FC = () => {
         fill
         priority
         className="object-cover absolute z-10 w-full h-full transition-opacity opacity-0 group-hover:opacity-100"
-        sizes="(max-width: 767px) 100vw, (min-width: 768px) 50vw"
+        sizes="(max-width: 767px) 293px, (min-width: 768px) 449px,  (min-width: 1280px) 716px"
       />
       <Image
         src={imageFace.path}
@@ -25,7 +25,7 @@ export const HeroImage: React.FC = () => {
         height={691}
         priority
         className="object-cover relative z-0 w-[293px] h-auto md:w-[449px] xl:w-[716px]"
-        sizes="(max-width: 767px) 100vw, (min-width: 768px) 50vw"
+        sizes="(max-width: 767px) 293px, (min-width: 768px) 449px,  (min-width: 1280px) 716px"
       />
       <div
         className={`${css.crumbs} pointer-events-none absolute bg-cover no-repeat z-10 top-[34px] md:top-[-7px] left-[-17px] xl:top-[-65px] md:left-[-144px] xl:left-[-243px] w-[306px] h-[200px] md:w-[576px] md:h-[417px] xl:w-[938px] xl:h-[696px]`}

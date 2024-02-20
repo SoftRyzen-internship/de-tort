@@ -15,7 +15,7 @@ export const fetchB2bPageData = async (): Promise<B2bPageType> => {
 
     return res.b2BPage.data.attributes || json.b2b;
   } catch (error) {
-    console.log("fetch B2B-page data error: ", error);
+    console.error("fetch B2B-page data error: ", error);
 
     return json.b2b;
   }
