@@ -15,7 +15,6 @@ export const fetchInformation = async (): Promise<InfoPageType> => {
 
     return res.information.data.attributes;
   } catch (error) {
-    console.log("fetch information error: ", error);
-    return json;
+    return json.data;
   }
 };

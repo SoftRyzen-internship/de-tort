@@ -12,6 +12,8 @@ export type SweetsSlug =
   | "macaron"
   | "cake-pops";
 
+export type InfoSlug = "contract-offer" | "service-terms";
+
 export type ImageDataType = {
   image_description: string;
   photo: {

@@ -1,23 +1,29 @@
 import Link from "next/link";
 
 import { ContactLinks } from "@/components/ui/ContactLinks";
-import { InfoButton } from "@/components/ui/InfoButton";
 import { Logo } from "@/components/ui/Logo";
 
 import data from "@/data/common.json";
+import info from "@/data/information.json";
 
 import { FooterProps } from "./types";
 
 export const Footer: React.FC<FooterProps> = ({ contacts }) => {
-  const { soft_ryzen, info } = data;
+  const { soft_ryzen } = data;
+  const { links } = info;
 
   return (
     <footer className="footer relative py-10 md:pb-[86px] bg-color-bg-primary">
       <div className="container flex flex-col items-center gap-6 md:flex-row md:justify-between">
         <ul className="flex flex-col items-center gap-4 md:items-start md:gap-5">
-          {info.buttons.map(({ id, label, data }) => (
-            <li key={id}>
-              <InfoButton label={label} data={data} />
+          {links.map(({ slug, label }, idx) => (
+            <li key={idx}>
+              <Link
+                href={`/information/${slug}`}
+                className="font-fixel text-color-text-secondary text-[16px] leading-[1.4] hover:text-color-accent-primary focus-visible:text-color-accent-primary transition-all"
+              >
+                {label}
+              </Link>
             </li>
           ))}
         </ul>
