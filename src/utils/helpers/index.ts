@@ -12,3 +12,4 @@ export * from "./schema";
 export * from "./getLabelFromName";
 export * from "./getLastPath";
 export * from "./getValue";
+export * from "./metadataGenerator";

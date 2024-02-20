@@ -67,8 +67,6 @@ export const fetchCake = async (cake: CakeSlug): Promise<CakeType[]> => {
 
     return data;
   } catch (error) {
-    console.error("fetch cake error: ", error);
-
     return [];
   }
 };

@@ -1,8 +1,8 @@
 {
-  "name": "De Tort",
-  "short_name": "De Tort",
-  "title": "De Tort",
-  "description": "Онлайн кондитерська De Tort",
+  "name": "de_tort",
+  "short_name": "de_tort",
+  "title": "de_tort",
+  "description": "Онлайн кондитерська de_tort",
   "start_url": "/",
   "id": "/",
   "locale": "uk_UA",
@@ -20,7 +20,7 @@
       "url": "/meta/ogp-image.jpg",
       "width": 1200,
       "height": 630,
-      "alt": "De-tort – онлайн кондитерська"
+      "alt": "de_tort – онлайн кондитерська"
     }
   ],
   "theme_color": "#ffffff",
