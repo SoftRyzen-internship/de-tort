@@ -1,12 +1,12 @@
 {
-  "title": "De Tort",
-  "description": "Онлайн кондитерська De Tort",
+  "title": "de_tort",
+  "description": "Онлайн кондитерська de_tort",
   "keywords": "Кондитерська, Солодощі, Торти, Капкейки, Чизкейки, Солодкі набори, Печиво, Макарон, Кейк-попси, Київ",
   "manifest": "/meta/site.webmanifest",
   "twitter": {
-    "title": "De Tort",
+    "title": "de_tort",
     "card": "summary_large_image",
-    "description": "Онлайн кондитерська De Tort",
+    "description": "Онлайн кондитерська de_tort",
     "images": [
       {
         "url": "/meta/ogp-image.jpg",
@@ -17,9 +17,9 @@
     ]
   },
   "openGraph": {
-    "title": "De Tort",
-    "description": "Онлайн кондитерська De Tort",
-    "siteName": "De Tort",
+    "title": "de_tort",
+    "description": "Онлайн кондитерська de_tort",
+    "siteName": "de_tort",
     "locale": "uk_UA",
     "type": "website",
     "images": [
@@ -27,7 +27,7 @@
         "url": "/meta/ogp-image.jpg",
         "width": 1200,
         "height": 630,
-        "alt": "Онлайн кондитерська De Tort"
+        "alt": "Онлайн кондитерська de_tort"
       }
     ]
   },
