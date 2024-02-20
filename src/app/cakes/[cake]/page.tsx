@@ -6,9 +6,9 @@ import { FormCakes } from "@/sections/cakes/FormCakes";
 
 import { fetchCake } from "@/requests";
 
+import { metadataGenerator } from "@/utils/helpers";
+
 import json from "@/data/cakes-assortment.json";
-import metaBase from "@/data/meta/base.json";
-import metaCakes from "@/data/meta/cakes.json";
 
 import { CakeSlug } from "@/types";
 
@@ -31,20 +31,7 @@ export async function generateMetadata({
     cake: CakeSlug;
   };
 }): Promise<Metadata> {
-  const baseUrl = process.env.NEXT_PUBLIC_MAIN_SITE_URL as string;
-
-  const data = metaCakes.find(({ slug }) => slug === cake);
-  const { openGraph, description, keywords } = metaBase;
-
-  return {
-    title: data?.title,
-    description: data?.description ? data.description : description,
-    keywords: data?.keywords ? data.keywords : keywords,
-    alternates: {
-      canonical: baseUrl + "cakes/" + cake + "/",
-    },
-    openGraph: { ...openGraph, url: baseUrl + "cakes/" + cake + "/" },
-  };
+  return metadataGenerator({ page: "cake", cake });
 }
 
 export default async function CakePage({

@@ -8,10 +8,10 @@ export function processFormValues(values: any): { [key: string]: string } {
         accumulator[label] = formatDate(value?.toString() || "");
       } else if (
         fieldName !== "consent" &&
-        typeof value == "string" &&
+        typeof value === "string" &&
         value.length
       ) {
-        // згода не відсилається в message
+        // згода та пусті значення не відсилаються в message
         accumulator[label] = value;
       }
       return accumulator;
