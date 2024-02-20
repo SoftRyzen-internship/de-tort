@@ -1,11 +1,13 @@
 import { Accordion } from "@/components/base/Accordion";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 
+import { fetchFAQ } from "@/requests";
+
 import json from "@/data/common.json";
 
-import { QAProps } from "./types";
+export const QA: React.FC = async () => {
+  const faq = await fetchFAQ();
 
-export const QA: React.FC<QAProps> = ({ faq }) => {
   return (
     <section className="section pb-[60px] mdOnly:pb-20 xl:pb-[120px]">
       <div className="container flex flex-col xl:flex-row xl:gap-8">
