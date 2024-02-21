@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 
+import { PublicOffer } from "@/sections/offer/PublicOffer";
+
 import { metadataGenerator } from "@/utils/helpers";
 
 import { fetchInformation } from "@/requests";
@@ -37,15 +39,12 @@ export default async function InfoPage({
 }) {
   const { contract_offer, service_terms } = await fetchInformation();
   // todo: parse & show information markdown according to current slug
-  info === "contract-offer"
-    ? console.log(contract_offer)
-    : console.log(service_terms);
 
   return (
     <>
-      <section className="py-[200px]">
-        <div className="container">Current page: {info}</div>
-      </section>
+      <PublicOffer
+        data={info === "contract-offer" ? contract_offer : service_terms}
+      />
     </>
   );
 }
