@@ -28,22 +28,22 @@ const unbounded = Unbounded({
 const fixelDisplay = localFont({
   src: [
     {
-      path: "../../public/fonts/FixelDisplay-Light.woff2",
+      path: "../../public/fonts/fixeldisplay-light-webfont.woff2",
       weight: "300",
       style: "normal",
     },
     {
-      path: "../../public/fonts/FixelDisplay-Regular.woff2",
+      path: "../../public/fonts/fixeldisplay-regular-webfont.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../../public/fonts/FixelDisplay-Medium.woff2",
+      path: "../../public/fonts/fixeldisplay-medium-webfont.woff2",
       weight: "500",
       style: "normal",
     },
     {
-      path: "../../public/fonts/FixelDisplay-SemiBold.woff2",
+      path: "../../public/fonts/fixeldisplay-semibold-webfont.woff2",
       weight: "600",
       style: "normal",
     },
