@@ -12,10 +12,10 @@ export const PublicOffer: React.FC<OfferProps> = ({ data }) => {
     "prose-h1:text-center prose-h1:leading-base prose-h1:text-[28px] prose-h1:md:text-[40px] prose-h1:xl:text-[48px] prose-h1:xl:tracking-normal prose-h1:uppercase";
 
   const subtitle =
-    "prose-h2:text-xl prose-h2:leading-normal prose-h2:text-color-text-secondary prose-h2:font-fixel prose-h2:font-semibold prose-h2:uppercase prose-h2:md:text-[24px]";
+    "prose-h2:text-xl prose-h2:leading-normal prose-h2:text-color-text-secondary prose-h2:font-fixel prose-h2:font-semibold prose-h2:md:text-[24px]";
 
   const paragrapgh =
-    "prose-p:font-fixel prose-p:text-base prose-p:leading-normal prose-p:text-color-text-secondary prose-p:md:text-xl prose-p:md:leading-normal prose-p:xl:text-justify";
+    "prose-p:font-fixel prose-p:text-base prose-p:leading-normal prose-p:text-color-text-secondary prose-p:md:text-xl prose-p:md:leading-normal prose-p:text-justify";
 
   return (
     <section className="pt-[148px] pb-[60px] md:pt-[168px] md:pb-20 xl:pb-[120px] xl:pt-[208px]">
