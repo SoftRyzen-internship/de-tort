@@ -26,7 +26,7 @@ export const AccordionItem: React.FC<AccordionItemType> = ({
       className={`border-b border-color-accent-primary flex flex-col mb-5 pb-6 last:mb-0 xl:w-[696px]`}
     >
       <div className="flex justify-between items-center cursor-pointer">
-        <p className="font-semibold text-[14px] text-color-text-primary w-[220px] leading-normal md:w-[425px] md:text-[20px] xl:text-[24px] xl:w-[615px]">
+        <p className="font-semibold text-[14px] text-color-text-primary w-[220px] leading-normal md:w-[550px] md:text-[20px] xl:text-[24px] xl:w-[615px]">
           {question}
         </p>
         <div
