@@ -1,6 +1,6 @@
 import { cn } from "@/utils/helpers";
 
-import LogoIcon from "~/icons/logo.svg";
+import { LogoIcon } from "@/components/ui/LogoIcon";
 
 import content from "@/data/common.json";
 
@@ -18,7 +18,7 @@ export const Logo: React.FC<TLogo> = ({ className = "" }) => {
       )}
       aria-label={companyName}
     >
-      <LogoIcon className="h-[64px] w-[58px]" />
+      <LogoIcon />
     </a>
   );
 };
