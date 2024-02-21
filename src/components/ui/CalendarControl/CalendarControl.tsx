@@ -37,6 +37,7 @@ export const CalendarControl: React.FC<CalendarControlProps> = ({
           <button
             onClick={handleOpen}
             disabled={disabled}
+            aria-controls={undefined}
             className={cn("input-field", "h-11", {
               "text-mine": field.value,
               "text-silver": !field.value,

@@ -31,7 +31,7 @@ export const MapLink: React.FC<MapLinkProps> = ({ className = "" }) => {
           blurDataURL={`data:image/svg+xml;base64,${getBase64(
             convertImage(592, 536, "#f8f7f7"),
           )}`}
-          sizes="100vw, (min-width: 1280px) 50vw"
+          sizes="(max-width: 640px) 100vw, (min-width: 641px) 50vw"
         />
 
         <div className="absolute bottom-[34%] left-[34%] md:bottom-[38%] md:left-[38%] flex flex-col items-center gap-3">
