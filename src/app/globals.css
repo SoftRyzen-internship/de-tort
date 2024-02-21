@@ -83,7 +83,7 @@
 
 .button-next-toppings.swiper-button-disabled,
 .button-prev-toppings.swiper-button-disabled {
-  @apply pointer-events-none border-alto bg-disabled-bg stroke-alto;
+  @apply pointer-events-none border-alto bg-disabled-bg stroke-alto  shadow-none translate-x-0 translate-y-0;
 }
 
 .desserts-slider-nav {
