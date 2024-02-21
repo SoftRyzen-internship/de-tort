@@ -1,49 +1,31 @@
-import { SectionTitle } from "@/components/ui/SectionTitle";
-
-import offer from "@/data/offerData.json";
+import Markdown from "markdown-to-jsx";
 
 import { OfferProps } from "./types";
 
-export const PublicOffer: React.FC<OfferProps> = ({ heading }) => {
-  const content = offer.data.map(({ title, text }) => (
-    <>
-      {title && (
-        <h2 className="mb-4 text-center text-xl leading-normal text-color-text-secondary font-fixel font-semibold uppercase">
-          {title}
-        </h2>
-      )}
-      <pre className="font-fixel whitespace-pre-wrap text-base leading-normal xl:text-justify text-color-text-secondary md:text-xl">
-        {text}
-      </pre>
-    </>
-  ));
+export const PublicOffer: React.FC<OfferProps> = ({ data }) => {
+  const styles = "prose ";
+
+  const strong =
+    "prose-h1:text-color-accent-primary prose-strong:font-bold prose-strong:md:tracking-base";
+
+  const title =
+    "prose-h1:text-center prose-h1:leading-base prose-h1:text-[28px] prose-h1:md:text-[40px] prose-h1:xl:text-[48px] prose-h1:xl:tracking-normal prose-h1:uppercase";
+
+  const subtitle =
+    "prose-h2:text-xl prose-h2:leading-normal prose-h2:text-color-text-secondary prose-h2:font-fixel prose-h2:font-semibold prose-h2:uppercase prose-h2:md:text-[24px]";
+
+  const paragrapgh =
+    "prose-p:font-fixel prose-p:text-base prose-p:leading-normal prose-p:text-color-text-secondary prose-p:md:text-xl prose-p:md:leading-normal prose-p:xl:text-justify";
 
   return (
     <section className="pt-[148px] pb-[60px] md:pt-[168px] md:pb-20 xl:pb-[120px] xl:pt-[208px]">
       <div className="container xl:px-60">
-        <SectionTitle
-          hero
-          text={heading}
-          className="text-center mb-7 md:mb-9 md:tracking-[0.04em] md:text-[40px] xl:tracking-normal"
-        />
-        <div className="flex flex-col gap-7 md:gap-9">{content}</div>
+        <Markdown
+          className={`${styles} ${strong} ${title} ${subtitle} ${paragrapgh}`}
+        >
+          {data}
+        </Markdown>
       </div>
     </section>
   );
 };
-/*h2
-
-
-pre
-
-
-
-
-tablet
-
-
-desk
-text-align: justify;
-
-
-*/

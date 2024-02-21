@@ -1,3 +1,3 @@
 export type OfferProps = {
-  heading: string;
+  data: string;
 };

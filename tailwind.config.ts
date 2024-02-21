@@ -102,7 +102,11 @@ const config: Config = {
         fixel: ["var(--font-fixelDisplay)"],
       },
       lineHeight: {
+        base: "1.2",
         normal: "1.4",
+      },
+      letterSpacing: {
+        base: ".04em",
       },
       // TRANSITION
       transitionDuration: {
@@ -113,6 +117,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
 export default config;
