@@ -28,7 +28,7 @@ export const Achievements: React.FC = async () => {
   return (
     <section className="section pb-[60px] md:pb-[80px] xl:pb-[120px]">
       <div className="container ">
-        <div className="md:flex md:items-center mb-6 md:mb-10 xl:mb-[60px]">
+        <div className="md:flex md:items-center mb-[22px] md:mb-[38px] xl:mb-[58px]">
           <SectionTitle text={titleSection} />
           <SliderNav
             className="smOnly:hidden mdOnly:flex mdOnly:ml-auto xl:hidden"
@@ -37,7 +37,7 @@ export const Achievements: React.FC = async () => {
         </div>
         <Slider
           customClass="xl:!cursor-default"
-          customSlideClass="pt-[18px] xl:pt-[22px] smOnly:!w-full xl:!cursor-auto"
+          customSlideClass="pt-[20px] smOnly:!w-full xl:!cursor-auto"
           slides={slides}
           section="achievements"
         />
