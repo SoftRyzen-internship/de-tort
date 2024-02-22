@@ -193,7 +193,7 @@ export const commonFormData: IFormConfig = {
       "coffee-shops": "Надіслати",
       cookies: "Замовити",
     },
-    labelInProgress: "Відсилка...",
+    labelInProgress: "Відправка...",
   },
   titles: {
     default: "Онлайн замовлення",
