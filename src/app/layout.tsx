@@ -20,7 +20,7 @@ export const viewport: Viewport = {
 
 const unbounded = Unbounded({
   subsets: ["cyrillic"],
-  weight: ["600", "700"],
+  weight: ["400", "600", "700", "800"],
   display: "swap",
   variable: "--font-unbounded",
 });
