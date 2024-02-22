@@ -42,7 +42,7 @@ export const CardCakes: React.FC<CardCakesProps> = ({
           width={592}
           height={480}
           priority
-          quality={90}
+          quality={100}
           placeholder="blur"
           blurDataURL={`data:image/svg+xml;base64,${getBase64(
             convertImage(592, 480, "#fff8f2"),
