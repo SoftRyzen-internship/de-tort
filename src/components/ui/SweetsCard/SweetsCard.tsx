@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { SweetsCardProps } from "./types";
+import { getBase64, convertImage } from "@/utils/helpers";
 
 export const SweetsCard: React.FC<SweetsCardProps> = ({
   name,
@@ -22,6 +23,11 @@ export const SweetsCard: React.FC<SweetsCardProps> = ({
           width={384}
           height={412}
           className="overflow-hidden object-cover w-full h-full group-hover:scale-110 group-focus:scale-110 transition-transform"
+          placeholder="blur"
+          blurDataURL={`data:image/svg+xml;base64,${getBase64(
+            convertImage(384, 412),
+          )}`}
+          sizes="(max-width: 767px) 100vw, (min-width: 768px) 50vw,  (min-width: 1280px) 33vw"
         />
         <p
           className={`text-center w-full font-unbounded uppercase font-bold text-[28px] absolute top-10 left-1/2 -translate-x-1/2 ${titleClass}`}

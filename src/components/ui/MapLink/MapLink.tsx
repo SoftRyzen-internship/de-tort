@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 
 import IconMapPin from "~/icons/pin-cake.svg";
 
@@ -7,8 +7,10 @@ import data from "@/data/section-contacts.json";
 
 import { MapLinkProps } from "./types";
 
+import { convertImage, getBase64 } from "@/utils/helpers";
+
 export const MapLink: React.FC<MapLinkProps> = ({ className = "" }) => {
-  const { href, path, alt, ariaLabel, caption } = data.address.image;
+  const { href, alt, path, ariaLabel, caption } = data.address.image;
 
   return (
     <>
@@ -25,6 +27,11 @@ export const MapLink: React.FC<MapLinkProps> = ({ className = "" }) => {
           height={536}
           alt={alt}
           className="object-cover object-center w-full h-full group-hover:scale-110 group-focus-visible:scale-110 transition-all"
+          placeholder="blur"
+          blurDataURL={`data:image/svg+xml;base64,${getBase64(
+            convertImage(592, 536, "#f8f7f7"),
+          )}`}
+          sizes="(max-width: 640px) 100vw, (min-width: 641px) 50vw"
         />
 
         <div className="absolute bottom-[34%] left-[34%] md:bottom-[38%] md:left-[38%] flex flex-col items-center gap-3">

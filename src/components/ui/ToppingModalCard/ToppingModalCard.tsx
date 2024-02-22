@@ -5,6 +5,7 @@ import Image from "next/image";
 import { DOUBLE, SINGLE, findLayer } from "@/utils/helpers/findLayer";
 
 import { ToppingModalCardProps } from "./types";
+import { getBase64, convertImage } from "@/utils/helpers";
 
 export const ToppingModalCard: React.FC<ToppingModalCardProps> = ({
   onClick,
@@ -39,6 +40,11 @@ export const ToppingModalCard: React.FC<ToppingModalCardProps> = ({
           alt={doubleLayer.desc}
           width={240}
           height={240}
+          placeholder="blur"
+          blurDataURL={`data:image/svg+xml;base64,${getBase64(
+            convertImage(240, 240),
+          )}`}
+          sizes="(max-width: 767px) 100vw, (min-width: 768px) 50vw,  (min-width: 1280px) 30vw"
         />
       </div>
 

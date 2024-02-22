@@ -3,11 +3,12 @@ import { Slider } from "@/components/base/Slider";
 import { SliderNav } from "@/components/base/SliderNav";
 import { AchievementCard } from "@/components/ui/AchievementCard";
 
+import { fetchAchievements } from "@/requests";
+
 import data from "@/data/achievement.json";
 
-import { AchievementsProps } from "./types";
-
-export const Achievements: React.FC<AchievementsProps> = ({ achievements }) => {
+export const Achievements: React.FC = async () => {
+  const achievements = await fetchAchievements();
   const { titleSection, cards } = data;
 
   const slides = cards.map(({ id, title: titleDefault, description, type }) => {
@@ -27,7 +28,7 @@ export const Achievements: React.FC<AchievementsProps> = ({ achievements }) => {
   return (
     <section className="section pb-[60px] md:pb-[80px] xl:pb-[120px]">
       <div className="container ">
-        <div className="md:flex md:items-center mb-6 md:mb-10 xl:mb-[60px]">
+        <div className="md:flex md:items-center mb-[22px] md:mb-[38px] xl:mb-[58px]">
           <SectionTitle text={titleSection} />
           <SliderNav
             className="smOnly:hidden mdOnly:flex mdOnly:ml-auto xl:hidden"
@@ -36,7 +37,7 @@ export const Achievements: React.FC<AchievementsProps> = ({ achievements }) => {
         </div>
         <Slider
           customClass="xl:!cursor-default"
-          customSlideClass="pt-[18px] xl:pt-[22px] smOnly:!w-full xl:!cursor-auto"
+          customSlideClass="pt-[20px] smOnly:!w-full xl:!cursor-auto"
           slides={slides}
           section="achievements"
         />

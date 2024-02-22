@@ -3,6 +3,7 @@ import Image from "next/image";
 import css from "./HeroImage.module.css";
 
 import data from "@/data/common.json";
+import { getBase64, convertImage } from "@/utils/helpers";
 
 export const HeroImage: React.FC = () => {
   const { hero } = data;
@@ -16,6 +17,10 @@ export const HeroImage: React.FC = () => {
         fill
         priority
         className="object-cover absolute z-10 w-full h-full transition-opacity opacity-0 group-hover:opacity-100"
+        placeholder="blur"
+        blurDataURL={`data:image/svg+xml;base64,${getBase64(
+          convertImage(716, 691, "#ffcfd3"),
+        )}`}
         sizes="(max-width: 767px) 293px, (min-width: 768px) 449px,  (min-width: 1280px) 716px"
       />
       <Image
@@ -24,6 +29,10 @@ export const HeroImage: React.FC = () => {
         width={716}
         height={691}
         priority
+        placeholder="blur"
+        blurDataURL={`data:image/svg+xml;base64,${getBase64(
+          convertImage(716, 691, "#ffcfd3"),
+        )}`}
         className="object-cover relative z-0 w-[293px] h-auto md:w-[449px] xl:w-[716px]"
         sizes="(max-width: 767px) 293px, (min-width: 768px) 449px,  (min-width: 1280px) 716px"
       />
