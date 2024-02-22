@@ -3,8 +3,6 @@ import Markdown from "markdown-to-jsx";
 import { OfferProps } from "./types";
 
 export const PublicOffer: React.FC<OfferProps> = ({ data }) => {
-  const styles = "prose ";
-
   const strong =
     "prose-h1:text-color-accent-primary prose-strong:font-bold prose-strong:md:tracking-base";
 
@@ -21,7 +19,7 @@ export const PublicOffer: React.FC<OfferProps> = ({ data }) => {
     <section className="pt-[148px] pb-[60px] md:pt-[168px] md:pb-20 xl:pb-[120px] xl:pt-[208px]">
       <div className="container xl:px-60">
         <Markdown
-          className={`${styles} ${strong} ${title} ${subtitle} ${paragrapgh}`}
+          className={`prose ${strong} ${title} ${subtitle} ${paragrapgh}`}
         >
           {data}
         </Markdown>
