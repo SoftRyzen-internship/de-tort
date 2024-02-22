@@ -8,11 +8,7 @@ import { Achievements } from "@/sections/home/Achievements";
 import { Reviews } from "@/sections/home/Reviews";
 import { Toppings } from "@/sections/home/Toppings";
 
-import { fetchCakeToppings } from "@/requests";
-
 export default async function Home() {
-  const toppings = await fetchCakeToppings("middle-cakes");
-
   return (
     <>
       <Hero />
@@ -20,7 +16,7 @@ export default async function Home() {
       <Sweets home />
       <About />
       <Achievements />
-      {toppings?.length > 3 && <Toppings toppings={toppings} />}
+      <Toppings />
       <QA />
       <Reviews />
       <Contacts />

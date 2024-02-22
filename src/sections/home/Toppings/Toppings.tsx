@@ -3,12 +3,14 @@ import { Slider } from "@/components/base/Slider";
 import { SliderNav } from "@/components/base/SliderNav";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 
+import { fetchCakeToppings } from "@/requests";
+
 import data from "@/data/common.json";
 
-import { ToppingsProps } from "./types";
-
-export const Toppings: React.FC<ToppingsProps> = ({ toppings }) => {
+export const Toppings: React.FC = async () => {
   const { sectionTitle } = data.toppings;
+
+  const toppings = await fetchCakeToppings("middle-cakes");
 
   // Filter dynamic data to prevent showing mistaken toppings (without double layers)
   const filteredToppings = toppings.filter(({ images }) =>
