@@ -17,7 +17,7 @@ export const CardCakes: React.FC<CardCakesProps> = ({
     <li className="cakes-card">
       <Link
         href={`/cakes/${slug}`}
-        className="group relative inline-block overflow-hidden rounded-3xl w-full h-[360px] xl:h-[480px]"
+        className="group relative block overflow-hidden rounded-3xl w-full h-[360px] xl:h-[480px]"
       >
         <p className="absolute top-8 left-1/2 -translate-x-1/2 w-full text-center font-unbounded text-color-accent-primary text-[24px] font-bold leading-normal uppercase xl:text-[28px] xl:top-10">
           {title}
@@ -47,6 +47,7 @@ export const CardCakes: React.FC<CardCakesProps> = ({
           blurDataURL={`data:image/svg+xml;base64,${getBase64(
             convertImage(592, 480, "#fff8f2"),
           )}`}
+          unoptimized
           className="notXl:hidden block object-cover object-center w-full h-full"
           sizes="(min-width: 1280px) 592px"
         />
