@@ -39,7 +39,7 @@ export const ToppingCard: React.FC<ToppingCardProps> = ({
               convertImage(320, 320, "#f5d9e2"),
             )}`}
             sizes="(max-width: 767px) 232px, (min-width: 768px) 240px,  (min-width: 1280px) 260px"
-            quality={90}
+            quality={100}
           />
         </div>
       </div>
