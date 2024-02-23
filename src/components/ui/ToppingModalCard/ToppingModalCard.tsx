@@ -45,7 +45,7 @@ export const ToppingModalCard: React.FC<ToppingModalCardProps> = ({
             convertImage(240, 240),
           )}`}
           sizes="(max-width: 767px) 100vw, (min-width: 768px) 240px"
-          quality={90}
+          quality={100}
         />
       </div>
 

@@ -23,7 +23,7 @@ export const SliderCakeCard: React.FC<SliderCakeCardProps> = ({
         loading="eager"
         sizes="(max-width: 479px) 100vw, (min-width: 480px) 440px ,(min-width: 768px) 704px, (min-width: 1280px) 592px"
         priority
-        quality={90}
+        quality={100}
         fill
         placeholder="blur"
         blurDataURL={`data:image/svg+xml;base64,${getBase64(

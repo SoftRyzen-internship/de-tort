@@ -23,7 +23,7 @@ export const SweetsCard: React.FC<SweetsCardProps> = ({
           width={384}
           height={412}
           className="overflow-hidden object-cover w-full h-full group-hover:scale-110 group-focus:scale-110 transition-transform"
-          quality={90}
+          quality={100}
           placeholder="blur"
           blurDataURL={`data:image/svg+xml;base64,${getBase64(
             convertImage(384, 412),
