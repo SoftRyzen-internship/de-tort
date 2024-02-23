@@ -35,7 +35,7 @@ export const BurgerMenu: React.FC<BurgerMenuProps> = ({ isOpen, onClose }) => {
             leaveTo="translate-x-full"
           >
             <Dialog.Panel
-              className={`burger-menu fixed inset-0 ml-auto w-full md:w-[428px] 2xl:w-1/2 bg-color-bg-primary px-6 pt-14 pb-[50px] md:pl-12 md:pr-[42px] md:pt-16 md:pb-[77px] 2xl:pl-[66px] 2xl:pr-12 2xl:py-[81px]`}
+              className={`burger-menu fixed inset-0 ml-auto w-full md:w-[445px] 2xl:w-1/2 bg-color-bg-primary`}
             >
               <CloseButton
                 ariaLabel={close}
