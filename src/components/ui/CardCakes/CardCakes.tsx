@@ -49,7 +49,7 @@ export const CardCakes: React.FC<CardCakesProps> = ({
           )}`}
           unoptimized
           className="notXl:hidden block object-cover object-center w-full h-full"
-          sizes="(min-width: 300px) 592px"
+          sizes="(min-width: 1280px) 592px"
         />
 
         <span className="notXL:hidden absolute bottom-10 left-[147.5px] opacity-0 xl:group-hover:opacity-100 transition xl:group-focus-visible:opacity-100 rounded-full px-9 py-[14px] text-center flex-center font-bold border-color-accent-primary uppercase text-xl leading-10 text-color-accent-primary bg-color-bg-white border-2 w-fit">
