@@ -31,7 +31,7 @@ export const Contacts: React.FC<ContactsProps> = async ({
 
   return (
     <section
-      className={`py-[60px] md:py-20 xl:pt-[120px] xl:pb-[175px] text-color-text-primary leading-[1.4] ${sectionBgColor}`}
+      className={`py-[60px] md:py-20 xl:py-[120px] text-color-text-primary leading-[1.4] ${sectionBgColor}`}
     >
       <div className="container flex flex-col gap-6 md:gap-10 xl:flex-row xl:gap-0 xl:justify-between xl:items-center">
         <div className="flex flex-col gap-6 md:gap-10 xl:gap-[60px]">
