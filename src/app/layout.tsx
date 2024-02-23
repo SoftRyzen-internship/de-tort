@@ -19,7 +19,8 @@ export const viewport: Viewport = {
 };
 
 const unbounded = Unbounded({
-  subsets: ["latin"],
+  subsets: ["cyrillic"],
+  weight: ["400", "600", "700", "800"],
   display: "swap",
   variable: "--font-unbounded",
 });
@@ -27,22 +28,22 @@ const unbounded = Unbounded({
 const fixelDisplay = localFont({
   src: [
     {
-      path: "../../public/fonts/FixelDisplay-Light.ttf",
+      path: "../../public/fonts/fixeldisplay-light-webfont.woff2",
       weight: "300",
       style: "normal",
     },
     {
-      path: "../../public/fonts/FixelDisplay-Regular.ttf",
+      path: "../../public/fonts/fixeldisplay-regular-webfont.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../../public/fonts/FixelDisplay-Medium.ttf",
+      path: "../../public/fonts/fixeldisplay-medium-webfont.woff2",
       weight: "500",
       style: "normal",
     },
     {
-      path: "../../public/fonts/FixelDisplay-SemiBold.ttf",
+      path: "../../public/fonts/fixeldisplay-semibold-webfont.woff2",
       weight: "600",
       style: "normal",
     },

@@ -51,12 +51,13 @@ export const CommonForm: React.FC<CommonFormProps> = ({ toppings = [] }) => {
 
   const title = getValue(commonFormData.titles, slug);
   const buttonText = getValue(commonFormData.button.labels, slug);
+  const Tag = slug === "coffee-shops" ? "p" : "h2";
 
   return (
     <div className="relative bg-white py-10 px-[14px] md:px-[114px] xl:px-[122px] md:py-[60px] rounded-3xl border-2 border-topping-card-even">
-      <h2 className="text-title mb-8 text-[20px] md:text-[28px] leading-normal text-center">
+      <Tag className="text-title mb-8 text-[20px] md:text-[28px] leading-normal text-center">
         {title}
-      </h2>
+      </Tag>
       <Form {...form}>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="relative grid xl:grid-flow-col xl:grid-rows-4 gap-6 mb-8 md:mx-auto xl:grid-cols-auto xl:justify-items-center">

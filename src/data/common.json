@@ -98,11 +98,11 @@
     "title": "Онлайн-кондитерська",
     "buttonLabel": "Каталог тортів",
     "imageFace": {
-      "path": "/images/tort-whole-@x2.webp",
+      "path": "/images/tort-whole-@x2.png",
       "alt": "Цілий торт"
     },
     "imageBack": {
-      "path": "/images/tort-sliced-@x2.webp",
+      "path": "/images/tort-sliced-@x2.png",
       "alt": "Нарізаний торт"
     }
   },

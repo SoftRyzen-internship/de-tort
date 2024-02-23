@@ -23,6 +23,7 @@ export const CakesAssortment: React.FC = () => {
             convertImage(592, 519, "#fff8f2"),
           )}`}
           sizes="(min-width: 1280px) 592px"
+          quality={100}
         />
 
         <div className="flex flex-col gap-6 md:gap-10 xl:w-[592px]">

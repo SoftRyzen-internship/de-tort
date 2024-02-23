@@ -15,6 +15,7 @@ const config: Config = {
       sm: "480px",
       md: "768px",
       xl: "1280px",
+      "2xl": "1440px",
 
       xsOnly: { max: "479.98px" },
       smOnly: { max: "767.98px" },
@@ -65,12 +66,12 @@ const config: Config = {
           secondary: "#383838",
         },
         "color-option": {
-          first: "#A33F06",
+          first: "#A9003A",
           second: "#A63F6B",
           third: "#381046",
           fourth: "#FEEE9F",
           fifth: "#197CCB",
-          sixth: "#A9003A",
+          sixth: "#A33F06",
           seven: "#5B4BFF",
           eight: "#626262",
           nine: "#683DD2",
