@@ -15,7 +15,6 @@ export default function sitemap() {
     lastModified: new Date(),
   };
 
-  //todo: including cakes general page...
   const sweetsAssortmentUrls = metaSweets.map(({ slug }) => ({
     url: `${baseUrl}${slug}/`,
     lastModified: new Date(),
