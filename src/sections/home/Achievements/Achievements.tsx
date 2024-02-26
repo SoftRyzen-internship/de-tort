@@ -35,6 +35,7 @@ export const Achievements: React.FC = async () => {
             section="achievements"
           />
         </div>
+
         <Slider
           customClass="xl:!cursor-default"
           customSlideClass="pt-[20px] smOnly:!w-full xl:!cursor-auto"
