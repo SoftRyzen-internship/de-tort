@@ -52,6 +52,16 @@ export const CommonForm: React.FC<CommonFormProps> = ({ toppings = [] }) => {
   const title = getValue(commonFormData.titles, slug);
   const buttonText = getValue(commonFormData.button.labels, slug);
   const Tag = slug === "coffee-shops" ? "p" : "h2";
+  const visibleInputs = inputs.filter(
+    (input) => !input.hiddenPaths.includes(slug),
+  );
+  const gridStyles = cn(
+    "relative grid xl:grid-flow-col gap-6 mb-8 md:mx-auto xl:grid-cols-auto xl:justify-items-center",
+    {
+      "xl:grid-rows-4": visibleInputs.length > 5,
+      "xl:grid-rows-3": visibleInputs.length === 5,
+    },
+  );
 
   return (
     <div className="relative bg-white py-10 px-[14px] md:px-[114px] xl:px-[122px] md:py-[60px] rounded-3xl border-2 border-topping-card-even">
@@ -60,33 +70,31 @@ export const CommonForm: React.FC<CommonFormProps> = ({ toppings = [] }) => {
       </Tag>
       <Form {...form}>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="relative grid xl:grid-flow-col xl:grid-rows-4 gap-6 mb-8 md:mx-auto xl:grid-cols-auto xl:justify-items-center">
-            {inputs
-              .filter((input) => !input.hiddenPaths.includes(slug))
-              .map((field) => {
-                const isDisabled = field.disabledPaths.includes(slug);
+          <div className={gridStyles}>
+            {visibleInputs.map((field) => {
+              const isDisabled = field.disabledPaths.includes(slug);
 
-                const isOptional = field.optionalPaths.includes(slug);
+              const isOptional = field.optionalPaths.includes(slug);
 
-                const placeholder = getValue(field.placeholders, slug);
+              const placeholder = getValue(field.placeholders, slug);
 
-                return (
-                  <Field
-                    key={field.name}
-                    register={register}
-                    control={control}
-                    name={field.name}
-                    placeholder={placeholder}
-                    type={field.type}
-                    label={field.label}
-                    error={formState.errors}
-                    isDisabled={isDisabled}
-                    isOptional={isOptional}
-                    toppings={toppings}
-                    slug={slug}
-                  />
-                );
-              })}
+              return (
+                <Field
+                  key={field.name}
+                  register={register}
+                  control={control}
+                  name={field.name}
+                  placeholder={placeholder}
+                  type={field.type}
+                  label={field.label}
+                  error={formState.errors}
+                  isDisabled={isDisabled}
+                  isOptional={isOptional}
+                  toppings={toppings}
+                  slug={slug}
+                />
+              );
+            })}
           </div>
           {!checkbox.hiddenPaths.includes(slug) && (
             <CheckboxWrapper
