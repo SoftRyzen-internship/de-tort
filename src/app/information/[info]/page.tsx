@@ -38,7 +38,6 @@ export default async function InfoPage({
   params: { info: InfoSlug };
 }) {
   const { contract_offer, service_terms } = await fetchInformation();
-  // todo: parse & show information markdown according to current slug
 
   return (
     <>

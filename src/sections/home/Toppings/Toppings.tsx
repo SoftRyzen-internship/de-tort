@@ -35,11 +35,13 @@ export const Toppings: React.FC = async () => {
       <div className="container">
         <div className="md:flex md:items-center mb-6 md:mb-10 xl:mb-[60px]">
           <SectionTitle text={sectionTitle} />
+
           <SliderNav
             className="smOnly:hidden md:flex md:ml-auto "
             section="toppings"
           />
         </div>
+
         <Slider
           customSlideClass="overflow-visible smOnly:!w-full"
           slides={slides}
