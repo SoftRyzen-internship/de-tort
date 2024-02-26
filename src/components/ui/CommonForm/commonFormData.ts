@@ -50,7 +50,9 @@ export const commonFormData: IFormConfig = {
         "macaron",
         "cake-pops",
       ],
-      disabledPaths: [
+      disabledPaths: [],
+      hiddenPaths: [
+        "coffee-shops",
         "mini-cakes",
         "cupcakes",
         "cheesecakes",
@@ -59,7 +61,6 @@ export const commonFormData: IFormConfig = {
         "macaron",
         "cake-pops",
       ],
-      hiddenPaths: ["coffee-shops"],
       schema: z.string().min(2, { message: errorText }),
     },
     {
@@ -81,7 +82,9 @@ export const commonFormData: IFormConfig = {
         "macaron",
         "cake-pops",
       ],
-      disabledPaths: [
+      disabledPaths: [],
+      hiddenPaths: [
+        "coffee-shops",
         "mini-cakes",
         "cupcakes",
         "cheesecakes",
@@ -90,7 +93,6 @@ export const commonFormData: IFormConfig = {
         "macaron",
         "cake-pops",
       ],
-      hiddenPaths: ["coffee-shops"],
       schema: z
         .string()
         .refine((value) => value.length <= 255, {
