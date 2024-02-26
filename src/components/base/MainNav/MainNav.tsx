@@ -9,8 +9,8 @@ export const MainNav: React.FC<MainNavProps> = ({ onClick }) => {
   const { b2bPage, dynamicPages } = data.menu.navigation;
 
   return (
-    <div className="overflow-y-auto flex flex-col justify-between gap-2 h-full font-unbounded font-bold leading-[1.4] xl:leading-[1.3] uppercase text-color-text-primary">
-      <ul className="flex flex-col gap-6 2xl:gap-7">
+    <div className="overflow-y-auto px-6 pt-14 pb-[50px] md:pl-12 md:pr-[42px] md:py-[50px] 2xl:pl-[66px] 2xl:pr-12 2xl:py-[81px] flex flex-col justify-between gap-7 h-full font-unbounded font-bold leading-[1.4] xl:leading-[1.3] uppercase text-color-text-primary">
+      <ul className="flex flex-col gap-4 2xl:gap-7">
         {dynamicPages.map((link, idx) => {
           return (
             <li key={idx}>
