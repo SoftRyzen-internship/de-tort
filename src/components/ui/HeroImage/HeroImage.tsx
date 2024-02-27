@@ -16,7 +16,7 @@ export const HeroImage: React.FC = () => {
         alt={imageBack.alt}
         fill
         priority
-        className="object-cover absolute z-10 w-full h-full transition-opacity opacity-0 group-hover:opacity-100"
+        className="object-cover absolute z-10 w-full h-full transition-opacity opacity-0 md:group-hover:opacity-100"
         placeholder="blur"
         blurDataURL={`data:image/svg+xml;base64,${getBase64(
           convertImage(716, 691, "#ffcfd3"),
