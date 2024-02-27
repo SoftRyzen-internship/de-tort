@@ -66,6 +66,16 @@
 }
 
 /* Burger-Menu */
+.burger-menu {
+  @apply fixed inset-0 ml-auto w-full md:w-[445px] bg-color-bg-primary;
+}
+
+@media screen and (min-width: 1440px) {
+  .burger-menu {
+    @apply w-1/2;
+  }
+}
+
 .burger-menu::before {
   content: "";
   @apply absolute top-0 left-0 w-full h-[7px] md:w-[7px] md:h-full bg-color-accent-primary;
