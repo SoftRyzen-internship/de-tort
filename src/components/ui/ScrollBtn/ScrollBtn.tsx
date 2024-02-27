@@ -6,7 +6,7 @@ import { cn } from "@/utils/helpers";
 
 import { ScrollBtnProps } from "./types";
 
-export const ButtonLink: React.FC<ScrollBtnProps> = ({
+export const ScrollBtn: React.FC<ScrollBtnProps> = ({
   label,
   targetName,
   className = "",
