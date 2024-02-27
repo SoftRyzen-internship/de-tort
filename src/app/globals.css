@@ -158,3 +158,9 @@
 .sweets-card-title_cake-pops {
   @apply text-color-option-first;
 }
+
+/* 404 Page */
+.block-404::after {
+  content: "";
+  @apply hidden xl:block absolute top-1/2 left-[-80px] -translate-y-1/2 w-[3px] h-full bg-color-accent-primary;
+}
