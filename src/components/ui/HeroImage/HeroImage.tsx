@@ -1,28 +1,33 @@
+"use client";
+
 import Image from "next/image";
 
 import css from "./HeroImage.module.css";
 
 import data from "@/data/common.json";
-import { getBase64, convertImage } from "@/utils/helpers";
+import { getBase64, convertImage, useWindowWidth } from "@/utils/helpers";
 
 export const HeroImage: React.FC = () => {
   const { hero } = data;
   const { imageFace, imageBack } = hero;
+  const windowWidth = useWindowWidth();
 
   return (
     <div className="relative md:absolute md:bottom-[-207px] mdOnly:right-0 xl:left-1/2 group pointer-events-auto translate-x-3 w-fit h-fit smOnly:mx-auto">
-      <Image
-        src={imageBack.path}
-        alt={imageBack.alt}
-        fill
-        priority
-        className="object-cover absolute z-10 w-full h-full transition-opacity opacity-0 group-hover:opacity-100"
-        placeholder="blur"
-        blurDataURL={`data:image/svg+xml;base64,${getBase64(
-          convertImage(716, 691, "#ffcfd3"),
-        )}`}
-        sizes="(max-width: 767px) 293px, (min-width: 768px) 449px,  (min-width: 1280px) 716px"
-      />
+      {windowWidth > 767 && (
+        <Image
+          src={imageBack.path}
+          alt={imageBack.alt}
+          fill
+          priority
+          className="object-cover absolute z-10 w-full h-full transition-opacity opacity-0 group-hover:opacity-100"
+          placeholder="blur"
+          blurDataURL={`data:image/svg+xml;base64,${getBase64(
+            convertImage(716, 691, "#ffcfd3"),
+          )}`}
+          sizes="(min-width: 768px) 449px,  (min-width: 1280px) 716px"
+        />
+      )}
       <Image
         src={imageFace.path}
         alt={imageFace.alt}
