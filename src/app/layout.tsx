@@ -98,7 +98,7 @@ export default async function RootLayout({
         className={`${fixelDisplay.variable} ${unbounded.className} bg-color-bg-primary flex flex-col min-h-screen`}
       >
         <Header contacts={contacts} />
-        <main>{children}</main>
+        <main className="grow flex flex-col">{children}</main>
         <Footer contacts={contacts} />
       </body>
     </html>

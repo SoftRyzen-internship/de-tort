@@ -17,7 +17,7 @@ export const CardCakes: React.FC<CardCakesProps> = ({
     <li className="cakes-card">
       <Link
         href={`/cakes/${slug}`}
-        className="group relative block overflow-hidden rounded-3xl w-full h-[360px] xl:h-[480px]"
+        className="group relative block overflow-hidden rounded-3xl w-full h-[360px] xl:h-[480px] 2xl:h-[542px]"
       >
         <p className="absolute top-8 left-1/2 -translate-x-1/2 w-full text-center font-unbounded text-color-accent-primary text-[24px] font-bold leading-normal uppercase xl:text-[28px] xl:top-10">
           {title}
@@ -52,7 +52,7 @@ export const CardCakes: React.FC<CardCakesProps> = ({
           sizes="(min-width: 1280px) 592px"
         />
 
-        <span className="notXL:hidden absolute bottom-10 left-[147.5px] opacity-0 xl:group-hover:opacity-100 transition xl:group-focus-visible:opacity-100 rounded-full px-9 py-[14px] text-center flex-center font-bold border-color-accent-primary uppercase text-xl leading-10 text-color-accent-primary bg-color-bg-white border-2 w-fit">
+        <span className="notXL:hidden absolute bottom-10 xl:left-1/2 xl:-translate-x-1/2 opacity-0 xl:group-hover:opacity-100 transition xl:group-focus-visible:opacity-100 rounded-full py-[14px] text-center flex-center font-bold border-color-accent-primary uppercase text-xl leading-10 text-color-accent-primary bg-color-bg-white border-2 w-[298px]">
           {json.button}
         </span>
       </Link>
