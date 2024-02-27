@@ -66,6 +66,16 @@
 }
 
 /* Burger-Menu */
+.burger-menu {
+  @apply fixed inset-0 ml-auto w-full md:w-[445px] bg-color-bg-primary;
+}
+
+@media screen and (min-width: 1440px) {
+  .burger-menu {
+    @apply w-1/2;
+  }
+}
+
 .burger-menu::before {
   content: "";
   @apply absolute top-0 left-0 w-full h-[7px] md:w-[7px] md:h-full bg-color-accent-primary;
@@ -157,4 +167,10 @@
 
 .sweets-card-title_cake-pops {
   @apply text-color-option-first;
+}
+
+/* 404 Page */
+.block-404::after {
+  content: "";
+  @apply hidden xl:block absolute top-1/2 left-[-80px] -translate-y-1/2 w-[3px] h-full bg-color-accent-primary;
 }
