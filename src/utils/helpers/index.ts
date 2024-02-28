@@ -15,3 +15,4 @@ export * from "./getValue";
 export * from "./getBase64";
 export * from "./convertImage";
 export * from "./metadataGenerator";
+export * from "./useWindowWidth";
