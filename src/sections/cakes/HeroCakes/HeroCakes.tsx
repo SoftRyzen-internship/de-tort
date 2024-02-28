@@ -14,14 +14,8 @@ export const HeroCakes: React.FC = () => {
           hero
         />
         <ul className="flex flex-wrap flex-col gap-8 md:flex-row">
-          {links.map(({ label, slug, bgSrc, tbSrc }, i) => (
-            <CardCakes
-              key={i}
-              title={label}
-              bgSrc={bgSrc}
-              slug={slug}
-              tbSrc={tbSrc}
-            />
+          {links.map(({ label, slug, bgSrc }, i) => (
+            <CardCakes key={i} title={label} bgSrc={bgSrc} slug={slug} />
           ))}
         </ul>
       </div>
