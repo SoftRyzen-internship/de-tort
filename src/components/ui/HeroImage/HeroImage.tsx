@@ -25,7 +25,7 @@ export const HeroImage: React.FC = () => {
           blurDataURL={`data:image/svg+xml;base64,${getBase64(
             convertImage(716, 691, "#ffcfd3"),
           )}`}
-          sizes="(max-width: 767px) 100vw, (min-width: 768px) 50vw, (min-width: 1280px) 50vw"
+          sizes="(max-width: 767px) 50vw, (min-width: 768px) 50vw, (min-width: 1280px) 50vw"
         />
       )}
       <Image
@@ -39,7 +39,7 @@ export const HeroImage: React.FC = () => {
           convertImage(716, 691, "#ffcfd3"),
         )}`}
         className="object-cover relative z-0 w-[293px] h-auto md:w-[449px] xl:w-[716px]"
-        sizes="(max-width: 767px) 100vw, (min-width: 768px) 50vw, (min-width: 1280px) 50vw"
+        sizes="(max-width: 767px) 50vw, (min-width: 768px) 50vw, (min-width: 1280px) 50vw"
       />
       <div
         className={`${css.crumbs} pointer-events-none absolute bg-cover no-repeat z-10 top-[34px] md:top-[-7px] left-[-17px] xl:top-[-65px] md:left-[-144px] xl:left-[-243px] w-[306px] h-[200px] md:w-[576px] md:h-[417px] xl:w-[938px] xl:h-[696px]`}
