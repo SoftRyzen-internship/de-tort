@@ -38,7 +38,7 @@ export const ToppingCard: React.FC<ToppingCardProps> = ({
             blurDataURL={`data:image/svg+xml;base64,${getBase64(
               convertImage(320, 320, "#f5d9e2"),
             )}`}
-            sizes="(max-width: 767px) 232px, (min-width: 768px) 240px,  (min-width: 1280px) 260px"
+            sizes="(max-width: 767px) 232px, (max-width: 1279px) 240px,  (min-width: 1280px) 260px"
             quality={100}
           />
         </div>
