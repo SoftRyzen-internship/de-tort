@@ -28,7 +28,7 @@ export const SweetsCard: React.FC<SweetsCardProps> = ({
           blurDataURL={`data:image/svg+xml;base64,${getBase64(
             convertImage(384, 412),
           )}`}
-          sizes="(max-width: 767px) 100vw, (min-width: 768px) 336px,  (min-width: 1280px) 384px"
+          sizes="(max-width: 767px) 100vw, (max-width: 1279px) 336px,  (min-width: 1280px) 384px"
         />
         <p
           className={`text-center w-full font-unbounded uppercase font-bold text-[28px] absolute top-10 left-1/2 -translate-x-1/2 ${titleClass}`}

@@ -21,7 +21,7 @@ export const SliderCakeCard: React.FC<SliderCakeCardProps> = ({
         alt={alt}
         src={src}
         loading="eager"
-        sizes="(max-width: 479px) 100vw, (min-width: 480px) 440px ,(min-width: 768px) 704px, (min-width: 1280px) 592px"
+        sizes="(max-width: 479px) 100vw, (max-width: 768px) 440px ,(max-width: 1279px) 704px, (min-width: 1280px) 592px"
         priority
         quality={100}
         fill

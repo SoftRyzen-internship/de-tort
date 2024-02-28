@@ -33,7 +33,7 @@ export const CardCakes: React.FC<CardCakesProps> = ({
             convertImage(440, 360, "#fff8f2"),
           )}`}
           className="block object-cover object-center w-full h-full xl:hidden"
-          sizes="(max-width: 767px) 100vw, (min-width: 768px) 336px"
+          sizes="(max-width: 767px) 100vw, (max-width: 1279px) 336px"
         />
 
         <Image
