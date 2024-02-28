@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 
-import css from "./HeroImage.module.css";
-
 import data from "@/data/common.json";
 import { getBase64, convertImage, useWindowWidth } from "@/utils/helpers";
+
+import css from "./HeroImage.module.css";
 
 export const HeroImage: React.FC = () => {
   const { hero } = data;
