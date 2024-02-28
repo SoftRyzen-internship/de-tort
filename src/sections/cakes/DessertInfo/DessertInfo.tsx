@@ -3,7 +3,7 @@ import { Slider } from "@/components/base/Slider";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 
 import { SliderCakeCard } from "@/components/ui/SliderCakeCard";
-import { ButtonLink } from "@/components/ui/ScrollBtn";
+import { ScrollBtn } from "@/components/ui/ScrollBtn";
 
 import Dollar from "~/icons/dollar.svg";
 import Slice from "~/icons/cake-cherry.svg";
@@ -136,7 +136,7 @@ export const DessertInfo: React.FC<DessertInfoProps> = ({ dessert }) => {
             )}
           </div>
 
-          <ButtonLink
+          <ScrollBtn
             label={
               slug === "mini-cakes" ||
               slug === "bento-cakes" ||
