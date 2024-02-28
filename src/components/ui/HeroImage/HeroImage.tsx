@@ -3,18 +3,18 @@
 import Image from "next/image";
 
 import data from "@/data/common.json";
-import { getBase64, convertImage, useWindowWidth } from "@/utils/helpers";
+import { getBase64, convertImage } from "@/utils/helpers";
 
 import css from "./HeroImage.module.css";
 
 export const HeroImage: React.FC = () => {
   const { hero } = data;
-  const { imageFace, imageBack } = hero;
-  const windowWidth = useWindowWidth();
+  const { imageFace } = hero;
+  // const windowWidth = useWindowWidth();
 
   return (
     <div className="relative md:absolute md:bottom-[-207px] mdOnly:right-0 xl:left-1/2 group pointer-events-auto translate-x-3 w-fit h-fit smOnly:mx-auto">
-      {windowWidth > 1279 && (
+      {/* {windowWidth > 1279 && (
         <Image
           src={imageBack.path}
           alt={imageBack.alt}
@@ -27,7 +27,7 @@ export const HeroImage: React.FC = () => {
           )}`}
           sizes="(max-width: 767px) 50vw, (min-width: 768px) 50vw, (min-width: 1280px) 50vw"
         />
-      )}
+      )} */}
       <Image
         src={imageFace.path}
         alt={imageFace.alt}
