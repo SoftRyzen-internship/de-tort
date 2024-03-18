@@ -67,9 +67,9 @@ const config: Config = {
         "color-option": {
           first: "#A9003A",
           second: "#A63F6B",
-          third: "#381046",
-          fourth: "#FEEE9F",
-          fifth: "#197CCB",
+          third: "#CC1B73",
+          fourth: "#934848",
+          fifth: "#006089",
           sixth: "#A33F06",
           seven: "#5B4BFF",
           eight: "#626262",
