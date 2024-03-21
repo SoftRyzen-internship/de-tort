@@ -20,13 +20,13 @@
     },
     {
       "label": "Торти від 1/1.5 кг",
-      "caption": "4-5 людей",
+      "caption": "4-7 людей",
       "slug": "middle-cakes",
       "bgSrc": "/images/middletort-@2x.jpg"
     },
     {
       "label": "Торти від 2кг",
-      "caption": "8 людей",
+      "caption": "8-10 людей",
       "slug": "big-cakes",
       "bgSrc": "/images/bigtort-@2x.jpg"
     }
