@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { isBefore, isSameDay, format } from "date-fns";
+import { isBefore, format, isSameDay } from "date-fns";
 import { uk } from "date-fns/locale";
 
 import { cn } from "@/utils/helpers";
@@ -62,7 +62,7 @@ export const CalendarControl: React.FC<CalendarControlProps> = ({
           }}
           disabled={(date) => {
             const today = new Date();
-            return isBefore(date, today) || isSameDay(date, today);
+            return isBefore(date, today) && !isSameDay(date, today);
           }}
           initialFocus
         />
